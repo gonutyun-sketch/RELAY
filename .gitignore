@@ -1,4 +1,5 @@
 # Unity generated data
+/.utmp/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -8,31 +9,66 @@
 /[Bb]uilds/
 /[Mm]emoryCaptures/
 /[Rr]ecordings/
+/ExportedObj/
+/ServerData/
 
 # Unity crash recovery copies
 /Assets/_Recovery/
 /Assets/_Recovery.meta
 
+# Unity generated content and test output
+*.log
+sysinfo.txt
+mono_crash.*
+*.apk
+*.aab
+*.unitypackage
+*.unitypackage.meta
+*.app
+InitTestScene*.unity*
+/[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Addressables and generated Visual Scripting data
+/[Aa]ssets/StreamingAssets/aa*
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/Addressables_Temp*
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
 # IDE generated files
 /.vs/
 /.idea/
 /.vscode/
+/.gradle/
 *.csproj
+*.unityproj
 *.sln
 *.slnx
 *.suo
+*.tmp
 *.user
 *.userprefs
 *.pidb
+*.pidb.meta
 *.booproj
 *.opendb
 *.VC.db
 *.pdb
+*.pdb.meta
 *.mdb
+*.mdb.meta
+*.svd
+*.DotSettings.user
+/[Aa]ssets/Plugins/Editor/JetBrains*
 
-# Local logs, crash reports and credentials
-*.log
-/sysinfo.txt
+# Blender temporary imports
+*.blend1
+*.blend1.meta
+
+# Local logs, builds, credentials and OS metadata
 /crash.dmp
 .env
 .env.*
@@ -41,8 +77,6 @@
 *.jks
 *.pfx
 *.p12
-
-# Operating system metadata
 .DS_Store
 Thumbs.db
 Desktop.ini
