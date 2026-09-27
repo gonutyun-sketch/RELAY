@@ -1,0 +1,48 @@
+# Unity generated data
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Unity crash recovery copies
+/Assets/_Recovery/
+/Assets/_Recovery.meta
+
+# IDE generated files
+/.vs/
+/.idea/
+/.vscode/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.opendb
+*.VC.db
+*.pdb
+*.mdb
+
+# Local logs, crash reports and credentials
+*.log
+/sysinfo.txt
+/crash.dmp
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.pfx
+*.p12
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
