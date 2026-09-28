@@ -1,0 +1,73 @@
+{
+  "parts_checked": 11,
+  "total_triangles": 32768,
+  "unity_runtime_tested": false,
+  "checks": [
+    {
+      "part": "POWER_Cabinet",
+      "fbx_roundtrip_max_extent_error_m": 1.1920928955078125e-07,
+      "uv_present": true,
+      "triangles": 9284
+    },
+    {
+      "part": "AUX_Housing",
+      "fbx_roundtrip_max_extent_error_m": 1.4901161193847656e-08,
+      "uv_present": true,
+      "triangles": 2064
+    },
+    {
+      "part": "AUX_Handle",
+      "fbx_roundtrip_max_extent_error_m": 5.587935447692871e-09,
+      "uv_present": true,
+      "triangles": 704
+    },
+    {
+      "part": "MAIN_Housing",
+      "fbx_roundtrip_max_extent_error_m": 2.9802322387695312e-08,
+      "uv_present": true,
+      "triangles": 1964
+    },
+    {
+      "part": "MAIN_Handle",
+      "fbx_roundtrip_max_extent_error_m": 3.725290298461914e-09,
+      "uv_present": true,
+      "triangles": 1256
+    },
+    {
+      "part": "VOLTAGE_Housing",
+      "fbx_roundtrip_max_extent_error_m": 7.450580596923828e-09,
+      "uv_present": true,
+      "triangles": 2640
+    },
+    {
+      "part": "VOLTAGE_Knob",
+      "fbx_roundtrip_max_extent_error_m": 7.450580596923828e-09,
+      "uv_present": true,
+      "triangles": 6532
+    },
+    {
+      "part": "BALANCE_Housing",
+      "fbx_roundtrip_max_extent_error_m": 7.450580596923828e-09,
+      "uv_present": true,
+      "triangles": 2928
+    },
+    {
+      "part": "BALANCE_Knob",
+      "fbx_roundtrip_max_extent_error_m": 7.450580596923828e-09,
+      "uv_present": true,
+      "triangles": 788
+    },
+    {
+      "part": "Gauge_Housing",
+      "fbx_roundtrip_max_extent_error_m": 3.3527612686157227e-08,
+      "uv_present": true,
+      "triangles": 4108
+    },
+    {
+      "part": "Gauge_Needle",
+      "fbx_roundtrip_max_extent_error_m": 1.3737007975578308e-08,
+      "uv_present": true,
+      "triangles": 500
+    }
+  ]
+}

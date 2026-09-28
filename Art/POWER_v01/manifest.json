@@ -1,0 +1,117 @@
+{
+  "asset": "RELAY POWER v01",
+  "authoring_units": "meters",
+  "parts": [
+    {
+      "name": "POWER_Cabinet",
+      "triangles": 9284,
+      "unity_parent_local_position": [
+        0,
+        0,
+        0
+      ],
+      "file": "exports/POWER_Cabinet.fbx"
+    },
+    {
+      "name": "AUX_Housing",
+      "triangles": 2064,
+      "unity_parent_local_position": [
+        0,
+        0,
+        0
+      ],
+      "file": "exports/AUX_Housing.fbx"
+    },
+    {
+      "name": "AUX_Handle",
+      "triangles": 704,
+      "unity_parent_local_position": [
+        0.0,
+        0.0,
+        -0.085
+      ],
+      "file": "exports/AUX_Handle.fbx"
+    },
+    {
+      "name": "MAIN_Housing",
+      "triangles": 1964,
+      "unity_parent_local_position": [
+        0,
+        0,
+        0
+      ],
+      "file": "exports/MAIN_Housing.fbx"
+    },
+    {
+      "name": "MAIN_Handle",
+      "triangles": 1256,
+      "unity_parent_local_position": [
+        0.0,
+        0.0,
+        -0.1
+      ],
+      "file": "exports/MAIN_Handle.fbx"
+    },
+    {
+      "name": "VOLTAGE_Housing",
+      "triangles": 2640,
+      "unity_parent_local_position": [
+        0,
+        0,
+        0
+      ],
+      "file": "exports/VOLTAGE_Housing.fbx"
+    },
+    {
+      "name": "VOLTAGE_Knob",
+      "triangles": 6532,
+      "unity_parent_local_position": [
+        0.0,
+        0.0,
+        -0.1
+      ],
+      "file": "exports/VOLTAGE_Knob.fbx"
+    },
+    {
+      "name": "BALANCE_Housing",
+      "triangles": 2928,
+      "unity_parent_local_position": [
+        0,
+        0,
+        0
+      ],
+      "file": "exports/BALANCE_Housing.fbx"
+    },
+    {
+      "name": "BALANCE_Knob",
+      "triangles": 788,
+      "unity_parent_local_position": [
+        0.0,
+        0.0,
+        -0.1
+      ],
+      "file": "exports/BALANCE_Knob.fbx"
+    },
+    {
+      "name": "Gauge_Housing",
+      "triangles": 4108,
+      "unity_parent_local_position": [
+        0,
+        0,
+        0
+      ],
+      "file": "exports/Gauge_Housing.fbx"
+    },
+    {
+      "name": "Gauge_Needle",
+      "triangles": 500,
+      "unity_parent_local_position": [
+        0.0,
+        0.035,
+        -0.095
+      ],
+      "file": "exports/Gauge_Needle.fbx"
+    }
+  ],
+  "note": "Unity scene/scripts untouched. FBX import axis/material verification required in Unity."
+}
