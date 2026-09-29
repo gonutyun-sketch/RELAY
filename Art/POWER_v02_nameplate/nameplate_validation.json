@@ -1,0 +1,28 @@
+{
+  "unchanged_source_objects_checked": 249,
+  "unchanged_export_parts": 11,
+  "copied_files_sha256": {
+    "exports/AUX_Handle.fbx": "f2d1f71cc695ff9937a4e7224a05f59c0e2c7b8a0f1bd760ceeef4929c3fd44b",
+    "exports/AUX_Housing.fbx": "6efe9aae123496f9352c3f3f48c8a43ab06ecb7853a848ff8587e7cd43d17d50",
+    "exports/BALANCE_Housing.fbx": "0b4f900521c4c3a5cf31642ce4f685beacc2f75fc57bdd35a8247e4196248d33",
+    "exports/BALANCE_Knob.fbx": "ef1b430a9c243f2bd8b462b09d507fbda9b8479c823b2580b78e6e288b1199f3",
+    "exports/Gauge_Glass.fbx": "3a5e143d5632a9db7347581db3e125c493b202eb0c25212cf51583f3645f10ea",
+    "exports/Gauge_Housing.fbx": "a235ea26b22eeeba585fdbd02c2613f0716154021ddbbbb05de64d952d7371c3",
+    "exports/Gauge_Needle.fbx": "52a61e54fc9993cd9c6cea9af098edd6abeeb8123eb8016674f9ead33480473c",
+    "exports/MAIN_Handle.fbx": "701592a59c6f423e94650990b57524747e5fc2c1728862399459de45904c6e0c",
+    "exports/MAIN_Housing.fbx": "990be3f7499462146d94de0fb577b900f45d387721fd4b18b35dbf907703fa66",
+    "exports/VOLTAGE_Housing.fbx": "d3dea20d3adc4b12e936684e17448879cdf3c24cbca06816e39f0eb9f4a267a8",
+    "exports/VOLTAGE_Knob.fbx": "400b5586520c5b6c8277e78b87f16c892ac90f9569e93178a7efabb56b6dea73",
+    "textures/POWER_Fascia_BaseColor.png": "13a47ffd4444cf64adc119e14026e6c0c2f8227795981b005f5c13a15f1c6978",
+    "textures/POWER_Fascia_MetallicSmoothness.png": "793fb87d765c85b0966b63159db40d94e438fae1e29ae3123610977691660fed"
+  },
+  "cabinet_roundtrip_bounds_error_m": 8.940696716308594e-08,
+  "unity_modified": false,
+  "unity_runtime_tested": false,
+  "nameplate_dimensions_m": [
+    0.35,
+    0.1,
+    0.003
+  ],
+  "capital_height_m": 0.035
+}
