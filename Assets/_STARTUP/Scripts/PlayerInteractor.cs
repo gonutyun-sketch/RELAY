@@ -120,8 +120,7 @@ namespace Startup
             {
                 if (canInteract)
                 {
-                    target.Interact();
-                    BeginFeedback(false);
+                    BeginFeedback(!target.TryInteract());
                 }
                 else
                 {
