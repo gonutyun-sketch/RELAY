@@ -1,0 +1,212 @@
+{
+  "unity_opened_or_modified": false,
+  "checks": [
+    {
+      "name": "COOLING_Frame FBX round-trip dimensions",
+      "passed": true,
+      "details": {
+        "maximum_axis_bound_error_m": 8.940696716308594e-08
+      }
+    },
+    {
+      "name": "COOLING_Frame finite geometry",
+      "passed": true,
+      "details": {
+        "vertices": 18261,
+        "triangles": 34852
+      }
+    },
+    {
+      "name": "PUMP_Housing FBX round-trip dimensions",
+      "passed": true,
+      "details": {
+        "maximum_axis_bound_error_m": 1.1175870895385742e-08
+      }
+    },
+    {
+      "name": "PUMP_Housing finite geometry",
+      "passed": true,
+      "details": {
+        "vertices": 1237,
+        "triangles": 2273
+      }
+    },
+    {
+      "name": "PUMP_Handle FBX round-trip dimensions",
+      "passed": true,
+      "details": {
+        "maximum_axis_bound_error_m": 1.1175870895385742e-08
+      }
+    },
+    {
+      "name": "PUMP_Handle finite geometry",
+      "passed": true,
+      "details": {
+        "vertices": 352,
+        "triangles": 692
+      }
+    },
+    {
+      "name": "VALVE_Housing FBX round-trip dimensions",
+      "passed": true,
+      "details": {
+        "maximum_axis_bound_error_m": 1.4901161193847656e-08
+      }
+    },
+    {
+      "name": "VALVE_Housing finite geometry",
+      "passed": true,
+      "details": {
+        "vertices": 3193,
+        "triangles": 6130
+      }
+    },
+    {
+      "name": "VALVE_Wheel FBX round-trip dimensions",
+      "passed": true,
+      "details": {
+        "maximum_axis_bound_error_m": 3.725290298461914e-09
+      }
+    },
+    {
+      "name": "VALVE_Wheel finite geometry",
+      "passed": true,
+      "details": {
+        "vertices": 1500,
+        "triangles": 2808
+      }
+    },
+    {
+      "name": "FLOW_Housing FBX round-trip dimensions",
+      "passed": true,
+      "details": {
+        "maximum_axis_bound_error_m": 1.862645149230957e-08
+      }
+    },
+    {
+      "name": "FLOW_Housing finite geometry",
+      "passed": true,
+      "details": {
+        "vertices": 1890,
+        "triangles": 2892
+      }
+    },
+    {
+      "name": "FLOW_Needle FBX round-trip dimensions",
+      "passed": true,
+      "details": {
+        "maximum_axis_bound_error_m": 1.234002411365509e-08
+      }
+    },
+    {
+      "name": "FLOW_Needle finite geometry",
+      "passed": true,
+      "details": {
+        "vertices": 304,
+        "triangles": 596
+      }
+    },
+    {
+      "name": "FLOW_Glass FBX round-trip dimensions",
+      "passed": true,
+      "details": {
+        "maximum_axis_bound_error_m": 1.4901161193847656e-08
+      }
+    },
+    {
+      "name": "FLOW_Glass finite geometry",
+      "passed": true,
+      "details": {
+        "vertices": 56,
+        "triangles": 108
+      }
+    },
+    {
+      "name": "THERMAL_Housing FBX round-trip dimensions",
+      "passed": true,
+      "details": {
+        "maximum_axis_bound_error_m": 1.1175870895385742e-08
+      }
+    },
+    {
+      "name": "THERMAL_Housing finite geometry",
+      "passed": true,
+      "details": {
+        "vertices": 1268,
+        "triangles": 1912
+      }
+    },
+    {
+      "name": "Triangle budget",
+      "passed": true,
+      "details": 52263
+    },
+    {
+      "name": "Wheel vertices inside existing approximate pick volumes",
+      "passed": true,
+      "details": {
+        "covered": 1500,
+        "total": 1500,
+        "missed_bounds": null,
+        "missed_examples": [],
+        "note": "Analytic retained collider volumes; actual Unity raycast remains a manual check."
+      }
+    },
+    {
+      "name": "Valve and gauge horizontal separation at neutral pose",
+      "passed": true,
+      "details": {
+        "gap_m": 0.03888533115386966,
+        "note": "Wheel is further forward than gauge; full sweeps evaluated below."
+      }
+    },
+    {
+      "name": "Full wheel sweep does not hit gauge envelope",
+      "passed": true,
+      "details": {
+        "minimum_conservative_xy_gap_m": 0.021785655551132543,
+        "wheel_radius_m": 0.2742143542240292
+      }
+    },
+    {
+      "name": "Flow readout remains in front of opaque face",
+      "passed": true,
+      "details": {
+        "text_z": -0.095,
+        "face_front_z": -0.087,
+        "clearance_m": 0.008
+      }
+    },
+    {
+      "name": "Thermal readout remains in front of opaque face",
+      "passed": true,
+      "details": {
+        "text_z": -0.082,
+        "face_front_z": -0.0795,
+        "clearance_m": 0.0025
+      }
+    },
+    {
+      "name": "Neutral moving pivots match source scene",
+      "passed": true,
+      "details": "PUMP_Handle, VALVE_Wheel, FLOW_Needle"
+    },
+    {
+      "name": "Nine separate exported meshes",
+      "passed": true,
+      "details": [
+        "COOLING_Frame",
+        "PUMP_Housing",
+        "PUMP_Handle",
+        "VALVE_Housing",
+        "VALVE_Wheel",
+        "FLOW_Housing",
+        "FLOW_Needle",
+        "FLOW_Glass",
+        "THERMAL_Housing"
+      ]
+    }
+  ],
+  "unity_runtime_test": "Pending manual import and gameplay verification by user",
+  "all_checks_passed": true
+}

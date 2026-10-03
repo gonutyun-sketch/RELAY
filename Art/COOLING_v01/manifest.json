@@ -1,0 +1,538 @@
+{
+  "asset": "RELAY COOLING v01",
+  "unity_modified": false,
+  "units": "metres",
+  "front": "Unity -Z",
+  "reference_scene": "Assets/Scenes/Startup_Graybox.unity",
+  "reference_module_position": [
+    -1,
+    1.2,
+    4
+  ],
+  "import_note": "Children local position 0, local rotation Y 180, local scale 1; same established FBX convention as POWER. Unity import/gameplay still requires user verification.",
+  "live_readout_note": "No fake dynamic values in exported meshes. Keep existing TMP objects.",
+  "parts": [
+    {
+      "name": "COOLING_Frame",
+      "file": "exports/COOLING_Frame.fbx",
+      "triangles": 34852,
+      "vertices": 18261,
+      "materials": [
+        "RLYC_Steel",
+        "RLYC_OxidizedSteel",
+        "RLYC_PumpBlue",
+        "RLYC_Rubber",
+        "RLYC_Bakelite",
+        "RLYC_InstrumentEnamel",
+        "RLYC_Brass",
+        "RLYC_FramePaint",
+        "RLYC_PrintLight",
+        "RLYC_PrintDark"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.8999999761581421,
+          0.9000000357627869
+        ],
+        [
+          -1.2000001668930054,
+          1.192000150680542
+        ],
+        [
+          -0.531999945640564,
+          0.49000000953674316
+        ]
+      ],
+      "unity_parent": "Environment/COOLING_Module",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "PUMP_Housing",
+      "file": "exports/PUMP_Housing.fbx",
+      "triangles": 2273,
+      "vertices": 1237,
+      "materials": [
+        "RLYC_FramePaint",
+        "RLYC_PrintDark",
+        "RLYC_Bakelite",
+        "RLYC_OxidizedSteel",
+        "RLYC_InstrumentEnamel",
+        "RLYC_Steel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.1459999978542328,
+          0.1459999978542328
+        ],
+        [
+          -0.21023252606391907,
+          0.16899999976158142
+        ],
+        [
+          -0.091000035405159,
+          0.05350003018975258
+        ]
+      ],
+      "unity_parent": "COOLING_Module/PUMP_Switch",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "PUMP_Handle",
+      "file": "exports/PUMP_Handle.fbx",
+      "triangles": 692,
+      "vertices": 352,
+      "materials": [
+        "RLYC_PrintLight",
+        "RLYC_Bakelite"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.032999999821186066,
+          0.032999999821186066
+        ],
+        [
+          -0.03300000727176666,
+          0.17399999499320984
+        ],
+        [
+          -0.04649997875094414,
+          0.01099998876452446
+        ]
+      ],
+      "unity_parent": "COOLING_Module/PUMP_Switch/HandlePivot",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        -0.085
+      ]
+    },
+    {
+      "name": "VALVE_Housing",
+      "file": "exports/VALVE_Housing.fbx",
+      "triangles": 6130,
+      "vertices": 3193,
+      "materials": [
+        "RLYC_Brass",
+        "RLYC_PumpBlue",
+        "RLYC_Rubber",
+        "RLYC_PrintDark",
+        "RLYC_InstrumentEnamel",
+        "RLYC_Steel",
+        "RLYC_OxidizedSteel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.1550000011920929,
+          0.1550000011920929
+        ],
+        [
+          -0.13600003719329834,
+          0.3569999933242798
+        ],
+        [
+          -0.1820000261068344,
+          0.20500002801418304
+        ]
+      ],
+      "unity_parent": "COOLING_Module/FLOW_Valve",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "VALVE_Wheel",
+      "file": "exports/VALVE_Wheel.fbx",
+      "triangles": 2808,
+      "vertices": 1500,
+      "materials": [
+        "RLYC_ValveRed",
+        "RLYC_PrintLight",
+        "RLYC_Brass",
+        "RLYC_Steel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.2571146786212921,
+          0.2571146786212921
+        ],
+        [
+          -0.2571146786212921,
+          0.2571146786212921
+        ],
+        [
+          -0.0494999997317791,
+          0.03199999779462814
+        ]
+      ],
+      "unity_parent": "COOLING_Module/FLOW_Valve/WheelPivot",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "name": "FLOW_Housing",
+      "file": "exports/FLOW_Housing.fbx",
+      "triangles": 2892,
+      "vertices": 1890,
+      "materials": [
+        "RLYC_Rubber",
+        "RLYC_InstrumentEnamel",
+        "RLYC_PrintDark",
+        "RLYC_FramePaint",
+        "RLYC_OxidizedSteel",
+        "RLYC_Steel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.30399999022483826,
+          0.30399999022483826
+        ],
+        [
+          -0.27300000190734863,
+          0.27300000190734863
+        ],
+        [
+          -0.12125000357627869,
+          0.05899998918175697
+        ]
+      ],
+      "unity_parent": "COOLING_Module/FLOW_Gauge",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "FLOW_Needle",
+      "file": "exports/FLOW_Needle.fbx",
+      "triangles": 596,
+      "vertices": 304,
+      "materials": [
+        "RLYC_ValveRed",
+        "RLYC_PrintDark",
+        "RLYC_Brass"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.014000000432133675,
+          0.014000000432133675
+        ],
+        [
+          -0.03850001096725464,
+          0.1640000194311142
+        ],
+        [
+          -0.008500009775161743,
+          0.001500000013038516
+        ]
+      ],
+      "unity_parent": "COOLING_Module/FLOW_Gauge/NeedlePivot",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0.035,
+        -0.095
+      ]
+    },
+    {
+      "name": "FLOW_Glass",
+      "file": "exports/FLOW_Glass.fbx",
+      "triangles": 108,
+      "vertices": 56,
+      "materials": [
+        "RLYC_MeterGlass"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.27549999952316284,
+          0.27549999952316284
+        ],
+        [
+          -0.24199999868869781,
+          0.24199999868869781
+        ],
+        [
+          -0.12375002354383469,
+          -0.1222500279545784
+        ]
+      ],
+      "unity_parent": "COOLING_Module/FLOW_Gauge",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "THERMAL_Housing",
+      "file": "exports/THERMAL_Housing.fbx",
+      "triangles": 1912,
+      "vertices": 1268,
+      "materials": [
+        "RLYC_PrintDark",
+        "RLYC_Steel",
+        "RLYC_Bakelite",
+        "RLYC_OxidizedSteel",
+        "RLYC_PrintLight",
+        "RLYC_FramePaint",
+        "RLYC_InstrumentEnamel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.2539999783039093,
+          0.2540000081062317
+        ],
+        [
+          -0.18549999594688416,
+          0.1524999737739563
+        ],
+        [
+          -0.0922500267624855,
+          0.062000006437301636
+        ]
+      ],
+      "unity_parent": "COOLING_Module/Cooling_Readout",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "RLYC_PumpBlue",
+      "base_color_srgb": "#46686C",
+      "metallic": 0,
+      "smoothness": 0.41,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_FramePaint",
+      "base_color_srgb": "#414D49",
+      "metallic": 0,
+      "smoothness": 0.39,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_InstrumentEnamel",
+      "base_color_srgb": "#C4C3AF",
+      "metallic": 0,
+      "smoothness": 0.38,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_Steel",
+      "base_color_srgb": "#838A85",
+      "metallic": 0.8,
+      "smoothness": 0.63,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_OxidizedSteel",
+      "base_color_srgb": "#414944",
+      "metallic": 0.65,
+      "smoothness": 0.42,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_Rubber",
+      "base_color_srgb": "#1B221F",
+      "metallic": 0,
+      "smoothness": 0.2,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_Bakelite",
+      "base_color_srgb": "#30352F",
+      "metallic": 0,
+      "smoothness": 0.55,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_Brass",
+      "base_color_srgb": "#89794D",
+      "metallic": 0.72,
+      "smoothness": 0.53,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_ValveRed",
+      "base_color_srgb": "#87473C",
+      "metallic": 0,
+      "smoothness": 0.47,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_PrintDark",
+      "base_color_srgb": "#252C28",
+      "metallic": 0,
+      "smoothness": 0.22,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_PrintLight",
+      "base_color_srgb": "#DDD8C3",
+      "metallic": 0,
+      "smoothness": 0.27,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYC_MeterGlass",
+      "base_color_srgb": "#F0F1E9",
+      "metallic": 0,
+      "smoothness": 0.9,
+      "surface": "Transparent",
+      "alpha": 0.06,
+      "receive_shadows": false
+    }
+  ],
+  "triangles_total": 52263
+}
