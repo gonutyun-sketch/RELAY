@@ -1,0 +1,255 @@
+{
+  "all_checks_passed": true,
+  "check_count": 33,
+  "checks": [
+    {
+      "name": "Four additive model units",
+      "passed": true,
+      "detail": [
+        "COOLING_CoverFrame",
+        "COOLING_FrontGlass",
+        "COOLING_LeftGlass",
+        "COOLING_RightGlass"
+      ]
+    },
+    {
+      "name": "COOLING_CoverFrame finite geometry and UVs",
+      "passed": true,
+      "detail": 8320
+    },
+    {
+      "name": "COOLING_CoverFrame closed outward-facing solid",
+      "passed": true,
+      "detail": {
+        "non_manifold_edges": 0,
+        "signed_volume": 0.012815176554408707
+      }
+    },
+    {
+      "name": "COOLING_CoverFrame FBX round-trip scale origin and materials",
+      "passed": true,
+      "detail": {
+        "bound_error": 8.940696716308594e-08,
+        "material_count": 4
+      }
+    },
+    {
+      "name": "COOLING_CoverFrame no animation camera or light exported",
+      "passed": true,
+      "detail": [
+        "MESH"
+      ]
+    },
+    {
+      "name": "COOLING_FrontGlass finite geometry and UVs",
+      "passed": true,
+      "detail": 608
+    },
+    {
+      "name": "COOLING_FrontGlass closed outward-facing solid",
+      "passed": true,
+      "detail": {
+        "non_manifold_edges": 0,
+        "signed_volume": 0.014142056053772839
+      }
+    },
+    {
+      "name": "COOLING_FrontGlass FBX round-trip scale origin and materials",
+      "passed": true,
+      "detail": {
+        "bound_error": 5.960464477539063e-08,
+        "material_count": 1
+      }
+    },
+    {
+      "name": "COOLING_FrontGlass no animation camera or light exported",
+      "passed": true,
+      "detail": [
+        "MESH"
+      ]
+    },
+    {
+      "name": "COOLING_LeftGlass finite geometry and UVs",
+      "passed": true,
+      "detail": 56
+    },
+    {
+      "name": "COOLING_LeftGlass closed outward-facing solid",
+      "passed": true,
+      "detail": {
+        "non_manifold_edges": 0,
+        "signed_volume": 0.01066179791477162
+      }
+    },
+    {
+      "name": "COOLING_LeftGlass FBX round-trip scale origin and materials",
+      "passed": true,
+      "detail": {
+        "bound_error": 8.940696716308594e-08,
+        "material_count": 1
+      }
+    },
+    {
+      "name": "COOLING_LeftGlass no animation camera or light exported",
+      "passed": true,
+      "detail": [
+        "MESH"
+      ]
+    },
+    {
+      "name": "COOLING_RightGlass finite geometry and UVs",
+      "passed": true,
+      "detail": 56
+    },
+    {
+      "name": "COOLING_RightGlass closed outward-facing solid",
+      "passed": true,
+      "detail": {
+        "non_manifold_edges": 0,
+        "signed_volume": 0.01066179791477162
+      }
+    },
+    {
+      "name": "COOLING_RightGlass FBX round-trip scale origin and materials",
+      "passed": true,
+      "detail": {
+        "bound_error": 8.940696716308594e-08,
+        "material_count": 1
+      }
+    },
+    {
+      "name": "COOLING_RightGlass no animation camera or light exported",
+      "passed": true,
+      "detail": [
+        "MESH"
+      ]
+    },
+    {
+      "name": "Original Blender source unchanged",
+      "passed": true,
+      "detail": "C:\\Users\\gonut\\RELAY_Art\\COOLING_v01\\RELAY_COOLING_v01.blend"
+    },
+    {
+      "name": "No inherited meter-glass material in new guard exports",
+      "passed": true,
+      "detail": "Existing FLOW_Glass and its material remain separate."
+    },
+    {
+      "name": "Meter glass adjustment preserved in review scene",
+      "passed": true,
+      "detail": [
+        0.0,
+        0.0,
+        0.009999999776482582
+      ]
+    },
+    {
+      "name": "FLOW meter opening is an actual empty aperture",
+      "passed": true,
+      "detail": {
+        "rays": 81,
+        "occluded": 0
+      }
+    },
+    {
+      "name": "PUMP switch opening is an actual empty aperture",
+      "passed": true,
+      "detail": {
+        "rays": 81,
+        "occluded": 0
+      }
+    },
+    {
+      "name": "THERMAL display opening is an actual empty aperture",
+      "passed": true,
+      "detail": {
+        "rays": 81,
+        "occluded": 0
+      }
+    },
+    {
+      "name": "Valve circular penetration is open",
+      "passed": true,
+      "detail": {
+        "rays": 32,
+        "occluded": 0
+      }
+    },
+    {
+      "name": "Glass exists across previously open cabinet areas",
+      "passed": true,
+      "detail": {
+        "probes": 5,
+        "hits": 5
+      }
+    },
+    {
+      "name": "Glazing does not intersect COOLING_Frame",
+      "passed": true,
+      "detail": {
+        "COOLING_FrontGlass": 0,
+        "COOLING_LeftGlass": 0,
+        "COOLING_RightGlass": 0
+      }
+    },
+    {
+      "name": "Glazing does not intersect FLOW_Housing",
+      "passed": true,
+      "detail": {
+        "COOLING_FrontGlass": 0,
+        "COOLING_LeftGlass": 0,
+        "COOLING_RightGlass": 0
+      }
+    },
+    {
+      "name": "Glazing does not intersect THERMAL_Housing",
+      "passed": true,
+      "detail": {
+        "COOLING_FrontGlass": 0,
+        "COOLING_LeftGlass": 0,
+        "COOLING_RightGlass": 0
+      }
+    },
+    {
+      "name": "Glazing does not intersect PUMP_Housing",
+      "passed": true,
+      "detail": {
+        "COOLING_FrontGlass": 0,
+        "COOLING_LeftGlass": 0,
+        "COOLING_RightGlass": 0
+      }
+    },
+    {
+      "name": "Glazing does not intersect VALVE_Housing",
+      "passed": true,
+      "detail": {
+        "COOLING_FrontGlass": 0,
+        "COOLING_LeftGlass": 0,
+        "COOLING_RightGlass": 0
+      }
+    },
+    {
+      "name": "PUMP_Handle full operation clears glazing and hardware",
+      "passed": true,
+      "detail": {
+        "samples": 51,
+        "colliding_angles": []
+      }
+    },
+    {
+      "name": "VALVE_Wheel full operation clears glazing and hardware",
+      "passed": true,
+      "detail": {
+        "samples": 72,
+        "colliding_angles": []
+      }
+    },
+    {
+      "name": "Additive geometry budget",
+      "passed": true,
+      "detail": 17572
+    }
+  ],
+  "unity_modified": false,
+  "runtime_limit": "Unity transparency, lighting and clicks require user Play-mode verification."
+}

@@ -1,0 +1,59 @@
+{
+  "source": "C:/Users/gonut/School_p2/Assets/Scenes/Startup_Graybox.unity",
+  "audit_date": "2026-10-04",
+  "inspection": "Read-only saved scene and existing C# scripts; Unity was not operated or modified.",
+  "units": "metres; vectors x,y,z; front is negative Z",
+  "module": {"path": "Environment/SIGNAL_Module", "position": [1,1.2,4], "rotation_euler": [0,0,0], "scale": [1,1,1], "panel_dimensions": [1.8,2.4,1], "panel_front_z": -0.5},
+  "scope": {
+    "path": "SIGNAL_Module/Scope", "position": [0,0.42,-0.55], "scale": [1,1,1],
+    "housing": {"position": [0,0,0], "dimensions": [1.4,0.72,0.16]},
+    "screen": {"position": [0,0,-0.085], "dimensions": [1.28,0.6,0.02], "front_z": -0.095},
+    "reference_wave": {"position": [0,0,-0.11], "scale": [1,1,1], "line_width": 0.016, "renderer_id": 293611813},
+    "current_wave": {"position": [0,0,-0.114], "scale": [1,1,1], "line_width": 0.008, "renderer_id": 458068066},
+    "wave_points_runtime": {"count": 129, "local_space": true, "x_range": [-0.59,0.59], "max_y_range": [-0.25,0.25], "point_z": 0},
+    "recommended_minimum_clear_aperture": [1.22,0.54],
+    "recommended_background_front_z": -0.095,
+    "avoid": "Opaque geometry in front of either line within the clear aperture; fake exported waves; moving or scaling the existing LineRenderer objects."
+  },
+  "frequency": {
+    "path": "SIGNAL_Module/FREQUENCY_Dial", "position": [-0.48,-0.16,-0.55], "scale": [1,1,1],
+    "body_dimensions": [0.36,0.36,0.12],
+    "moving_part": {"path": "PointerPivot", "transform_id": 1706056784, "position": [0,0,-0.1], "rotation_euler": [0,0,0], "scale": [1,1,1]},
+    "old_knob": {"position": [0,0,0], "rotation_euler": [90,0,0], "scale": [0.18,0.07,0.18], "physical_dimensions": [0.18,0.18,0.14], "collider": "Capsule, radius .5, height 2, local Y, transformed with old mesh"},
+    "old_pointer": {"position": [0,0.065,-0.08], "dimensions": [0.016,0.065,0.02]},
+    "value": {"minimum": 1, "maximum": 6, "step": 0.25, "initial": 1, "unit": "Hz"},
+    "motion": {"axis": "local Z", "minimum_degrees": 135, "maximum_degrees": -135, "neutral_pointer": "+Y"}
+  },
+  "phase": {
+    "path": "SIGNAL_Module/PHASE_Slider", "position": [0.1,-0.16,-0.55], "scale": [1,1,1],
+    "body_dimensions": [0.66,0.22,0.12],
+    "track": {"position": [0,0,-0.066], "dimensions": [0.54,0.035,0.012]},
+    "moving_part": {"path": "Handle", "transform_id": 969069304, "position": [-0.25,0,-0.09], "rotation_euler": [0,0,0], "scale": [0.07,0.14,0.07], "collider": "unit BoxCollider centered zero"},
+    "minimum_position": [-0.25,0,-0.09], "maximum_position": [0.25,0,-0.09],
+    "value": {"minimum": 0, "maximum": 345, "step": 15, "initial": 0},
+    "moving_child_scale_compensation_for_metre_mesh": [14.2857142857,7.1428571429,14.2857142857],
+    "integration_warning": "The moving part is the old scaled Handle, not a unit-scale empty pivot. Either export a normalized approximately unit-sized grip mesh, or apply reciprocal child scale. Do not reset the old Handle scale because its BoxCollider depends on it."
+  },
+  "gain": {
+    "path": "SIGNAL_Module/GAIN_Slider", "position": [0.64,-0.28,-0.55], "scale": [1,1,1],
+    "body_dimensions": [0.22,0.52,0.12],
+    "track": {"position": [0,0,-0.066], "dimensions": [0.035,0.4,0.012]},
+    "moving_part": {"path": "Handle", "transform_id": 347128202, "position": [0,-0.108,-0.09], "rotation_euler": [0,0,0], "scale": [0.14,0.07,0.07], "collider": "unit BoxCollider centered zero"},
+    "minimum_position": [0,-0.18,-0.09], "maximum_position": [0,0.18,-0.09],
+    "value": {"minimum": 0.25, "maximum": 1.25, "step": 0.05, "initial": 0.45},
+    "moving_child_scale_compensation_for_metre_mesh": [7.1428571429,14.2857142857,14.2857142857],
+    "integration_warning": "Same non-unit moving Handle scale constraint as PHASE."
+  },
+  "lock_indicator": {
+    "path": "SIGNAL_Module/LOCK_Indicator", "position": [0,-0.65,-0.55], "scale": [1,1,1],
+    "body_dimensions": [0.38,0.38,0.12],
+    "lens_off": {"position": [0,0.025,-0.068], "dimensions": [0.14,0.065,0.02], "front_z": -0.078},
+    "lens_on": {"position": [0,0.025,-0.08], "dimensions": [0.12,0.05,0.006], "front_z": -0.083, "renderer_id": 1006459673},
+    "behavior": "SignalScope toggles Lens_On MeshRenderer.enabled directly every LateUpdate. Power must be online and frequency/phase/gain must match for 3 seconds. Children do not inherit MeshRenderer.enabled; do not simply hide old Lens_On and expect a child new lens to follow it.",
+    "recommended_integration": "Retain existing Lens_On as the actual functional luminous surface. Add new static bezel/body and off-lens around/behind it. Keep a clear aperture at local center (0,.025) at least .124 x .054. Alternatively replacing the on lens requires user to remap lockLamp to the new MeshRenderer.",
+    "match": {"frequency": 3.5, "frequency_tolerance": 0.03, "phase": 105, "phase_tolerance": 6, "gain": 0.8, "gain_tolerance": 0.035, "hold_seconds": 3}
+  },
+  "collider_policy": "Keep old GameObjects and colliders enabled; hide old MeshRenderers only. Every old rectangular body/track/handle uses a unit BoxCollider centered zero, its physical size coming from Transform scale. Existing Frequency knob uses CapsuleCollider. New meshes should stay inside or close to these hit areas.",
+  "static_text_to_replace_visually": ["Label_SIGNAL", "FREQUENCY_Dial/Label_FREQUENCY", "PHASE_Slider/Label_PHASE", "GAIN_Slider/Label_GAIN", "LOCK_Indicator/Label_LOCK"],
+  "slider_behavior": "MachineSlider Awake sets Handle.localPosition from initialValue. Q/R step is smoothed over .1 sec; LMB drag is continuous and immediate. Mesh must travel with existing Handle. Do not add a second stationary exported grip to the housing."
+}

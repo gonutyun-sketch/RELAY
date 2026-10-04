@@ -1,0 +1,537 @@
+{
+  "asset": "RELAY SIGNAL v01",
+  "unity_modified": false,
+  "units": "metres",
+  "front": "Unity -Z",
+  "reference_scene": "Assets/Scenes/Startup_Graybox.unity",
+  "reference_module_position": [
+    1,
+    1.2,
+    4
+  ],
+  "import_note": "New child position zero, rotation Y180. Scale1 except fader handles: use recorded reciprocal scale. Do not modify functional parents.",
+  "live_display_note": "Keep existing Screen, ReferenceWave, CurrentWave, Lens_Off and Lens_On. Preview waves and lenses never enter exports.",
+  "parts": [
+    {
+      "name": "SIGNAL_Cabinet",
+      "file": "exports/SIGNAL_Cabinet.fbx",
+      "triangles": 13558,
+      "vertices": 7144,
+      "materials": [
+        "RLYS_Enamel",
+        "RLYS_CasePaint",
+        "RLYS_OxidizedSteel",
+        "RLYS_PrintLight",
+        "RLYS_FramePaint",
+        "RLYS_Rubber",
+        "RLYS_PrintDark",
+        "RLYS_Bakelite",
+        "RLYS_Steel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.8979999423027039,
+          0.8979999423027039
+        ],
+        [
+          -1.1979999542236328,
+          1.181999921798706
+        ],
+        [
+          -0.531000018119812,
+          0.49000000953674316
+        ]
+      ],
+      "unity_parent": "Environment/SIGNAL_Module",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "SCOPE_Housing",
+      "file": "exports/SCOPE_Housing.fbx",
+      "triangles": 6694,
+      "vertices": 3704,
+      "materials": [
+        "RLYS_OxidizedSteel",
+        "RLYS_Graticule",
+        "RLYS_Rubber",
+        "RLYS_Steel",
+        "RLYS_FramePaint",
+        "RLYS_PrintDark",
+        "RLYS_Enamel",
+        "RLYS_CasePaint"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.7680000066757202,
+          0.768000066280365
+        ],
+        [
+          -0.3810000419616699,
+          0.38749998807907104
+        ],
+        [
+          -0.17399999499320984,
+          0.22800002992153168
+        ]
+      ],
+      "unity_parent": "Environment/SIGNAL_Module/Scope",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "FREQUENCY_Housing",
+      "file": "exports/FREQUENCY_Housing.fbx",
+      "triangles": 4648,
+      "vertices": 2651,
+      "materials": [
+        "RLYS_Brass",
+        "RLYS_PrintDark",
+        "RLYS_OxidizedSteel",
+        "RLYS_Enamel",
+        "RLYS_Steel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.17350000143051147,
+          0.17350000143051147
+        ],
+        [
+          -0.20286643505096436,
+          0.17350000143051147
+        ],
+        [
+          -0.08650003373622894,
+          0.05799998342990875
+        ]
+      ],
+      "unity_parent": "Environment/SIGNAL_Module/FREQUENCY_Dial",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "FREQUENCY_Knob",
+      "file": "exports/FREQUENCY_Knob.fbx",
+      "triangles": 9724,
+      "vertices": 4936,
+      "materials": [
+        "RLYS_Steel",
+        "RLYS_FramePaint",
+        "RLYS_Bakelite",
+        "RLYS_PrintLight"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.0860000029206276,
+          0.0860000029206276
+        ],
+        [
+          -0.08600001037120819,
+          0.08600001782178879
+        ],
+        [
+          -0.0769999772310257,
+          0.05100003257393837
+        ]
+      ],
+      "unity_parent": "Environment/SIGNAL_Module/FREQUENCY_Dial/PointerPivot",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "PHASE_Housing",
+      "file": "exports/PHASE_Housing.fbx",
+      "triangles": 2408,
+      "vertices": 1517,
+      "materials": [
+        "RLYS_PrintDark",
+        "RLYS_Steel",
+        "RLYS_OxidizedSteel",
+        "RLYS_Enamel",
+        "RLYS_Rubber"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.33000001311302185,
+          0.33000004291534424
+        ],
+        [
+          -0.14379645884037018,
+          0.10750000178813934
+        ],
+        [
+          -0.05299997702240944,
+          0.057499997317790985
+        ]
+      ],
+      "unity_parent": "Environment/SIGNAL_Module/PHASE_Slider",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "PHASE_Handle",
+      "file": "exports/PHASE_Handle.fbx",
+      "triangles": 756,
+      "vertices": 392,
+      "materials": [
+        "RLYS_OxidizedSteel",
+        "RLYS_PrintDark",
+        "RLYS_PrintLight",
+        "RLYS_Bakelite"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.03200000151991844,
+          0.03200000151991844
+        ],
+        [
+          -0.06549999862909317,
+          0.06549999862909317
+        ],
+        [
+          -0.03399999067187309,
+          0.033499982208013535
+        ]
+      ],
+      "unity_parent": "Environment/SIGNAL_Module/PHASE_Slider/Handle",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        14.285714285714285,
+        7.142857142857142,
+        14.285714285714285
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "GAIN_Housing",
+      "file": "exports/GAIN_Housing.fbx",
+      "triangles": 1960,
+      "vertices": 1110,
+      "materials": [
+        "RLYS_PrintDark",
+        "RLYS_Steel",
+        "RLYS_OxidizedSteel",
+        "RLYS_Enamel",
+        "RLYS_Rubber"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.11750000715255737,
+          0.11749999970197678
+        ],
+        [
+          -0.29279643297195435,
+          0.25600001215934753
+        ],
+        [
+          -0.05299995839595795,
+          0.05749999359250069
+        ]
+      ],
+      "unity_parent": "Environment/SIGNAL_Module/GAIN_Slider",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "GAIN_Handle",
+      "file": "exports/GAIN_Handle.fbx",
+      "triangles": 756,
+      "vertices": 392,
+      "materials": [
+        "RLYS_PrintDark",
+        "RLYS_OxidizedSteel",
+        "RLYS_GainCap"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.06599999964237213,
+          0.06599999964237213
+        ],
+        [
+          -0.03200000151991844,
+          0.03200000151991844
+        ],
+        [
+          -0.03399999067187309,
+          0.032999977469444275
+        ]
+      ],
+      "unity_parent": "Environment/SIGNAL_Module/GAIN_Slider/Handle",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        7.142857142857142,
+        14.285714285714285,
+        14.285714285714285
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LOCK_Housing",
+      "file": "exports/LOCK_Housing.fbx",
+      "triangles": 1190,
+      "vertices": 694,
+      "materials": [
+        "RLYS_PrintDark",
+        "RLYS_Steel",
+        "RLYS_OxidizedSteel",
+        "RLYS_Enamel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.15199999511241913,
+          0.15199999511241913
+        ],
+        [
+          -0.09499998390674591,
+          0.0794999748468399
+        ],
+        [
+          -0.08150002360343933,
+          0.04549999535083771
+        ]
+      ],
+      "unity_parent": "Environment/SIGNAL_Module/LOCK_Indicator",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "RLYS_CasePaint",
+      "base_color_srgb": "#626A60",
+      "metallic": 0,
+      "smoothness": 0.4,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_FramePaint",
+      "base_color_srgb": "#363E3A",
+      "metallic": 0,
+      "smoothness": 0.38,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_Enamel",
+      "base_color_srgb": "#C8C5B2",
+      "metallic": 0,
+      "smoothness": 0.36,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_Steel",
+      "base_color_srgb": "#959B96",
+      "metallic": 0.8,
+      "smoothness": 0.65,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_OxidizedSteel",
+      "base_color_srgb": "#454E49",
+      "metallic": 0.65,
+      "smoothness": 0.41,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_Rubber",
+      "base_color_srgb": "#1B221F",
+      "metallic": 0,
+      "smoothness": 0.18,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_Bakelite",
+      "base_color_srgb": "#2B302C",
+      "metallic": 0,
+      "smoothness": 0.56,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_Brass",
+      "base_color_srgb": "#89794D",
+      "metallic": 0.72,
+      "smoothness": 0.51,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_PrintDark",
+      "base_color_srgb": "#252C28",
+      "metallic": 0,
+      "smoothness": 0.21,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_PrintLight",
+      "base_color_srgb": "#DED8C3",
+      "metallic": 0,
+      "smoothness": 0.28,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_GainCap",
+      "base_color_srgb": "#AC925E",
+      "metallic": 0,
+      "smoothness": 0.46,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYS_Graticule",
+      "base_color_srgb": "#355346",
+      "metallic": 0,
+      "smoothness": 0.1,
+      "surface": "Opaque"
+    }
+  ],
+  "triangles_total": 41694
+}

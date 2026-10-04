@@ -1,0 +1,685 @@
+{
+  "unity_opened_or_modified": false,
+  "checks": [
+    {
+      "name": "Exactly nine separate expected exported units",
+      "passed": true,
+      "details": [
+        "FREQUENCY_Housing",
+        "FREQUENCY_Knob",
+        "GAIN_Handle",
+        "GAIN_Housing",
+        "LOCK_Housing",
+        "PHASE_Handle",
+        "PHASE_Housing",
+        "SCOPE_Housing",
+        "SIGNAL_Cabinet"
+      ]
+    },
+    {
+      "name": "SIGNAL_Cabinet neutral mesh origin and finite vertices",
+      "passed": true,
+      "details": {
+        "vertices": 7144
+      }
+    },
+    {
+      "name": "SIGNAL_Cabinet complete finite UV coordinates",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "mesh_loops": 26878
+      }
+    },
+    {
+      "name": "SIGNAL_Cabinet export has only approved runtime materials",
+      "passed": true,
+      "details": [
+        "RLYS_Bakelite",
+        "RLYS_CasePaint",
+        "RLYS_Enamel",
+        "RLYS_FramePaint",
+        "RLYS_OxidizedSteel",
+        "RLYS_PrintDark",
+        "RLYS_PrintLight",
+        "RLYS_Rubber",
+        "RLYS_Steel"
+      ]
+    },
+    {
+      "name": "SIGNAL_Cabinet actual FBX round-trip dimensions and neutral object",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "objects": 1,
+        "maximum_axis_bound_error_m": 8.940696716308594e-08,
+        "imported_origin": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "SIGNAL_Cabinet FBX mesh has no animation or preview assets",
+      "passed": true,
+      "details": [
+        "SIGNAL_Cabinet_EXPORT.001"
+      ]
+    },
+    {
+      "name": "SCOPE_Housing neutral mesh origin and finite vertices",
+      "passed": true,
+      "details": {
+        "vertices": 3704
+      }
+    },
+    {
+      "name": "SCOPE_Housing complete finite UV coordinates",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "mesh_loops": 13178
+      }
+    },
+    {
+      "name": "SCOPE_Housing export has only approved runtime materials",
+      "passed": true,
+      "details": [
+        "RLYS_CasePaint",
+        "RLYS_Enamel",
+        "RLYS_FramePaint",
+        "RLYS_Graticule",
+        "RLYS_OxidizedSteel",
+        "RLYS_PrintDark",
+        "RLYS_Rubber",
+        "RLYS_Steel"
+      ]
+    },
+    {
+      "name": "SCOPE_Housing actual FBX round-trip dimensions and neutral object",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "objects": 1,
+        "maximum_axis_bound_error_m": 2.9802322387695312e-08,
+        "imported_origin": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "SCOPE_Housing FBX mesh has no animation or preview assets",
+      "passed": true,
+      "details": [
+        "SCOPE_Housing_EXPORT.001"
+      ]
+    },
+    {
+      "name": "FREQUENCY_Housing neutral mesh origin and finite vertices",
+      "passed": true,
+      "details": {
+        "vertices": 2651
+      }
+    },
+    {
+      "name": "FREQUENCY_Housing complete finite UV coordinates",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "mesh_loops": 9488
+      }
+    },
+    {
+      "name": "FREQUENCY_Housing export has only approved runtime materials",
+      "passed": true,
+      "details": [
+        "RLYS_Brass",
+        "RLYS_Enamel",
+        "RLYS_OxidizedSteel",
+        "RLYS_PrintDark",
+        "RLYS_Steel"
+      ]
+    },
+    {
+      "name": "FREQUENCY_Housing actual FBX round-trip dimensions and neutral object",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "objects": 1,
+        "maximum_axis_bound_error_m": 3.725290298461914e-09,
+        "imported_origin": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "FREQUENCY_Housing FBX mesh has no animation or preview assets",
+      "passed": true,
+      "details": [
+        "FREQUENCY_Housing_EXPORT.001"
+      ]
+    },
+    {
+      "name": "FREQUENCY_Knob neutral mesh origin and finite vertices",
+      "passed": true,
+      "details": {
+        "vertices": 4936
+      }
+    },
+    {
+      "name": "FREQUENCY_Knob complete finite UV coordinates",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "mesh_loops": 18792
+      }
+    },
+    {
+      "name": "FREQUENCY_Knob export has only approved runtime materials",
+      "passed": true,
+      "details": [
+        "RLYS_Bakelite",
+        "RLYS_FramePaint",
+        "RLYS_PrintLight",
+        "RLYS_Steel"
+      ]
+    },
+    {
+      "name": "FREQUENCY_Knob actual FBX round-trip dimensions and neutral object",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "objects": 1,
+        "maximum_axis_bound_error_m": 7.450580596923828e-09,
+        "imported_origin": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "FREQUENCY_Knob FBX mesh has no animation or preview assets",
+      "passed": true,
+      "details": [
+        "FREQUENCY_Knob_EXPORT.001"
+      ]
+    },
+    {
+      "name": "PHASE_Housing neutral mesh origin and finite vertices",
+      "passed": true,
+      "details": {
+        "vertices": 1517
+      }
+    },
+    {
+      "name": "PHASE_Housing complete finite UV coordinates",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "mesh_loops": 5168
+      }
+    },
+    {
+      "name": "PHASE_Housing export has only approved runtime materials",
+      "passed": true,
+      "details": [
+        "RLYS_Enamel",
+        "RLYS_OxidizedSteel",
+        "RLYS_PrintDark",
+        "RLYS_Rubber",
+        "RLYS_Steel"
+      ]
+    },
+    {
+      "name": "PHASE_Housing actual FBX round-trip dimensions and neutral object",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "objects": 1,
+        "maximum_axis_bound_error_m": 7.450580596923828e-09,
+        "imported_origin": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "PHASE_Housing FBX mesh has no animation or preview assets",
+      "passed": true,
+      "details": [
+        "PHASE_Housing_EXPORT.001"
+      ]
+    },
+    {
+      "name": "PHASE_Handle neutral mesh origin and finite vertices",
+      "passed": true,
+      "details": {
+        "vertices": 392
+      }
+    },
+    {
+      "name": "PHASE_Handle complete finite UV coordinates",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "mesh_loops": 1512
+      }
+    },
+    {
+      "name": "PHASE_Handle export has only approved runtime materials",
+      "passed": true,
+      "details": [
+        "RLYS_Bakelite",
+        "RLYS_OxidizedSteel",
+        "RLYS_PrintDark",
+        "RLYS_PrintLight"
+      ]
+    },
+    {
+      "name": "PHASE_Handle actual FBX round-trip dimensions and neutral object",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "objects": 1,
+        "maximum_axis_bound_error_m": 3.725290298461914e-09,
+        "imported_origin": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "PHASE_Handle FBX mesh has no animation or preview assets",
+      "passed": true,
+      "details": [
+        "PHASE_Handle_EXPORT.001"
+      ]
+    },
+    {
+      "name": "GAIN_Housing neutral mesh origin and finite vertices",
+      "passed": true,
+      "details": {
+        "vertices": 1110
+      }
+    },
+    {
+      "name": "GAIN_Housing complete finite UV coordinates",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "mesh_loops": 3980
+      }
+    },
+    {
+      "name": "GAIN_Housing export has only approved runtime materials",
+      "passed": true,
+      "details": [
+        "RLYS_Enamel",
+        "RLYS_OxidizedSteel",
+        "RLYS_PrintDark",
+        "RLYS_Rubber",
+        "RLYS_Steel"
+      ]
+    },
+    {
+      "name": "GAIN_Housing actual FBX round-trip dimensions and neutral object",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "objects": 1,
+        "maximum_axis_bound_error_m": 1.862645149230957e-08,
+        "imported_origin": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "GAIN_Housing FBX mesh has no animation or preview assets",
+      "passed": true,
+      "details": [
+        "GAIN_Housing_EXPORT.001"
+      ]
+    },
+    {
+      "name": "GAIN_Handle neutral mesh origin and finite vertices",
+      "passed": true,
+      "details": {
+        "vertices": 392
+      }
+    },
+    {
+      "name": "GAIN_Handle complete finite UV coordinates",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "mesh_loops": 1512
+      }
+    },
+    {
+      "name": "GAIN_Handle export has only approved runtime materials",
+      "passed": true,
+      "details": [
+        "RLYS_GainCap",
+        "RLYS_OxidizedSteel",
+        "RLYS_PrintDark"
+      ]
+    },
+    {
+      "name": "GAIN_Handle actual FBX round-trip dimensions and neutral object",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "objects": 1,
+        "maximum_axis_bound_error_m": 3.725290298461914e-09,
+        "imported_origin": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "GAIN_Handle FBX mesh has no animation or preview assets",
+      "passed": true,
+      "details": [
+        "GAIN_Handle_EXPORT.001"
+      ]
+    },
+    {
+      "name": "LOCK_Housing neutral mesh origin and finite vertices",
+      "passed": true,
+      "details": {
+        "vertices": 694
+      }
+    },
+    {
+      "name": "LOCK_Housing complete finite UV coordinates",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "mesh_loops": 2470
+      }
+    },
+    {
+      "name": "LOCK_Housing export has only approved runtime materials",
+      "passed": true,
+      "details": [
+        "RLYS_Enamel",
+        "RLYS_OxidizedSteel",
+        "RLYS_PrintDark",
+        "RLYS_Steel"
+      ]
+    },
+    {
+      "name": "LOCK_Housing actual FBX round-trip dimensions and neutral object",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "objects": 1,
+        "maximum_axis_bound_error_m": 7.450580596923828e-09,
+        "imported_origin": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "LOCK_Housing FBX mesh has no animation or preview assets",
+      "passed": true,
+      "details": [
+        "LOCK_Housing_EXPORT.001"
+      ]
+    },
+    {
+      "name": "Total triangle count is appropriate for one environment prop",
+      "passed": true,
+      "details": {
+        "triangles": 41694,
+        "budget": 90000
+      }
+    },
+    {
+      "name": "SIGNAL_Cabinet authoring pivot matches saved Unity mount",
+      "passed": true,
+      "details": {
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "error_m": 0.0
+      }
+    },
+    {
+      "name": "SCOPE_Housing authoring pivot matches saved Unity mount",
+      "passed": true,
+      "details": {
+        "expected": [
+          0,
+          0.42,
+          -0.55
+        ],
+        "actual": [
+          -5.960464477539063e-08,
+          0.42000001668930054,
+          -0.550000011920929
+        ],
+        "error_m": 6.664001874625056e-08
+      }
+    },
+    {
+      "name": "FREQUENCY_Housing authoring pivot matches saved Unity mount",
+      "passed": true,
+      "details": {
+        "expected": [
+          -0.48,
+          -0.16,
+          -0.55
+        ],
+        "actual": [
+          -0.47999998927116394,
+          -0.1600000113248825,
+          -0.550000011920929
+        ],
+        "error_m": 1.4901161193847656e-08
+      }
+    },
+    {
+      "name": "FREQUENCY_Knob authoring pivot matches saved Unity mount",
+      "passed": true,
+      "details": {
+        "expected": [
+          -0.48,
+          -0.16,
+          -0.65
+        ],
+        "actual": [
+          -0.47999998927116394,
+          -0.1600000113248825,
+          -0.6500000953674316
+        ],
+        "error_m": 1.2013700229374393e-07
+      }
+    },
+    {
+      "name": "PHASE_Housing authoring pivot matches saved Unity mount",
+      "passed": true,
+      "details": {
+        "expected": [
+          0.1,
+          -0.16,
+          -0.55
+        ],
+        "actual": [
+          0.09999999403953552,
+          -0.1599999964237213,
+          -0.550000011920929
+        ],
+        "error_m": 7.450580596923828e-09
+      }
+    },
+    {
+      "name": "PHASE_Handle authoring pivot matches saved Unity mount",
+      "passed": true,
+      "details": {
+        "expected": [
+          -0.15,
+          -0.16,
+          -0.64
+        ],
+        "actual": [
+          -0.15000000596046448,
+          -0.1599999964237213,
+          -0.6399999856948853
+        ],
+        "error_m": 0.0
+      }
+    },
+    {
+      "name": "GAIN_Housing authoring pivot matches saved Unity mount",
+      "passed": true,
+      "details": {
+        "expected": [
+          0.64,
+          -0.28,
+          -0.55
+        ],
+        "actual": [
+          0.6399999856948853,
+          -0.2799999713897705,
+          -0.5500000715255737
+        ],
+        "error_m": 6.664001874625056e-08
+      }
+    },
+    {
+      "name": "GAIN_Handle authoring pivot matches saved Unity mount",
+      "passed": true,
+      "details": {
+        "expected": [
+          0.64,
+          -0.388,
+          -0.64
+        ],
+        "actual": [
+          0.6399999856948853,
+          -0.3880000114440918,
+          -0.6399999856948853
+        ],
+        "error_m": 0.0
+      }
+    },
+    {
+      "name": "LOCK_Housing authoring pivot matches saved Unity mount",
+      "passed": true,
+      "details": {
+        "expected": [
+          0,
+          -0.65,
+          -0.55
+        ],
+        "actual": [
+          0.0,
+          -0.6500000357627869,
+          -0.550000011920929
+        ],
+        "error_m": 5.960464477539063e-08
+      }
+    },
+    {
+      "name": "PHASE_Handle parent scale cancellation and original collider footprint",
+      "passed": true,
+      "details": {
+        "scale_cancellation_error": 0.0,
+        "axis_overshoot_m": [
+          -0.0029999984800815616,
+          -0.0045000013709068365,
+          -0.0010000093281269107
+        ],
+        "note": "Up to 2mm front surface relief is permitted, keeping the original XY hit area."
+      }
+    },
+    {
+      "name": "PHASE_Handle complete travel has no fixed housing surface intersection",
+      "passed": true,
+      "details": {
+        "samples": 101,
+        "collision_samples": 0,
+        "first_samples": [],
+        "last_samples": [],
+        "note": "Actual evaluated export mesh BVH surface intersections, including touching surfaces."
+      }
+    },
+    {
+      "name": "GAIN_Handle parent scale cancellation and original collider footprint",
+      "passed": true,
+      "details": {
+        "scale_cancellation_error": 0.0,
+        "axis_overshoot_m": [
+          -0.004000000357627875,
+          -0.0029999984800815616,
+          -0.0010000093281269107
+        ],
+        "note": "Up to 2mm front surface relief is permitted, keeping the original XY hit area."
+      }
+    },
+    {
+      "name": "GAIN_Handle complete travel has no fixed housing surface intersection",
+      "passed": true,
+      "details": {
+        "samples": 101,
+        "collision_samples": 0,
+        "first_samples": [],
+        "last_samples": [],
+        "note": "Actual evaluated export mesh BVH surface intersections, including touching surfaces."
+      }
+    },
+    {
+      "name": "Live waveform footprint is clear of new opaque scope geometry",
+      "passed": true,
+      "details": {
+        "rays": 1891,
+        "occluded": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "Existing unlit lens remains visible through new lock housing",
+      "passed": true,
+      "details": {
+        "rays": 465,
+        "occluded": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "Existing controlled lit lens remains visible through new lock housing",
+      "passed": true,
+      "details": {
+        "rays": 465,
+        "occluded": 0,
+        "examples": []
+      }
+    }
+  ],
+  "manual_runtime_check": "Unity import, lighting and interaction remain for the user.",
+  "all_checks_passed": true,
+  "check_count": 63,
+  "failures": []
+}

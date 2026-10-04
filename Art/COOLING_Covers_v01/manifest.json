@@ -1,0 +1,232 @@
+{
+  "asset": "RELAY COOLING protective covers v01",
+  "source_blend": "C:\\Users\\gonut\\RELAY_Art\\COOLING_v01\\RELAY_COOLING_v01.blend",
+  "source_sha256": "820d9e910f078d30aa96494d96faeab0e5d692ad4cc49815308b76107cda8045",
+  "additive_only": true,
+  "unity_modified": false,
+  "units": "metres",
+  "front": "Unity -Z",
+  "preserved_flow_glass_local_z": 0.01,
+  "front_glass_z": -0.513,
+  "rectangular_openings": [
+    {
+      "name": "FLOW meter",
+      "x": -0.32,
+      "y": 0.35,
+      "w": 0.634,
+      "h": 0.572
+    },
+    {
+      "name": "PUMP switch",
+      "x": -0.3,
+      "y": -0.4,
+      "w": 0.308,
+      "h": 0.352
+    },
+    {
+      "name": "THERMAL display",
+      "x": 0.28,
+      "y": -0.217,
+      "w": 0.528,
+      "h": 0.358
+    }
+  ],
+  "valve_opening": {
+    "x": 0.28,
+    "y": 0.35,
+    "r": 0.118
+  },
+  "import_note": "All four new FBX children: parent COOLING_Module, local position zero, rotation Y180, scale1. No new colliders.",
+  "materials": [
+    {
+      "name": "RLYC_CoverGlass",
+      "hex": "DCEAE6",
+      "alpha": 0.14,
+      "metallic": 0,
+      "smoothness": 0.91,
+      "surface": "Transparent",
+      "blend": "Alpha",
+      "render_face": "Front",
+      "cast_shadows": false,
+      "receive_shadows": false
+    },
+    {
+      "name": "RLYC_FramePaint",
+      "reuse_existing": true
+    },
+    {
+      "name": "RLYC_Rubber",
+      "reuse_existing": true
+    },
+    {
+      "name": "RLYC_Steel",
+      "reuse_existing": true
+    },
+    {
+      "name": "RLYC_PrintDark",
+      "reuse_existing": true
+    }
+  ],
+  "parts": [
+    {
+      "name": "COOLING_CoverFrame",
+      "file": "exports/COOLING_CoverFrame.fbx",
+      "triangles": 16128,
+      "vertices": 8320,
+      "materials": [
+        "RLYC_Rubber",
+        "RLYC_FramePaint",
+        "RLYC_PrintDark",
+        "RLYC_Steel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.9248499870300293,
+          0.9248499274253845
+        ],
+        [
+          -1.0705000162124634,
+          1.1145000457763672
+        ],
+        [
+          -0.5258499979972839,
+          0.45399999618530273
+        ]
+      ],
+      "unity_parent": "Environment/COOLING_Module",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "COOLING_FrontGlass",
+      "file": "exports/COOLING_FrontGlass.fbx",
+      "triangles": 1228,
+      "vertices": 608,
+      "materials": [
+        "RLYC_CoverGlass"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.8150143623352051,
+          0.8149999976158142
+        ],
+        [
+          -1.0290000438690186,
+          0.8489999771118164
+        ],
+        [
+          -0.5160000324249268,
+          -0.5099999904632568
+        ]
+      ],
+      "unity_parent": "Environment/COOLING_Module",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "COOLING_LeftGlass",
+      "file": "exports/COOLING_LeftGlass.fbx",
+      "triangles": 108,
+      "vertices": 56,
+      "materials": [
+        "RLYC_CoverGlass"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.9010000228881836,
+          -0.8949999809265137
+        ],
+        [
+          -1.059000015258789,
+          1.1029999256134033
+        ],
+        [
+          -0.41100001335144043,
+          0.41100001335144043
+        ]
+      ],
+      "unity_parent": "Environment/COOLING_Module",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "COOLING_RightGlass",
+      "file": "exports/COOLING_RightGlass.fbx",
+      "triangles": 108,
+      "vertices": 56,
+      "materials": [
+        "RLYC_CoverGlass"
+      ],
+      "bounds_unity_local": [
+        [
+          0.8949999809265137,
+          0.9010000228881836
+        ],
+        [
+          -1.059000015258789,
+          1.1029999256134033
+        ],
+        [
+          -0.41100001335144043,
+          0.41100001335144043
+        ]
+      ],
+      "unity_parent": "Environment/COOLING_Module",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "triangles_total": 17572
+}
