@@ -1,0 +1,1625 @@
+{
+  "method": "Saved Blender baked meshes, actual FBX round trip, measured Unity mounts, mesh BVH rays.",
+  "unity_opened_or_modified": false,
+  "checks": [
+    {
+      "name": "Exactly eleven expected model exports",
+      "passed": true,
+      "details": [
+        "COLD_Housing",
+        "CORE_Cabinet",
+        "CORE_Containment",
+        "CORE_Emitter",
+        "CORE_Glass",
+        "CORE_Guardrail",
+        "HEAT_Housing",
+        "STARTUP_GaugeHousing",
+        "STARTUP_Housing",
+        "START_Handle",
+        "START_Housing"
+      ]
+    },
+    {
+      "name": "CORE_Cabinet baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "CORE_Cabinet_EXPORT"
+      }
+    },
+    {
+      "name": "CORE_Cabinet nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 3976,
+        "triangles": 7425,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "CORE_Cabinet complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 14683,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "CORE_Cabinet runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_CasePaint",
+        "RLYK_Enamel",
+        "RLYK_FramePaint",
+        "RLYK_PrintDark",
+        "RLYK_PrintLight",
+        "RLYK_Rubber",
+        "RLYK_Steel"
+      ]
+    },
+    {
+      "name": "CORE_Cabinet manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -0.8999999761581421,
+            0.906499981880188
+          ],
+          [
+            -1.1970000267028809,
+            1.1970000267028809
+          ],
+          [
+            -0.5122500658035278,
+            0.5430001020431519
+          ]
+        ],
+        "manifest": [
+          [
+            -0.8999999761581421,
+            0.906499981880188
+          ],
+          [
+            -1.1970000267028809,
+            1.1970000267028809
+          ],
+          [
+            -0.5122500658035278,
+            0.5430001020431519
+          ]
+        ]
+      }
+    },
+    {
+      "name": "CORE_Cabinet FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\CORE_Cabinet.fbx"
+    },
+    {
+      "name": "CORE_Cabinet actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 5.960464477539063e-08,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "CORE_Cabinet reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "CORE_Cabinet_EXPORT.001"
+      ]
+    },
+    {
+      "name": "START_Housing baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "START_Housing_EXPORT"
+      }
+    },
+    {
+      "name": "START_Housing nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 1379,
+        "triangles": 2462,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "START_Housing complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 4938,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "START_Housing runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_DarkSteel",
+        "RLYK_Enamel",
+        "RLYK_FramePaint",
+        "RLYK_PrintDark",
+        "RLYK_Steel"
+      ]
+    },
+    {
+      "name": "START_Housing manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -0.2070000022649765,
+            0.2070000022649765
+          ],
+          [
+            -0.414000004529953,
+            0.4140000343322754
+          ],
+          [
+            -0.14800001680850983,
+            0.054999977350234985
+          ]
+        ],
+        "manifest": [
+          [
+            -0.2070000022649765,
+            0.2070000022649765
+          ],
+          [
+            -0.414000004529953,
+            0.4140000343322754
+          ],
+          [
+            -0.14800001680850983,
+            0.054999977350234985
+          ]
+        ]
+      }
+    },
+    {
+      "name": "START_Housing FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\START_Housing.fbx"
+    },
+    {
+      "name": "START_Housing actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 2.9802322387695312e-08,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "START_Housing reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "START_Housing_EXPORT.001"
+      ]
+    },
+    {
+      "name": "START_Handle baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "START_Handle_EXPORT"
+      }
+    },
+    {
+      "name": "START_Handle nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 584,
+        "triangles": 1136,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "START_Handle complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 2216,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "START_Handle runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_Bakelite",
+        "RLYK_PrintDark",
+        "RLYK_Rubber",
+        "RLYK_Steel"
+      ]
+    },
+    {
+      "name": "START_Handle manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -0.1379999965429306,
+            0.1379999965429306
+          ],
+          [
+            -0.03100001811981201,
+            0.40300002694129944
+          ],
+          [
+            -0.04850001260638237,
+            0.04699999839067459
+          ]
+        ],
+        "manifest": [
+          [
+            -0.1379999965429306,
+            0.1379999965429306
+          ],
+          [
+            -0.03100001811981201,
+            0.40300002694129944
+          ],
+          [
+            -0.04850001260638237,
+            0.04699999839067459
+          ]
+        ]
+      }
+    },
+    {
+      "name": "START_Handle FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\START_Handle.fbx"
+    },
+    {
+      "name": "START_Handle actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 2.9802322387695312e-08,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "START_Handle reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "START_Handle_EXPORT.001"
+      ]
+    },
+    {
+      "name": "STARTUP_GaugeHousing baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "STARTUP_GaugeHousing_EXPORT"
+      }
+    },
+    {
+      "name": "STARTUP_GaugeHousing nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 1104,
+        "triangles": 1898,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "STARTUP_GaugeHousing complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 3902,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "STARTUP_GaugeHousing runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_DarkSteel",
+        "RLYK_FramePaint",
+        "RLYK_PrintDark",
+        "RLYK_PrintLight",
+        "RLYK_Steel"
+      ]
+    },
+    {
+      "name": "STARTUP_GaugeHousing manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -0.5609999895095825,
+            0.560999870300293
+          ],
+          [
+            -0.1264999955892563,
+            0.2011098861694336
+          ],
+          [
+            -0.09925000369548798,
+            0.05899999290704727
+          ]
+        ],
+        "manifest": [
+          [
+            -0.5609999895095825,
+            0.560999870300293
+          ],
+          [
+            -0.1264999955892563,
+            0.2011098861694336
+          ],
+          [
+            -0.09925000369548798,
+            0.05899999290704727
+          ]
+        ]
+      }
+    },
+    {
+      "name": "STARTUP_GaugeHousing FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\STARTUP_GaugeHousing.fbx"
+    },
+    {
+      "name": "STARTUP_GaugeHousing actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 7.450580596923828e-09,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "STARTUP_GaugeHousing reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "STARTUP_GaugeHousing_EXPORT.001"
+      ]
+    },
+    {
+      "name": "HEAT_Housing baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "HEAT_Housing_EXPORT"
+      }
+    },
+    {
+      "name": "HEAT_Housing nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 712,
+        "triangles": 1219,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "HEAT_Housing complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 2557,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "HEAT_Housing runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_DarkSteel",
+        "RLYK_Enamel",
+        "RLYK_PrintDark",
+        "RLYK_Steel"
+      ]
+    },
+    {
+      "name": "HEAT_Housing manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -0.1264999955892563,
+            0.1264999955892563
+          ],
+          [
+            -0.1264999955892563,
+            0.1264999955892563
+          ],
+          [
+            -0.08750001341104507,
+            0.052999988198280334
+          ]
+        ],
+        "manifest": [
+          [
+            -0.1264999955892563,
+            0.1264999955892563
+          ],
+          [
+            -0.1264999955892563,
+            0.1264999955892563
+          ],
+          [
+            -0.08750001341104507,
+            0.052999988198280334
+          ]
+        ]
+      }
+    },
+    {
+      "name": "HEAT_Housing FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\HEAT_Housing.fbx"
+    },
+    {
+      "name": "HEAT_Housing actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 7.450580596923828e-09,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "HEAT_Housing reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "HEAT_Housing_EXPORT.001"
+      ]
+    },
+    {
+      "name": "COLD_Housing baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "COLD_Housing_EXPORT"
+      }
+    },
+    {
+      "name": "COLD_Housing nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 694,
+        "triangles": 1198,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "COLD_Housing complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 2494,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "COLD_Housing runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_DarkSteel",
+        "RLYK_Enamel",
+        "RLYK_PrintDark",
+        "RLYK_Steel"
+      ]
+    },
+    {
+      "name": "COLD_Housing manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -0.1264999955892563,
+            0.1264999955892563
+          ],
+          [
+            -0.1264999955892563,
+            0.1264999955892563
+          ],
+          [
+            -0.08750001341104507,
+            0.052999988198280334
+          ]
+        ],
+        "manifest": [
+          [
+            -0.1264999955892563,
+            0.1264999955892563
+          ],
+          [
+            -0.1264999955892563,
+            0.1264999955892563
+          ],
+          [
+            -0.08750001341104507,
+            0.052999988198280334
+          ]
+        ]
+      }
+    },
+    {
+      "name": "COLD_Housing FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\COLD_Housing.fbx"
+    },
+    {
+      "name": "COLD_Housing actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 7.450580596923828e-09,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "COLD_Housing reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "COLD_Housing_EXPORT.001"
+      ]
+    },
+    {
+      "name": "STARTUP_Housing baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "STARTUP_Housing_EXPORT"
+      }
+    },
+    {
+      "name": "STARTUP_Housing nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 619,
+        "triangles": 1126,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "STARTUP_Housing complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 2278,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "STARTUP_Housing runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_DarkSteel",
+        "RLYK_Enamel",
+        "RLYK_PrintDark",
+        "RLYK_Steel"
+      ]
+    },
+    {
+      "name": "STARTUP_Housing manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -0.1860000044107437,
+            0.1860000044107437
+          ],
+          [
+            -0.1860000044107437,
+            0.1860000044107437
+          ],
+          [
+            -0.08750001341104507,
+            0.052999988198280334
+          ]
+        ],
+        "manifest": [
+          [
+            -0.1860000044107437,
+            0.1860000044107437
+          ],
+          [
+            -0.1860000044107437,
+            0.1860000044107437
+          ],
+          [
+            -0.08750001341104507,
+            0.052999988198280334
+          ]
+        ]
+      }
+    },
+    {
+      "name": "STARTUP_Housing FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\STARTUP_Housing.fbx"
+    },
+    {
+      "name": "STARTUP_Housing actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 1.4901161193847656e-08,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "STARTUP_Housing reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "STARTUP_Housing_EXPORT.001"
+      ]
+    },
+    {
+      "name": "CORE_Containment baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "CORE_Containment_EXPORT"
+      }
+    },
+    {
+      "name": "CORE_Containment nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 34664,
+        "triangles": 67354,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "CORE_Containment complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 130522,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "CORE_Containment runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_Brass",
+        "RLYK_CasePaint",
+        "RLYK_DarkSteel",
+        "RLYK_Enamel",
+        "RLYK_FramePaint",
+        "RLYK_PrintDark",
+        "RLYK_PrintLight",
+        "RLYK_Rubber",
+        "RLYK_Steel"
+      ]
+    },
+    {
+      "name": "CORE_Containment manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -1.496000051498413,
+            1.4960001707077026
+          ],
+          [
+            -1.75,
+            1.731742024421692
+          ],
+          [
+            -1.496000051498413,
+            1.4960001707077026
+          ]
+        ],
+        "manifest": [
+          [
+            -1.496000051498413,
+            1.4960001707077026
+          ],
+          [
+            -1.75,
+            1.731742024421692
+          ],
+          [
+            -1.496000051498413,
+            1.4960001707077026
+          ]
+        ]
+      }
+    },
+    {
+      "name": "CORE_Containment FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\CORE_Containment.fbx"
+    },
+    {
+      "name": "CORE_Containment actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 1.1920928955078125e-07,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "CORE_Containment reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "CORE_Containment_EXPORT.001"
+      ]
+    },
+    {
+      "name": "CORE_Glass baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "CORE_Glass_EXPORT"
+      }
+    },
+    {
+      "name": "CORE_Glass nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 456,
+        "triangles": 888,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "CORE_Glass complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 1776,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "CORE_Glass runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_ChamberGlass"
+      ]
+    },
+    {
+      "name": "CORE_Glass manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -0.7219865322113037,
+            0.7219865322113037
+          ],
+          [
+            -0.7239999771118164,
+            0.7239999771118164
+          ],
+          [
+            -0.722000002861023,
+            0.722000002861023
+          ]
+        ],
+        "manifest": [
+          [
+            -0.7219865322113037,
+            0.7219865322113037
+          ],
+          [
+            -0.7239999771118164,
+            0.7239999771118164
+          ],
+          [
+            -0.722000002861023,
+            0.722000002861023
+          ]
+        ]
+      }
+    },
+    {
+      "name": "CORE_Glass FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\CORE_Glass.fbx"
+    },
+    {
+      "name": "CORE_Glass actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 5.960464477539063e-08,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "CORE_Glass reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "CORE_Glass_EXPORT.001"
+      ]
+    },
+    {
+      "name": "CORE_Emitter baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "CORE_Emitter_EXPORT"
+      }
+    },
+    {
+      "name": "CORE_Emitter nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 2376,
+        "triangles": 4692,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "CORE_Emitter complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 9384,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "CORE_Emitter runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_Emitter"
+      ]
+    },
+    {
+      "name": "CORE_Emitter manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -0.9505699872970581,
+            0.9286802411079407
+          ],
+          [
+            -0.8364999890327454,
+            0.8324999809265137
+          ],
+          [
+            -1.0440000295639038,
+            1.0440001487731934
+          ]
+        ],
+        "manifest": [
+          [
+            -0.9505699872970581,
+            0.9286802411079407
+          ],
+          [
+            -0.8364999890327454,
+            0.8324999809265137
+          ],
+          [
+            -1.0440000295639038,
+            1.0440001487731934
+          ]
+        ]
+      }
+    },
+    {
+      "name": "CORE_Emitter FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\CORE_Emitter.fbx"
+    },
+    {
+      "name": "CORE_Emitter actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 1.1920928955078125e-07,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "CORE_Emitter reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "CORE_Emitter_EXPORT.001"
+      ]
+    },
+    {
+      "name": "CORE_Guardrail baked mesh exists",
+      "passed": true,
+      "details": {
+        "object": "CORE_Guardrail_EXPORT"
+      }
+    },
+    {
+      "name": "CORE_Guardrail nonempty finite geometry and unit source scale",
+      "passed": true,
+      "details": {
+        "vertices": 6272,
+        "triangles": 12256,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "CORE_Guardrail complete finite UV mapping",
+      "passed": true,
+      "details": {
+        "loops": 23168,
+        "uv_layers": 1
+      }
+    },
+    {
+      "name": "CORE_Guardrail runtime materials and no preview content",
+      "passed": true,
+      "details": [
+        "RLYK_DarkSteel",
+        "RLYK_SafetyPaint",
+        "RLYK_Steel"
+      ]
+    },
+    {
+      "name": "CORE_Guardrail manifest dimensions match stored mesh",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            -1.4505000114440918,
+            1.4505000114440918
+          ],
+          [
+            -1.5794999599456787,
+            -0.6270000338554382
+          ],
+          [
+            -1.4505000114440918,
+            1.4505000114440918
+          ]
+        ],
+        "manifest": [
+          [
+            -1.4505000114440918,
+            1.4505000114440918
+          ],
+          [
+            -1.5794999599456787,
+            -0.6270000338554382
+          ],
+          [
+            -1.4505000114440918,
+            1.4505000114440918
+          ]
+        ]
+      }
+    },
+    {
+      "name": "CORE_Guardrail FBX path remains within art output folder",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\CORE_v01\\exports\\CORE_Guardrail.fbx"
+    },
+    {
+      "name": "CORE_Guardrail actual FBX round-trip bounds and identity transform",
+      "passed": true,
+      "details": {
+        "mesh_count": 1,
+        "object_count": 1,
+        "max_bound_error_m": 1.1920928955078125e-07,
+        "scales": [
+          [
+            1.0,
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "CORE_Guardrail reimport contains no animation camera light or preview material",
+      "passed": true,
+      "details": [
+        "CORE_Guardrail_EXPORT.001"
+      ]
+    },
+    {
+      "name": "Combined model geometry budget",
+      "passed": true,
+      "details": {
+        "triangles": 101654,
+        "budget": 180000,
+        "note": "Mesh complexity check, not a runtime performance measurement."
+      }
+    },
+    {
+      "name": "CORE_Cabinet attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/CORE_Module",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "START_Housing attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/CORE_Module/START_Lever",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "START_Handle attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/CORE_Module/START_Lever/HandlePivot",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "STARTUP_GaugeHousing attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/CORE_Module/Startup_Gauge",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "HEAT_Housing attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/CORE_Module/HEAT_Indicator",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "COLD_Housing attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/CORE_Module/COLD_Indicator",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "STARTUP_Housing attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/CORE_Module/STARTUP_Indicator",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "CORE_Containment attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/Core_Block",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          0.3333333333333333,
+          0.2857142857142857,
+          0.3333333333333333
+        ]
+      }
+    },
+    {
+      "name": "CORE_Glass attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/Core_Block",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          0.3333333333333333,
+          0.2857142857142857,
+          0.3333333333333333
+        ]
+      }
+    },
+    {
+      "name": "CORE_Emitter attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/Core_Block",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          0.3333333333333333,
+          0.2857142857142857,
+          0.3333333333333333
+        ]
+      }
+    },
+    {
+      "name": "CORE_Guardrail attachment preserves old transform and collider scale",
+      "passed": true,
+      "details": {
+        "parent": "Environment/Core_Block",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "scale": [
+          0.3333333333333333,
+          0.2857142857142857,
+          0.3333333333333333
+        ]
+      }
+    },
+    {
+      "name": "Assembled reactor fits original Core_Block collision envelope",
+      "passed": true,
+      "details": {
+        "local_bounds": [
+          [
+            -1.496000051498413,
+            1.4960001707077026
+          ],
+          [
+            -1.75,
+            1.731742024421692
+          ],
+          [
+            -1.496000051498413,
+            1.4960001707077026
+          ]
+        ],
+        "world_bounds": [
+          [
+            -1.496000051498413,
+            1.4960001707077026
+          ],
+          [
+            0.0,
+            3.481742024421692
+          ],
+          [
+            5.003999948501587,
+            7.996000170707703
+          ]
+        ],
+        "maximum_excess_m": 0.0,
+        "note": "Includes glass, emitter, guardrail and containment, not only main shell."
+      }
+    },
+    {
+      "name": "Full startup progress fill remains visible through all fixed new control meshes",
+      "passed": true,
+      "details": {
+        "rays": 671,
+        "opaque_parts_checked": [
+          "COLD_Housing",
+          "CORE_Cabinet",
+          "HEAT_Housing",
+          "STARTUP_GaugeHousing",
+          "STARTUP_Housing",
+          "START_Housing"
+        ],
+        "occlusion_count": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "Unfilled startup gauge track remains visible through all fixed new control meshes",
+      "passed": true,
+      "details": {
+        "rays": 915,
+        "opaque_parts_checked": [
+          "COLD_Housing",
+          "CORE_Cabinet",
+          "HEAT_Housing",
+          "STARTUP_GaugeHousing",
+          "STARTUP_Housing",
+          "START_Housing"
+        ],
+        "occlusion_count": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "startup original unlit lens remains visible",
+      "passed": true,
+      "details": {
+        "rays": 231,
+        "opaque_parts_checked": [
+          "COLD_Housing",
+          "CORE_Cabinet",
+          "HEAT_Housing",
+          "STARTUP_GaugeHousing",
+          "STARTUP_Housing",
+          "START_Housing"
+        ],
+        "occlusion_count": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "startup original script-controlled lit lens remains visible",
+      "passed": true,
+      "details": {
+        "rays": 231,
+        "opaque_parts_checked": [
+          "COLD_Housing",
+          "CORE_Cabinet",
+          "HEAT_Housing",
+          "STARTUP_GaugeHousing",
+          "STARTUP_Housing",
+          "START_Housing"
+        ],
+        "occlusion_count": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "heat original unlit lens remains visible",
+      "passed": true,
+      "details": {
+        "rays": 231,
+        "opaque_parts_checked": [
+          "COLD_Housing",
+          "CORE_Cabinet",
+          "HEAT_Housing",
+          "STARTUP_GaugeHousing",
+          "STARTUP_Housing",
+          "START_Housing"
+        ],
+        "occlusion_count": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "heat original script-controlled lit lens remains visible",
+      "passed": true,
+      "details": {
+        "rays": 231,
+        "opaque_parts_checked": [
+          "COLD_Housing",
+          "CORE_Cabinet",
+          "HEAT_Housing",
+          "STARTUP_GaugeHousing",
+          "STARTUP_Housing",
+          "START_Housing"
+        ],
+        "occlusion_count": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "cold original unlit lens remains visible",
+      "passed": true,
+      "details": {
+        "rays": 231,
+        "opaque_parts_checked": [
+          "COLD_Housing",
+          "CORE_Cabinet",
+          "HEAT_Housing",
+          "STARTUP_GaugeHousing",
+          "STARTUP_Housing",
+          "START_Housing"
+        ],
+        "occlusion_count": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "cold original script-controlled lit lens remains visible",
+      "passed": true,
+      "details": {
+        "rays": 231,
+        "opaque_parts_checked": [
+          "COLD_Housing",
+          "CORE_Cabinet",
+          "HEAT_Housing",
+          "STARTUP_GaugeHousing",
+          "STARTUP_Housing",
+          "START_Housing"
+        ],
+        "occlusion_count": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "Retained dynamic startup status text rectangle is not covered by new cabinet parts",
+      "passed": true,
+      "details": {
+        "rays": 1037,
+        "opaque_parts_checked": [
+          "COLD_Housing",
+          "CORE_Cabinet",
+          "HEAT_Housing",
+          "STARTUP_GaugeHousing",
+          "STARTUP_Housing",
+          "START_Housing"
+        ],
+        "occlusion_count": 0,
+        "examples": []
+      }
+    },
+    {
+      "name": "Unity source unchanged since audit: Startup_Graybox.unity",
+      "passed": true,
+      "details": {
+        "path": "C:/Users/gonut/School_p2/Assets/Scenes/Startup_Graybox.unity",
+        "sha256": "14D06B562676F37C293D322678444B7EE0E601A6384AE0C795FFA8B86905E671",
+        "note": "A mismatch could be a user edit; this validator never changes source files."
+      }
+    },
+    {
+      "name": "Unity source unchanged since audit: CoreModule.cs",
+      "passed": true,
+      "details": {
+        "path": "C:/Users/gonut/School_p2/Assets/_STARTUP/Scripts/CoreModule.cs",
+        "sha256": "418AB68966DAAD25382E1AF3C151B69ABF7852396907F154321677860C570BC0",
+        "note": "A mismatch could be a user edit; this validator never changes source files."
+      }
+    },
+    {
+      "name": "Unity source unchanged since audit: CorePanelDisplay.cs",
+      "passed": true,
+      "details": {
+        "path": "C:/Users/gonut/School_p2/Assets/_STARTUP/Scripts/CorePanelDisplay.cs",
+        "sha256": "0E280795D3DD68134F248E5F7B79F8C6B4E4B293FB201AEA44E9335C842268AF",
+        "note": "A mismatch could be a user edit; this validator never changes source files."
+      }
+    },
+    {
+      "name": "Unity source unchanged since audit: CoreStartLever.cs",
+      "passed": true,
+      "details": {
+        "path": "C:/Users/gonut/School_p2/Assets/_STARTUP/Scripts/CoreStartLever.cs",
+        "sha256": "718845880F60FDDAC7D72E638800AE59A9C83AC6CD3419335B65EF5A3DAC6ECD",
+        "note": "A mismatch could be a user edit; this validator never changes source files."
+      }
+    },
+    {
+      "name": "Unity source unchanged since audit: MachineSwitch.cs",
+      "passed": true,
+      "details": {
+        "path": "C:/Users/gonut/School_p2/Assets/_STARTUP/Scripts/MachineSwitch.cs",
+        "sha256": "0D36625BAFBEEBD44F0CC2A0658D5914D10D873A689D63B5F691303848889607",
+        "note": "A mismatch could be a user edit; this validator never changes source files."
+      }
+    },
+    {
+      "name": "Full fresh authoring baseline unchanged",
+      "passed": true,
+      "details": {
+        "files_compared": 72,
+        "changed": [],
+        "scope": "Only the scene, scripts, script metadata and project settings listed in the fresh baseline."
+      }
+    }
+  ],
+  "manual_runtime_check": "Unity import, render order, material remapping, lighting, first-person interaction and startup gameplay remain for the user.",
+  "all_checks_passed": true,
+  "check_count": 117,
+  "total_triangles": 101654,
+  "failures": []
+}

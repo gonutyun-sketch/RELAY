@@ -1,0 +1,656 @@
+{
+  "asset": "RELAY CORE v01",
+  "unity_modified": false,
+  "units": "metres",
+  "front": "Unity -Z",
+  "reference_scene": "Assets/Scenes/Startup_Graybox.unity",
+  "reactor_reference_position": [
+    0,
+    1.75,
+    6.5
+  ],
+  "reference_module_position": [
+    5,
+    1.2,
+    4
+  ],
+  "reactor_reference_bounds": [
+    [
+      -1.5,
+      1.5
+    ],
+    [
+      -1.75,
+      1.75
+    ],
+    [
+      -1.5,
+      1.5
+    ]
+  ],
+  "emitter_default": "Unpowered. Emission is zero. Any energized preview is presentation only.",
+  "live_display_note": "Keep Track,FillPivot,Fill,all Lens_Off/Lens_On,and Startup_Status. Preview-only values/lenses not exported.",
+  "parts": [
+    {
+      "name": "CORE_Cabinet",
+      "file": "exports/CORE_Cabinet.fbx",
+      "triangles": 7425,
+      "vertices": 3976,
+      "materials": [
+        "RLYK_PrintLight",
+        "RLYK_CasePaint",
+        "RLYK_FramePaint",
+        "RLYK_Enamel",
+        "RLYK_Rubber",
+        "RLYK_PrintDark",
+        "RLYK_Steel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.8999999761581421,
+          0.906499981880188
+        ],
+        [
+          -1.1970000267028809,
+          1.1970000267028809
+        ],
+        [
+          -0.5122500658035278,
+          0.5430001020431519
+        ]
+      ],
+      "unity_parent": "Environment/CORE_Module",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "START_Housing",
+      "file": "exports/START_Housing.fbx",
+      "triangles": 2462,
+      "vertices": 1379,
+      "materials": [
+        "RLYK_PrintDark",
+        "RLYK_DarkSteel",
+        "RLYK_Steel",
+        "RLYK_Enamel",
+        "RLYK_FramePaint"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.2070000022649765,
+          0.2070000022649765
+        ],
+        [
+          -0.414000004529953,
+          0.4140000343322754
+        ],
+        [
+          -0.14800001680850983,
+          0.054999977350234985
+        ]
+      ],
+      "unity_parent": "Environment/CORE_Module/START_Lever",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "START_Handle",
+      "file": "exports/START_Handle.fbx",
+      "triangles": 1136,
+      "vertices": 584,
+      "materials": [
+        "RLYK_Bakelite",
+        "RLYK_Steel",
+        "RLYK_PrintDark",
+        "RLYK_Rubber"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.1379999965429306,
+          0.1379999965429306
+        ],
+        [
+          -0.03100001811981201,
+          0.40300002694129944
+        ],
+        [
+          -0.04850001260638237,
+          0.04699999839067459
+        ]
+      ],
+      "unity_parent": "Environment/CORE_Module/START_Lever/HandlePivot",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STARTUP_GaugeHousing",
+      "file": "exports/STARTUP_GaugeHousing.fbx",
+      "triangles": 1898,
+      "vertices": 1104,
+      "materials": [
+        "RLYK_PrintDark",
+        "RLYK_DarkSteel",
+        "RLYK_FramePaint",
+        "RLYK_Steel",
+        "RLYK_PrintLight"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.5609999895095825,
+          0.560999870300293
+        ],
+        [
+          -0.1264999955892563,
+          0.2011098861694336
+        ],
+        [
+          -0.09925000369548798,
+          0.05899999290704727
+        ]
+      ],
+      "unity_parent": "Environment/CORE_Module/Startup_Gauge",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "HEAT_Housing",
+      "file": "exports/HEAT_Housing.fbx",
+      "triangles": 1219,
+      "vertices": 712,
+      "materials": [
+        "RLYK_DarkSteel",
+        "RLYK_Enamel",
+        "RLYK_PrintDark",
+        "RLYK_Steel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.1264999955892563,
+          0.1264999955892563
+        ],
+        [
+          -0.1264999955892563,
+          0.1264999955892563
+        ],
+        [
+          -0.08750001341104507,
+          0.052999988198280334
+        ]
+      ],
+      "unity_parent": "Environment/CORE_Module/HEAT_Indicator",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "COLD_Housing",
+      "file": "exports/COLD_Housing.fbx",
+      "triangles": 1198,
+      "vertices": 694,
+      "materials": [
+        "RLYK_DarkSteel",
+        "RLYK_Enamel",
+        "RLYK_PrintDark",
+        "RLYK_Steel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.1264999955892563,
+          0.1264999955892563
+        ],
+        [
+          -0.1264999955892563,
+          0.1264999955892563
+        ],
+        [
+          -0.08750001341104507,
+          0.052999988198280334
+        ]
+      ],
+      "unity_parent": "Environment/CORE_Module/COLD_Indicator",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "STARTUP_Housing",
+      "file": "exports/STARTUP_Housing.fbx",
+      "triangles": 1126,
+      "vertices": 619,
+      "materials": [
+        "RLYK_DarkSteel",
+        "RLYK_Enamel",
+        "RLYK_PrintDark",
+        "RLYK_Steel"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.1860000044107437,
+          0.1860000044107437
+        ],
+        [
+          -0.1860000044107437,
+          0.1860000044107437
+        ],
+        [
+          -0.08750001341104507,
+          0.052999988198280334
+        ]
+      ],
+      "unity_parent": "Environment/CORE_Module/STARTUP_Indicator",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "CORE_Containment",
+      "file": "exports/CORE_Containment.fbx",
+      "triangles": 67354,
+      "vertices": 34664,
+      "materials": [
+        "RLYK_Steel",
+        "RLYK_DarkSteel",
+        "RLYK_Enamel",
+        "RLYK_Brass",
+        "RLYK_PrintDark",
+        "RLYK_Rubber",
+        "RLYK_FramePaint",
+        "RLYK_PrintLight",
+        "RLYK_CasePaint"
+      ],
+      "bounds_unity_local": [
+        [
+          -1.496000051498413,
+          1.4960001707077026
+        ],
+        [
+          -1.75,
+          1.731742024421692
+        ],
+        [
+          -1.496000051498413,
+          1.4960001707077026
+        ]
+      ],
+      "unity_parent": "Environment/Core_Block",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        0.3333333333333333,
+        0.2857142857142857,
+        0.3333333333333333
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ],
+      "note": "Centre-pivot model under existing scaled Core_Block. Exact inverse scale; local position ZERO. Preserve old collider."
+    },
+    {
+      "name": "CORE_Glass",
+      "file": "exports/CORE_Glass.fbx",
+      "triangles": 888,
+      "vertices": 456,
+      "materials": [
+        "RLYK_ChamberGlass"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.7219865322113037,
+          0.7219865322113037
+        ],
+        [
+          -0.7239999771118164,
+          0.7239999771118164
+        ],
+        [
+          -0.722000002861023,
+          0.722000002861023
+        ]
+      ],
+      "unity_parent": "Environment/Core_Block",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        0.3333333333333333,
+        0.2857142857142857,
+        0.3333333333333333
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ],
+      "note": "Centre-pivot model under existing scaled Core_Block. Exact inverse scale; local position ZERO. Preserve old collider."
+    },
+    {
+      "name": "CORE_Emitter",
+      "file": "exports/CORE_Emitter.fbx",
+      "triangles": 4692,
+      "vertices": 2376,
+      "materials": [
+        "RLYK_Emitter"
+      ],
+      "bounds_unity_local": [
+        [
+          -0.9505699872970581,
+          0.9286802411079407
+        ],
+        [
+          -0.8364999890327454,
+          0.8324999809265137
+        ],
+        [
+          -1.0440000295639038,
+          1.0440001487731934
+        ]
+      ],
+      "unity_parent": "Environment/Core_Block",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        0.3333333333333333,
+        0.2857142857142857,
+        0.3333333333333333
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ],
+      "note": "Centre-pivot model under existing scaled Core_Block. Exact inverse scale; local position ZERO. Preserve old collider."
+    },
+    {
+      "name": "CORE_Guardrail",
+      "file": "exports/CORE_Guardrail.fbx",
+      "triangles": 12256,
+      "vertices": 6272,
+      "materials": [
+        "RLYK_SafetyPaint",
+        "RLYK_Steel",
+        "RLYK_DarkSteel"
+      ],
+      "bounds_unity_local": [
+        [
+          -1.4505000114440918,
+          1.4505000114440918
+        ],
+        [
+          -1.5794999599456787,
+          -0.6270000338554382
+        ],
+        [
+          -1.4505000114440918,
+          1.4505000114440918
+        ]
+      ],
+      "unity_parent": "Environment/Core_Block",
+      "model_child_local_position": [
+        0,
+        0,
+        0
+      ],
+      "model_child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "model_child_local_scale": [
+        0.3333333333333333,
+        0.2857142857142857,
+        0.3333333333333333
+      ],
+      "authoring_pivot": [
+        0,
+        0,
+        0
+      ],
+      "note": "Centre-pivot model under existing scaled Core_Block. Exact inverse scale; local position ZERO. Preserve old collider."
+    }
+  ],
+  "materials": [
+    {
+      "name": "RLYK_CasePaint",
+      "base_color_srgb": "#62655F",
+      "metallic": 0,
+      "smoothness": 0.44,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_FramePaint",
+      "base_color_srgb": "#303B3D",
+      "metallic": 0,
+      "smoothness": 0.43,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_Enamel",
+      "base_color_srgb": "#C8C5B2",
+      "metallic": 0,
+      "smoothness": 0.4,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_Steel",
+      "base_color_srgb": "#939C9C",
+      "metallic": 0.82,
+      "smoothness": 0.68,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_DarkSteel",
+      "base_color_srgb": "#444B4A",
+      "metallic": 0.72,
+      "smoothness": 0.52,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_Rubber",
+      "base_color_srgb": "#191F1E",
+      "metallic": 0,
+      "smoothness": 0.17,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_Bakelite",
+      "base_color_srgb": "#713E32",
+      "metallic": 0,
+      "smoothness": 0.57,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_Brass",
+      "base_color_srgb": "#8B7754",
+      "metallic": 0.73,
+      "smoothness": 0.58,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_PrintDark",
+      "base_color_srgb": "#242B2A",
+      "metallic": 0,
+      "smoothness": 0.21,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_PrintLight",
+      "base_color_srgb": "#DED8C3",
+      "metallic": 0,
+      "smoothness": 0.28,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_SafetyPaint",
+      "base_color_srgb": "#AD8740",
+      "metallic": 0,
+      "smoothness": 0.51,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYK_ChamberGlass",
+      "base_color_srgb": "#CFE4E2",
+      "metallic": 0,
+      "smoothness": 0.925,
+      "surface": "Transparent",
+      "alpha": 0.16,
+      "render_face": "Front",
+      "cast_shadows": false
+    },
+    {
+      "name": "RLYK_Emitter",
+      "base_color_srgb": "#B2D8DC",
+      "metallic": 0,
+      "smoothness": 0.68,
+      "surface": "Opaque"
+    }
+  ],
+  "triangles_total": 101654
+}

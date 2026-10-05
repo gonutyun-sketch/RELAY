@@ -1,0 +1,18 @@
+{
+  "samples": 131,
+  "off_x": -25,
+  "on_x": -155,
+  "intersections": [],
+  "clickable_fit": [
+    {
+      "part": "Forged lever stem",
+      "fits_existing_neutral_collider": true
+    },
+    {
+      "part": "Bakelite grip",
+      "fits_existing_neutral_collider": true
+    }
+  ],
+  "passed": true,
+  "note": "Geometric swept-pose check only; Unity animation/input is not run."
+}
