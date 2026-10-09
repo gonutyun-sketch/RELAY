@@ -1,0 +1,120 @@
+{
+  "RLYS_Rock_BaseColor.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "bytes": 3564876,
+    "rgb_mean": [
+      103.79,
+      100.64,
+      92.4
+    ],
+    "range": [
+      51,
+      142
+    ],
+    "seam": {
+      "wrap_x_mean_delta": 1.3752,
+      "interior_x_mean_delta": 1.416,
+      "wrap_y_mean_delta": 1.3486,
+      "interior_y_mean_delta": 1.4077,
+      "wrap_over_interior_x": 0.9712,
+      "wrap_over_interior_y": 0.9581
+    }
+  },
+  "RLYS_Rock_Normal.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "bytes": 8056156,
+    "rgb_mean": [
+      127.5,
+      127.5,
+      251.21
+    ],
+    "range": [
+      31,
+      255
+    ],
+    "seam": {
+      "wrap_x_mean_delta": 7.6914,
+      "interior_x_mean_delta": 7.9615,
+      "wrap_y_mean_delta": 7.6802,
+      "interior_y_mean_delta": 7.9237,
+      "wrap_over_interior_x": 0.9661,
+      "wrap_over_interior_y": 0.9693
+    }
+  },
+  "RLYS_Earth_BaseColor.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "bytes": 3739852,
+    "rgb_mean": [
+      109.35,
+      87.35,
+      64.53
+    ],
+    "range": [
+      27,
+      152
+    ],
+    "seam": {
+      "wrap_x_mean_delta": 2.3704,
+      "interior_x_mean_delta": 2.4719,
+      "wrap_y_mean_delta": 2.4813,
+      "interior_y_mean_delta": 2.4691,
+      "wrap_over_interior_x": 0.959,
+      "wrap_over_interior_y": 1.0049
+    }
+  },
+  "RLYS_Earth_Normal.png": {
+    "size": [
+      2048,
+      2048
+    ],
+    "mode": "RGB",
+    "bytes": 9090567,
+    "rgb_mean": [
+      127.5,
+      127.5,
+      248.64
+    ],
+    "range": [
+      24,
+      255
+    ],
+    "seam": {
+      "wrap_x_mean_delta": 11.7562,
+      "interior_x_mean_delta": 12.1231,
+      "wrap_y_mean_delta": 12.1383,
+      "interior_y_mean_delta": 12.1119,
+      "wrap_over_interior_x": 0.9697,
+      "wrap_over_interior_y": 1.0022
+    }
+  },
+  "metadata": {
+    "tile_metres": 2.0,
+    "seed": 291009,
+    "normal_convention": "OpenGL tangent +Y",
+    "basecolor_colourspace": "sRGB",
+    "normal_colourspace": "Non-Color / Linear",
+    "recommended": {
+      "Rock": {
+        "roughness": 0.86,
+        "metallic": 0.0
+      },
+      "Earth": {
+        "roughness": 0.95,
+        "metallic": 0.0
+      }
+    },
+    "seam_validation": "Periodic FFT fields; wrap derivatives. Edge deltas should be comparable to neighbouring interior pixels, not necessarily zero."
+  }
+}

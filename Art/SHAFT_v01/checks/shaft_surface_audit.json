@@ -1,0 +1,83 @@
+{
+  "manifest_comparisons": [
+    {
+      "name": "SHAFT_RockShell",
+      "checks": {
+        "vertices_match": true,
+        "triangles_match": true,
+        "materials_match": true,
+        "design_min_match": true,
+        "design_max_match": true,
+        "uv_every_corner": true,
+        "material_face_counts_match": true
+      },
+      "passed": true
+    },
+    {
+      "name": "SHAFT_Steelwork",
+      "checks": {
+        "vertices_match": true,
+        "triangles_match": true,
+        "materials_match": true,
+        "design_min_match": true,
+        "design_max_match": true,
+        "uv_every_corner": true,
+        "material_face_counts_match": true
+      },
+      "passed": true
+    },
+    {
+      "name": "SHAFT_Details",
+      "checks": {
+        "vertices_match": true,
+        "triangles_match": true,
+        "materials_match": true,
+        "design_min_match": true,
+        "design_max_match": true,
+        "uv_every_corner": true,
+        "material_face_counts_match": true
+      },
+      "passed": true
+    }
+  ],
+  "rock_normals": {
+    "left": {
+      "polygons_sampled": 89,
+      "min_dot": 0.957344651222229,
+      "max_dot": 0.9999752044677734,
+      "mean_dot": 0.9911217528782533,
+      "inward_count": 89,
+      "backward_count": 0,
+      "sideways_count": 0
+    },
+    "right": {
+      "polygons_sampled": 95,
+      "min_dot": 0.9353093504905701,
+      "max_dot": 0.9999534487724304,
+      "mean_dot": 0.9882586736428111,
+      "inward_count": 95,
+      "backward_count": 0,
+      "sideways_count": 0
+    },
+    "rear": {
+      "polygons_sampled": 141,
+      "min_dot": 0.9074068069458008,
+      "max_dot": 0.9998598694801331,
+      "mean_dot": 0.9896966451448752,
+      "inward_count": 141,
+      "backward_count": 0,
+      "sideways_count": 0
+    },
+    "front": {
+      "polygons_sampled": 146,
+      "min_dot": 0.9250333905220032,
+      "max_dot": 0.9999772310256958,
+      "mean_dot": 0.9881814910124426,
+      "inward_count": 146,
+      "backward_count": 0,
+      "sideways_count": 0
+    }
+  },
+  "method": "Raw FBX attributes transformed by expected Unity X handedness. No Unity import.",
+  "manifest_passed": true
+}

@@ -1,0 +1,207 @@
+{
+  "method": "Raw FBX binary inspection using Blender parser only. No Unity import or UI. Expected Unity coordinates assume X-handedness conversion; calibrated from earlier asset orientation, not an actual Unity verification.",
+  "files": [
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\SHAFT_v01\\exports\\SHAFT_RockShell.fbx",
+      "sha256": "0f5092813bfebfa1701f89775f49218c6b483bd57da8bb3417e116dd79f0bd79",
+      "fbx_version": 7400,
+      "checks": {
+        "Y_up": true,
+        "axis_metadata_matches_calibration": true,
+        "metres_unit": true,
+        "no_anim_camera_light": true,
+        "contains_mesh": true
+      },
+      "models": [
+        {
+          "name": "SHAFT_RockShell",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "SHAFT_RockShell",
+          "vertices": 18260,
+          "polygons": 26785,
+          "triangles": 36488,
+          "expected_unity_min": [
+            -3.450000524520874,
+            -1.4600000381469727,
+            -4.3000006675720215
+          ],
+          "expected_unity_max": [
+            3.450000047683716,
+            34.45000076293945,
+            1.341278314590454
+          ],
+          "materials": [
+            "RLYS_Rock",
+            "RLYS_Earth"
+          ],
+          "used_material_indices": [
+            0,
+            1
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "valid_uv": true,
+            "finite_nonzero_normals": true,
+            "material_slots_present": true,
+            "valid_material_indices": true
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\SHAFT_v01\\exports\\SHAFT_Steelwork.fbx",
+      "sha256": "b35a2c33d5b85b57bda9957a2e58ec70a56ec7dc35d8a4962e1532d0379a099c",
+      "fbx_version": 7400,
+      "checks": {
+        "Y_up": true,
+        "axis_metadata_matches_calibration": true,
+        "metres_unit": true,
+        "no_anim_camera_light": true,
+        "contains_mesh": true
+      },
+      "models": [
+        {
+          "name": "SHAFT_Steelwork",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "SHAFT_Steelwork",
+          "vertices": 12520,
+          "polygons": 11250,
+          "triangles": 23460,
+          "expected_unity_min": [
+            -2.7700002193450928,
+            -1.0,
+            -3.630000352859497
+          ],
+          "expected_unity_max": [
+            2.7699999809265137,
+            34.02745819091797,
+            0.7700002193450928
+          ],
+          "materials": [
+            "RLYS_Steel",
+            "RLYS_Oxide"
+          ],
+          "used_material_indices": [
+            0,
+            1
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "valid_uv": true,
+            "finite_nonzero_normals": true,
+            "material_slots_present": true,
+            "valid_material_indices": true
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\SHAFT_v01\\exports\\SHAFT_Details.fbx",
+      "sha256": "08fd45bff5cdeeed1e9c72c14d25c98066599011df8b6f522a8ea7df38348f62",
+      "fbx_version": 7400,
+      "checks": {
+        "Y_up": true,
+        "axis_metadata_matches_calibration": true,
+        "metres_unit": true,
+        "no_anim_camera_light": true,
+        "contains_mesh": true
+      },
+      "models": [
+        {
+          "name": "SHAFT_Details",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "SHAFT_Details",
+          "vertices": 4648,
+          "polygons": 3948,
+          "triangles": 8396,
+          "expected_unity_min": [
+            -2.8744657039642334,
+            -0.9849804043769836,
+            -3.5250403881073
+          ],
+          "expected_unity_max": [
+            2.8744657039642334,
+            33.750144958496094,
+            0.6105599999427795
+          ],
+          "materials": [
+            "RLYS_Steel",
+            "RLYS_Cable",
+            "RLYS_Earth",
+            "RLYS_Rock",
+            "RLYS_Oxide"
+          ],
+          "used_material_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "valid_uv": true,
+            "finite_nonzero_normals": true,
+            "material_slots_present": true,
+            "valid_material_indices": true
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}
