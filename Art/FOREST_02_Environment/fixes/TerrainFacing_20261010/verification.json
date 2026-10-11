@@ -1,0 +1,37 @@
+{
+  "source": [
+    {
+      "object": "Forest_Ground",
+      "faces_reversed": 22704,
+      "faces": 22704,
+      "all_upward": true
+    },
+    {
+      "object": "Worn_Forest_Path",
+      "faces_reversed": 0,
+      "faces": 360,
+      "all_upward": true
+    }
+  ],
+  "exported_faces": [
+    {
+      "material": "RLYF_ForestFloor",
+      "faces": 22704,
+      "minimum_up_normal": 0.7293423414230347,
+      "all_upward": true
+    },
+    {
+      "material": "RLYF_TroddenPath",
+      "faces": 360,
+      "minimum_up_normal": 0.9990884065628052,
+      "all_upward": true
+    }
+  ],
+  "vertex_positions_unchanged": true,
+  "bounds_material_names_and_counts_preserved": true,
+  "triangles": 46128,
+  "replacement": "C:\\Users\\gonut\\RELAY_Art\\FOREST_02_Environment\\fixes\\TerrainFacing_20261010\\FOREST_Terrain.fbx",
+  "sha256": "2340636b2284e5819f203e3a640ab45aaf4406c1fa37db5d021d7ce252e639b1",
+  "unity_watched_files_changed": [],
+  "unity_import_or_playtest_performed": false
+}

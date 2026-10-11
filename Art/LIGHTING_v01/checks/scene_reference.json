@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "audit_date_local": "2026-10-06",
+  "timezone": "Asia/Seoul",
+  "audit_scope": "Read-only saved scene and script inspection; no Unity operations or project modifications.",
+  "scene": {
+    "path": "C:/Users/gonut/School_p2/Assets/Scenes/Startup_Graybox.unity",
+    "sha256": "D91D873B77BB6CF1036CC7B356098A36C4ED33E90A120554C9A9DE77D8C36A4B",
+    "bytes": 816533,
+    "last_write_utc": "2026-10-05T07:44:01Z"
+  },
+  "controller": {
+    "path": "C:/Users/gonut/School_p2/Assets/_STARTUP/Scripts/CorePowerVisual.cs",
+    "sha256": "ADADD71058CB2742B66C3DE742988B5322F84E997D31C67C75930030F460FCAF",
+    "scene_object": "Environment/Core_Block",
+    "component_file_id": 1349894561,
+    "power_source_file_id": 1268241570,
+    "emitter_renderer_file_id": 1483172278,
+    "lab_reflection_file_id": 657052369,
+    "power_condition": "PowerModule.IsOnline",
+    "light_control": "Cache current intensity at Awake, multiply by power fade, disable at zero.",
+    "lens_control": "Capture first shared material _BaseColor; lerp via MaterialPropertyBlock.",
+    "unlit_lens_color_rgba": [0.07058824, 0.08627451, 0.09803922, 1],
+    "fade_in_seconds": 1,
+    "fade_out_seconds": 0.25,
+    "required_new_lens_renderers_per_fixture": 1,
+    "required_new_lens_material_slots": 1
+  },
+  "shared_existing_children": {
+    "housing": {
+      "mesh": "Unity built-in Cube",
+      "local_position": [0, 0, 0],
+      "local_rotation_euler": [0, 0, 0],
+      "local_scale_and_dimensions_m": [0.65, 0.1, 1.8],
+      "material_guid": "53a6de5086d21cf4a874e42076044c17"
+    },
+    "lens": {
+      "mesh": "Unity built-in Cube",
+      "local_position": [0, -0.06, 0],
+      "local_rotation_euler": [0, 0, 0],
+      "local_scale_and_dimensions_m": [0.5, 0.03, 1.6],
+      "material_path": "Assets/_STARTUP/Materials/M_LightFace.mat",
+      "material_guid": "26ab0a94536bac64cac565b9fa2a93c5",
+      "shader": "Universal Render Pipeline/Unlit",
+      "shader_guid": "650dd9526735d5b46b79224bc6e94025",
+      "base_color_rgba": [0.9137255, 0.93333334, 0.9607843, 1],
+      "surface": "Opaque"
+    },
+    "light": {
+      "local_position": [0, -0.16, 0],
+      "local_rotation_euler": [90, 0, 0],
+      "local_scale": [1, 1, 1],
+      "type": "Spot",
+      "mode": "Realtime",
+      "spot_angle_degrees": 110,
+      "color_rgba": [0.9137255, 0.93333334, 0.9607843, 1]
+    }
+  },
+  "fixtures": [
+    {
+      "path": "Environment/Lighting/Fixture_WorkLeft",
+      "game_object_file_id": 616315168,
+      "transform_file_id": 616315169,
+      "room_fixtures_index": 0,
+      "local_position": [-1, 5.95, 1.8],
+      "initial_world_position": [-1, 5.95, 1.8],
+      "local_rotation_euler": [0, 0, 0],
+      "local_scale": [1, 1, 1],
+      "housing_renderer_file_id": 515146091,
+      "lens_renderer_file_id": 1489692851,
+      "light_component_file_id": 394518986,
+      "light_intensity": 18,
+      "light_range_m": 12,
+      "replacement_variant": "Linear"
+    },
+    {
+      "path": "Environment/Lighting/Fixture_WorkRight",
+      "game_object_file_id": 1457104974,
+      "transform_file_id": 1457104975,
+      "room_fixtures_index": 1,
+      "local_position": [5, 5.95, 1.8],
+      "initial_world_position": [5, 5.95, 1.8],
+      "local_rotation_euler": [0, 0, 0],
+      "local_scale": [1, 1, 1],
+      "housing_renderer_file_id": 131346172,
+      "lens_renderer_file_id": 1222651202,
+      "light_component_file_id": 993252132,
+      "light_intensity": 18,
+      "light_range_m": 12,
+      "replacement_variant": "Linear"
+    },
+    {
+      "path": "Environment/Lighting/Fixture_Exit",
+      "game_object_file_id": 118513706,
+      "transform_file_id": 118513707,
+      "room_fixtures_index": 2,
+      "local_position": [0, 5.95, -6],
+      "initial_world_position": [0, 5.95, -6],
+      "local_rotation_euler": [0, 0, 0],
+      "local_scale": [1, 1, 1],
+      "housing_renderer_file_id": 479207472,
+      "lens_renderer_file_id": 974486122,
+      "light_component_file_id": 1935065970,
+      "light_intensity": 18,
+      "light_range_m": 12,
+      "replacement_variant": "Linear"
+    },
+    {
+      "path": "Environment/EXIT_Module/ELEVATOR_Module/Fixture_Cabin",
+      "game_object_file_id": 1289436147,
+      "transform_file_id": 1289436148,
+      "room_fixtures_index": 3,
+      "local_position": [0, 2.95, -1.7],
+      "initial_world_position": [0, 2.95, -11.7],
+      "local_rotation_euler": [0, 0, 0],
+      "local_scale": [1, 1, 1],
+      "housing_renderer_file_id": 219917168,
+      "lens_renderer_file_id": 2063541963,
+      "light_component_file_id": 1797770254,
+      "light_intensity": 4,
+      "light_range_m": 4,
+      "replacement_variant": "Bulkhead",
+      "must_remain_under_elevator_module": true
+    }
+  ],
+  "environment": {
+    "environment_transform_is_identity": true,
+    "lighting_transform_is_identity": true,
+    "lab_structure_transform_is_identity": true,
+    "floor": {
+      "position": [0, -0.25, -2],
+      "dimensions_m": [16, 0.5, 16],
+      "top_y_m": 0
+    },
+    "ceiling": {
+      "position": [0, 6.15, -2],
+      "dimensions_m": [16, 0.3, 16],
+      "underside_y_m": 6
+    },
+    "side_wall_inner_x_m": [-7.75, 7.75],
+    "back_wall_inner_z_m": 5.75,
+    "beam_front": {
+      "path": "Environment/LabStructure/Beam_Front",
+      "position": [0, 5.85, -5],
+      "dimensions_m": [14.7, 0.3, 0.65],
+      "bounds_min": [-7.35, 5.7, -5.325],
+      "bounds_max": [7.35, 6, -4.675]
+    },
+    "beam_back": {
+      "path": "Environment/LabStructure/Beam_Back",
+      "position": [0, 5.85, 5],
+      "dimensions_m": [14.7, 0.3, 0.65],
+      "bounds_min": [-7.35, 5.7, 4.675],
+      "bounds_max": [7.35, 6, 5.325]
+    },
+    "exit_module_position": [0, 0, -10],
+    "elevator_local_transform_is_identity": true,
+    "cabin_roof": {
+      "path": "Environment/EXIT_Module/ELEVATOR_Module/ExitCeiling",
+      "local_position": [0, 3.15, -1.5],
+      "dimensions_m": [3.4, 0.3, 3.5],
+      "underside_local_y_m": 3
+    },
+    "cabin_inner_x_m": [-1.2, 1.2],
+    "cabin_rear_wall_inner_local_z_m": -2.75,
+    "cabin_door_local_z_m": -0.45
+  },
+  "model_design_contract": {
+    "space": "Unity axis convention",
+    "unit": "meter",
+    "shared_origin": "center of top mounting plane at Y=0",
+    "long_axis": "+Z",
+    "illuminated_face_direction": "-Y",
+    "linear_max_envelope_min": [-0.3, -0.19, -0.9],
+    "linear_max_envelope_max": [0.3, 0, 0.9],
+    "bulkhead_max_envelope_min": [-0.25, -0.17, -0.42],
+    "bulkhead_max_envelope_max": [0.25, 0, 0.42],
+    "fbx_names": [
+      "LIGHT_LinearHousing.fbx",
+      "LIGHT_LinearLens.fbx",
+      "LIGHT_LinearGlass.fbx",
+      "LIGHT_BulkheadHousing.fbx",
+      "LIGHT_BulkheadLens.fbx",
+      "LIGHT_BulkheadGlass.fbx"
+    ]
+  },
+  "recommended_user_operations_not_applied": {
+    "new_fbx_parent": "respective existing Fixture_* root",
+    "new_fbx_local_position": [0, 0.05, 0],
+    "new_fbx_local_rotation_euler": [0, 0, 0],
+    "new_fbx_local_scale": [1, 1, 1],
+    "preserve_existing_light_transform_intensity_references": true,
+    "disable_only_old_housing_and_lens_mesh_renderers": true,
+    "replace_room_fixtures_lens_references_only": true,
+    "lens_material_remap": "RLYL_Lens -> existing M_LightFace.mat",
+    "glass_cast_shadows": false,
+    "glass_receive_shadows": false,
+    "linear_bottom_relative_to_fixture_m": -0.14,
+    "bulkhead_bottom_relative_to_fixture_m": -0.12,
+    "existing_light_below_linear_bottom_m": 0.02,
+    "existing_light_below_bulkhead_bottom_m": 0.04,
+    "exit_fixture_clearance_adjustment": {
+      "existing_housing_z_bounds_m": [-6.9, -5.1],
+      "existing_beam_overlap_z_m": 0.225,
+      "recommended_root_position": [0, 5.95, -6.5],
+      "new_model_max_z_bounds_m": [-7.4, -5.6],
+      "gap_to_beam_front_m": 0.275
+    },
+    "unity_playtest_status": "Not performed by agent; user performs after manual import and wiring."
+  }
+}

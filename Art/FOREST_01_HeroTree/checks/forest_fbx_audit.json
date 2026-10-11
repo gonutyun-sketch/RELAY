@@ -1,0 +1,557 @@
+{
+  "method": "Independent raw FBX parse with Blender parser and polygon tessellation. No Unity import/UI. Unity bounds are inferred using prior shaft X handedness convention, not verified in Unity.",
+  "manifest_available": true,
+  "files": [
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_01_HeroTree\\exports\\FOREST_Spruce_A_LOD0.fbx",
+      "sha256": "6f733bce770d762abd142145477018ceb0a5d7c42a28528f500fe33ecf424e92",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "y_up": true,
+        "axis_matches_shaft_convention": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "two_mesh_parts": true,
+        "lod_names_consistent": true,
+        "distinct_wood_needles_parts": true
+      },
+      "models": [
+        {
+          "name": "SPRUCE_A_Needles_LOD0",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        },
+        {
+          "name": "SPRUCE_A_Wood_LOD0",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "SPRUCE_A_Needles_LOD0",
+          "vertices": 40200,
+          "polygons": 15075,
+          "triangles": 30150,
+          "minimum_triangle_area_m2": 0.012530088277244621,
+          "expected_unity_min": [
+            -2.7011430263519287,
+            0.6503363847732544,
+            -2.985975503921509
+          ],
+          "expected_unity_max": [
+            3.414294958114624,
+            11.640718460083008,
+            2.797793388366699
+          ],
+          "materials": [
+            "RLYF_SpruceNeedles"
+          ],
+          "used_material_indices": [
+            0
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true,
+            "needle_uv_within_atlas": true
+          },
+          "passed": true
+        },
+        {
+          "name": "SPRUCE_A_Wood_LOD0",
+          "vertices": 46932,
+          "polygons": 41309,
+          "triangles": 88636,
+          "minimum_triangle_area_m2": 1.251976444175521e-07,
+          "expected_unity_min": [
+            -2.052351713180542,
+            -0.08411142975091934,
+            -2.5191562175750732
+          ],
+          "expected_unity_max": [
+            2.765838146209717,
+            11.820432662963867,
+            2.271618127822876
+          ],
+          "materials": [
+            "RLYF_SpruceBark",
+            "RLYF_ExposedWood"
+          ],
+          "used_material_indices": [
+            0,
+            1
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 118786,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_01_HeroTree\\exports\\FOREST_Spruce_A_LOD1.fbx",
+      "sha256": "e2e89c7eeedcf67d045a5d27bd8effe51c36c3b25b892f3cfdeb8777d6ecb51c",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "y_up": true,
+        "axis_matches_shaft_convention": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "two_mesh_parts": true,
+        "lod_names_consistent": true,
+        "distinct_wood_needles_parts": true
+      },
+      "models": [
+        {
+          "name": "SPRUCE_A_Needles_LOD1",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        },
+        {
+          "name": "SPRUCE_A_Wood_LOD1",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "SPRUCE_A_Needles_LOD1",
+          "vertices": 19602,
+          "polygons": 6534,
+          "triangles": 13068,
+          "minimum_triangle_area_m2": 0.02357093431072083,
+          "expected_unity_min": [
+            -2.7907803058624268,
+            0.6046106219291687,
+            -3.048858880996704
+          ],
+          "expected_unity_max": [
+            3.5007848739624023,
+            11.686687469482422,
+            2.8768091201782227
+          ],
+          "materials": [
+            "RLYF_SpruceNeedles"
+          ],
+          "used_material_indices": [
+            0
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true,
+            "needle_uv_within_atlas": true
+          },
+          "passed": true
+        },
+        {
+          "name": "SPRUCE_A_Wood_LOD1",
+          "vertices": 22513,
+          "polygons": 18430,
+          "triangles": 39798,
+          "minimum_triangle_area_m2": 8.256614174440568e-07,
+          "expected_unity_min": [
+            -2.052396297454834,
+            -0.08443573117256165,
+            -2.5194764137268066
+          ],
+          "expected_unity_max": [
+            2.7658395767211914,
+            11.820426940917969,
+            2.2718677520751953
+          ],
+          "materials": [
+            "RLYF_SpruceBark",
+            "RLYF_ExposedWood"
+          ],
+          "used_material_indices": [
+            0,
+            1
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 52866,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_01_HeroTree\\exports\\FOREST_Spruce_A_LOD2.fbx",
+      "sha256": "33369fbc86b191f760efa9d7bdfffa9c3b4f4f9ba9e4bf263456271ed30de55b",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "y_up": true,
+        "axis_matches_shaft_convention": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "two_mesh_parts": true,
+        "lod_names_consistent": true,
+        "distinct_wood_needles_parts": true
+      },
+      "models": [
+        {
+          "name": "SPRUCE_A_Needles_LOD2",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        },
+        {
+          "name": "SPRUCE_A_Wood_LOD2",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "SPRUCE_A_Needles_LOD2",
+          "vertices": 6032,
+          "polygons": 1508,
+          "triangles": 3016,
+          "minimum_triangle_area_m2": 0.06935975691550264,
+          "expected_unity_min": [
+            -2.5707077980041504,
+            0.5392329096794128,
+            -3.1641454696655273
+          ],
+          "expected_unity_max": [
+            3.659349203109741,
+            11.770966529846191,
+            3.0216715335845947
+          ],
+          "materials": [
+            "RLYF_SpruceNeedles"
+          ],
+          "used_material_indices": [
+            0
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true,
+            "needle_uv_within_atlas": true
+          },
+          "passed": true
+        },
+        {
+          "name": "SPRUCE_A_Wood_LOD2",
+          "vertices": 7281,
+          "polygons": 6457,
+          "triangles": 11770,
+          "minimum_triangle_area_m2": 5.583398729055906e-07,
+          "expected_unity_min": [
+            -2.0474042892456055,
+            -0.0835285633802414,
+            -2.5182762145996094
+          ],
+          "expected_unity_max": [
+            2.765782117843628,
+            11.820432662963867,
+            2.270589590072632
+          ],
+          "materials": [
+            "RLYF_SpruceBark",
+            "RLYF_ExposedWood"
+          ],
+          "used_material_indices": [
+            0,
+            1
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 14786,
+      "passed": true
+    }
+  ],
+  "lod_triangle_counts_decrease": true,
+  "passed": true
+}

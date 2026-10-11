@@ -1,0 +1,323 @@
+{
+  "method": "Independent fresh Blender FBX imports; no Unity or model edits, no render.",
+  "blender_version": "5.2.0 LTS",
+  "tolerance_metres": 0.0001,
+  "parts": [
+    {
+      "name": "ELEVATOR_Cabin",
+      "file": "C:\\Users\\gonut\\RELAY_Art\\ELEVATOR_v01\\exports\\ELEVATOR_Cabin.fbx",
+      "checks": {
+        "fbx_exists": true,
+        "one_mesh": true,
+        "no_lights_or_cameras": true,
+        "no_animation": true,
+        "finite_positions": true,
+        "pivot_at_zero": true,
+        "bounds_match_manifest": true,
+        "triangles_match_manifest": true,
+        "uv_present_and_finite": true,
+        "material_names_match_manifest": true,
+        "assigned_indices_cover_all_slots": true,
+        "assigned_indices_match_manifest": true,
+        "expected_base_color_textures_connected": true,
+        "base_color_texture_paths_exist": true,
+        "import_and_validation_completed": true
+      },
+      "object_types": [
+        "MESH"
+      ],
+      "unity_min": [
+        -1.5450000762939453,
+        -0.3600000739097595,
+        -3.125
+      ],
+      "unity_max": [
+        1.5450000762939453,
+        3.5445172786712646,
+        0.1250000149011612
+      ],
+      "unity_size": [
+        3.0900001525878906,
+        3.904517352581024,
+        3.250000014901161
+      ],
+      "pivot_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 24644,
+      "uv_layers": 1,
+      "materials": [
+        "RLYE_WornSteel",
+        "RLYE_Iron",
+        "RLYE_FadedPaint",
+        "RLYE_Oxide",
+        "RLYE_Ochre",
+        "RLYE_Timber",
+        "RLYE_Dark"
+      ],
+      "assigned_material_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "base_color_images": [
+        {
+          "material": "RLYE_Iron",
+          "image": "RLYE_Iron_BaseColor",
+          "path": "C:\\Users\\gonut\\RELAY_Art\\ELEVATOR_v01\\textures\\RLYE_Iron_BaseColor.png",
+          "exists": true
+        },
+        {
+          "material": "RLYE_Timber",
+          "image": "RLYE_Timber_BaseColor",
+          "path": "C:\\Users\\gonut\\RELAY_Art\\ELEVATOR_v01\\textures\\RLYE_Timber_BaseColor.png",
+          "exists": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "ELEVATOR_DoorLeft",
+      "file": "C:\\Users\\gonut\\RELAY_Art\\ELEVATOR_v01\\exports\\ELEVATOR_DoorLeft.fbx",
+      "checks": {
+        "fbx_exists": true,
+        "one_mesh": true,
+        "no_lights_or_cameras": true,
+        "no_animation": true,
+        "finite_positions": true,
+        "pivot_at_zero": true,
+        "bounds_match_manifest": true,
+        "triangles_match_manifest": true,
+        "uv_present_and_finite": true,
+        "material_names_match_manifest": true,
+        "assigned_indices_cover_all_slots": true,
+        "assigned_indices_match_manifest": true,
+        "expected_base_color_textures_connected": true,
+        "base_color_texture_paths_exist": true,
+        "door_within_existing_panel_box": true,
+        "import_and_validation_completed": true
+      },
+      "object_types": [
+        "MESH"
+      ],
+      "unity_min": [
+        -0.6000000238418579,
+        -1.4950000047683716,
+        -0.06900011003017426
+      ],
+      "unity_max": [
+        0.6000000238418579,
+        1.4950001239776611,
+        0.07950010150671005
+      ],
+      "unity_size": [
+        1.2000000476837158,
+        2.9900001287460327,
+        0.1485002115368843
+      ],
+      "pivot_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 2952,
+      "uv_layers": 1,
+      "materials": [
+        "RLYE_Iron",
+        "RLYE_FadedPaint",
+        "RLYE_WornSteel",
+        "RLYE_Oxide",
+        "RLYE_Ochre"
+      ],
+      "assigned_material_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "base_color_images": [
+        {
+          "material": "RLYE_Iron",
+          "image": "RLYE_Iron_BaseColor",
+          "path": "C:\\Users\\gonut\\RELAY_Art\\ELEVATOR_v01\\textures\\RLYE_Iron_BaseColor.png",
+          "exists": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "ELEVATOR_DoorRight",
+      "file": "C:\\Users\\gonut\\RELAY_Art\\ELEVATOR_v01\\exports\\ELEVATOR_DoorRight.fbx",
+      "checks": {
+        "fbx_exists": true,
+        "one_mesh": true,
+        "no_lights_or_cameras": true,
+        "no_animation": true,
+        "finite_positions": true,
+        "pivot_at_zero": true,
+        "bounds_match_manifest": true,
+        "triangles_match_manifest": true,
+        "uv_present_and_finite": true,
+        "material_names_match_manifest": true,
+        "assigned_indices_cover_all_slots": true,
+        "assigned_indices_match_manifest": true,
+        "expected_base_color_textures_connected": true,
+        "base_color_texture_paths_exist": true,
+        "door_within_existing_panel_box": true,
+        "import_and_validation_completed": true
+      },
+      "object_types": [
+        "MESH"
+      ],
+      "unity_min": [
+        -0.6000000238418579,
+        -1.4950000047683716,
+        -0.06900011003017426
+      ],
+      "unity_max": [
+        0.6000000238418579,
+        1.4950001239776611,
+        0.07950010150671005
+      ],
+      "unity_size": [
+        1.2000000476837158,
+        2.9900001287460327,
+        0.1485002115368843
+      ],
+      "pivot_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 2952,
+      "uv_layers": 1,
+      "materials": [
+        "RLYE_Iron",
+        "RLYE_FadedPaint",
+        "RLYE_WornSteel",
+        "RLYE_Oxide",
+        "RLYE_Ochre"
+      ],
+      "assigned_material_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "base_color_images": [
+        {
+          "material": "RLYE_Iron",
+          "image": "RLYE_Iron_BaseColor",
+          "path": "C:\\Users\\gonut\\RELAY_Art\\ELEVATOR_v01\\textures\\RLYE_Iron_BaseColor.png",
+          "exists": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "ELEVATOR_DoorTrack",
+      "file": "C:\\Users\\gonut\\RELAY_Art\\ELEVATOR_v01\\exports\\ELEVATOR_DoorTrack.fbx",
+      "checks": {
+        "fbx_exists": true,
+        "one_mesh": true,
+        "no_lights_or_cameras": true,
+        "no_animation": true,
+        "finite_positions": true,
+        "pivot_at_zero": true,
+        "bounds_match_manifest": true,
+        "triangles_match_manifest": true,
+        "uv_present_and_finite": true,
+        "material_names_match_manifest": true,
+        "assigned_indices_cover_all_slots": true,
+        "assigned_indices_match_manifest": true,
+        "expected_base_color_textures_connected": true,
+        "base_color_texture_paths_exist": true,
+        "import_and_validation_completed": true
+      },
+      "object_types": [
+        "MESH"
+      ],
+      "unity_min": [
+        -2.5299999713897705,
+        3.091638944852093e-08,
+        -0.6699997782707214
+      ],
+      "unity_max": [
+        2.5299999713897705,
+        3.2649998664855957,
+        -0.2749997675418854
+      ],
+      "unity_size": [
+        5.059999942779541,
+        3.2649998355692063,
+        0.39500001072883606
+      ],
+      "pivot_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 1912,
+      "uv_layers": 1,
+      "materials": [
+        "RLYE_WornSteel",
+        "RLYE_Iron",
+        "RLYE_Ochre",
+        "RLYE_FadedPaint"
+      ],
+      "assigned_material_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "base_color_images": [
+        {
+          "material": "RLYE_Iron",
+          "image": "RLYE_Iron_BaseColor",
+          "path": "C:\\Users\\gonut\\RELAY_Art\\ELEVATOR_v01\\textures\\RLYE_Iron_BaseColor.png",
+          "exists": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "door_layout": {
+    "closed_seam_x": [
+      2.384185793236071e-08,
+      -2.384185793236071e-08
+    ],
+    "open_outer_x": [
+      -2.450000023841858,
+      2.450000023841858
+    ],
+    "track_outer_x": [
+      -2.5299999713897705,
+      2.5299999713897705
+    ],
+    "checks": {
+      "closed_doors_meet_at_x_zero": true,
+      "open_door_extent_matches_2_45": true,
+      "track_extent_matches_2_53": true,
+      "open_doors_fit_track_span": true
+    },
+    "passed": true
+  },
+  "unity_scene": {
+    "file": "C:\\Users\\gonut\\School_p2\\Assets\\Scenes\\Startup_Graybox.unity",
+    "sha256_current": "3dae13dbffc9a508582b62303d05927951af1ec7f7f33aaccef54e55b7e60549",
+    "sha256_build_before": "3dae13dbffc9a508582b62303d05927951af1ec7f7f33aaccef54e55b7e60549",
+    "sha256_build_after": "3dae13dbffc9a508582b62303d05927951af1ec7f7f33aaccef54e55b7e60549",
+    "unchanged": true
+  },
+  "total_triangles": 32460,
+  "all_passed": true
+}

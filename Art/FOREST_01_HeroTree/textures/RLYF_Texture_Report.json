@@ -1,0 +1,192 @@
+{
+  "asset": "RLYF mountain spruce hero tree source textures",
+  "seed": 429307,
+  "generated_with": "NumPy and Pillow; original procedural source",
+  "bark": {
+    "revision": "2 - elongated peeling bark; interrupted seams; longitudinal fibers",
+    "physical_repeat_m": [
+      1.0,
+      2.0
+    ],
+    "normal_convention": "OpenGL +Y",
+    "height_approx_m": 0.009,
+    "moss_pixel_fraction": 0.020016193389892578,
+    "albedo_mean_rgb": [
+      80.0,
+      75.0,
+      63.0
+    ],
+    "roughness_range": [
+      0.7288892861455679,
+      0.9614153504371643
+    ]
+  },
+  "needles": {
+    "physical_tile_m": [
+      0.35,
+      0.9
+    ],
+    "alpha": "straight, RGB padded 16 px then average foliage color",
+    "alpha_cutoff": 0.45,
+    "tile_orientation": "stem at bottom center, pointed tip at top; tangent +V is growth axis",
+    "tiles": [
+      {
+        "tile_image_xy": [
+          0,
+          0
+        ],
+        "needle_count": 8682,
+        "alpha_cutout_fraction": 0.23552608489990234,
+        "cutout_bounds_px": [
+          99,
+          80,
+          870,
+          954
+        ],
+        "safe_margin_min_px": 70
+      },
+      {
+        "tile_image_xy": [
+          1,
+          0
+        ],
+        "needle_count": 10524,
+        "alpha_cutout_fraction": 0.2713632583618164,
+        "cutout_bounds_px": [
+          135,
+          63,
+          959,
+          954
+        ],
+        "safe_margin_min_px": 63
+      },
+      {
+        "tile_image_xy": [
+          0,
+          1
+        ],
+        "needle_count": 8412,
+        "alpha_cutout_fraction": 0.23741722106933594,
+        "cutout_bounds_px": [
+          95,
+          88,
+          901,
+          954
+        ],
+        "safe_margin_min_px": 70
+      },
+      {
+        "tile_image_xy": [
+          1,
+          1
+        ],
+        "needle_count": 9818,
+        "alpha_cutout_fraction": 0.2656240463256836,
+        "cutout_bounds_px": [
+          115,
+          56,
+          942,
+          954
+        ],
+        "safe_margin_min_px": 56
+      }
+    ]
+  },
+  "files": {
+    "RLYF_Bark_BaseColor.png": {
+      "size_px": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "file_bytes": 3323965,
+      "edge_seam_max_abs": {
+        "U": 0.0,
+        "V": 0.0
+      }
+    },
+    "RLYF_Bark_Normal.png": {
+      "size_px": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "file_bytes": 5893808,
+      "edge_seam_max_abs": {
+        "U": 0.0,
+        "V": 0.0
+      }
+    },
+    "RLYF_Bark_Roughness.png": {
+      "size_px": [
+        2048,
+        2048
+      ],
+      "mode": "L",
+      "file_bytes": 1081152,
+      "edge_seam_max_abs": {
+        "U": 0.0,
+        "V": 0.0
+      }
+    },
+    "RLYF_Needles_Atlas.png": {
+      "size_px": [
+        2048,
+        2048
+      ],
+      "mode": "RGBA",
+      "file_bytes": 4460693,
+      "alpha_empty_fraction": 0.6750972270965576,
+      "alpha_opaque_fraction": 0.12000155448913574,
+      "alpha_cutout_fraction": 0.25248265266418457,
+      "opaque_mean_rgb": [
+        68.6500015258789,
+        85.87999725341797,
+        56.56999969482422
+      ],
+      "transparent_rgb_zero_fraction": 0.0,
+      "nonzero_alpha_tile_bounds": [
+        {
+          "tile": 0,
+          "nonzero_alpha_bounds_px": [
+            88,
+            76,
+            877,
+            956
+          ],
+          "minimum_margin_px": 68
+        },
+        {
+          "tile": 1,
+          "nonzero_alpha_bounds_px": [
+            126,
+            59,
+            965,
+            956
+          ],
+          "minimum_margin_px": 59
+        },
+        {
+          "tile": 2,
+          "nonzero_alpha_bounds_px": [
+            88,
+            83,
+            904,
+            957
+          ],
+          "minimum_margin_px": 67
+        },
+        {
+          "tile": 3,
+          "nonzero_alpha_bounds_px": [
+            106,
+            52,
+            952,
+            956
+          ],
+          "minimum_margin_px": 52
+        }
+      ]
+    }
+  }
+}

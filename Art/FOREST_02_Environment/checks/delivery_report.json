@@ -1,0 +1,12 @@
+{
+  "all_export_audits_passed": true,
+  "terrain_facing_repair_verified": true,
+  "unity_source_files_unchanged_during_repair": true,
+  "verification_scope": "Repair only; user performed Unity imports between original delivery and this repair.",
+  "unity_import_or_playtest_performed": false,
+  "delivery_zip": "C:\\Users\\gonut\\RELAY_Art\\FOREST_02_Environment\\RELAY_Forest_UnityFiles.zip",
+  "zip_integrity_passed": true,
+  "zip_file_count": 19,
+  "zip_bytes": 123867643,
+  "total_triangles": 3133239
+}

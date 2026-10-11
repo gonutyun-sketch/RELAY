@@ -1,0 +1,201 @@
+{
+  "name": "RELAY Forest 01 - mountain spruce A",
+  "stage": "One reusable hero tree; forest terrain, rocks, additional trees and Unity placement deferred",
+  "metres": true,
+  "unity_root": "trunk base at (0,0,0), P0 R0 S1",
+  "layers": [
+    {
+      "level": 0,
+      "parts": [
+        {
+          "name": "SPRUCE_A_Wood_LOD0",
+          "vertices": 46932,
+          "triangles": 88636,
+          "min": [
+            -2.052351713180542,
+            -0.08411142975091934,
+            -2.5191562175750732
+          ],
+          "max": [
+            2.765838146209717,
+            11.820432662963867,
+            2.271618127822876
+          ],
+          "materials": [
+            "RLYF_SpruceBark",
+            "RLYF_ExposedWood"
+          ]
+        },
+        {
+          "name": "SPRUCE_A_Needles_LOD0",
+          "vertices": 40200,
+          "triangles": 30150,
+          "min": [
+            -2.7011430263519287,
+            0.6503363847732544,
+            -2.985975503921509
+          ],
+          "max": [
+            3.414294958114624,
+            11.640718460083008,
+            2.797793388366699
+          ],
+          "materials": [
+            "RLYF_SpruceNeedles"
+          ]
+        }
+      ],
+      "total_triangles": 118786
+    },
+    {
+      "level": 1,
+      "parts": [
+        {
+          "name": "SPRUCE_A_Wood_LOD1",
+          "vertices": 22513,
+          "triangles": 39798,
+          "min": [
+            -2.052396297454834,
+            -0.08443573117256165,
+            -2.5194764137268066
+          ],
+          "max": [
+            2.7658395767211914,
+            11.820426940917969,
+            2.2718677520751953
+          ],
+          "materials": [
+            "RLYF_SpruceBark",
+            "RLYF_ExposedWood"
+          ]
+        },
+        {
+          "name": "SPRUCE_A_Needles_LOD1",
+          "vertices": 19602,
+          "triangles": 13068,
+          "min": [
+            -2.7907803058624268,
+            0.6046106219291687,
+            -3.048858880996704
+          ],
+          "max": [
+            3.5007848739624023,
+            11.686687469482422,
+            2.8768091201782227
+          ],
+          "materials": [
+            "RLYF_SpruceNeedles"
+          ]
+        }
+      ],
+      "total_triangles": 52866
+    },
+    {
+      "level": 2,
+      "parts": [
+        {
+          "name": "SPRUCE_A_Wood_LOD2",
+          "vertices": 7281,
+          "triangles": 11770,
+          "min": [
+            -2.0474042892456055,
+            -0.0835285633802414,
+            -2.5182762145996094
+          ],
+          "max": [
+            2.765782117843628,
+            11.820432662963867,
+            2.270589590072632
+          ],
+          "materials": [
+            "RLYF_SpruceBark",
+            "RLYF_ExposedWood"
+          ]
+        },
+        {
+          "name": "SPRUCE_A_Needles_LOD2",
+          "vertices": 6032,
+          "triangles": 3016,
+          "min": [
+            -2.5707077980041504,
+            0.5392329096794128,
+            -3.1641454696655273
+          ],
+          "max": [
+            3.659349203109741,
+            11.770966529846191,
+            3.0216715335845947
+          ],
+          "materials": [
+            "RLYF_SpruceNeedles"
+          ]
+        }
+      ],
+      "total_triangles": 14786
+    }
+  ],
+  "spray_count_source": 5025,
+  "source_hashes_before": {
+    "C:\\Users\\gonut\\School_p2\\Assets\\Scenes\\Startup_Graybox.unity": "f452b9cf159297ddf02960629aab8975f29eb4e4541f64279f3f01b70746505a",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CoolingFlowGauge.cs": "700bece1450cfeece61a1162c4370c1caa443bd8b81f9f79cd7ea775868887ac",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CoolingModule.cs": "d2376ab9bd454a4be257575d114d25d1814d0ed3463fe59d6e6fd03efc4bb7d6",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CoreElectricalFX.cs": "09f160271aa296ae2e4d725046d89c307c94f70778fb0bcd57a58aeb5f063474",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CoreModule.cs": "418ab68966daad25382e1af3c151b69abf7852396907f154321677860c570bc0",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CorePanelDisplay.cs": "3b003754928a6c3288b3f1762e8b06804bdd20c52e9404aba4d9b6733985d009",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CorePowerVisual.cs": "adadd71058cb2742b66c3de742988b5322f84e997d31c67c75930030f460fcaf",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CoreStartLever.cs": "718845880f60fddac7d72e638800ae59a9c83ac6cd3419335b65ef5a3dac6ecd",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\DoorRevealSequence.cs": "96c36ec3033c078b51a21e38498cc2cd1bc5a9a47228ed54833d5b6905a49049",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\ElevatorButton.cs": "ec8c23c3e77526ea01074065b8706ca70963d8871d214bfbab032e9eecad4100",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\ElevatorModule.cs": "b9b49a704ceb42a1cb124463f74c69daa009cf257796173701230f23981194b4",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\EndingMenu.cs": "ab5b74c1c6481766fde485d5c07ed0df4628d96db6552cbb6caa4d68667f88d8",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\ExitDoor.cs": "e17a02d5b974e945dd4400c771b4a2eeb5d20b94e3257edfc54027102c8d1775",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\FirstPersonMotor.cs": "d971fdec53007c7f73322a663af4d021131786dbaa7ef40f2e9459604ee947ae",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\Interactable.cs": "61535d63f8b4e4469aa1bc43491f0e74fe6c118af87b8a28a5efddc0757b3404",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MachineDial.cs": "54c73079db7472ff4c797d557f056a5197d02feec6d66f4d73922faee97be940",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MachineGauge.cs": "768cf8d76027c1c0f901e65f0908d0e80badda3d3aaae84b4cbe2d5c41c98775",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MachineLever.cs": "40cc85f7cd59dcdd725d37c97b4dcc5a3c23efa91c2839593f4b818f01183cf8",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MachineSlider.cs": "c643ff5d78619583b480cdc9125eb27f4d56db6fc87de4c593d0e5f5824ef23f",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MachineSwitch.cs": "0d36625bafbeebd44f0cc2a0658d5914d10d873a689d63b5f691303848889607",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MountainEndingSequence.cs": "3aad430519fa9b80e71b51b25094394f4294d3a1f23b5e33dcea16bd74da6156",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\PlayerInteractor.cs": "1c6a31be51065ef4d56a598ff1e073e292bd67ae6133988e85505c97aa3748d3",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\PoweredSwitch.cs": "6b81e380b664042a1f845562c1533860ec7bf6fb1e0ab0e1f8801e2fe3bd4917",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\PowerModule.cs": "942d7236356869bf86e0a892ce5c1e9c783f1ce623f6c5fb5baa9c73dd0820a4",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\SignalScope.cs": "0aacde89f3f153ea9e1f08102fe4ef61cb168a64bb88f0afa3d39b5e02aab8c2",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\SliderDragInput.cs": "46b948f5a0300a0b47a0f5653ee88607d0c2678b16973d57edb79bafb1a4a735"
+  },
+  "source_hashes_after": {
+    "C:\\Users\\gonut\\School_p2\\Assets\\Scenes\\Startup_Graybox.unity": "f452b9cf159297ddf02960629aab8975f29eb4e4541f64279f3f01b70746505a",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CoolingFlowGauge.cs": "700bece1450cfeece61a1162c4370c1caa443bd8b81f9f79cd7ea775868887ac",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CoolingModule.cs": "d2376ab9bd454a4be257575d114d25d1814d0ed3463fe59d6e6fd03efc4bb7d6",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CoreElectricalFX.cs": "09f160271aa296ae2e4d725046d89c307c94f70778fb0bcd57a58aeb5f063474",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CoreModule.cs": "418ab68966daad25382e1af3c151b69abf7852396907f154321677860c570bc0",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CorePanelDisplay.cs": "3b003754928a6c3288b3f1762e8b06804bdd20c52e9404aba4d9b6733985d009",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CorePowerVisual.cs": "adadd71058cb2742b66c3de742988b5322f84e997d31c67c75930030f460fcaf",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\CoreStartLever.cs": "718845880f60fddac7d72e638800ae59a9c83ac6cd3419335b65ef5a3dac6ecd",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\DoorRevealSequence.cs": "96c36ec3033c078b51a21e38498cc2cd1bc5a9a47228ed54833d5b6905a49049",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\ElevatorButton.cs": "ec8c23c3e77526ea01074065b8706ca70963d8871d214bfbab032e9eecad4100",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\ElevatorModule.cs": "b9b49a704ceb42a1cb124463f74c69daa009cf257796173701230f23981194b4",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\EndingMenu.cs": "ab5b74c1c6481766fde485d5c07ed0df4628d96db6552cbb6caa4d68667f88d8",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\ExitDoor.cs": "e17a02d5b974e945dd4400c771b4a2eeb5d20b94e3257edfc54027102c8d1775",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\FirstPersonMotor.cs": "d971fdec53007c7f73322a663af4d021131786dbaa7ef40f2e9459604ee947ae",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\Interactable.cs": "61535d63f8b4e4469aa1bc43491f0e74fe6c118af87b8a28a5efddc0757b3404",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MachineDial.cs": "54c73079db7472ff4c797d557f056a5197d02feec6d66f4d73922faee97be940",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MachineGauge.cs": "768cf8d76027c1c0f901e65f0908d0e80badda3d3aaae84b4cbe2d5c41c98775",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MachineLever.cs": "40cc85f7cd59dcdd725d37c97b4dcc5a3c23efa91c2839593f4b818f01183cf8",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MachineSlider.cs": "c643ff5d78619583b480cdc9125eb27f4d56db6fc87de4c593d0e5f5824ef23f",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MachineSwitch.cs": "0d36625bafbeebd44f0cc2a0658d5914d10d873a689d63b5f691303848889607",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\MountainEndingSequence.cs": "3aad430519fa9b80e71b51b25094394f4294d3a1f23b5e33dcea16bd74da6156",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\PlayerInteractor.cs": "1c6a31be51065ef4d56a598ff1e073e292bd67ae6133988e85505c97aa3748d3",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\PoweredSwitch.cs": "6b81e380b664042a1f845562c1533860ec7bf6fb1e0ab0e1f8801e2fe3bd4917",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\PowerModule.cs": "942d7236356869bf86e0a892ce5c1e9c783f1ce623f6c5fb5baa9c73dd0820a4",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\SignalScope.cs": "0aacde89f3f153ea9e1f08102fe4ef61cb168a64bb88f0afa3d39b5e02aab8c2",
+    "C:\\Users\\gonut\\School_p2\\Assets\\RELAY\\Scripts\\SliderDragInput.cs": "46b948f5a0300a0b47a0f5653ee88607d0c2678b16973d57edb79bafb1a4a735"
+  },
+  "unity_project_unchanged": true,
+  "needle_detail_target": [
+    0.7686061859130859,
+    3.531583786010742,
+    -2.1200404167175293
+  ],
+  "export_convention": "Unity design (x,y,z) -> Blender (x,z,y); export geometry Z180 baked; -Z forward Y up FBX. Expected Unity P0 R0 S1."
+}

@@ -1,0 +1,313 @@
+{
+  "package": "RELAY forest exit integration 03",
+  "units": "metres",
+  "axis": "Unity +Y up, +Z forest; new exports use local identity",
+  "static_parent": "MountainEnding",
+  "moving_parent": "EXIT_Module/ELEVATOR_Module",
+  "rectangular_hole_union": [
+    [
+      -1.75,
+      1.75,
+      -3.55,
+      0.55
+    ],
+    [
+      -2.65,
+      2.65,
+      -0.82,
+      -0.16
+    ]
+  ],
+  "terrain_removed_under_new_landing": [
+    [
+      -3.7,
+      3.7,
+      -3.8,
+      1.75
+    ],
+    [
+      -1.7,
+      1.7,
+      1.74,
+      2.75
+    ]
+  ],
+  "terrain_cut": [
+    {
+      "object": "Forest_Ground",
+      "old_faces": 22704,
+      "new_faces": 22622,
+      "all_upward": true
+    },
+    {
+      "object": "Worn_Forest_Path",
+      "old_faces": 360,
+      "new_faces": 312,
+      "all_upward": true
+    }
+  ],
+  "parts": [
+    {
+      "name": "FOREST_Terrain",
+      "file": "FOREST_Terrain.fbx",
+      "vertices": 23357,
+      "triangles": 45867,
+      "unity_min": [
+        -42.0,
+        -4.655198574066162,
+        -7.0
+      ],
+      "unity_max": [
+        42.0,
+        4.196502208709717,
+        208.0
+      ],
+      "materials": [
+        "RLYF_ForestFloor",
+        "RLYF_TroddenPath"
+      ],
+      "bytes": 972300,
+      "sha256": "20ae59ae4289c0d80891f2aab6bc87fbcc62540228bcf53eade2e75d310e846f"
+    },
+    {
+      "name": "FOREST_Undergrowth",
+      "file": "FOREST_Undergrowth.fbx",
+      "vertices": 420270,
+      "triangles": 322783,
+      "unity_min": [
+        -11.138089179992676,
+        -1.942500352859497,
+        -1.1175446510314941
+      ],
+      "unity_max": [
+        11.179932594299316,
+        1.4958229064941406,
+        28.149097442626953
+      ],
+      "materials": [
+        "RLYF_SpruceBark",
+        "RLYF_CutWood",
+        "RLYF_RockMoss_0",
+        "RLYF_RockMoss_1",
+        "RLYF_RockMoss_2",
+        "RLYF_DryTwigs",
+        "RLYF_Bilberry_0",
+        "RLYF_Bilberry_1",
+        "RLYF_Bilberry_2",
+        "RLYF_LeafLitter_0",
+        "RLYF_LeafLitter_1",
+        "RLYF_LeafLitter_2",
+        "RLYF_Fern_0",
+        "RLYF_Fern_1",
+        "RLYF_Fern_2",
+        "RLYF_Fern_3",
+        "RLYF_Sedge_0",
+        "RLYF_Sedge_1",
+        "RLYF_Sedge_2"
+      ],
+      "bytes": 17166764,
+      "sha256": "88ca0ab0fdf66fd17d78e73e4ce3e2733a86e852b7ac65c3b1ae17ac99271d62"
+    },
+    {
+      "name": "EXIT_Hillside",
+      "file": "EXIT_Hillside.fbx",
+      "vertices": 6478,
+      "triangles": 12904,
+      "unity_min": [
+        -24.0,
+        -2.200000047683716,
+        -27.0
+      ],
+      "unity_max": [
+        24.0,
+        11.511548042297363,
+        1.0499999523162842
+      ],
+      "materials": [
+        "RLYF_DampGranite",
+        "RLYF_ForestFloor",
+        "RLYX_SealRubber",
+        "RLYX_RockMoss"
+      ],
+      "bytes": 420140,
+      "sha256": "c2333ab7761b6bba6b4a40ace9fa88f253807dc82f947f6cd164074f1d4b745e"
+    },
+    {
+      "name": "EXIT_Headwall",
+      "file": "EXIT_Headwall.fbx",
+      "vertices": 2232,
+      "triangles": 4268,
+      "unity_min": [
+        -3.8499999046325684,
+        0.0,
+        -4.329999923706055
+      ],
+      "unity_max": [
+        3.8499999046325684,
+        4.699999809265137,
+        1.409999966621399
+      ],
+      "materials": [
+        "RLYX_AgedConcrete",
+        "RLYX_DarkSteel",
+        "RLYF_DampGranite"
+      ],
+      "bytes": 100236,
+      "sha256": "4fbfe969025f2f618193917f2121bb0e2d3f9301f58073f5f64eaad907610947"
+    },
+    {
+      "name": "EXIT_Landing",
+      "file": "EXIT_Landing.fbx",
+      "vertices": 1408,
+      "triangles": 2680,
+      "unity_min": [
+        -3.700000047683716,
+        -0.1899999976158142,
+        -3.799999952316284
+      ],
+      "unity_max": [
+        3.700000047683716,
+        0.05927439406514168,
+        2.75
+      ],
+      "materials": [
+        "RLYX_AgedConcrete",
+        "RLYX_DarkSteel",
+        "RLYX_SealRubber"
+      ],
+      "bytes": 68284,
+      "sha256": "d05b6539f4a2a9621a3f4e7219cb5cde17b4a1abc67a20db66e4b6283f8d2a36"
+    },
+    {
+      "name": "EXIT_SealTrim",
+      "file": "EXIT_SealTrim.fbx",
+      "vertices": 672,
+      "triangles": 1296,
+      "unity_min": [
+        -1.7910000085830688,
+        -0.699999988079071,
+        -3.5910000801086426
+      ],
+      "unity_max": [
+        1.7910000085830688,
+        0.014999999664723873,
+        0.5910000205039978
+      ],
+      "materials": [
+        "RLYX_SealRubber",
+        "RLYX_DarkSteel"
+      ],
+      "bytes": 44156,
+      "sha256": "90f9b0202d5f9ba66531d1bf40d167938b0f17eadf819b063a837f39213766da"
+    },
+    {
+      "name": "ELEVATOR_LandingApron",
+      "file": "ELEVATOR_LandingApron.fbx",
+      "vertices": 424,
+      "triangles": 804,
+      "unity_min": [
+        -1.7000000476837158,
+        -0.04600000008940697,
+        -3.5
+      ],
+      "unity_max": [
+        1.7000000476837158,
+        0.00800000037997961,
+        0.5
+      ],
+      "materials": [
+        "RLYX_DarkSteel",
+        "RLYX_FadedOchre"
+      ],
+      "bytes": 33964,
+      "sha256": "444eebaab3940b718669f40771cfce8567edb0a2630543a97bf77c5d7bbceddc"
+    },
+    {
+      "name": "EXIT_BackTrees",
+      "file": "EXIT_BackTrees.fbx",
+      "vertices": 213008,
+      "triangles": 236576,
+      "unity_min": [
+        -20.733640670776367,
+        2.0570781230926514,
+        -23.753662109375
+      ],
+      "unity_max": [
+        21.448680877685547,
+        20.281143188476562,
+        -1.636063814163208
+      ],
+      "materials": [
+        "RLYF_SpruceBark",
+        "RLYF_ExposedWood",
+        "RLYF_SpruceNeedles"
+      ],
+      "bytes": 7207660,
+      "sha256": "434532a65eaa4d4bd62ad34842dc8b27e145665f012a6a6c1e5c65bc195ade6d"
+    }
+  ],
+  "seed": 11102026,
+  "original_unity_scene_modified": false,
+  "undergrowth_cleared_at_landing": [
+    {
+      "object": "Exposed_Spruce_Root.013",
+      "removed_vertices": 81
+    },
+    {
+      "object": "Rock_Surface_Moss",
+      "removed_vertices": 304
+    },
+    {
+      "object": "Bilberry_Stem.001",
+      "removed_vertices": 15
+    },
+    {
+      "object": "Bilberry_Stem.002",
+      "removed_vertices": 15
+    },
+    {
+      "object": "Bilberry_Stem.007",
+      "removed_vertices": 15
+    },
+    {
+      "object": "Bilberry_Leaves",
+      "removed_vertices": 63
+    },
+    {
+      "object": "Scattered_Leaf_Litter",
+      "removed_vertices": 133
+    },
+    {
+      "object": "Fern_Beds",
+      "removed_vertices": 6009
+    },
+    {
+      "object": "Sedge_and_Dry_Grass",
+      "removed_vertices": 1780
+    },
+    {
+      "object": "Forest_Twig.024",
+      "removed_vertices": 10
+    },
+    {
+      "object": "Forest_Twig.028",
+      "removed_vertices": 10
+    },
+    {
+      "object": "Forest_Twig.031",
+      "removed_vertices": 10
+    },
+    {
+      "object": "Forest_Twig.037",
+      "removed_vertices": 10
+    },
+    {
+      "object": "Forest_Twig.051",
+      "removed_vertices": 10
+    },
+    {
+      "object": "Forest_Twig.056",
+      "removed_vertices": 10
+    }
+  ]
+}

@@ -1,0 +1,1099 @@
+{
+  "method": "Independent raw FBX checks and exact triangle-box sweep checks; no Unity execution or writes",
+  "files": [
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_03_ExitIntegration\\exports\\FOREST_Terrain.fbx",
+      "sha256": "20ae59ae4289c0d80891f2aab6bc87fbcc62540228bcf53eade2e75d310e846f",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "FOREST_Terrain",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "FOREST_Terrain",
+          "vertices": 23357,
+          "polygons": 22934,
+          "triangles": 45867,
+          "minimum_triangle_area_m2": 2.1267836574740913e-05,
+          "expected_unity_min": [
+            -42.0,
+            -4.655198574066162,
+            -7.000003814697266
+          ],
+          "expected_unity_max": [
+            42.00001907348633,
+            4.196502208709717,
+            208.0
+          ],
+          "materials": [
+            "RLYF_ForestFloor",
+            "RLYF_TroddenPath"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 45867,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_03_ExitIntegration\\exports\\FOREST_Undergrowth.fbx",
+      "sha256": "88ca0ab0fdf66fd17d78e73e4ce3e2733a86e852b7ac65c3b1ae17ac99271d62",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "FOREST_Undergrowth",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "FOREST_Undergrowth",
+          "vertices": 420270,
+          "polygons": 293003,
+          "triangles": 322783,
+          "minimum_triangle_area_m2": 2.1279799947648503e-06,
+          "expected_unity_min": [
+            -11.13808822631836,
+            -1.942500352859497,
+            -1.117545247077942
+          ],
+          "expected_unity_max": [
+            11.17993450164795,
+            1.4958229064941406,
+            28.149097442626953
+          ],
+          "materials": [
+            "RLYF_SpruceBark",
+            "RLYF_CutWood",
+            "RLYF_RockMoss_0",
+            "RLYF_RockMoss_1",
+            "RLYF_RockMoss_2",
+            "RLYF_DryTwigs",
+            "RLYF_Bilberry_0",
+            "RLYF_Bilberry_1",
+            "RLYF_Bilberry_2",
+            "RLYF_LeafLitter_0",
+            "RLYF_LeafLitter_1",
+            "RLYF_LeafLitter_2",
+            "RLYF_Fern_0",
+            "RLYF_Fern_1",
+            "RLYF_Fern_2",
+            "RLYF_Fern_3",
+            "RLYF_Sedge_0",
+            "RLYF_Sedge_1",
+            "RLYF_Sedge_2"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 322783,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_03_ExitIntegration\\exports\\EXIT_Hillside.fbx",
+      "sha256": "c2333ab7761b6bba6b4a40ace9fa88f253807dc82f947f6cd164074f1d4b745e",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "EXIT_Hillside",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "EXIT_Hillside",
+          "vertices": 6478,
+          "polygons": 12904,
+          "triangles": 12904,
+          "minimum_triangle_area_m2": 0.006005383129069825,
+          "expected_unity_min": [
+            -24.000001907348633,
+            -2.200000047683716,
+            -27.000001907348633
+          ],
+          "expected_unity_max": [
+            24.0,
+            11.511548042297363,
+            1.050002098083496
+          ],
+          "materials": [
+            "RLYF_DampGranite",
+            "RLYF_ForestFloor",
+            "RLYX_SealRubber",
+            "RLYX_RockMoss"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 12904,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_03_ExitIntegration\\exports\\EXIT_Headwall.fbx",
+      "sha256": "4fbfe969025f2f618193917f2121bb0e2d3f9301f58073f5f64eaad907610947",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "EXIT_Headwall",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "EXIT_Headwall",
+          "vertices": 2232,
+          "polygons": 2006,
+          "triangles": 4268,
+          "minimum_triangle_area_m2": 5.756317102707744e-06,
+          "expected_unity_min": [
+            -3.8499999046325684,
+            0.0,
+            -4.330000400543213
+          ],
+          "expected_unity_max": [
+            3.8500001430511475,
+            4.699999809265137,
+            1.4100003242492676
+          ],
+          "materials": [
+            "RLYX_AgedConcrete",
+            "RLYX_DarkSteel",
+            "RLYF_DampGranite"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 4268,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_03_ExitIntegration\\exports\\EXIT_Landing.fbx",
+      "sha256": "d05b6539f4a2a9621a3f4e7219cb5cde17b4a1abc67a20db66e4b6283f8d2a36",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "EXIT_Landing",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "EXIT_Landing",
+          "vertices": 1408,
+          "polygons": 1276,
+          "triangles": 2680,
+          "minimum_triangle_area_m2": 2.0723266861053625e-06,
+          "expected_unity_min": [
+            -3.700000286102295,
+            -0.1899999976158142,
+            -3.8000001907348633
+          ],
+          "expected_unity_max": [
+            3.700000286102295,
+            0.05927439406514168,
+            2.750000238418579
+          ],
+          "materials": [
+            "RLYX_AgedConcrete",
+            "RLYX_DarkSteel",
+            "RLYX_SealRubber"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 2680,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_03_ExitIntegration\\exports\\EXIT_SealTrim.fbx",
+      "sha256": "90f9b0202d5f9ba66531d1bf40d167938b0f17eadf819b063a837f39213766da",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "EXIT_SealTrim",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "EXIT_SealTrim",
+          "vertices": 672,
+          "polygons": 648,
+          "triangles": 1296,
+          "minimum_triangle_area_m2": 2.3016892462694823e-07,
+          "expected_unity_min": [
+            -1.7910003662109375,
+            -0.699999988079071,
+            -3.5910003185272217
+          ],
+          "expected_unity_max": [
+            1.7910000085830688,
+            0.014999999664723873,
+            0.5910001993179321
+          ],
+          "materials": [
+            "RLYX_SealRubber",
+            "RLYX_DarkSteel"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 1296,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_03_ExitIntegration\\exports\\ELEVATOR_LandingApron.fbx",
+      "sha256": "444eebaab3940b718669f40771cfce8567edb0a2630543a97bf77c5d7bbceddc",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "ELEVATOR_LandingApron",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "ELEVATOR_LandingApron",
+          "vertices": 424,
+          "polygons": 354,
+          "triangles": 804,
+          "minimum_triangle_area_m2": 2.3024637157718604e-07,
+          "expected_unity_min": [
+            -1.7000004053115845,
+            -0.04600000008940697,
+            -3.500000238418579
+          ],
+          "expected_unity_max": [
+            1.7000000476837158,
+            0.00800000037997961,
+            0.5000001192092896
+          ],
+          "materials": [
+            "RLYX_DarkSteel",
+            "RLYX_FadedOchre"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 804,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_03_ExitIntegration\\exports\\EXIT_BackTrees.fbx",
+      "sha256": "434532a65eaa4d4bd62ad34842dc8b27e145665f012a6a6c1e5c65bc195ade6d",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "EXIT_BackTrees",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "EXIT_BackTrees",
+          "vertices": 213008,
+          "polygons": 127440,
+          "triangles": 236576,
+          "minimum_triangle_area_m2": 3.549590107819378e-07,
+          "expected_unity_min": [
+            -20.733642578125,
+            2.0570781230926514,
+            -23.753660202026367
+          ],
+          "expected_unity_max": [
+            21.448678970336914,
+            20.281143188476562,
+            -1.6360628604888916
+          ],
+          "materials": [
+            "RLYF_SpruceBark",
+            "RLYF_ExposedWood",
+            "RLYF_SpruceNeedles"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 236576,
+      "passed": true
+    }
+  ],
+  "swept_clearance": [
+    {
+      "sweep": "moving floor",
+      "overlap_triangle_count": 0,
+      "objects": [],
+      "examples": []
+    },
+    {
+      "sweep": "moving roof",
+      "overlap_triangle_count": 0,
+      "objects": [],
+      "examples": []
+    },
+    {
+      "sweep": "track",
+      "overlap_triangle_count": 0,
+      "objects": [],
+      "examples": []
+    },
+    {
+      "sweep": "hoist envelope",
+      "overlap_triangle_count": 0,
+      "objects": [],
+      "examples": []
+    }
+  ],
+  "terrain_aperture_rays": {
+    "count": 1561,
+    "blocked_count": 0,
+    "blocked_examples": []
+  },
+  "hillside_cavity_rays": {
+    "count": 336,
+    "blocked_count": 0,
+    "blocked_examples": []
+  },
+  "ground_landing_overlap": {
+    "coplanar_count": 0,
+    "terrain_above_landing_count": 0,
+    "examples": []
+  },
+  "arrival_oblique_down_rays": {
+    "samples": 1152,
+    "deep_or_miss_count": 2,
+    "examples": [
+      {
+        "eye": [
+          -0.85,
+          1.62,
+          -1.0
+        ],
+        "azimuth": 290,
+        "pitch": -50,
+        "hit": [
+          -2.739999771118164,
+          -0.7769688367843628,
+          -0.31209635734558105
+        ]
+      },
+      {
+        "eye": [
+          0.85,
+          1.62,
+          -1.0
+        ],
+        "azimuth": 70,
+        "pitch": -50,
+        "hit": [
+          2.739999771118164,
+          -0.7769688367843628,
+          -0.31209635734558105
+        ]
+      }
+    ]
+  },
+  "fbx_passed": true,
+  "swept_clear": true,
+  "holes_clear": true,
+  "landing_clear": true,
+  "passed": true
+}

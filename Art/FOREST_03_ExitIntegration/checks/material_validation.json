@@ -1,0 +1,139 @@
+{
+  "seed": 11032026,
+  "size": [
+    2048,
+    2048
+  ],
+  "normal_convention": "OpenGL tangent-space +Y",
+  "base_color_color_space": "sRGB",
+  "normal_color_space": "linear",
+  "periodic_algorithm": "FFT Gaussian convolution and wrapping central derivatives",
+  "assets": [
+    {
+      "name": "RLYX_AgedConcrete",
+      "roughness": 0.87,
+      "metallic": 0.0,
+      "tile_width_meters": 1.5,
+      "normal_strength": 1.0,
+      "maps": {
+        "BaseColor": {
+          "path": "textures/RLYX_AgedConcrete_BaseColor.png",
+          "sha256": "79e6985f05913f9d92c4f1248bcb6040f8167ddaf4652b8c8331c55f249dbe40",
+          "rgb_mean": [
+            107.389,
+            105.389,
+            97.389
+          ],
+          "rgb_min": [
+            67,
+            66,
+            57
+          ],
+          "rgb_max": [
+            134,
+            131,
+            123
+          ],
+          "seam_validation": {
+            "boundary_horizontal_mean_delta": 1.2715,
+            "boundary_vertical_mean_delta": 1.2559,
+            "interior_horizontal_mean_delta": 1.2554,
+            "interior_vertical_mean_delta": 1.2548,
+            "boundary_to_interior_x_ratio": 1.0128,
+            "boundary_to_interior_y_ratio": 1.0009
+          }
+        },
+        "Normal": {
+          "path": "textures/RLYX_AgedConcrete_Normal.png",
+          "sha256": "3978160c309cd4a67cd84bdcd08e854c3e18261458b768be3718121bdbd9968f",
+          "rgb_mean": [
+            127.5,
+            127.5,
+            254.957
+          ],
+          "rgb_min": [
+            87,
+            87,
+            246
+          ],
+          "rgb_max": [
+            166,
+            170,
+            255
+          ],
+          "seam_validation": {
+            "boundary_horizontal_mean_delta": 2.0578,
+            "boundary_vertical_mean_delta": 1.9914,
+            "interior_horizontal_mean_delta": 2.0102,
+            "interior_vertical_mean_delta": 2.0101,
+            "boundary_to_interior_x_ratio": 1.0237,
+            "boundary_to_interior_y_ratio": 0.9907
+          }
+        }
+      }
+    },
+    {
+      "name": "RLYX_DarkSteel",
+      "roughness": 0.69,
+      "metallic": 0.78,
+      "tile_width_meters": 1.0,
+      "normal_strength": 1.0,
+      "maps": {
+        "BaseColor": {
+          "path": "textures/RLYX_DarkSteel_BaseColor.png",
+          "sha256": "3a458f21892c2aa5e83ee33d5ed78f2a0c670d9c0a034cbd59a76810c984212f",
+          "rgb_mean": [
+            47.667,
+            47.191,
+            43.049
+          ],
+          "rgb_min": [
+            36,
+            36,
+            32
+          ],
+          "rgb_max": [
+            61,
+            59,
+            55
+          ],
+          "seam_validation": {
+            "boundary_horizontal_mean_delta": 0.3768,
+            "boundary_vertical_mean_delta": 0.5452,
+            "interior_horizontal_mean_delta": 0.3901,
+            "interior_vertical_mean_delta": 0.5155,
+            "boundary_to_interior_x_ratio": 0.9659,
+            "boundary_to_interior_y_ratio": 1.0577
+          }
+        },
+        "Normal": {
+          "path": "textures/RLYX_DarkSteel_Normal.png",
+          "sha256": "ebd9db980a369283a417c8526aeb4344c72c039ecd28c3fde6169dc02ec04bd0",
+          "rgb_mean": [
+            127.5,
+            127.5,
+            255.0
+          ],
+          "rgb_min": [
+            125,
+            124,
+            255
+          ],
+          "rgb_max": [
+            130,
+            131,
+            255
+          ],
+          "seam_validation": {
+            "boundary_horizontal_mean_delta": 0.1956,
+            "boundary_vertical_mean_delta": 0.2596,
+            "interior_horizontal_mean_delta": 0.1954,
+            "interior_vertical_mean_delta": 0.2511,
+            "boundary_to_interior_x_ratio": 1.0012,
+            "boundary_to_interior_y_ratio": 1.0337
+          }
+        }
+      }
+    }
+  ]
+}

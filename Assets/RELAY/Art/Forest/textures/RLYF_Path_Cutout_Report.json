@@ -1,0 +1,20 @@
+{
+  "resolution": [
+    1024,
+    4096
+  ],
+  "mode": "RGBA",
+  "physical_meters": [
+    2.5,
+    18.9
+  ],
+  "uv": "U across; V0 entrance at image bottom; V1 far end at image top",
+  "color_repeat_meters": [
+    2,
+    2
+  ],
+  "clip_threshold": 0.45,
+  "coverage_above_clip_percent": 78.99,
+  "import": "sRGB on; alpha source; Clamp wrap; clip .45. Same floor normal separately repeats every 2 metres.",
+  "previous_maps": "unchanged"
+}

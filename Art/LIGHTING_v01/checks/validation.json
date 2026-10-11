@@ -1,0 +1,1505 @@
+{
+  "checked_at_utc": "2026-10-06T05:05:20.561624+00:00",
+  "method": "Load saved Blender mesh, actual independent FBX imports, compare round-trip geometry/UVs/materials/transforms and audited scene mounts.",
+  "unity_opened_or_modified": false,
+  "tolerance_m": 5e-05,
+  "checks": [
+    {
+      "name": "Before validation audited Unity scene SHA256 unchanged",
+      "passed": true,
+      "details": {
+        "path": "C:/Users/gonut/School_p2/Assets/Scenes/Startup_Graybox.unity",
+        "actual": "D91D873B77BB6CF1036CC7B356098A36C4ED33E90A120554C9A9DE77D8C36A4B",
+        "expected": "D91D873B77BB6CF1036CC7B356098A36C4ED33E90A120554C9A9DE77D8C36A4B"
+      }
+    },
+    {
+      "name": "Before validation audited Unity controller SHA256 unchanged",
+      "passed": true,
+      "details": {
+        "path": "C:/Users/gonut/School_p2/Assets/_STARTUP/Scripts/CorePowerVisual.cs",
+        "actual": "ADADD71058CB2742B66C3DE742988B5322F84E997D31C67C75930030F460FCAF",
+        "expected": "ADADD71058CB2742B66C3DE742988B5322F84E997D31C67C75930030F460FCAF"
+      }
+    },
+    {
+      "name": "Before validation Unity repository worktree clean",
+      "passed": true,
+      "details": {
+        "returncode": 0,
+        "status": "",
+        "stderr": "",
+        "scope": "Git-tracked project content and nonignored untracked files; not Unity Library or other ignored generated caches."
+      }
+    },
+    {
+      "name": "Blender scene uses metric metres",
+      "passed": true,
+      "details": {
+        "system": "METRIC",
+        "scale_length": 1.0
+      }
+    },
+    {
+      "name": "Saved authoring file has no cameras lights or animation",
+      "passed": true,
+      "details": {
+        "excluded_object_types": [],
+        "action_count": 0
+      }
+    },
+    {
+      "name": "Exactly six expected manifest entries and FBX files",
+      "passed": true,
+      "details": {
+        "manifest_names": [
+          "LIGHT_BulkheadGlass",
+          "LIGHT_BulkheadHousing",
+          "LIGHT_BulkheadLens",
+          "LIGHT_LinearGlass",
+          "LIGHT_LinearHousing",
+          "LIGHT_LinearLens"
+        ],
+        "disk_names": [
+          "LIGHT_BulkheadGlass",
+          "LIGHT_BulkheadHousing",
+          "LIGHT_BulkheadLens",
+          "LIGHT_LinearGlass",
+          "LIGHT_LinearHousing",
+          "LIGHT_LinearLens"
+        ]
+      }
+    },
+    {
+      "name": "Manifest import offset agrees with audited top mount convention",
+      "passed": true,
+      "details": [
+        0,
+        0.05,
+        0
+      ]
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: saved export mesh exists",
+      "passed": true,
+      "details": "LIGHT_BulkheadGlass_Export"
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: finite nonempty geometry and applied source scale",
+      "passed": true,
+      "details": {
+        "vertices": 216,
+        "triangles": 428,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: baked local mesh inside exact design envelope",
+      "passed": true,
+      "details": {
+        "actual_unity_bounds": [
+          [
+            -0.17249999940395355,
+            0.17249999940395355
+          ],
+          [
+            -0.13699999451637268,
+            -0.11299999803304672
+          ],
+          [
+            -0.3330000042915344,
+            0.3330000042915344
+          ]
+        ],
+        "allowed_bounds": [
+          [
+            -0.25,
+            0.25
+          ],
+          [
+            -0.17,
+            0
+          ],
+          [
+            -0.42,
+            0.42
+          ]
+        ],
+        "maximum_excess_m": -0.03300000548362733
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: manifest matches source mesh bounds and counts",
+      "passed": true,
+      "details": {
+        "bound_error_m": 0.0,
+        "triangles": 428
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: complete finite source UVs",
+      "passed": true,
+      "details": {
+        "layers": 1,
+        "loops": 792
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: expected runtime material slots",
+      "passed": true,
+      "details": [
+        "RLYL_Glass"
+      ]
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: source origin agrees with shared fixture mount",
+      "passed": true,
+      "details": {
+        "pivot_error_m": 0.0,
+        "source_origin_blender": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "note": "All baked export roots and FBX origins are zero; editable source group offset is not an export offset."
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: export path remains in package",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\LIGHTING_v01\\exports\\LIGHT_BulkheadGlass.fbx"
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: FBX contains exactly one mesh and no helper content",
+      "passed": true,
+      "details": [
+        {
+          "name": "LIGHT_BulkheadGlass_Export.001",
+          "type": "MESH"
+        }
+      ]
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: actual FBX orientation metre scale and mount origin preserved",
+      "passed": true,
+      "details": {
+        "max_bound_error_m": 2.9802322387695312e-08,
+        "expected_fbx_axis_matrix_error": 0.0,
+        "note": "Blender FBX reimport uses +90-degree X axis conversion; world-space mesh must match original Blender geometry.",
+        "unity_bounds": [
+          [
+            -0.17249999940395355,
+            0.17249999940395355
+          ],
+          [
+            -0.13700002431869507,
+            -0.11299997568130493
+          ],
+          [
+            -0.3330000042915344,
+            0.3330000042915344
+          ]
+        ],
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            7.549790126404332e-08,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: FBX UVs finite and triangle count preserved",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "triangles": 428,
+        "source_triangles": 428
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadGlass: FBX material slots preserved and no animation",
+      "passed": true,
+      "details": {
+        "materials": [
+          "RLYL_Glass"
+        ],
+        "animation_data": "None"
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: saved export mesh exists",
+      "passed": true,
+      "details": "LIGHT_BulkheadHousing_Export"
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: finite nonempty geometry and applied source scale",
+      "passed": true,
+      "details": {
+        "vertices": 10490,
+        "triangles": 20544,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: baked local mesh inside exact design envelope",
+      "passed": true,
+      "details": {
+        "actual_unity_bounds": [
+          [
+            -0.21080125868320465,
+            0.21080125868320465
+          ],
+          [
+            -0.16759724915027618,
+            2.9571438631137426e-09
+          ],
+          [
+            -0.3722616732120514,
+            0.41850003600120544
+          ]
+        ],
+        "allowed_bounds": [
+          [
+            -0.25,
+            0.25
+          ],
+          [
+            -0.17,
+            0
+          ],
+          [
+            -0.42,
+            0.42
+          ]
+        ],
+        "maximum_excess_m": 2.9571438631137426e-09
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: manifest matches source mesh bounds and counts",
+      "passed": true,
+      "details": {
+        "bound_error_m": 0.0,
+        "triangles": 20544
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: complete finite source UVs",
+      "passed": true,
+      "details": {
+        "layers": 1,
+        "loops": 40464
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: expected runtime material slots",
+      "passed": true,
+      "details": [
+        "RLYL_Rubber",
+        "RLYL_Frame",
+        "RLYL_Steel",
+        "RLYL_Paint"
+      ]
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: source origin agrees with shared fixture mount",
+      "passed": true,
+      "details": {
+        "pivot_error_m": 0.0,
+        "source_origin_blender": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "note": "All baked export roots and FBX origins are zero; editable source group offset is not an export offset."
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: export path remains in package",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\LIGHTING_v01\\exports\\LIGHT_BulkheadHousing.fbx"
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: FBX contains exactly one mesh and no helper content",
+      "passed": true,
+      "details": [
+        {
+          "name": "LIGHT_BulkheadHousing_Export.001",
+          "type": "MESH"
+        }
+      ]
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: actual FBX orientation metre scale and mount origin preserved",
+      "passed": true,
+      "details": {
+        "max_bound_error_m": 2.9802322387695312e-08,
+        "expected_fbx_axis_matrix_error": 0.0,
+        "note": "Blender FBX reimport uses +90-degree X axis conversion; world-space mesh must match original Blender geometry.",
+        "unity_bounds": [
+          [
+            -0.21080125868320465,
+            0.21080125868320465
+          ],
+          [
+            -0.16759727895259857,
+            2.7644956546168942e-08
+          ],
+          [
+            -0.3722616732120514,
+            0.41850003600120544
+          ]
+        ],
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            7.549790126404332e-08,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: FBX UVs finite and triangle count preserved",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "triangles": 20544,
+        "source_triangles": 20544
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadHousing: FBX material slots preserved and no animation",
+      "passed": true,
+      "details": {
+        "materials": [
+          "RLYL_Rubber",
+          "RLYL_Frame",
+          "RLYL_Steel",
+          "RLYL_Paint"
+        ],
+        "animation_data": "None"
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadLens: saved export mesh exists",
+      "passed": true,
+      "details": "LIGHT_BulkheadLens_Export"
+    },
+    {
+      "name": "LIGHT_BulkheadLens: finite nonempty geometry and applied source scale",
+      "passed": true,
+      "details": {
+        "vertices": 288,
+        "triangles": 572,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadLens: baked local mesh inside exact design envelope",
+      "passed": true,
+      "details": {
+        "actual_unity_bounds": [
+          [
+            -0.16909568011760712,
+            0.16909568011760712
+          ],
+          [
+            -0.11999999731779099,
+            -0.10599999874830246
+          ],
+          [
+            -0.32954683899879456,
+            0.32954683899879456
+          ]
+        ],
+        "allowed_bounds": [
+          [
+            -0.25,
+            0.25
+          ],
+          [
+            -0.17,
+            0
+          ],
+          [
+            -0.42,
+            0.42
+          ]
+        ],
+        "maximum_excess_m": -0.05000000268220903
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadLens: manifest matches source mesh bounds and counts",
+      "passed": true,
+      "details": {
+        "bound_error_m": 0.0,
+        "triangles": 572
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadLens: complete finite source UVs",
+      "passed": true,
+      "details": {
+        "layers": 1,
+        "loops": 1080
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadLens: expected runtime material slots",
+      "passed": true,
+      "details": [
+        "RLYL_Lens"
+      ]
+    },
+    {
+      "name": "LIGHT_BulkheadLens: source origin agrees with shared fixture mount",
+      "passed": true,
+      "details": {
+        "pivot_error_m": 0.0,
+        "source_origin_blender": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "note": "All baked export roots and FBX origins are zero; editable source group offset is not an export offset."
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadLens: export path remains in package",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\LIGHTING_v01\\exports\\LIGHT_BulkheadLens.fbx"
+    },
+    {
+      "name": "LIGHT_BulkheadLens: FBX contains exactly one mesh and no helper content",
+      "passed": true,
+      "details": [
+        {
+          "name": "LIGHT_BulkheadLens_Export.001",
+          "type": "MESH"
+        }
+      ]
+    },
+    {
+      "name": "LIGHT_BulkheadLens: actual FBX orientation metre scale and mount origin preserved",
+      "passed": true,
+      "details": {
+        "max_bound_error_m": 2.2351741790771484e-08,
+        "expected_fbx_axis_matrix_error": 0.0,
+        "note": "Blender FBX reimport uses +90-degree X axis conversion; world-space mesh must match original Blender geometry.",
+        "unity_bounds": [
+          [
+            -0.16909568011760712,
+            0.16909568011760712
+          ],
+          [
+            -0.12000001966953278,
+            -0.10599997639656067
+          ],
+          [
+            -0.32954683899879456,
+            0.32954683899879456
+          ]
+        ],
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            7.549790126404332e-08,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadLens: FBX UVs finite and triangle count preserved",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "triangles": 572,
+        "source_triangles": 572
+      }
+    },
+    {
+      "name": "LIGHT_BulkheadLens: FBX material slots preserved and no animation",
+      "passed": true,
+      "details": {
+        "materials": [
+          "RLYL_Lens"
+        ],
+        "animation_data": "None"
+      }
+    },
+    {
+      "name": "LIGHT_LinearGlass: saved export mesh exists",
+      "passed": true,
+      "details": "LIGHT_LinearGlass_Export"
+    },
+    {
+      "name": "LIGHT_LinearGlass: finite nonempty geometry and applied source scale",
+      "passed": true,
+      "details": {
+        "vertices": 216,
+        "triangles": 428,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_LinearGlass: baked local mesh inside exact design envelope",
+      "passed": true,
+      "details": {
+        "actual_unity_bounds": [
+          [
+            -0.22349999845027924,
+            0.22349999845027924
+          ],
+          [
+            -0.16500000655651093,
+            -0.14800000190734863
+          ],
+          [
+            -0.7304999828338623,
+            0.7304999828338623
+          ]
+        ],
+        "allowed_bounds": [
+          [
+            -0.3,
+            0.3
+          ],
+          [
+            -0.19,
+            0
+          ],
+          [
+            -0.9,
+            0.9
+          ]
+        ],
+        "maximum_excess_m": -0.024999993443489077
+      }
+    },
+    {
+      "name": "LIGHT_LinearGlass: manifest matches source mesh bounds and counts",
+      "passed": true,
+      "details": {
+        "bound_error_m": 0.0,
+        "triangles": 428
+      }
+    },
+    {
+      "name": "LIGHT_LinearGlass: complete finite source UVs",
+      "passed": true,
+      "details": {
+        "layers": 1,
+        "loops": 792
+      }
+    },
+    {
+      "name": "LIGHT_LinearGlass: expected runtime material slots",
+      "passed": true,
+      "details": [
+        "RLYL_Glass"
+      ]
+    },
+    {
+      "name": "LIGHT_LinearGlass: source origin agrees with shared fixture mount",
+      "passed": true,
+      "details": {
+        "pivot_error_m": 0.0,
+        "source_origin_blender": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "note": "All baked export roots and FBX origins are zero; editable source group offset is not an export offset."
+      }
+    },
+    {
+      "name": "LIGHT_LinearGlass: export path remains in package",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\LIGHTING_v01\\exports\\LIGHT_LinearGlass.fbx"
+    },
+    {
+      "name": "LIGHT_LinearGlass: FBX contains exactly one mesh and no helper content",
+      "passed": true,
+      "details": [
+        {
+          "name": "LIGHT_LinearGlass_Export.001",
+          "type": "MESH"
+        }
+      ]
+    },
+    {
+      "name": "LIGHT_LinearGlass: actual FBX orientation metre scale and mount origin preserved",
+      "passed": true,
+      "details": {
+        "max_bound_error_m": 5.960464477539063e-08,
+        "expected_fbx_axis_matrix_error": 0.0,
+        "note": "Blender FBX reimport uses +90-degree X axis conversion; world-space mesh must match original Blender geometry.",
+        "unity_bounds": [
+          [
+            -0.22349999845027924,
+            0.22349999845027924
+          ],
+          [
+            -0.1650000661611557,
+            -0.14799994230270386
+          ],
+          [
+            -0.7304999828338623,
+            0.7304999828338623
+          ]
+        ],
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            7.549790126404332e-08,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_LinearGlass: FBX UVs finite and triangle count preserved",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "triangles": 428,
+        "source_triangles": 428
+      }
+    },
+    {
+      "name": "LIGHT_LinearGlass: FBX material slots preserved and no animation",
+      "passed": true,
+      "details": {
+        "materials": [
+          "RLYL_Glass"
+        ],
+        "animation_data": "None"
+      }
+    },
+    {
+      "name": "LIGHT_LinearHousing: saved export mesh exists",
+      "passed": true,
+      "details": "LIGHT_LinearHousing_Export"
+    },
+    {
+      "name": "LIGHT_LinearHousing: finite nonempty geometry and applied source scale",
+      "passed": true,
+      "details": {
+        "vertices": 12584,
+        "triangles": 24860,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_LinearHousing: baked local mesh inside exact design envelope",
+      "passed": true,
+      "details": {
+        "actual_unity_bounds": [
+          [
+            -0.27799999713897705,
+            0.27799999713897705
+          ],
+          [
+            -0.17500001192092896,
+            -3.397317982489767e-10
+          ],
+          [
+            -0.8096253871917725,
+            0.8934999704360962
+          ]
+        ],
+        "allowed_bounds": [
+          [
+            -0.3,
+            0.3
+          ],
+          [
+            -0.19,
+            0
+          ],
+          [
+            -0.9,
+            0.9
+          ]
+        ],
+        "maximum_excess_m": -3.397317982489767e-10
+      }
+    },
+    {
+      "name": "LIGHT_LinearHousing: manifest matches source mesh bounds and counts",
+      "passed": true,
+      "details": {
+        "bound_error_m": 0.0,
+        "triangles": 24860
+      }
+    },
+    {
+      "name": "LIGHT_LinearHousing: complete finite source UVs",
+      "passed": true,
+      "details": {
+        "layers": 1,
+        "loops": 48936
+      }
+    },
+    {
+      "name": "LIGHT_LinearHousing: expected runtime material slots",
+      "passed": true,
+      "details": [
+        "RLYL_Frame",
+        "RLYL_Steel",
+        "RLYL_Rubber",
+        "RLYL_Paint"
+      ]
+    },
+    {
+      "name": "LIGHT_LinearHousing: source origin agrees with shared fixture mount",
+      "passed": true,
+      "details": {
+        "pivot_error_m": 0.0,
+        "source_origin_blender": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "note": "All baked export roots and FBX origins are zero; editable source group offset is not an export offset."
+      }
+    },
+    {
+      "name": "LIGHT_LinearHousing: export path remains in package",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\LIGHTING_v01\\exports\\LIGHT_LinearHousing.fbx"
+    },
+    {
+      "name": "LIGHT_LinearHousing: FBX contains exactly one mesh and no helper content",
+      "passed": true,
+      "details": [
+        {
+          "name": "LIGHT_LinearHousing_Export.001",
+          "type": "MESH"
+        }
+      ]
+    },
+    {
+      "name": "LIGHT_LinearHousing: actual FBX orientation metre scale and mount origin preserved",
+      "passed": true,
+      "details": {
+        "max_bound_error_m": 4.1674841355643366e-08,
+        "expected_fbx_axis_matrix_error": 0.0,
+        "note": "Blender FBX reimport uses +90-degree X axis conversion; world-space mesh must match original Blender geometry.",
+        "unity_bounds": [
+          [
+            -0.27799999713897705,
+            0.27799999713897705
+          ],
+          [
+            -0.17500004172325134,
+            4.133510955739439e-08
+          ],
+          [
+            -0.8096253871917725,
+            0.8934999704360962
+          ]
+        ],
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            7.549790126404332e-08,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_LinearHousing: FBX UVs finite and triangle count preserved",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "triangles": 24860,
+        "source_triangles": 24860
+      }
+    },
+    {
+      "name": "LIGHT_LinearHousing: FBX material slots preserved and no animation",
+      "passed": true,
+      "details": {
+        "materials": [
+          "RLYL_Frame",
+          "RLYL_Steel",
+          "RLYL_Rubber",
+          "RLYL_Paint"
+        ],
+        "animation_data": "None"
+      }
+    },
+    {
+      "name": "LIGHT_LinearLens: saved export mesh exists",
+      "passed": true,
+      "details": "LIGHT_LinearLens_Export"
+    },
+    {
+      "name": "LIGHT_LinearLens: finite nonempty geometry and applied source scale",
+      "passed": true,
+      "details": {
+        "vertices": 348,
+        "triangles": 692,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_LinearLens: baked local mesh inside exact design envelope",
+      "passed": true,
+      "details": {
+        "actual_unity_bounds": [
+          [
+            -0.21922567486763,
+            0.21922567486763
+          ],
+          [
+            -0.15299999713897705,
+            -0.13600000739097595
+          ],
+          [
+            -0.729127824306488,
+            0.729127824306488
+          ]
+        ],
+        "allowed_bounds": [
+          [
+            -0.3,
+            0.3
+          ],
+          [
+            -0.19,
+            0
+          ],
+          [
+            -0.9,
+            0.9
+          ]
+        ],
+        "maximum_excess_m": -0.03700000286102295
+      }
+    },
+    {
+      "name": "LIGHT_LinearLens: manifest matches source mesh bounds and counts",
+      "passed": true,
+      "details": {
+        "bound_error_m": 0.0,
+        "triangles": 692
+      }
+    },
+    {
+      "name": "LIGHT_LinearLens: complete finite source UVs",
+      "passed": true,
+      "details": {
+        "layers": 1,
+        "loops": 1308
+      }
+    },
+    {
+      "name": "LIGHT_LinearLens: expected runtime material slots",
+      "passed": true,
+      "details": [
+        "RLYL_Lens"
+      ]
+    },
+    {
+      "name": "LIGHT_LinearLens: source origin agrees with shared fixture mount",
+      "passed": true,
+      "details": {
+        "pivot_error_m": 0.0,
+        "source_origin_blender": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "note": "All baked export roots and FBX origins are zero; editable source group offset is not an export offset."
+      }
+    },
+    {
+      "name": "LIGHT_LinearLens: export path remains in package",
+      "passed": true,
+      "details": "C:\\Users\\gonut\\RELAY_Art\\LIGHTING_v01\\exports\\LIGHT_LinearLens.fbx"
+    },
+    {
+      "name": "LIGHT_LinearLens: FBX contains exactly one mesh and no helper content",
+      "passed": true,
+      "details": [
+        {
+          "name": "LIGHT_LinearLens_Export.001",
+          "type": "MESH"
+        }
+      ]
+    },
+    {
+      "name": "LIGHT_LinearLens: actual FBX orientation metre scale and mount origin preserved",
+      "passed": true,
+      "details": {
+        "max_bound_error_m": 5.960464477539063e-08,
+        "expected_fbx_axis_matrix_error": 0.0,
+        "note": "Blender FBX reimport uses +90-degree X axis conversion; world-space mesh must match original Blender geometry.",
+        "unity_bounds": [
+          [
+            -0.21922567486763,
+            0.21922567486763
+          ],
+          [
+            -0.15300005674362183,
+            -0.13599994778633118
+          ],
+          [
+            -0.729127824306488,
+            0.729127824306488
+          ]
+        ],
+        "origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            7.549790126404332e-08,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "LIGHT_LinearLens: FBX UVs finite and triangle count preserved",
+      "passed": true,
+      "details": {
+        "uv_layers": 1,
+        "triangles": 692,
+        "source_triangles": 692
+      }
+    },
+    {
+      "name": "LIGHT_LinearLens: FBX material slots preserved and no animation",
+      "passed": true,
+      "details": {
+        "materials": [
+          "RLYL_Lens"
+        ],
+        "animation_data": "None"
+      }
+    },
+    {
+      "name": "All five transverse cage ribs meet the rounded perimeter",
+      "passed": true,
+      "details": {
+        "endpoint_count": 10,
+        "tolerance_m": 0.003,
+        "details": [
+          {
+            "rib": "Cage_transverse_rib",
+            "end": 0,
+            "distance_m": 0.001014340945551467
+          },
+          {
+            "rib": "Cage_transverse_rib",
+            "end": 24,
+            "distance_m": 0.0010143417481674173
+          },
+          {
+            "rib": "Cage_transverse_rib.001",
+            "end": 0,
+            "distance_m": 0.0010000020451263647
+          },
+          {
+            "rib": "Cage_transverse_rib.001",
+            "end": 24,
+            "distance_m": 0.0010000020450986091
+          },
+          {
+            "rib": "Cage_transverse_rib.002",
+            "end": 0,
+            "distance_m": 0.0010000020450986091
+          },
+          {
+            "rib": "Cage_transverse_rib.002",
+            "end": 24,
+            "distance_m": 0.0010000020450986091
+          },
+          {
+            "rib": "Cage_transverse_rib.003",
+            "end": 0,
+            "distance_m": 0.0010000020450986091
+          },
+          {
+            "rib": "Cage_transverse_rib.003",
+            "end": 24,
+            "distance_m": 0.0010000020451263647
+          },
+          {
+            "rib": "Cage_transverse_rib.004",
+            "end": 0,
+            "distance_m": 0.001014340945551467
+          },
+          {
+            "rib": "Cage_transverse_rib.004",
+            "end": 24,
+            "distance_m": 0.0010143417481674173
+          }
+        ]
+      }
+    },
+    {
+      "name": "Linear: combined model reaches ceiling mount plane without exceeding it",
+      "passed": true,
+      "details": {
+        "combined_bounds": [
+          [
+            -0.27799999713897705,
+            0.27799999713897705
+          ],
+          [
+            -0.17500001192092896,
+            -3.397317982489767e-10
+          ],
+          [
+            -0.8096253871917725,
+            0.8934999704360962
+          ]
+        ],
+        "top_y": -3.397317982489767e-10
+      }
+    },
+    {
+      "name": "Linear: preserved Light origin lies below entire imported assembly",
+      "passed": true,
+      "details": {
+        "assembly_bottom_relative_to_fixture_y": -0.12500001192092897,
+        "light_y": -0.16,
+        "light_below_entire_assembly_m": 0.03499998807907104
+      }
+    },
+    {
+      "name": "Linear: clear cover lies ahead of downward lens face",
+      "passed": true,
+      "details": {
+        "lens_bounds": [
+          [
+            -0.21922567486763,
+            0.21922567486763
+          ],
+          [
+            -0.15299999713897705,
+            -0.13600000739097595
+          ],
+          [
+            -0.729127824306488,
+            0.729127824306488
+          ]
+        ],
+        "glass_bounds": [
+          [
+            -0.22349999845027924,
+            0.22349999845027924
+          ],
+          [
+            -0.16500000655651093,
+            -0.14800000190734863
+          ],
+          [
+            -0.7304999828338623,
+            0.7304999828338623
+          ]
+        ]
+      }
+    },
+    {
+      "name": "Bulkhead: combined model reaches ceiling mount plane without exceeding it",
+      "passed": true,
+      "details": {
+        "combined_bounds": [
+          [
+            -0.21080125868320465,
+            0.21080125868320465
+          ],
+          [
+            -0.16759724915027618,
+            2.9571438631137426e-09
+          ],
+          [
+            -0.3722616732120514,
+            0.41850003600120544
+          ]
+        ],
+        "top_y": 2.9571438631137426e-09
+      }
+    },
+    {
+      "name": "Bulkhead: preserved Light origin lies below entire imported assembly",
+      "passed": true,
+      "details": {
+        "assembly_bottom_relative_to_fixture_y": -0.11759724915027618,
+        "light_y": -0.16,
+        "light_below_entire_assembly_m": 0.04240275084972382
+      }
+    },
+    {
+      "name": "Bulkhead: clear cover lies ahead of downward lens face",
+      "passed": true,
+      "details": {
+        "lens_bounds": [
+          [
+            -0.16909568011760712,
+            0.16909568011760712
+          ],
+          [
+            -0.11999999731779099,
+            -0.10599999874830246
+          ],
+          [
+            -0.32954683899879456,
+            0.32954683899879456
+          ]
+        ],
+        "glass_bounds": [
+          [
+            -0.17249999940395355,
+            0.17249999940395355
+          ],
+          [
+            -0.13699999451637268,
+            -0.11299999803304672
+          ],
+          [
+            -0.3330000042915344,
+            0.3330000042915344
+          ]
+        ]
+      }
+    },
+    {
+      "name": "Recommended Exit root position clears front structural beam",
+      "passed": true,
+      "details": {
+        "recommended_root_z": -6.5,
+        "actual_model_end_z": -5.606500029563904,
+        "beam_near_z": -5.325,
+        "gap_m": 0.28150002956390363,
+        "applied_to_unity": false
+      }
+    },
+    {
+      "name": "Compact cabin fixture fits cabin roof and rear wall clearance",
+      "passed": true,
+      "details": {
+        "width_bounds": [
+          -0.21080125868320465,
+          0.21080125868320465
+        ],
+        "cabin_z_bounds": [
+          -2.0722616732120516,
+          -1.2814999639987945
+        ],
+        "rear_wall_gap_m": 0.6777383267879484
+      }
+    },
+    {
+      "name": "Aggregate geometry count agrees with manifest and bounded fixture budget",
+      "passed": true,
+      "details": {
+        "total_triangles": 47524,
+        "manifest_total": 47524,
+        "audit_budget": 60000,
+        "note": "Geometry check only; not a Unity runtime performance measurement."
+      }
+    },
+    {
+      "name": "Input artifact unchanged during validation: RELAY_Lighting.blend",
+      "passed": true,
+      "details": {
+        "sha256": "2F0E7FC10B12967024BB2EF5D560702BA26EE9BCAF8F16FF870B62E970D22510"
+      }
+    },
+    {
+      "name": "Input artifact unchanged during validation: manifest.json",
+      "passed": true,
+      "details": {
+        "sha256": "F2A9A3EA98C315B9AA95BBFC2762EB75740FCB3F13C8B51912ACB80D2D3F0EBE"
+      }
+    },
+    {
+      "name": "Input artifact unchanged during validation: LIGHT_BulkheadGlass.fbx",
+      "passed": true,
+      "details": {
+        "sha256": "0A5584973C9EB1EB80FFFB293C924DB64E228A0F19F101BB2C903F8432E5212C"
+      }
+    },
+    {
+      "name": "Input artifact unchanged during validation: LIGHT_BulkheadHousing.fbx",
+      "passed": true,
+      "details": {
+        "sha256": "06317C26CE559EC366EFC6E62922D4200C38237164629D78CAB99077849B0B71"
+      }
+    },
+    {
+      "name": "Input artifact unchanged during validation: LIGHT_BulkheadLens.fbx",
+      "passed": true,
+      "details": {
+        "sha256": "219613D0AC046BF6461D8DC62C923EA19139B91EF64FCFD652171D9458636320"
+      }
+    },
+    {
+      "name": "Input artifact unchanged during validation: LIGHT_LinearGlass.fbx",
+      "passed": true,
+      "details": {
+        "sha256": "0A333BB841BC767F6992BF0AB63B962DEBE8B6BAB873799415F00673595CF093"
+      }
+    },
+    {
+      "name": "Input artifact unchanged during validation: LIGHT_LinearHousing.fbx",
+      "passed": true,
+      "details": {
+        "sha256": "6A7829BC38F0F1B3A201B7E6A348ABA63E66DF8B7C26EB69546535BE0C3A388B"
+      }
+    },
+    {
+      "name": "Input artifact unchanged during validation: LIGHT_LinearLens.fbx",
+      "passed": true,
+      "details": {
+        "sha256": "6C212E5F8A8441B77C3B1683B0D4D63984F7EEB53B0AF9CB82885183E9757136"
+      }
+    },
+    {
+      "name": "After validation audited Unity scene SHA256 unchanged",
+      "passed": true,
+      "details": {
+        "path": "C:/Users/gonut/School_p2/Assets/Scenes/Startup_Graybox.unity",
+        "actual": "D91D873B77BB6CF1036CC7B356098A36C4ED33E90A120554C9A9DE77D8C36A4B",
+        "expected": "D91D873B77BB6CF1036CC7B356098A36C4ED33E90A120554C9A9DE77D8C36A4B"
+      }
+    },
+    {
+      "name": "After validation audited Unity controller SHA256 unchanged",
+      "passed": true,
+      "details": {
+        "path": "C:/Users/gonut/School_p2/Assets/_STARTUP/Scripts/CorePowerVisual.cs",
+        "actual": "ADADD71058CB2742B66C3DE742988B5322F84E997D31C67C75930030F460FCAF",
+        "expected": "ADADD71058CB2742B66C3DE742988B5322F84E997D31C67C75930030F460FCAF"
+      }
+    },
+    {
+      "name": "After validation Unity repository worktree clean",
+      "passed": true,
+      "details": {
+        "returncode": 0,
+        "status": "",
+        "stderr": "",
+        "scope": "Git-tracked project content and nonignored untracked files; not Unity Library or other ignored generated caches."
+      }
+    }
+  ],
+  "manual_runtime_checks": [
+    "Unity importer material remapping and actual rendering.",
+    "User assigns new Lens renderer references for all four fixtures.",
+    "OFF, AUX-only, MAIN-on, power-loss and elevator-motion playtest."
+  ],
+  "known_scene_issue": "Existing Fixture_Exit overlaps Beam_Front. Manual root Z=-6.5 clearance correction is recommended, not applied.",
+  "total_triangles": 47524,
+  "check_count": 100,
+  "failures": [],
+  "all_checks_passed": true
+}

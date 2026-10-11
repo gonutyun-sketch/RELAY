@@ -1,0 +1,894 @@
+{
+  "method": "Independent raw FBX parse, batched NumPy geometry checks, Blender tessellation for polygons above four corners. No Unity import/UI or runtime validation. Bounds use prior art handedness convention.",
+  "manifest_available": true,
+  "files": [
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_02_Environment\\exports\\FOREST_Terrain.fbx",
+      "sha256": "2340636b2284e5819f203e3a640ab45aaf4406c1fa37db5d021d7ce252e639b1",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "FOREST_Terrain",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "FOREST_Terrain",
+          "vertices": 23464,
+          "polygons": 23064,
+          "triangles": 46128,
+          "minimum_triangle_area_m2": 0.03454111683753935,
+          "expected_unity_min": [
+            -42.0,
+            -4.655198574066162,
+            -7.000003814697266
+          ],
+          "expected_unity_max": [
+            42.00001907348633,
+            4.196502208709717,
+            208.0
+          ],
+          "materials": [
+            "RLYF_ForestFloor",
+            "RLYF_TroddenPath"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 46128,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_02_Environment\\exports\\FOREST_Rockwork.fbx",
+      "sha256": "c2ae251e0715a2fd7a1867f9b1d07f67776b5c1171573d76d2aa159ec911fa46",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "FOREST_Rockwork",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "FOREST_Rockwork",
+          "vertices": 7098,
+          "polygons": 13520,
+          "triangles": 13520,
+          "minimum_triangle_area_m2": 3.725406640783571e-05,
+          "expected_unity_min": [
+            -25.45728874206543,
+            -4.319917678833008,
+            -3.5522983074188232
+          ],
+          "expected_unity_max": [
+            25.939550399780273,
+            2.63450288772583,
+            47.39223098754883
+          ],
+          "materials": [
+            "RLYF_DampGranite"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 13520,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_02_Environment\\exports\\FOREST_Undergrowth.fbx",
+      "sha256": "86a8ab5067c24a0e93bcdf9fa23df376cb85150e25f95d07d871d9a88ece1fef",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "FOREST_Undergrowth",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "FOREST_Undergrowth",
+          "vertices": 428745,
+          "polygons": 298314,
+          "triangles": 328991,
+          "minimum_triangle_area_m2": 2.1279799947648503e-06,
+          "expected_unity_min": [
+            -11.13808822631836,
+            -1.942500352859497,
+            -1.117545247077942
+          ],
+          "expected_unity_max": [
+            11.17993450164795,
+            1.4958229064941406,
+            28.149097442626953
+          ],
+          "materials": [
+            "RLYF_Bilberry_0",
+            "RLYF_Bilberry_1",
+            "RLYF_Bilberry_2",
+            "RLYF_DryTwigs",
+            "RLYF_SpruceBark",
+            "RLYF_CutWood",
+            "RLYF_Fern_0",
+            "RLYF_Fern_2",
+            "RLYF_Fern_3",
+            "RLYF_Fern_1",
+            "RLYF_RockMoss_2",
+            "RLYF_RockMoss_1",
+            "RLYF_RockMoss_0",
+            "RLYF_LeafLitter_0",
+            "RLYF_LeafLitter_1",
+            "RLYF_LeafLitter_2",
+            "RLYF_Sedge_0",
+            "RLYF_Sedge_1",
+            "RLYF_Sedge_2"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 328991,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_02_Environment\\exports\\FOREST_Trees_Near.fbx",
+      "sha256": "ee35ef0e4277893ababed022d6ea83a80fbc1dc4b9d7d0ec656c0467b75630a3",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "FOREST_Trees_Near",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "FOREST_Trees_Near",
+          "vertices": 174264,
+          "polygons": 112768,
+          "triangles": 237572,
+          "minimum_triangle_area_m2": 5.6181536491039304e-08,
+          "expected_unity_min": [
+            -6.872343063354492,
+            0.005685089156031609,
+            1.0838819742202759
+          ],
+          "expected_unity_max": [
+            6.9975972175598145,
+            12.459315299987793,
+            10.643681526184082
+          ],
+          "materials": [
+            "RLYF_SpruceNeedles",
+            "RLYF_SpruceBark",
+            "RLYF_ExposedWood"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 237572,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_02_Environment\\exports\\FOREST_Trees_Mid.fbx",
+      "sha256": "85c1818160839dd20206fda19097992f885619823890dcce7df0acc456c26656",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "FOREST_Trees_Mid",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "FOREST_Trees_Mid",
+          "vertices": 505380,
+          "polygons": 299568,
+          "triangles": 634392,
+          "minimum_triangle_area_m2": 3.340381130413818e-08,
+          "expected_unity_min": [
+            -14.568771362304688,
+            -0.06746502220630646,
+            -1.7554147243499756
+          ],
+          "expected_unity_max": [
+            15.551552772521973,
+            13.981938362121582,
+            25.652324676513672
+          ],
+          "materials": [
+            "RLYF_SpruceNeedles",
+            "RLYF_SpruceBark",
+            "RLYF_ExposedWood"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 634392,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_02_Environment\\exports\\FOREST_Trees_Far.fbx",
+      "sha256": "36cc206fc261bf0ddded00334f35fb379fc308914dd732894a97d834e1f1be7d",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "FOREST_Trees_Far",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "FOREST_Trees_Far",
+          "vertices": 1677438,
+          "polygons": 1003590,
+          "triangles": 1863036,
+          "minimum_triangle_area_m2": 7.530958202280357e-08,
+          "expected_unity_min": [
+            -36.369354248046875,
+            -4.65872049331665,
+            -5.654290676116943
+          ],
+          "expected_unity_max": [
+            38.22553253173828,
+            14.95393180847168,
+            81.92228698730469
+          ],
+          "materials": [
+            "RLYF_SpruceNeedles",
+            "RLYF_SpruceBark",
+            "RLYF_ExposedWood"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 1863036,
+      "passed": true
+    },
+    {
+      "file": "C:\\Users\\gonut\\RELAY_Art\\FOREST_02_Environment\\exports\\FOREST_Ridges.fbx",
+      "sha256": "3a1bc2f6e5b95da22bee5ac44db61fd234dcef16706fc8c13d100ba182de2681",
+      "version": 7400,
+      "axis_settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "checks": {
+        "manifest_parts_present": true,
+        "y_up": true,
+        "axis_matches_existing_art": true,
+        "metres_unit": true,
+        "no_animation_camera_light": true,
+        "mesh_model_counts_match": true,
+        "all_manifest_parts_present": true
+      },
+      "models": [
+        {
+          "name": "FOREST_Ridges",
+          "checks": {
+            "Lcl Translation": true,
+            "Lcl Rotation": true,
+            "Lcl Scaling": true,
+            "PreRotation": true,
+            "PostRotation": true,
+            "GeometricTranslation": true,
+            "GeometricRotation": true,
+            "GeometricScaling": true,
+            "root_at_scene": true
+          },
+          "passed": true
+        }
+      ],
+      "geometry": [
+        {
+          "name": "FOREST_Ridges",
+          "vertices": 5145,
+          "polygons": 4800,
+          "triangles": 9600,
+          "minimum_triangle_area_m2": 2.0,
+          "expected_unity_min": [
+            -103.99999237060547,
+            -5.0,
+            79.0
+          ],
+          "expected_unity_max": [
+            117.00001525878906,
+            39.6270751953125,
+            201.0
+          ],
+          "materials": [
+            "RLYF_DistantStone"
+          ],
+          "checks": {
+            "finite_vertices": true,
+            "valid_polygon_indices": true,
+            "tessellation_triangle_count": true,
+            "no_degenerate_triangles": true,
+            "finite_uv": true,
+            "uv_corner_mapping": true,
+            "finite_unit_normals": true,
+            "normal_mapping_complete": true,
+            "material_indices_valid": true,
+            "manifest_part_present": true,
+            "manifest_vertices_triangles_match": true,
+            "manifest_bounds_match_expected_unity": true,
+            "manifest_materials_match": true
+          },
+          "passed": true
+        }
+      ],
+      "total_triangles": 9600,
+      "passed": true
+    }
+  ],
+  "total_triangles": 3133239,
+  "passed": true
+}

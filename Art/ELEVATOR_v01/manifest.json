@@ -1,0 +1,153 @@
+{
+  "package": "RELAY mine elevator v01",
+  "units": "metres",
+  "parts": [
+    {
+      "name": "ELEVATOR_Cabin",
+      "unity_min": [
+        -1.5450000762939453,
+        -0.3600001037120819,
+        -3.125
+      ],
+      "unity_max": [
+        1.5450000762939453,
+        3.5445170402526855,
+        0.1250000149011612
+      ],
+      "source_pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 24644,
+      "materials": [
+        "RLYE_WornSteel",
+        "RLYE_Iron",
+        "RLYE_FadedPaint",
+        "RLYE_Oxide",
+        "RLYE_Ochre",
+        "RLYE_Timber",
+        "RLYE_Dark"
+      ],
+      "used_material_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "uv_layers": 1
+    },
+    {
+      "name": "ELEVATOR_DoorLeft",
+      "unity_min": [
+        -0.6000000238418579,
+        -1.4950000047683716,
+        -0.0689999982714653
+      ],
+      "unity_max": [
+        0.6000000238418579,
+        1.4950001239776611,
+        0.0794999897480011
+      ],
+      "source_pivot": [
+        -0.6000000238418579,
+        1.5,
+        -0.44999998807907104
+      ],
+      "triangles": 2952,
+      "materials": [
+        "RLYE_Iron",
+        "RLYE_FadedPaint",
+        "RLYE_WornSteel",
+        "RLYE_Oxide",
+        "RLYE_Ochre"
+      ],
+      "used_material_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "uv_layers": 1
+    },
+    {
+      "name": "ELEVATOR_DoorRight",
+      "unity_min": [
+        -0.6000000238418579,
+        -1.4950000047683716,
+        -0.0689999982714653
+      ],
+      "unity_max": [
+        0.6000000238418579,
+        1.4950001239776611,
+        0.0794999897480011
+      ],
+      "source_pivot": [
+        0.6000000238418579,
+        1.5,
+        -0.44999998807907104
+      ],
+      "triangles": 2952,
+      "materials": [
+        "RLYE_Iron",
+        "RLYE_FadedPaint",
+        "RLYE_WornSteel",
+        "RLYE_Oxide",
+        "RLYE_Ochre"
+      ],
+      "used_material_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "uv_layers": 1
+    },
+    {
+      "name": "ELEVATOR_DoorTrack",
+      "unity_min": [
+        -2.5299999713897705,
+        0.0,
+        -0.6700000166893005
+      ],
+      "unity_max": [
+        2.5299999713897705,
+        3.2649998664855957,
+        -0.2750000059604645
+      ],
+      "source_pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 1912,
+      "materials": [
+        "RLYE_WornSteel",
+        "RLYE_Iron",
+        "RLYE_Ochre",
+        "RLYE_FadedPaint"
+      ],
+      "used_material_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "uv_layers": 1
+    }
+  ],
+  "unity_scene_sha256_before": "3dae13dbffc9a508582b62303d05927951af1ec7f7f33aaccef54e55b7e60549",
+  "notes": [
+    "Visual asset only; preserve original gameplay colliders and scripts.",
+    "Door panels have independent centre pivots; exported alone at origin.",
+    "Track width 5.06m accommodates original 1.25m opening travel.",
+    "Image textures must accompany FBX; they are packed in the Blender file."
+  ],
+  "total_triangles": 32460,
+  "unity_scene_sha256_after": "3dae13dbffc9a508582b62303d05927951af1ec7f7f33aaccef54e55b7e60549"
+}

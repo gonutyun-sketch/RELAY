@@ -1,0 +1,201 @@
+{
+  "package": "RELAY LIGHTING v01",
+  "authoring": "Unity metres: X width, Y up, Z length; lens faces -Y",
+  "mount_origin": "Ceiling contact plane at local Y=0",
+  "manual_import_local_position": [
+    0,
+    0.05,
+    0
+  ],
+  "parts": [
+    {
+      "name": "LIGHT_LinearHousing",
+      "fbx": "exports\\LIGHT_LinearHousing.fbx",
+      "vertices": 12584,
+      "triangles": 24860,
+      "unity_min": [
+        -0.27799999713897705,
+        -0.17500001192092896,
+        -0.8096253871917725
+      ],
+      "unity_max": [
+        0.27799999713897705,
+        -3.397317982489767e-10,
+        0.8934999704360962
+      ],
+      "dimensions": [
+        0.5559999942779541,
+        0.17500001158119716,
+        1.7031253576278687
+      ],
+      "materials": [
+        "RLYL_Frame",
+        "RLYL_Steel",
+        "RLYL_Rubber",
+        "RLYL_Paint"
+      ],
+      "material_face_counts": {
+        "RLYL_Frame": 2324,
+        "RLYL_Steel": 6696,
+        "RLYL_Rubber": 2460,
+        "RLYL_Paint": 558
+      },
+      "uv_layers": 1
+    },
+    {
+      "name": "LIGHT_LinearLens",
+      "fbx": "exports\\LIGHT_LinearLens.fbx",
+      "vertices": 348,
+      "triangles": 692,
+      "unity_min": [
+        -0.21922567486763,
+        -0.15299999713897705,
+        -0.729127824306488
+      ],
+      "unity_max": [
+        0.21922567486763,
+        -0.13600000739097595,
+        0.729127824306488
+      ],
+      "dimensions": [
+        0.43845134973526,
+        0.0169999897480011,
+        1.458255648612976
+      ],
+      "materials": [
+        "RLYL_Lens"
+      ],
+      "material_face_counts": {
+        "RLYL_Lens": 308
+      },
+      "uv_layers": 1
+    },
+    {
+      "name": "LIGHT_LinearGlass",
+      "fbx": "exports\\LIGHT_LinearGlass.fbx",
+      "vertices": 216,
+      "triangles": 428,
+      "unity_min": [
+        -0.22349999845027924,
+        -0.16500000655651093,
+        -0.7304999828338623
+      ],
+      "unity_max": [
+        0.22349999845027924,
+        -0.14800000190734863,
+        0.7304999828338623
+      ],
+      "dimensions": [
+        0.44699999690055847,
+        0.017000004649162292,
+        1.4609999656677246
+      ],
+      "materials": [
+        "RLYL_Glass"
+      ],
+      "material_face_counts": {
+        "RLYL_Glass": 182
+      },
+      "uv_layers": 1
+    },
+    {
+      "name": "LIGHT_BulkheadHousing",
+      "fbx": "exports\\LIGHT_BulkheadHousing.fbx",
+      "vertices": 10490,
+      "triangles": 20544,
+      "unity_min": [
+        -0.21080125868320465,
+        -0.16759724915027618,
+        -0.3722616732120514
+      ],
+      "unity_max": [
+        0.21080125868320465,
+        2.9571438631137426e-09,
+        0.41850003600120544
+      ],
+      "dimensions": [
+        0.4216025173664093,
+        0.16759725210742005,
+        0.7907617092132568
+      ],
+      "materials": [
+        "RLYL_Rubber",
+        "RLYL_Frame",
+        "RLYL_Steel",
+        "RLYL_Paint"
+      ],
+      "material_face_counts": {
+        "RLYL_Rubber": 1782,
+        "RLYL_Frame": 1054,
+        "RLYL_Steel": 5762,
+        "RLYL_Paint": 1362
+      },
+      "uv_layers": 1
+    },
+    {
+      "name": "LIGHT_BulkheadLens",
+      "fbx": "exports\\LIGHT_BulkheadLens.fbx",
+      "vertices": 288,
+      "triangles": 572,
+      "unity_min": [
+        -0.16909568011760712,
+        -0.11999999731779099,
+        -0.32954683899879456
+      ],
+      "unity_max": [
+        0.16909568011760712,
+        -0.10599999874830246,
+        0.32954683899879456
+      ],
+      "dimensions": [
+        0.33819136023521423,
+        0.013999998569488525,
+        0.6590936779975891
+      ],
+      "materials": [
+        "RLYL_Lens"
+      ],
+      "material_face_counts": {
+        "RLYL_Lens": 254
+      },
+      "uv_layers": 1
+    },
+    {
+      "name": "LIGHT_BulkheadGlass",
+      "fbx": "exports\\LIGHT_BulkheadGlass.fbx",
+      "vertices": 216,
+      "triangles": 428,
+      "unity_min": [
+        -0.17249999940395355,
+        -0.13699999451637268,
+        -0.3330000042915344
+      ],
+      "unity_max": [
+        0.17249999940395355,
+        -0.11299999803304672,
+        0.3330000042915344
+      ],
+      "dimensions": [
+        0.3449999988079071,
+        0.023999996483325958,
+        0.6660000085830688
+      ],
+      "materials": [
+        "RLYL_Glass"
+      ],
+      "material_face_counts": {
+        "RLYL_Glass": 182
+      },
+      "uv_layers": 1
+    }
+  ],
+  "source_parts": {
+    "LIGHT_LinearHousing": 79,
+    "LIGHT_LinearLens": 1,
+    "LIGHT_LinearGlass": 1,
+    "LIGHT_BulkheadHousing": 52,
+    "LIGHT_BulkheadLens": 1,
+    "LIGHT_BulkheadGlass": 1
+  },
+  "total_triangles": 47524
+}

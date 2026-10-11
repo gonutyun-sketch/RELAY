@@ -1,0 +1,5 @@
+Art/FOREST_02_Environment/RELAY_MountainForest.blend filter=lfs diff=lfs merge=lfs -text
+Art/FOREST_02_Environment/exports/FOREST_Trees_Far.fbx filter=lfs diff=lfs merge=lfs -text
+Art/FOREST_03_ExitIntegration/RELAY_ForestExit_Review.blend filter=lfs diff=lfs merge=lfs -text
+Art/FOREST_03_ExitIntegration/RELAY_ForestExit.blend filter=lfs diff=lfs merge=lfs -text
+Assets/RELAY/Art/Forest/exports/FOREST_Trees_Far.fbx filter=lfs diff=lfs merge=lfs -text

@@ -43,6 +43,23 @@ namespace Startup
         {
             manipulationFrame = Time.frameCount;
         }
+        public float MouseSensitivity
+        {
+            get => mouseSensitivity;
+            set => mouseSensitivity = Mathf.Clamp(value, 0.02f, 0.25f);
+        }
+
+        public bool WalkBobEnabled
+        {
+            get => walkBobEnabled;
+            set
+            {
+                walkBobEnabled = value;
+
+                if (!value)
+                    ResetWalkBob();
+            }
+        }
         public Transform ViewCamera => viewCamera;
         public Vector3 CameraRestLocalPosition => cameraRestLocalPosition;
         public bool HasControl => Application.isFocused && Cursor.lockState == CursorLockMode.Locked;

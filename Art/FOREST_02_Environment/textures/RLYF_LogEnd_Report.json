@@ -1,0 +1,20 @@
+{
+  "resolution": [
+    1024,
+    1024
+  ],
+  "mode": "RGB",
+  "uv": "Full circular cap centered at U0.5,V0.5; radius0.5. Eccentric growth heart inside.",
+  "mean_rgb_8bit": [
+    89.76,
+    78.25,
+    63.73
+  ],
+  "normal": "OpenGL +Y; nominal cap diameter0.4m; subtle mm-scale detail",
+  "roughness": 0.89,
+  "smoothness": 0.11,
+  "metallic": 0,
+  "alpha": "opaque",
+  "import": "Albedo sRGB on; normal NormalMap sRGB off, green not flipped; Clamp wrap.",
+  "existing_textures": "unchanged"
+}

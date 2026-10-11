@@ -1,0 +1,254 @@
+{
+  "parts_checked": 12,
+  "total_triangles": 33032,
+  "unity_runtime_tested": false,
+  "unity_files_modified": false,
+  "main_full_travel_degrees": [
+    -155,
+    -25
+  ],
+  "main_minimum_floor_clearance_m": 0.07577486038208003,
+  "main_minimum_fixed_fascia_clearance_m": 0.09899997568130492,
+  "checks": [
+    {
+      "part": "POWER_Cabinet",
+      "fbx_roundtrip_max_bounds_error_m": 8.940696716308594e-08,
+      "uv_present": true,
+      "triangles": 11313,
+      "bounds_blender_xyz": [
+        [
+          -0.8999999761581421,
+          0.9545000195503235
+        ],
+        [
+          -0.5292999744415283,
+          0.4950000047683716
+        ],
+        [
+          -1.2000000476837158,
+          1.2000000476837158
+        ]
+      ]
+    },
+    {
+      "part": "AUX_Housing",
+      "fbx_roundtrip_max_bounds_error_m": 1.1175870895385742e-08,
+      "uv_present": true,
+      "triangles": 1498,
+      "bounds_blender_xyz": [
+        [
+          -0.14000000059604645,
+          0.14000000059604645
+        ],
+        [
+          -0.06700003147125244,
+          0.03999999910593033
+        ],
+        [
+          -0.2212325483560562,
+          0.1549999862909317
+        ]
+      ]
+    },
+    {
+      "part": "AUX_Handle",
+      "fbx_roundtrip_max_bounds_error_m": 7.450580596923828e-09,
+      "uv_present": true,
+      "triangles": 596,
+      "bounds_blender_xyz": [
+        [
+          -0.039000000804662704,
+          0.039000000804662704
+        ],
+        [
+          -0.0429999977350235,
+          0.03150003030896187
+        ],
+        [
+          -0.039000004529953,
+          0.11700001358985901
+        ]
+      ]
+    },
+    {
+      "part": "MAIN_Housing",
+      "fbx_roundtrip_max_bounds_error_m": 2.60770320892334e-08,
+      "uv_present": true,
+      "triangles": 2388,
+      "bounds_blender_xyz": [
+        [
+          -0.17999999225139618,
+          0.18000002205371857
+        ],
+        [
+          -0.1470000147819519,
+          0.041999995708465576
+        ],
+        [
+          -0.36000004410743713,
+          0.4378274977207184
+        ]
+      ]
+    },
+    {
+      "part": "MAIN_Handle",
+      "fbx_roundtrip_max_bounds_error_m": 2.60770320892334e-08,
+      "uv_present": true,
+      "triangles": 2964,
+      "bounds_blender_xyz": [
+        [
+          -0.14649999141693115,
+          0.14649999141693115
+        ],
+        [
+          -0.04800000041723251,
+          0.04800000041723251
+        ],
+        [
+          -0.03700001537799835,
+          0.40800002217292786
+        ]
+      ]
+    },
+    {
+      "part": "VOLTAGE_Housing",
+      "fbx_roundtrip_max_bounds_error_m": 1.4901161193847656e-08,
+      "uv_present": true,
+      "triangles": 3682,
+      "bounds_blender_xyz": [
+        [
+          -0.17599999904632568,
+          0.17599999904632568
+        ],
+        [
+          -0.03800002112984657,
+          0.043000053614377975
+        ],
+        [
+          -0.23023252189159393,
+          0.19884099066257477
+        ]
+      ]
+    },
+    {
+      "part": "VOLTAGE_Knob",
+      "fbx_roundtrip_max_bounds_error_m": 7.450580596923828e-09,
+      "uv_present": true,
+      "triangles": 1920,
+      "bounds_blender_xyz": [
+        [
+          -0.11104182153940201,
+          0.11104182153940201
+        ],
+        [
+          -0.06075000390410423,
+          0.08099999278783798
+        ],
+        [
+          -0.11104182153940201,
+          0.11104182153940201
+        ]
+      ]
+    },
+    {
+      "part": "BALANCE_Housing",
+      "fbx_roundtrip_max_bounds_error_m": 1.4901161193847656e-08,
+      "uv_present": true,
+      "triangles": 3828,
+      "bounds_blender_xyz": [
+        [
+          -0.17599999904632568,
+          0.17599999904632568
+        ],
+        [
+          -0.03800002112984657,
+          0.043000053614377975
+        ],
+        [
+          -0.23023250699043274,
+          0.19884100556373596
+        ]
+      ]
+    },
+    {
+      "part": "BALANCE_Knob",
+      "fbx_roundtrip_max_bounds_error_m": 3.725290298461914e-09,
+      "uv_present": true,
+      "triangles": 1072,
+      "bounds_blender_xyz": [
+        [
+          -0.0860000029206276,
+          0.0860000029206276
+        ],
+        [
+          -0.061000000685453415,
+          0.08100000023841858
+        ],
+        [
+          -0.10849999636411667,
+          0.10849999636411667
+        ]
+      ]
+    },
+    {
+      "part": "Gauge_Housing",
+      "fbx_roundtrip_max_bounds_error_m": 1.862645149230957e-08,
+      "uv_present": true,
+      "triangles": 3067,
+      "bounds_blender_xyz": [
+        [
+          -0.30000001192092896,
+          0.30000001192092896
+        ],
+        [
+          -0.12530001997947693,
+          0.042999982833862305
+        ],
+        [
+          -0.27000001072883606,
+          0.27000001072883606
+        ]
+      ]
+    },
+    {
+      "part": "Gauge_Needle",
+      "fbx_roundtrip_max_bounds_error_m": 9.313225746154785e-10,
+      "uv_present": true,
+      "triangles": 596,
+      "bounds_blender_xyz": [
+        [
+          -0.014000000432133675,
+          0.014000000432133675
+        ],
+        [
+          -0.005999917630106211,
+          0.002000087406486273
+        ],
+        [
+          -0.04000000283122063,
+          0.1720000058412552
+        ]
+      ]
+    },
+    {
+      "part": "Gauge_Glass",
+      "fbx_roundtrip_max_bounds_error_m": 1.4901161193847656e-08,
+      "uv_present": true,
+      "triangles": 108,
+      "bounds_blender_xyz": [
+        [
+          -0.2639999985694885,
+          0.2639999985694885
+        ],
+        [
+          -0.11500002443790436,
+          -0.11300002038478851
+        ],
+        [
+          -0.23399999737739563,
+          0.23399999737739563
+        ]
+      ]
+    }
+  ]
+}

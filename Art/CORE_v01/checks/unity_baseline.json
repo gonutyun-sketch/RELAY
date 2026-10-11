@@ -1,0 +1,290 @@
+[
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\Scenes\\Startup_Graybox.unity",
+    "Hash": "298F54B72C3E926B87C88D2DEBB6930CBBC6C1685CD1D6365BD383AE0338AE2C"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\CoolingFlowGauge.cs",
+    "Hash": "700BECE1450CFEECE61A1162C4370C1CAA443BD8B81F9F79CD7EA775868887AC"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\CoolingFlowGauge.cs.meta",
+    "Hash": "420AC5F409A9E4EED771CA10B546466DBD4255882A27EDD025636A8A491B33F5"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\CoolingModule.cs",
+    "Hash": "D2376AB9BD454A4BE257575D114D25D1814D0ED3463FE59D6E6FD03EFC4BB7D6"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\CoolingModule.cs.meta",
+    "Hash": "B4877AAEDF22E89BB2E546819A318FD7606EFCFA633646EAB886D8A44A8389DD"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\CoreModule.cs",
+    "Hash": "418AB68966DAAD25382E1AF3C151B69ABF7852396907F154321677860C570BC0"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\CoreModule.cs.meta",
+    "Hash": "285F3BC176B3D3478B20627BAEB9AAF93CC7A9A8075F7387729CFBED9A5A04F5"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\CorePanelDisplay.cs",
+    "Hash": "0E280795D3DD68134F248E5F7B79F8C6B4E4B293FB201AEA44E9335C842268AF"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\CorePanelDisplay.cs.meta",
+    "Hash": "3A656471753A1D8142CD9F2A67BA9341903E48B96178015BC02D7D26B0DED131"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\CoreStartLever.cs",
+    "Hash": "718845880F60FDDAC7D72E638800AE59A9C83AC6CD3419335B65EF5A3DAC6ECD"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\CoreStartLever.cs.meta",
+    "Hash": "330EF0FA27A5664EB8FAB87084E6D70D04819D34E0E74DE69A1F4FDEED4F7F09"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\DoorRevealSequence.cs",
+    "Hash": "B16F9C99E842D09E83DAFAF012E8A6F7D51D64C3F21B3C1F0BCA05CAD8B04E48"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\DoorRevealSequence.cs.meta",
+    "Hash": "2A05243FB5A346167E9DCE116C7E2D4855775B95B457CA24D7B65A155C71A0C5"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\ElevatorButton.cs",
+    "Hash": "EC8C23C3E77526EA01074065B8706CA70963D8871D214BFBAB032E9EECAD4100"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\ElevatorButton.cs.meta",
+    "Hash": "3CF09275668EE8F80F2987CA6F19417D63B55845645C040F45CD2B5FFC8E7B91"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\ElevatorModule.cs",
+    "Hash": "77151F929AF462D7AD7ED6206DCB52B09B9ABE365B8ABEDA80AE038DA3D2FC97"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\ElevatorModule.cs.meta",
+    "Hash": "A9D774A7FA49DE5F5F67FE5FDD1F1048A257E57E6BF5A2550882B3571375E736"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\EndingMenu.cs",
+    "Hash": "AB5B74C1C6481766FDE485D5C07ED0DF4628D96DB6552CBB6CAA4D68667F88D8"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\EndingMenu.cs.meta",
+    "Hash": "6806A0D309180235BCABBBEA64E5C54652E4B5DD3AD1BB4FB9883518B41079E0"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\ExitDoor.cs",
+    "Hash": "E17A02D5B974E945DD4400C771B4A2EEB5D20B94E3257EDFC54027102C8D1775"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\ExitDoor.cs.meta",
+    "Hash": "C2732C5DDE9C2735E5999ADA5A35F55B0F710981D372A8577283731C3D8DAA9E"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\FirstPersonMotor.cs",
+    "Hash": "560A8E04F88D46D4962AAB306B0A6E1DAA401EB9DC567D0E2F6342E9004BA5BE"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\FirstPersonMotor.cs.meta",
+    "Hash": "72318EE98CC0088553DF18F317FE92B11DBAB13716FC8D19A789FF46A8EA83D1"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\Interactable.cs",
+    "Hash": "61535D63F8B4E4469AA1BC43491F0E74FE6C118AF87B8A28A5EFDDC0757B3404"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\Interactable.cs.meta",
+    "Hash": "A7EDA163E40E620D78423C9D17B90A8A52E332AF78CE210E27C6668F4CF8C237"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MachineDial.cs",
+    "Hash": "54C73079DB7472FF4C797D557F056A5197D02FEEC6D66F4D73922FAEE97BE940"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MachineDial.cs.meta",
+    "Hash": "AB507405F5585C1A3FAE3C74C4A24806883DCA20D8FCE595CBE2E94BFAB29F63"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MachineGauge.cs",
+    "Hash": "768CF8D76027C1C0F901E65F0908D0E80BADDA3D3AAAE84B4CBE2D5C41C98775"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MachineGauge.cs.meta",
+    "Hash": "B66C0898239A4BE10F541465484956F699FE88011670AE9709339F5C408E041B"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MachineLever.cs",
+    "Hash": "40CC85F7CD59DCDD725D37C97B4DCC5A3C23EFA91C2839593F4B818F01183CF8"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MachineLever.cs.meta",
+    "Hash": "3D4165FD670DE2BC47495B43D87396FB8CCD33DA54B381FFC087D2294EEAFF14"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MachineSlider.cs",
+    "Hash": "C643FF5D78619583B480CDC9125EB27F4D56DB6FC87DE4C593D0E5F5824EF23F"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MachineSlider.cs.meta",
+    "Hash": "993B26559A49414D498597CA09F2F4BEF22CB61486C94E6A33E9F1195E3BD073"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MachineSwitch.cs",
+    "Hash": "0D36625BAFBEEBD44F0CC2A0658D5914D10D873A689D63B5F691303848889607"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MachineSwitch.cs.meta",
+    "Hash": "CCBE3E471AFEE0DADA7B9B3CC74A3A8973E67DEBB3BD81C210AD30E1ED03EAA1"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MountainEndingSequence.cs",
+    "Hash": "3AAD430519FA9B80E71B51B25094394F4294D3A1F23B5E33DCEA16BD74DA6156"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\MountainEndingSequence.cs.meta",
+    "Hash": "99BC369095F9E5A2D6DBA32A146964FC81C41D90844DA8E0792740F5A44CBE6A"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\PlayerInteractor.cs",
+    "Hash": "1C6A31BE51065EF4D56A598FF1E073E292BD67AE6133988E85505C97AA3748D3"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\PlayerInteractor.cs.meta",
+    "Hash": "ABECE3BFC2F7366EE6B663DCDF2B479DDA012E6B7047CA64A9CBAE092C191CA9"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\PoweredSwitch.cs",
+    "Hash": "6B81E380B664042A1F845562C1533860EC7BF6FB1E0AB0E1F8801E2FE3BD4917"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\PoweredSwitch.cs.meta",
+    "Hash": "742E0129E31294F6FB1DDB844EFADF3A9A6C269288C896AE30E92E6444D439CC"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\PowerModule.cs",
+    "Hash": "942D7236356869BF86E0A892CE5C1E9C783F1CE623F6C5FB5BAA9C73DD0820A4"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\PowerModule.cs.meta",
+    "Hash": "943546D7E5694149773376B3F9FFF74021F37FF22A4404150AE611CAF47482AF"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\SignalScope.cs",
+    "Hash": "0AACDE89F3F153EA9E1F08102FE4EF61CB168A64BB88F0AFA3D39B5E02AAB8C2"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\SignalScope.cs.meta",
+    "Hash": "3E5BDD9E20B1E9932D66079AB87E719FA6460713583F9E95108316B2D46B1DDB"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\SliderDragInput.cs",
+    "Hash": "46B948F5A0300A0B47A0F5653EE88607D0C2678B16973D57EDB79BAFB1A4A735"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\Assets\\_STARTUP\\Scripts\\SliderDragInput.cs.meta",
+    "Hash": "6CADCB518BF801640E8881E06608EB7F9232336A136C6D9771B2D20B15CDED37"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\AudioManager.asset",
+    "Hash": "AEEDEB3243F07B61DBBE854AA08B5EF6F0B5274DD9852AD9F6129DDE3E105A31"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\ClusterInputManager.asset",
+    "Hash": "40E65DD214BF254955D2C8829CA8CE2130FD3510485560CE012E9A1DDD93E623"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\DynamicsManager.asset",
+    "Hash": "B7C9A9DC08B98990109D4346F68745E15E238DE400F96C583E53E1C83C743A78"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\EditorBuildSettings.asset",
+    "Hash": "97D3129413BD59395FB0EF7823C7C09AAD95D6003D59DED87FA1A69718A1FA01"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\EditorSettings.asset",
+    "Hash": "32D6A9BE4C9AA9795A96BD951820A2D9BE1BFEFAB82ED05A5DB111AF0863938F"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\GraphicsSettings.asset",
+    "Hash": "6736F33DC62C35B0E7A88E275242080BC7A1D94C91154D18FCEB332B661A6BCE"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\InputManager.asset",
+    "Hash": "7A1BB836A1008D26D0860D143E9D9DF7CA41731D30A72901B518063819C62DF2"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\MemorySettings.asset",
+    "Hash": "1E8379A461B10AE09F3F696911088C16875D63E87ED5F2D95DF9E1892703F9FD"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\MultiplayerManager.asset",
+    "Hash": "ABA89FD1A1DDAD182727AD82727E536D27372E90328A8196DA2A4560398983DD"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\NavMeshAreas.asset",
+    "Hash": "80106CFA7E6181A1928B142C075F3E510D527441E3D79BC83590E4AC91E7CD66"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\PackageManagerSettings.asset",
+    "Hash": "A7DABBA589ABE7FC2B45BD3D3FBA3FE9BE97043492703F716DA2D9131C13A807"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\Physics2DSettings.asset",
+    "Hash": "E3CBDBF0BE15244B7B67D2F07BDB8E8981911C11A8C7FE8035F5261272FEC658"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\PresetManager.asset",
+    "Hash": "29C125923FE6E29F90190D4FCE1C82D660E7051546E2C9D02908D18C9CF2436C"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\ProjectSettings.asset",
+    "Hash": "8D38B3140AE0870A96EFF5891860DAC8F20C6F21EC338DCAC2E2BC3AD5D15A54"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\ProjectVersion.txt",
+    "Hash": "EE06B66C6E48DC22FE4771812F37F3817B17F9459D44B61202D45E2A44EA3509"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\QualitySettings.asset",
+    "Hash": "E0A32651500AB485DFE0978BAACD2D6ADCD64E94D6D3178050D980906070CEE2"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\SceneTemplateSettings.json",
+    "Hash": "BB9098B3BFCDE78D93E264B96F7B77B5430E64E8C57A7AAD7F5A5D9C3945E16A"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\ShaderGraphSettings.asset",
+    "Hash": "CDBA1E5D65BCF6E3269D76ED3E60B6C21F98322002996642C9D74F1EB89F6B91"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\TagManager.asset",
+    "Hash": "23FC56B484AA3D7EDF5914CD3591F7A823CCEF5E3F3496F8A51F30388EAD63DC"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\TimeManager.asset",
+    "Hash": "1A83E54ADBBDA7C9F4851103A0C6AB7F6448A3343D4EA5B7620452FA08416ECD"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\UnityConnectSettings.asset",
+    "Hash": "98F142992D8A623501C99648E1B7363ADCA08B67BB50390B566DF368D00BC9A0"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\URPProjectSettings.asset",
+    "Hash": "C317FE22B9488785C0611F0642429922E5D324430D929BFFB41648130F30C218"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\VersionControlSettings.asset",
+    "Hash": "E7BDA45BF7A394745FEE1316E6C71FA676004D591AD1F3AA247FD3E4CEB86071"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\VFXManager.asset",
+    "Hash": "F066C6483919961332415EE64204F74FE52F38C02E82892EB02B7A5B2E381F0E"
+  },
+  {
+    "Path": "C:\\Users\\gonut\\School_p2\\ProjectSettings\\XRSettings.asset",
+    "Hash": "EDD2BEB4A2E388312B4B7DA241AA51070434005D82C59363F1237DD2E567585F"
+  }
+]

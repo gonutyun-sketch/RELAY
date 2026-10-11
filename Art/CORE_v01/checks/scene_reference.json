@@ -1,0 +1,94 @@
+{
+  "audit_date": "2026-10-05",
+  "source_scene": "C:/Users/gonut/School_p2/Assets/Scenes/Startup_Graybox.unity",
+  "scene_sha256": "14D06B562676F37C293D322678444B7EE0E601A6384AE0C795FFA8B86905E671",
+  "method": "Read-only serialized Unity YAML and C# inspection; no Unity operation, scene edit, or runtime verification.",
+  "axes": "Unity metres: X right, Y up, control panel front -Z. Parent Environment is identity.",
+  "existing_baseline_note": "unity_baseline.json is an older 2026-10-04 hash list and was preserved without modification.",
+  "module": {
+    "path": "Environment/CORE_Module",
+    "transform_id": 954874102,
+    "position": [5, 1.2, 4],
+    "rotation_euler": [0, 0, 0],
+    "scale": [1, 1, 1],
+    "panel": {"path": "Panel_CORE", "position": [0, 0, 0], "dimensions": [1.8, 2.4, 1], "renderer_id": 951727204, "box_collider_id": 951727203},
+    "cabinet_recommendation": "New cabinet child of CORE_Module at local 0,0,0; existing Panel_CORE only MeshRenderer disabled, BoxCollider retained. Main front panel must stay behind retained status text at local Z -0.512; recommend opaque front surface Z -0.5. Keep all functional object references."
+  },
+  "start_lever": {
+    "path": "Environment/CORE_Module/START_Lever",
+    "transform_id": 135750351,
+    "position": [0, -0.2, -0.55],
+    "body": {"position": [0, 0, 0], "dimensions": [0.42, 0.84, 0.12], "renderer_id": 356742253, "collider_id": 356742252},
+    "hinge": {"position": [0, 0, -0.08], "dimensions": [0.18, 0.12, 0.16], "renderer_id": 1722799996, "collider_id": 1722799995},
+    "handle_pivot": {"path": "HandlePivot", "transform_id": 2008608432, "position": [0, 0, -0.1], "scale": [1, 1, 1], "saved_edit_rotation": [-15, 0, 0], "runtime_off_euler": [-25, 0, 0], "runtime_on_euler": [-155, 0, 0]},
+    "handle": {"position_in_pivot": [0, 0.18, 0], "dimensions": [0.06, 0.36, 0.06], "renderer_id": 65262932, "collider_id": 65262931},
+    "grip": {"position_in_pivot": [0, 0.36, 0], "dimensions": [0.28, 0.09, 0.1], "renderer_id": 932741369, "collider_id": 932741368},
+    "turn_seconds": 0.28,
+    "interpolation": "Quaternion.Slerp with SmoothStep; negative X rotation from -25 to -155, travelling away from panel through -90.",
+    "mount_recommendation": "Fixed housing under START_Lever, new moving handle under existing HandlePivot, each new child local position 0, scale 1. Do not reset existing pivot rotation or assign new movingPart. Preserve four old BoxColliders and old GameObjects; disable only their old renderers. Match visible stem and grip to their current collider footprints."
+  },
+  "startup_gauge": {
+    "path": "Environment/CORE_Module/Startup_Gauge",
+    "transform_id": 2096661918,
+    "position": [-0.12, 0.55, -0.55],
+    "body": {"dimensions": [1.12, 0.26, 0.12], "renderer_id": 1052753054, "collider_id": 1052753053},
+    "track": {"position": [0, 0, -0.067], "dimensions": [1, 0.1, 0.01], "transform_id": 1630271513},
+    "fill_pivot": {"position": [-0.5, 0, -0.08], "scale": [1, 1, 1], "transform_id": 1318819733},
+    "fill": {"position_in_pivot": [0.5, 0, 0], "dimensions": [1, 0.075, 0.012], "renderer_id": 350270038},
+    "fill_front_z_in_gauge": -0.086,
+    "fill_behavior": "Existing CorePanelDisplay shrinks FillPivot.localScale.x from left edge; renderer directly toggled by progress. Keep FillPivot and Fill with existing renderer and material. Do not attach a replacement child and assume renderer.enabled propagates.",
+    "housing_recommendation": "Keep clear aperture at least X +/-0.505, Y +/-0.051. Keep opaque backing behind track rear/front and fill; no static full-progress bar. Hide old Body renderer only; preserve Track and Fill."
+  },
+  "indicators": {
+    "shared": {
+      "off_lens_position": [0, 0.025, -0.068],
+      "off_lens_dimensions": [0.14, 0.065, 0.02],
+      "off_lens_front_z": -0.078,
+      "on_lens_position": [0, 0.025, -0.08],
+      "on_lens_dimensions": [0.12, 0.05, 0.006],
+      "on_lens_front_z": -0.083,
+      "recommendation": "New bezel child under existing indicator root. Preserve existing Lens_On/Lens_Off renderers/materials and objects, hide only old Body renderer. Clear opening at least 0.145 by 0.07 centred local Y .025. Each warning renderer is directly enabled/disabled by existing code; do not replace with a child-only lamp."
+    },
+    "startup": {"root": "STARTUP_Indicator", "position": [-0.55, -0.55, -0.55], "body_dimensions": [0.38, 0.38, 0.12], "body_renderer_id": 2125024475, "on_renderer_id": 273359106, "behavior": "Blinks while starting (1 second cycle, 50 percent duty), steady when complete, off without online POWER."},
+    "heat": {"root": "HEAT_Indicator", "position": [0.67, 0.55, -0.55], "body_dimensions": [0.26, 0.26, 0.12], "body_renderer_id": 1425972596, "on_renderer_id": 1508273652, "behavior": "AUX required. Warning at >=80 C, resets <=77 C. Critical blink >=85 C, resets <=82 C. Existing core aborts at >=90 C."},
+    "cold": {"root": "COLD_Indicator", "position": [0.67, 0.15, -0.55], "body_dimensions": [0.26, 0.26, 0.12], "body_renderer_id": 275482818, "on_renderer_id": 1348090325, "behavior": "AUX required; steady if below65 C."}
+  },
+  "text": {
+    "important": "These are 3D TextMeshPro RectTransforms. Serialized local X/Y are zero but anchoredPosition stores the intended panel position. Do not use m_LocalPosition alone for layout audit.",
+    "status": {"path": "Startup_Status", "transform_id": 500302174, "component_id": 500302175, "anchored_position": [0, -0.9], "local_z": -0.512, "scale": [0.1, 0.1, 0.1], "size_delta": [15, 2.4], "effective_dimensions": [1.5, 0.24], "font_size": 7, "color": [0.12549, 0.12549, 0.12549, 1], "preserve": true, "recommendation": "Use a light backing behind Z -0.512 and keep rectangle X +/- .75,Y -1.02 to -.78 free of opaque geometry in front. Keep dynamic TMP enabled."},
+    "static_labels": [
+      {"path": "Label_CORE", "anchored_position": [0, 0.98], "local_z": -0.512, "scale": 0.1, "size_delta": [14, 3.6]},
+      {"path": "START_Lever/Label_START", "anchored_position": [0, 0.47], "local_z": 0.038, "scale": 0.1, "size_delta": [4.6, 1]},
+      {"path": "Startup_Gauge/Label_Gauge", "anchored_position": [0, 0.19], "local_z": 0.038, "scale": 0.1, "size_delta": [10, 0.7]},
+      {"path": "STARTUP_Indicator/Label_LOCK", "anchored_position": [0, -0.06], "local_z": -0.062, "scale": 0.1, "size_delta": [3, 0.7]},
+      {"path": "HEAT_Indicator/Label_LOCK", "anchored_position": [0, -0.06], "local_z": -0.062, "scale": 0.1, "size_delta": [2.4, 0.7]},
+      {"path": "COLD_Indicator/Label_LOCK", "anchored_position": [0, -0.06], "local_z": -0.062, "scale": 0.1, "size_delta": [2.4, 0.7]}
+    ],
+    "static_label_recommendation": "Only turn off old static label GameObjects after replacement physical labels are present. Preserve Startup_Status."
+  },
+  "reactor_placeholder": {
+    "path": "Environment/Core_Block",
+    "transform_id": 1349894557,
+    "position": [0, 1.75, 6.5],
+    "scale": [3, 3.5, 3],
+    "rotation_euler": [0, 0, 0],
+    "renderer_id": 1349894559,
+    "box_collider_id": 1349894558,
+    "world_bounds_min": [-1.5, 0, 5],
+    "world_bounds_max": [1.5, 3.5, 8],
+    "code_reference": "No CoreModule/CorePanelDisplay reference to this block. New reactor effects are a later gameplay task, not part of this model design.",
+    "recommended_mount": "Final builder decision: all four reactor exports use a common centre origin and local Y bounds -1.75..1.75. Parent them directly under existing Core_Block with local position0, rotationY180 and inverse scale(1/3,1/3.5,1/3). Preserve old Core_Block BoxCollider and disable its MeshRenderer. No localY=-0.5 offset: these are centre-pivot exports, not floor-pivot exports.",
+    "clearance": "Old footprint 3x3m. Cooling and Signal cabinets behind/front separation is only0.5m between their rear Z4.5 and Core_Block front Z5; already less than player capsule diameter0.6m. Do not push reactor railing/feet forward of Z5 or imply this is a walkable aisle. Back wall innerZ9.75 gives1.75m to rear of existing core. Ceiling undersideY6; back ceiling beam spansY5.7..6,Z4.675..5.325. Reactor taller than3.5m would exceed old collider vertically; document any intentional height increase."
+  },
+  "adjacent_modules": [
+    {"name": "COOLING_Module", "position": [-1, 1.2, 4], "panel_dimensions": [1.8, 2.4, 1]},
+    {"name": "SIGNAL_Module", "position": [1, 1.2, 4], "panel_dimensions": [1.8, 2.4, 1]},
+    {"name": "POWER_Module", "position": [3, 1.2, 4], "panel_dimensions": [1.8, 2.4, 1]},
+    {"name": "CORE_Module", "position": [5, 1.2, 4], "panel_dimensions": [1.8, 2.4, 1]}
+  ],
+  "room": {"interior_x": [-11.75, 11.75], "interior_z": [-9.75, 9.75], "floor_y": 0, "ceiling_underside_y": 6},
+  "verified_prior_fix": {"path": "SIGNAL_Module/GAIN_Slider/Handle/GAIN_Handle", "child_scale": [7.142857, 14.285714, 14.285714], "status": "Correct in current saved scene."},
+  "source_component_refs": {"CoreModule": 954874103, "CorePanelDisplay": 954874104, "CoreStartLever": 135750352, "PowerModule": 1268241570, "CoolingModule": 546721940, "SignalScope": 985048669},
+  "interaction": "PlayerInteractor uses Physics.Raycast and hit.collider.GetComponentInParent<Interactable>. New decorative meshes should not get generated colliders. Preserve old functional collider GameObjects and references.",
+  "future_effects": "User wants lab dark and inactive before POWER online, then lighting/reactor glow/electric arcs; implement later. Model should expose separately remappable glass, emissive trim, interior chamber and cable attachment regions without adding behavior today."
+}

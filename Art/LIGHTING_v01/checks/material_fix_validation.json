@@ -1,0 +1,145 @@
+{
+  "scope": "Actual FBX reimports; material face allocation and geometry comparison to untouched Unity files.",
+  "parts": [
+    {
+      "name": "LIGHT_LinearHousing",
+      "old_face_counts": {
+        "RLYL_Frame": 12038,
+        "RLYL_Steel": 0,
+        "RLYL_Rubber": 0,
+        "RLYL_Paint": 0
+      },
+      "new_face_counts": {
+        "RLYL_Frame": 2324,
+        "RLYL_Steel": 6696,
+        "RLYL_Rubber": 2460,
+        "RLYL_Paint": 558
+      },
+      "position_max_error": 0.0,
+      "checks": {
+        "same_object_name": true,
+        "same_positions": true,
+        "same_topology": true,
+        "same_uv": true,
+        "same_zero_pivot": true,
+        "same_material_names": true,
+        "all_materials_used": true,
+        "face_counts_match_source_export": true
+      },
+      "passed": true
+    },
+    {
+      "name": "LIGHT_LinearLens",
+      "old_face_counts": {
+        "RLYL_Lens": 308
+      },
+      "new_face_counts": {
+        "RLYL_Lens": 308
+      },
+      "position_max_error": 0.0,
+      "checks": {
+        "same_object_name": true,
+        "same_positions": true,
+        "same_topology": true,
+        "same_uv": true,
+        "same_zero_pivot": true,
+        "same_material_names": true,
+        "all_materials_used": true,
+        "face_counts_match_source_export": true
+      },
+      "passed": true
+    },
+    {
+      "name": "LIGHT_LinearGlass",
+      "old_face_counts": {
+        "RLYL_Glass": 182
+      },
+      "new_face_counts": {
+        "RLYL_Glass": 182
+      },
+      "position_max_error": 0.0,
+      "checks": {
+        "same_object_name": true,
+        "same_positions": true,
+        "same_topology": true,
+        "same_uv": true,
+        "same_zero_pivot": true,
+        "same_material_names": true,
+        "all_materials_used": true,
+        "face_counts_match_source_export": true
+      },
+      "passed": true
+    },
+    {
+      "name": "LIGHT_BulkheadHousing",
+      "old_face_counts": {
+        "RLYL_Rubber": 9960,
+        "RLYL_Frame": 0,
+        "RLYL_Steel": 0,
+        "RLYL_Paint": 0
+      },
+      "new_face_counts": {
+        "RLYL_Rubber": 1782,
+        "RLYL_Frame": 1054,
+        "RLYL_Steel": 5762,
+        "RLYL_Paint": 1362
+      },
+      "position_max_error": 0.0,
+      "checks": {
+        "same_object_name": true,
+        "same_positions": true,
+        "same_topology": true,
+        "same_uv": true,
+        "same_zero_pivot": true,
+        "same_material_names": true,
+        "all_materials_used": true,
+        "face_counts_match_source_export": true
+      },
+      "passed": true
+    },
+    {
+      "name": "LIGHT_BulkheadLens",
+      "old_face_counts": {
+        "RLYL_Lens": 254
+      },
+      "new_face_counts": {
+        "RLYL_Lens": 254
+      },
+      "position_max_error": 0.0,
+      "checks": {
+        "same_object_name": true,
+        "same_positions": true,
+        "same_topology": true,
+        "same_uv": true,
+        "same_zero_pivot": true,
+        "same_material_names": true,
+        "all_materials_used": true,
+        "face_counts_match_source_export": true
+      },
+      "passed": true
+    },
+    {
+      "name": "LIGHT_BulkheadGlass",
+      "old_face_counts": {
+        "RLYL_Glass": 182
+      },
+      "new_face_counts": {
+        "RLYL_Glass": 182
+      },
+      "position_max_error": 0.0,
+      "checks": {
+        "same_object_name": true,
+        "same_positions": true,
+        "same_topology": true,
+        "same_uv": true,
+        "same_zero_pivot": true,
+        "same_material_names": true,
+        "all_materials_used": true,
+        "face_counts_match_source_export": true
+      },
+      "passed": true
+    }
+  ],
+  "unity_files_unchanged": true,
+  "all_passed": true
+}
