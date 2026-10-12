@@ -111,6 +111,7 @@ namespace Startup
                     return;
 
                 unlocked = true;
+                RelayAudioGuideDriver.PlayAt("Lab_ExitDoor_Open", transform.position);
             }
 
             elapsed = Mathf.Min(

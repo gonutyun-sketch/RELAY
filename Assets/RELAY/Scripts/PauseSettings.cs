@@ -31,6 +31,7 @@ namespace Startup
         private bool savedDragEnabled;
         private bool savedAudioPause;
         private float savedTimeScale;
+        private int audioDoorDirection = 0;
 
         public bool IsOpen { get; private set; }
 
@@ -228,6 +229,14 @@ namespace Startup
 
         private void OnDisable()
         {
+            RelayAudioGuideDriver.Stop("Cage_Door_Open");
+            RelayAudioGuideDriver.Stop("Cage_Door_Close");
+            RelayAudioGuideDriver.Stop("Winch_Start");
+            RelayAudioGuideDriver.Stop("Winch_Run_Loop");
+            RelayAudioGuideDriver.Stop("Shaft_Air_Loop");
+            RelayAudioGuideDriver.Stop("Cable_Creak");
+            audioDoorDirection = 0;
+
             if (!configured) return;
             Close(false);
             if (menuGroup != null) menuGroup.gameObject.SetActive(false);

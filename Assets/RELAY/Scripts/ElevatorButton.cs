@@ -49,6 +49,7 @@ namespace Startup
                 return;
 
             pressRemaining = PressDuration;
+            RelayAudioGuideDriver.PlayAt("Button_Press_01", transform.position);
         }
 
         private void Update()

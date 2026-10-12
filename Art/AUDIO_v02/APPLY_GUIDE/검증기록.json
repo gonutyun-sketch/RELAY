@@ -1,0 +1,91 @@
+{
+  "compiler_exit_code": 0,
+  "compiler_output": "",
+  "checked_code_insertions": 15,
+  "project_source_files_read": 27,
+  "project_sources_unchanged": true,
+  "unity_editor_launched": false,
+  "unity_scene_changed": false,
+  "unity_playtest": false,
+  "anchors": [
+    {
+      "file": "PlayerInteractor.cs",
+      "anchor": "private void BeginFeedback(bool failed)\n        {",
+      "matches": 1
+    },
+    {
+      "file": "FirstPersonMotor.cs",
+      "anchor": "UpdateWalkBob(distance, walking);",
+      "matches": 1
+    },
+    {
+      "file": "CoreElectricalFX.cs",
+      "anchor": "bursting = true;",
+      "matches": 1
+    },
+    {
+      "file": "ExitDoor.cs",
+      "anchor": "unlocked = true;",
+      "matches": 1
+    },
+    {
+      "file": "ElevatorButton.cs",
+      "anchor": "pressRemaining = PressDuration;",
+      "matches": 1
+    },
+    {
+      "file": "ElevatorModule.cs",
+      "anchor": "private float rideElapsed;",
+      "matches": 1
+    },
+    {
+      "file": "ElevatorModule.cs",
+      "anchor": "if (!configured || phase == Phase.Rising)\n                return;",
+      "matches": 1
+    },
+    {
+      "file": "ElevatorModule.cs",
+      "anchor": "float eased = Mathf.SmoothStep(0f, 1f, closeAmount);",
+      "matches": 1
+    },
+    {
+      "file": "ElevatorModule.cs",
+      "anchor": "phase = Phase.Rising;",
+      "matches": 1
+    },
+    {
+      "file": "ElevatorModule.cs",
+      "anchor": "rideElapsed += Time.deltaTime;",
+      "matches": 1
+    },
+    {
+      "file": "ElevatorModule.cs",
+      "anchor": "phase = Phase.Opening;",
+      "matches": 1
+    },
+    {
+      "file": "ElevatorModule.cs",
+      "anchor": "private void OnDisable()\n        {",
+      "matches": 1
+    },
+    {
+      "file": "ForestFogReturn.cs",
+      "anchor": "phase = Phase.Cover;",
+      "matches": 1
+    },
+    {
+      "file": "ForestFogReturn.cs",
+      "anchor": "phase = Phase.Reveal;",
+      "matches": 1
+    },
+    {
+      "file": "MountainEndingSequence.cs",
+      "anchor": "started = true;",
+      "matches": 1
+    }
+  ],
+  "note_lines": 1003,
+  "note_characters": 39992,
+  "sound_references_checked": 44,
+  "code_appendix_matches_file": true
+}

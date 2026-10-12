@@ -184,6 +184,7 @@ namespace Startup
                            (flags & CollisionFlags.Below) != 0 &&
                            actualSpeed > 0.1f;
             UpdateWalkBob(distance, walking);
+            RelayAudioGuideDriver.Walked(distance, walking);
         }
 
         private void UpdateLook(Mouse mouse)

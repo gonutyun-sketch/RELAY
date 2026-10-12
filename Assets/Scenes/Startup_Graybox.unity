@@ -10635,6 +10635,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 665192f2a3a7598408a973502ef1f814, type: 3}
   m_PrefabInstance: {fileID: 633454162}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &642985605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 642985606}
+  m_Layer: 0
+  m_Name: FogReturnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &642985606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642985605}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.08, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1094766287}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &651376562
 GameObject:
   m_ObjectHideFlags: 0
@@ -15192,6 +15223,7 @@ GameObject:
   - component: {fileID: 951423112}
   - component: {fileID: 951423111}
   - component: {fileID: 951423110}
+  - component: {fileID: 951423113}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -15262,7 +15294,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2654852}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1613011923}
+        m_TargetAssemblyTypeName: Startup.RelayAudioGuideDriver, Assembly-CSharp
+        m_MethodName: PlayUiBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &951423111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15301,6 +15345,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951423108}
   m_CullTransparentMesh: 1
+--- !u!114 &951423113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951423108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613011923}
+          m_TargetAssemblyTypeName: Startup.RelayAudioGuideDriver, Assembly-CSharp
+          m_MethodName: PlayUiHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &951727201
 GameObject:
   m_ObjectHideFlags: 0
@@ -17567,6 +17640,94 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052753051}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1054075290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1054075291}
+  - component: {fileID: 1054075294}
+  - component: {fileID: 1054075293}
+  - component: {fileID: 1054075292}
+  m_Layer: 5
+  m_Name: FogWhiteout
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1054075291
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054075290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2145268650}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1054075292
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054075290}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &1054075293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054075290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1054075294
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054075290}
+  m_CullTransparentMesh: 1
 --- !u!1 &1057191960
 GameObject:
   m_ObjectHideFlags: 0
@@ -18492,6 +18653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094766287}
   - component: {fileID: 1094766288}
+  - component: {fileID: 1094766289}
   m_Layer: 0
   m_Name: MountainEnding
   m_TagString: Untagged
@@ -18525,6 +18687,7 @@ Transform:
   - {fileID: 1012947957}
   - {fileID: 290974760}
   - {fileID: 1062572251}
+  - {fileID: 642985606}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1094766288
@@ -18548,6 +18711,36 @@ MonoBehaviour:
   lookSeconds: 2
   fadeSeconds: 2
   titleHoldSeconds: 3
+--- !u!114 &1094766289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094766286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2a3d3795c54594d8f336cce5817849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Startup.ForestFogReturn
+  playerMotor: {fileID: 1816404105}
+  elevator: {fileID: 472959855}
+  returnPoint: {fileID: 642985606}
+  whiteFade: {fileID: 1054075292}
+  halfWidth: 9.5
+  farEdgeZ: 19.5
+  mistStartDistance: 3.5
+  returnDistance: 0.85
+  fogColor: {r: 0.72, g: 0.76, b: 0.77, a: 1}
+  forestDensity: 0.055
+  edgeDensity: 0.26
+  edgeWhiteout: 0.5
+  forestBlendSeconds: 2
+  useFogColoredSky: 1
+  fadeInSeconds: 1.1
+  whiteHoldSeconds: 0.25
+  fadeOutSeconds: 1.2
+  cooldownSeconds: 1.5
 --- !u!1 &1108474431
 GameObject:
   m_ObjectHideFlags: 0
@@ -27986,6 +28179,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 627a636605c9a13498c964fafb2544d8, type: 3}
   m_PrefabInstance: {fileID: 1610769798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1613011921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613011922}
+  - component: {fileID: 1613011923}
+  m_Layer: 0
+  m_Name: AudioRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1613011922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613011921}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1613011923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613011921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee48f915fb8cf22499dea4b4443da38f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Startup.RelayAudioGuideDriver
+  power: {fileID: 1268241570}
+  cooling: {fileID: 546721940}
+  signal: {fileID: 985048669}
+  core: {fileID: 954874103}
+  elevator: {fileID: 472959855}
+  player: {fileID: 1816404110}
+  coreBody: {fileID: 1349894557}
+  exitDoor: {fileID: 196963603}
+  auxSwitch: {fileID: 1219739835}
+  mainLever: {fileID: 1421956303}
+  pumpSwitch: {fileID: 2064298938}
+  startLever: {fileID: 135750352}
+  voltageDial: {fileID: 300209141}
+  balanceDial: {fileID: 1403736458}
+  frequencyDial: {fileID: 718572117}
+  flowValve: {fileID: 194986308}
+  phaseSlider: {fileID: 1453563489}
+  gainSlider: {fileID: 590224238}
+  phaseRange: {x: 0, y: 345}
+  gainRange: {x: 0.25, y: 1.25}
+  controlsLevel: 0.75
+  machineLevel: 0.65
+  ambienceLevel: 0.5
+  footstepsLevel: 0.65
+  uiLevel: 0.6
+  stepDistance: 1.15
+  loopFadeSeconds: 0.35
 --- !u!1001 &1618457668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35310,6 +35574,108 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 166013f6d76945e459ad6f83132c4c91, type: 3}
   m_PrefabInstance: {fileID: 2144881042}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2145268646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145268650}
+  - component: {fileID: 2145268649}
+  - component: {fileID: 2145268648}
+  - component: {fileID: 2145268647}
+  m_Layer: 5
+  m_Name: FogCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2145268647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145268646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2145268648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145268646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.5
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &2145268649
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145268646}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1000
+  m_TargetDisplay: 0
+--- !u!224 &2145268650
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145268646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1054075291}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &2146596330
 GameObject:
   m_ObjectHideFlags: 0
@@ -35464,3 +35830,5 @@ SceneRoots:
   - {fileID: 1584815660}
   - {fileID: 1094766287}
   - {fileID: 1320034510}
+  - {fileID: 2145268650}
+  - {fileID: 1613011922}

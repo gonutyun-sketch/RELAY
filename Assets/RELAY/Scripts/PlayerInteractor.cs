@@ -153,6 +153,8 @@ namespace Startup
 
         private void BeginFeedback(bool failed)
         {
+            if (failed)
+                RelayAudioGuideDriver.Play("Interaction_Blocked");
             feedbackFailed = failed;
             // 0.16 s for normal input; 0.20 s for a refused lever attempt at current settings.
             feedbackDuration = Mathf.Max(0f, clickFeedbackSeconds) * (failed ? 1.25f : 1f);

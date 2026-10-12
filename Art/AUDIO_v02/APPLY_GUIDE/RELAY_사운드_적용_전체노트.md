@@ -1,0 +1,1003 @@
+# RELAY 사운드 v02 적용 전체 노트
+
+작성 기준: 2026-10-12 / Unity 6000.3.9f1 / C:\Users\gonut\School_p2
+
+이 문서는 현재 저장된 `Assets/Scenes/Startup_Graybox.unity`와 `Assets/RELAY/Scripts`의 코드를 읽고 작성했다. Unity 화면을 대신 조작하거나 프로젝트 파일을 수정한 상태가 아니다. 아래 작업을 사용자가 직접 진행한다.
+
+중요한 구분: WAV 파일을 프로젝트에 넣는 것과, 게임에서 정확한 순간에 소리가 나게 하는 것은 별개다. 이 노트는 파일 가져오기부터 기계 상태·조작·엘리베이터·발소리·숲·안개·설정창 연결까지 한 번에 다룬다.
+
+## 1. 최종적으로 어떤 상태를 만드는가
+
+- 게임 시작: 전기가 꺼진 실험실의 아주 약한 공기음만 들린다.
+- 첫 왼쪽 클릭: 커서만 잠긴다. 스위치 클릭음이나 실패음이 나지 않는다.
+- AUX 스위치: 실제 ON/OFF가 바뀔 때 짧은 접점음이 난다.
+- 다이얼·레버·밸브·슬라이더: 실제 값이나 상태가 변할 때 소리가 난다.
+- MAIN 전력 투입: 전력 투입음, 조명 점등음, 변압기와 환기음이 시작된다.
+- 펌프: 실제 펌프 가동 여부에 따라 시작·운전·정지가 구분된다. 냉각수는 유량에 따라 소리 크기가 달라진다.
+- SIGNAL: 전자음, 동기화 성공, 동기화 해제를 구분한다.
+- CORE: 대기·가동·충전·완료·중단, 고온·저온 경고와 실제 방전을 구분한다.
+- 출구: 코어 완료 순간이 아니라 문이 실제 움직이기 시작할 때 소리가 난다.
+- 엘리베이터: 버튼 → 문 닫힘 → 걸쇠 → 상승 → 케이블 → 브레이크 → 문 열림 순서다.
+- 발소리: 플레이어가 실제로 걸은 거리만 센다. 엘리베이터에 서 있을 때와 안개 순간이동에는 나지 않는다.
+- 숲: 도착 후 바람·나뭇잎이 들리고 새소리는 가끔 나온다.
+- 안개: 화면을 덮는 소리와 입구로 돌아와 시야가 열리는 소리를 구분한다.
+- ESC 설정창: 게임 소리는 정지하고 UI 소리만 재생할 수 있다. 기존 볼륨 슬라이더는 그대로 사용한다.
+
+이 노트의 경고 기준은 기존 퍼즐/경고등 기준을 따른다. 정답 수치나 힌트를 새로 노출하지 않는다.
+
+## 2. 준비할 파일과 보관 위치
+
+이미 제작된 사운드 폴더:
+
+```text
+C:\Users\gonut\RELAY_Art\AUDIO_v02
+├─ WAV                       ← Unity에 가져갈 73개 효과음
+├─ catalog.json              ← 파일 이름, 반복 여부, 기본 음량 목록
+├─ PREVIEW                   ← 감상용. Unity에는 가져오지 않는다.
+├─ LISTEN.html               ← 브라우저에서 미리 듣는 페이지
+└─ APPLY_GUIDE
+   ├─ RELAY_사운드_적용_전체노트.md
+   ├─ RELAY_사운드_적용_전체노트.txt
+   └─ RelayAudioGuideDriver.cs
+```
+
+새로 제공하는 `RelayAudioGuideDriver.cs`는 **수동 적용용 코드**다. 현재 프로젝트에 아직 들어가 있지 않다. 이 파일 하나가 파일 불러오기, 소리 재생, 기계 상태 관찰을 맡는다. 기존 이동·퍼즐·문 제어를 대체하지 않는다.
+
+프로젝트는 먼저 재생을 멈추고 현재 씬과 스크립트를 저장한다. 수정할 스크립트의 백업은 프로젝트 밖에 둔다. 같은 `.cs`의 복사본을 Assets 안에 두면 예전에 겪었던 클래스 중복 오류가 다시 생길 수 있다.
+
+## 3. WAV 가져오기 — 이 경로를 그대로 맞춘다
+
+Unity Project 창에서 다음 폴더를 만든다.
+
+```text
+Assets/RELAY/Resources/RELAY_Audio_v02
+```
+
+그 안에 두 가지를 복사한다.
+
+1. `AUDIO_v02/WAV` 폴더 전체.
+2. `AUDIO_v02/catalog.json` 파일.
+
+결과는 이렇게 되어야 한다.
+
+```text
+Assets/RELAY/Resources/RELAY_Audio_v02/catalog.json
+Assets/RELAY/Resources/RELAY_Audio_v02/WAV/01_Controls/Switch_On_01.wav
+Assets/RELAY/Resources/RELAY_Audio_v02/WAV/02_Power/Power_MainOn.wav
+... 나머지 폴더도 같은 위치
+```
+
+`AUDIO_v02` 전체를 통째로 넣는 것이 아니다. `WAV`와 `catalog.json`만 넣는다. PREVIEW를 함께 넣으면 같은 파일 이름이 중복되어 안내 코드가 오류를 낸다. 기존 v01도 이 Resources 폴더 안에는 넣지 않는다.
+
+`Resources`는 Unity가 실행 중 이름으로 파일을 불러올 수 있는 폴더다. 이 방식으로 73개 AudioClip을 Inspector에 하나씩 드래그하는 일을 줄였다. 이번처럼 한 씬에서 쓰는 작은 팩을 한 번에 불러오는 방식이며, 게임 규모가 커지면 나중에 구역별 로딩으로 바꿀 수 있다. 사용하지 않는 사운드까지 메모리에 로드한다는 점은 감안한다. [Unity Resources.LoadAll 문서](https://docs.unity3d.com/6000.3/Documentation/ScriptReference/Resources.LoadAll.html)
+
+## 4. 오디오 Import 설정
+
+우선 모든 WAV를 선택하고 아래처럼 시작한다. 여기서 말하는 값은 Project 창에서 WAV를 선택했을 때의 Import 설정이다.
+
+| 항목 | 값 |
+|---|---|
+| Load Type | Decompress On Load |
+| Compression Format | PCM |
+| Sample Rate Setting | Preserve Sample Rate |
+| Force To Mono | OFF |
+| Load In Background | OFF |
+| Preload Audio Data | 항목이 보이면 ON |
+
+설정 변경 후 Apply를 누른다. 파일의 3D/2D 여부는 AudioSource에서 정한다. 대부분의 기계 파일은 이미 모노이고, 숲·실험실 배경은 스테레오여서 Force To Mono를 일괄 켤 필요가 없다.
+
+처음에는 PCM으로 소리와 연결을 확인한다. 파일 크기 최적화가 필요해지면 긴 바람·환기음부터 Vorbis 또는 Streaming을 검토한다. 지금 짧은 버튼음까지 Streaming으로 바꾸거나 샘플레이트를 임의로 낮추지 않는다. [Unity Audio Clip 설정 문서](https://docs.unity3d.com/6000.3/Documentation/Manual/class-AudioClip.html)
+
+## 5. 제공 코드 넣기
+
+1. 파일 탐색기에서 `APPLY_GUIDE/RelayAudioGuideDriver.cs`를 찾는다.
+2. Unity Project의 `Assets/RELAY/Scripts`로 **그 파일 하나만** 가져온다.
+3. Unity가 컴파일을 마칠 때까지 기다린다.
+4. Console에 빨간 오류가 없는지 확인한다.
+
+복사 대신 직접 새 C# Script를 만들 경우 이름은 `RelayAudioGuideDriver`로 정확히 맞추고, 생성된 기본 내용을 전부 지운 뒤 노트 맨 아래의 전체 코드를 붙여 넣는다. 복사 방법과 직접 붙여넣기 방법 중 하나만 한다.
+
+이 코드를 기존 MachineSwitch나 FirstPersonMotor 파일 끝에 붙이지 않는다. 새로운 파일 하나다.
+
+## 6. 씬에 AudioRoot를 만들고 연결한다
+
+Hierarchy의 최상위에 빈 GameObject를 하나 만든다. 이름은 `AudioRoot`로 한다. Transform은 Position `(0,0,0)`, Rotation `(0,0,0)`, Scale `(1,1,1)`로 둔다.
+
+`AudioRoot`에 `RelayAudioGuideDriver` 컴포넌트를 추가한다. AudioRoot는 PauseMenu나 Player의 자식으로 넣지 않는다. 항상 활성화된 최상위 오브젝트로 유지한다.
+
+아래 표대로 Inspector에 연결한다. 경로는 현재 저장된 씬에서 확인한 실제 계층이다.
+
+| Inspector 칸 | 넣을 오브젝트 |
+|---|---|
+| Power | `Environment/POWER_Module` |
+| Cooling | `Environment/COOLING_Module` |
+| Signal | `Environment/SIGNAL_Module/Scope` |
+| Core | `Environment/CORE_Module` |
+| Elevator | `Environment/EXIT_Module/ELEVATOR_Module` |
+| Player | `Player` |
+| Core Body | `Environment/Core_Block` |
+| Exit Door | `Environment/EXIT_Module` |
+| Aux Switch | `Environment/POWER_Module/AUX_Switch` |
+| Main Lever | `Environment/POWER_Module/MAIN_Lever` |
+| Pump Switch | `Environment/COOLING_Module/PUMP_Switch` |
+| Start Lever | `Environment/CORE_Module/START_Lever` |
+| Voltage Dial | `Environment/POWER_Module/VOLTAGE_Dial` |
+| Balance Dial | `Environment/POWER_Module/BALANCE_Dial` |
+| Frequency Dial | `Environment/SIGNAL_Module/FREQUENCY_Dial` |
+| Flow Valve | `Environment/COOLING_Module/FLOW_Valve` |
+| Phase Slider | `Environment/SIGNAL_Module/PHASE_Slider` |
+| Gain Slider | `Environment/SIGNAL_Module/GAIN_Slider` |
+
+추가 값은 다음으로 시작한다.
+
+```text
+Phase Range       X = 0       Y = 345
+Gain Range        X = 0.25    Y = 1.25
+Controls Level    0.75
+Machine Level     0.65
+Ambience Level    0.50
+Footsteps Level   0.65
+UI Level          0.60
+Step Distance     1.15
+Loop Fade Seconds 0.35
+```
+
+Phase/Gain 범위는 현재 씬의 MachineSlider 값과 맞춘 것이다. 나중에 원래 슬라이더의 Min/Max를 바꾸면 여기 범위도 같이 맞춘다. 범위를 맞춰야 끝까지 밀었을 때만 EndStop 소리가 난다.
+
+Core Body는 **코어의 실제 본체**다. 조작 패널 CORE_Module과 다르다. 코어 소리 위치가 낮거나 멀면 본체 안에 빈 `CoreAudioPoint`를 만들고 원하는 소리 중심 위치에 둔 다음 Core Body 칸에 그 점을 넣어도 된다. 모델 자체의 위치나 크기를 바꿀 필요는 없다.
+
+## 7. Main Camera에서 한 가지만 확인한다
+
+`Player/Main Camera`에 Audio Listener가 활성화되어 있어야 한다. 씬 전체에서 활성 Audio Listener는 하나만 둔다. AudioRoot에 Audio Listener를 새로 붙이지 않는다.
+
+게임을 재생하면 AudioRoot 아래에 `Audio_...` 오브젝트들이 생긴다. 이들은 제공 코드가 **게임 실행 중에만** 만드는 재생용 AudioSource다. Play를 멈추면 사라지는 것이 정상이다. 런타임 재생 준비이며 씬을 저장하거나 재구성하는 에디터 자동화가 아니다.
+
+각 AudioSource는 기본적으로 다음 설정을 사용한다.
+
+```text
+Play On Awake     OFF
+Pitch             1
+Doppler Level     0
+Reverb Zone Mix   0
+Rolloff           Linear
+Min Distance      1.5
+Max Distance      catalog.json에 기록한 시작값
+```
+
+기계는 3D, UI·플레이어 발소리·전체 배경·안개 연출은 2D로 재생한다. 발소리가 2D인 이유는 현재 자기 캐릭터의 발소리만 다루기 때문이다. 피치 랜덤화는 하지 않고, 변형 파일이 있는 소리는 서로 다른 실제 파일을 선택한다. [Unity AudioSource 문서](https://docs.unity3d.com/6000.3/Documentation/ScriptReference/AudioSource.html)
+
+## 8. 여기까지 했을 때 바로 작동하는 것
+
+재생해서 다음을 먼저 확인한다.
+
+1. 첫 클릭에는 아무 조작음도 나지 않는다.
+2. AUX가 실제 바뀔 때 스위치음이 난다.
+3. MAIN이 실제 들어갈 때 레버와 전력 투입음이 난다.
+4. 다이얼 값이 변할 때 작은 클릭음이 난다.
+5. 밸브는 돌리는 동안만 마찰음이 난다.
+6. PHASE/GAIN은 실제 값이 변하는 동안만 슬라이더 마찰음이 난다.
+7. 펌프·신호·코어·경고·실험실과 숲 배경은 상태에 맞춰 바뀐다.
+
+이 연결은 기존 On Value Changed 이벤트를 수정하지 않고, 현재 상태를 관찰한다. 따라서 기존 UnityEvent에 같은 효과음도 별도로 연결하면 소리가 두 번 난다. 스위치·다이얼에는 AudioSource.Play를 추가로 연결하지 않는다.
+
+다음 항목은 뒤에서 짧은 코드 연결을 해야 한다: 실패 조작, 발소리, 실제 전기 스파크, 출구 문 시작, 엘리베이터의 세부 동작, 안개 복귀, 엔딩 시작, UI.
+
+## 9. 거절된 조작 — 빨간 조준선과 실패음
+
+파일: `Assets/RELAY/Scripts/PlayerInteractor.cs`
+
+검색: `private void BeginFeedback(bool failed)`
+
+그 메서드의 첫 줄에 아래 두 줄을 추가한다. 기존 내용은 남긴다.
+
+```csharp
+if (failed)
+    RelayAudioGuideDriver.Play("Interaction_Blocked");
+```
+
+결과의 앞부분은 이렇게 된다.
+
+```csharp
+private void BeginFeedback(bool failed)
+{
+    if (failed)
+        RelayAudioGuideDriver.Play("Interaction_Blocked");
+
+    feedbackFailed = failed;
+    // 아래의 기존 feedbackDuration 등의 코드는 유지
+```
+
+마지막 주석은 설명용이다. 메서드를 위 일부만으로 통째로 교체하지 않는다. 첫 클릭을 처리하는 Update 앞부분이나 마우스 버튼 입력 줄에 소리를 넣으면 안 된다. 여기서는 실제 실패 판정이 내려졌을 때만 재생한다.
+
+## 10. 발소리 — 기존 이동 코드에 한 줄만 연결
+
+파일: `Assets/RELAY/Scripts/FirstPersonMotor.cs`
+
+Update 안에서 아래 부분을 찾는다. 현재 코드에 실제로 있는 부분이다.
+
+```csharp
+bool walking = input.sqrMagnitude > 0.01f &&
+               (flags & CollisionFlags.Below) != 0 &&
+               actualSpeed > 0.1f;
+UpdateWalkBob(distance, walking);
+```
+
+마지막 줄 바로 아래에 이것만 추가한다.
+
+```csharp
+RelayAudioGuideDriver.Walked(distance, walking);
+```
+
+이동 방향, 중력, CharacterController.Move, 화면 흔들림은 수정하지 않는다.
+
+이미 기존 코드가 엘리베이터의 운반 이동을 제외하고 **플레이어가 걸은 거리**를 계산한다. 그 값을 그대로 쓰므로 엘리베이터 상승 자체로 발소리가 나지 않는다. 안개 복귀 때는 플레이어 이동 스크립트가 잠깐 꺼져 있어 순간이동 거리도 세지 않는다.
+
+현재 표면 구분은 다음 규칙이다.
+
+| 플레이어 위치/게임 단계 | 발소리 |
+|---|---|
+| 엘리베이터 탑승 영역 안 | 금속 |
+| 엘리베이터 도착 이후, 탑승 영역 밖 | 숲/부드러운 땅 |
+| 그 외 실험실 | 콘크리트 |
+
+현재 게임 동선에 맞춘 간단한 구분이다. 바닥 재질을 읽어 자동 판별하는 기능은 아니다. 나중에 숲에 금속 다리 등을 추가하면 그때 바닥별 판별을 확장한다.
+
+발소리 간격은 AudioRoot의 Step Distance에서 조정한다. 1.15m마다 한 번이 시작값이다. 소리가 너무 자주 나면 1.3~1.4, 너무 뜸하면 0.9~1.0 정도로 조금씩 바꾼다. 걷기 속도를 바꾸기 위해 이 값을 조절하는 것은 아니다.
+
+## 11. 코어 전기 방전 — 화면에 번쩍일 때만
+
+파일: `Assets/RELAY/Scripts/CoreElectricalFX.cs`
+
+LateUpdate 안에서 다음 부분을 찾는다.
+
+```csharp
+PrepareGlassArcs();
+bursting = true;
+```
+
+바로 아래에 한 줄을 넣는다.
+
+```csharp
+RelayAudioGuideDriver.PlayAt("Core_GlassArc", transform.position);
+```
+
+이 위치는 새 방전이 시작되는 순간이다. `BuildArc()`나 `SetPositions()` 아래에 넣으면 0.035초 또는 매 프레임마다 재생될 수 있으므로 그곳에 넣지 않는다.
+
+`Core_GlassArc`는 `_01`, `_02`, `_03` 중 하나를 선택한다. 같은 파일이 연속 선택되는 것을 피하고, 최소 0.35초 재생 간격을 둔다. 기존 코드의 MAIN 전력 검사 뒤에서 호출하므로 AUX만 켠 상태에 방전음이 먼저 나지 않는다.
+
+코어 지속음과 방전은 함께 재생할 수 있다. 방전이 너무 시끄러우면 나중에 해당 파일의 기본 volume 값을 낮추거나 전용 조절 칸을 추가한다. 처음부터 전역 볼륨을 높여 방전을 강조하지 않는다.
+
+## 12. 출구 문 — 코어 완료와 실제 개방을 분리
+
+파일: `Assets/RELAY/Scripts/ExitDoor.cs`
+
+FixedUpdate 안에서 `unlocked = true;`를 찾는다. Awake의 `unlocked = false;`가 아니다.
+
+```csharp
+unlocked = true;
+```
+
+이 줄 바로 아래에 추가한다.
+
+```csharp
+RelayAudioGuideDriver.PlayAt("Lab_ExitDoor_Open", transform.position);
+```
+
+DoorRevealSequence가 문을 잠깐 보류하고 카메라 연출을 한 뒤 실제 개방을 허용하는 구조다. `CoreModule.IsComplete`가 된 즉시 문 소리를 내면 화면 속 문과 타이밍이 어긋날 수 있다. 위 위치는 보류가 풀린 뒤 딱 한 번 실행된다.
+
+## 13. 엘리베이터 버튼
+
+파일: `Assets/RELAY/Scripts/ElevatorButton.cs`
+
+Interact에서 `pressRemaining = PressDuration;` 바로 아래에 추가한다.
+
+```csharp
+RelayAudioGuideDriver.PlayAt("Button_Press_01", transform.position);
+```
+
+현재 메서드는 `CanInteract`와 `TryRequestDeparture()`가 실패하면 먼저 return한다. 따라서 성공한 버튼 조작에만 눌림음이 난다. 거절은 9번의 빨간 조준선 실패음이 담당한다.
+
+## 14. 엘리베이터 문·상승·브레이크
+
+이 항목은 파일 하나의 여러 위치를 수정한다. 한 번에 끝내고 저장한 후 컴파일을 확인한다.
+
+파일: `Assets/RELAY/Scripts/ElevatorModule.cs`
+
+### 14-1. 클래스 안에 변수 두 개 추가
+
+기존 `private float rideElapsed;` 아래에 추가한다.
+
+```csharp
+private int audioDoorDirection;
+private float audioNextCable;
+```
+
+### 14-2. FixedUpdate에서 문 이동 방향을 기록
+
+현재 앞부분:
+
+```csharp
+if (!configured || phase == Phase.Rising)
+    return;
+```
+
+이 바로 아래에 추가한다.
+
+```csharp
+float audioPreviousClose = closeAmount;
+```
+
+이후 기존 `closeAmount = Mathf.MoveTowards(...)` 계산이 끝난 다음, `float eased = ...` 앞에 아래 블록을 추가한다.
+
+```csharp
+int audioDirection = closeAmount > audioPreviousClose ? 1 :
+    closeAmount < audioPreviousClose ? -1 : 0;
+
+if (audioDirection != audioDoorDirection)
+{
+    RelayAudioGuideDriver.Stop("Cage_Door_Open");
+    RelayAudioGuideDriver.Stop("Cage_Door_Close");
+
+    if (audioDirection > 0)
+        RelayAudioGuideDriver.Play("Cage_Door_Close");
+    else if (audioDirection < 0)
+        RelayAudioGuideDriver.Play("Cage_Door_Open");
+
+    audioDoorDirection = audioDirection;
+}
+```
+
+이렇게 하면 실제로 닫히거나 열리기 시작할 때만 난다. 문 닫히는 도중 플레이어가 밖으로 나가 출발이 취소되면 닫힘음을 끊고 열림음으로 바뀐다. 문이 이미 열린 채 가만히 있을 때는 반복 재생되지 않는다.
+
+### 14-3. 실제 상승 시작에 소리 연결
+
+`private void BeginRide()` 안의 마지막 `phase = Phase.Rising;` 바로 아래에 추가한다.
+
+```csharp
+RelayAudioGuideDriver.Stop("Cage_Door_Open");
+RelayAudioGuideDriver.Stop("Cage_Door_Close");
+RelayAudioGuideDriver.Play("Cage_Latch");
+RelayAudioGuideDriver.Play("Winch_Start");
+RelayAudioGuideDriver.SetLoop("Winch_Run_Loop", true);
+RelayAudioGuideDriver.SetLoop("Shaft_Air_Loop", true);
+audioDoorDirection = 0;
+audioNextCable = 2.5f;
+```
+
+버튼을 누른 순간에 윈치를 재생하지 않는다. 문이 다 닫히고 실제로 올라가기 시작할 때 재생한다. 시작음과 운전음은 별개의 파일이고 짧게 겹쳐진다. 운전음의 피치를 올려 시작음으로 쓰지 않는다.
+
+### 14-4. 올라가는 중 케이블 소리
+
+Update의 `rideElapsed += Time.deltaTime;` 바로 아래에 추가한다.
+
+```csharp
+if (rideElapsed >= audioNextCable)
+{
+    RelayAudioGuideDriver.Play("Cable_Creak");
+    audioNextCable += 2.8f;
+}
+```
+
+이 부분은 기존 `phase != Phase.Rising` return 뒤에 있으므로 실제 상승 중에만 돈다. `_01`과 `_02` 중 하나를 사용한다.
+
+### 14-5. 도착 순간 정지
+
+Update의 `if (t >= 1f)` 블록 안에서 `phase = Phase.Opening;` 바로 아래에 추가한다.
+
+```csharp
+RelayAudioGuideDriver.Stop("Winch_Start");
+RelayAudioGuideDriver.Stop("Cable_Creak");
+RelayAudioGuideDriver.SetLoop("Winch_Run_Loop", false);
+RelayAudioGuideDriver.SetLoop("Shaft_Air_Loop", false);
+RelayAudioGuideDriver.Play("Winch_Brake");
+```
+
+문 열림은 14-2의 실제 문 이동 감지가 처리한다. 여기서 `Cage_Door_Open`을 한 번 더 호출하지 않는다.
+
+### 14-6. 비활성화 때 정리
+
+`private void OnDisable()`의 **첫 부분**, `if (!configured) return;`보다 앞에 추가한다.
+
+```csharp
+RelayAudioGuideDriver.Stop("Cage_Door_Open");
+RelayAudioGuideDriver.Stop("Cage_Door_Close");
+RelayAudioGuideDriver.Stop("Winch_Start");
+RelayAudioGuideDriver.Stop("Winch_Run_Loop");
+RelayAudioGuideDriver.Stop("Shaft_Air_Loop");
+RelayAudioGuideDriver.Stop("Cable_Creak");
+audioDoorDirection = 0;
+```
+
+비활성화 때는 서서히 줄이는 SetLoop 대신 즉시 Stop을 쓴다. 객체를 끄거나 재시작할 때 윈치만 남는 것을 막는다.
+
+## 15. 숲 배경과 새소리
+
+추가 코드 수정 없이 안내 코드가 `elevator.HasArrived`를 관찰한다.
+
+- 도착 전: 실험실 배경.
+- 도착 후: 숲 바람과 나뭇잎을 서서히 켜고 실험실 배경을 끈다.
+- 새소리: 도착 이후 간헐적으로 재생, 이후 12~25초 사이의 간격.
+
+현재 HasArrived는 상부에 도착해 **문이 열리기 시작할 때**부터 true다. 완전히 문 밖으로 나온 뒤의 판정은 아니다. 상부 문이 열리는 순간 숲 공기음이 들리기 시작하는 연출로 사용한다.
+
+기계의 3D 소리는 숲 도착만으로 강제로 모두 끄지 않는다. 기계가 지하에 있고 플레이어가 충분히 멀어지면 거리 감쇠로 안 들린다. 윈치는 14-5에서 실제로 정지시킨다.
+
+## 16. 안개에 들어갔다 돌아오는 소리
+
+파일: `Assets/RELAY/Scripts/ForestFogReturn.cs`
+
+### 16-1. 하얗게 덮기 시작
+
+`BeginReturn()` 안에서 `phase = Phase.Cover;` 바로 아래에 추가한다.
+
+```csharp
+RelayAudioGuideDriver.Stop("Fog_Return");
+RelayAudioGuideDriver.Play("Fog_Enter");
+```
+
+### 16-2. 입구로 옮겨지고 화면이 열리기 시작
+
+`AdvanceReturn(float dt)`의 `case Phase.Hold:` 안에 있는 `phase = Phase.Reveal;` 바로 아래에 추가한다.
+
+```csharp
+RelayAudioGuideDriver.Stop("Fog_Enter");
+RelayAudioGuideDriver.Play("Fog_Return");
+```
+
+소리를 안개 경계 검사 매 프레임에 넣지 않는다. 위 두 줄은 해당 단계가 바뀔 때 한 번만 실행된다. 그림처럼 화면 가운데 작은 하얀 네모가 보이는 문제는 별도의 RectTransform/Canvas 문제이며 이 오디오 연결로 고쳐지는 것은 아니다.
+
+## 17. 엔딩이 시작되는 순간
+
+파일: `Assets/RELAY/Scripts/MountainEndingSequence.cs`
+
+`BeginEnding()`의 `started = true;` 바로 아래에 추가한다.
+
+```csharp
+RelayAudioGuideDriver.Play("Forest_Reveal");
+```
+
+이 소리는 현재 엔딩 조건, 즉 정해진 구역에서 산을 바라본 뒤 타이틀 연출이 시작되는 순간에 연결한다. 엘리베이터 도착 순간과 엔딩 시작 순간 양쪽에 모두 연결하면 두 번 재생될 수 있으므로 여기 한 곳에만 넣는다.
+
+## 18. 설정창과 UI 버튼
+
+기존 `PauseSettings`는 볼륨 슬라이더를 `AudioListener.volume`에 연결하고, ESC로 설정창을 열 때 `AudioListener.pause = true`를 사용한다. 해당 코드를 새 볼륨 코드로 교체하지 않는다.
+
+제공 코드에서 UI AudioSource만 `ignoreListenerPause = true`를 사용한다. 따라서 설정창에서도 UI 소리를 낼 수 있다. 전체 볼륨이 0이면 UI 역시 들리지 않는 것이 정상이다. [Unity ignoreListenerPause 문서](https://docs.unity3d.com/6000.3/Documentation/ScriptReference/AudioSource-ignoreListenerPause.html)
+
+버튼 연결 방법:
+
+1. Hierarchy에서 설정창의 ResumeButton을 선택한다.
+2. Button 컴포넌트의 On Click() 목록을 찾는다.
+3. `+`를 눌러 새 항목을 만든다. 기존 게임 동작 항목은 지우지 않는다.
+4. 새 항목의 Object 칸에 Hierarchy의 `AudioRoot`를 드래그한다.
+5. 함수 목록에서 `RelayAudioGuideDriver → PlayUiBack()`을 선택한다.
+
+같은 방법으로 일반 확인 버튼에는 `PlayUiConfirm()`, 돌아가기/닫기에는 `PlayUiBack()`을 연결한다. 나가기 버튼은 앱이 즉시 닫히면 소리가 끝까지 들리지 않을 수 있다. 소리를 위해 종료 동작을 지금 새로 지연시킬 필요는 없다.
+
+마우스 올렸을 때의 소리는 선택 사항이다.
+
+1. 해당 버튼에 Event Trigger 컴포넌트를 추가한다.
+2. Add New Event Type → Pointer Enter를 추가한다.
+3. 이벤트 Object에 AudioRoot를 넣는다.
+4. `RelayAudioGuideDriver → PlayUiHover()`를 선택한다.
+
+모든 마우스 클릭을 감지하는 코드를 Player에 추가하지 않는다. UI의 EventTrigger와 Button 이벤트만 사용한다. 그래야 버튼을 누를 때 게임 카메라나 기계가 같이 움직이는 문제를 다시 만들지 않는다.
+
+볼륨 슬라이더의 On Value Changed에 확인음을 연결하면 드래그 중 수십 번 재생된다. 볼륨·감도 슬라이더에는 이번에 클릭음을 매 변화마다 넣지 않는다. 조절 결과는 기계음/배경음으로 확인하면 된다.
+
+## 19. 전체 사운드와 연결 위치 표
+
+`_01~_04`는 파일별 원본이 다른 변형음이다. 피치를 바꿔 만들거나 재생하는 것이 아니다. 일부 파일은 선택 가능한 대안으로 보관하며, 모두 동시에 울릴 필요는 없다.
+
+| 파일/묶음 | 연결 위치 | 재생 방식 |
+|---|---|---|
+| Switch_On_01 / Off_01 | AUX | 실제 상태 변화, 자동 |
+| Switch_On_02 / Off_02 | PUMP 스위치 | 실제 상태 변화, 자동 |
+| Lever_Engage_01 / Release_01 | MAIN | 실제 상태 변화, 자동 |
+| Lever_Engage_02 / Release_02 | CORE START | 실제 상태 변화, 자동 |
+| Dial_Detent_01~03 | Voltage/Balance/Frequency | 값 변화마다 하나 선택, 자동 |
+| Valve_Wheel_Loop | FLOW Valve | 실제 값 변화 중, 자동 |
+| Slider_Travel_Loop / EndStop | PHASE/GAIN | 이동/끝점, 자동 |
+| Button_Press_01 | ASCEND 버튼 | 13번 코드 |
+| Button_Press_02 | 다른 물리 버튼용 대안 | 현재 의무 연결 없음 |
+| Interaction_Blocked | 거절된 상호작용 | 9번 코드 |
+| Power_MainOn / MainOff | MAIN 전원 | 실제 IsOnline 변화, 자동 |
+| Power_Transformer_Loop | POWER | 전력 공급 중, 자동 |
+| Light_Ignition | 실험실 점등 | 전력 투입 때 한 번, 자동 |
+| Pump_Start / Run_Loop / Stop | COOLING | 실제 IsPumping 변화, 자동 |
+| Coolant_Flow_Loop | COOLING | 유량 비율로 음량 변화, 자동 |
+| Pressure_Release | 펌프 정지 | 정지 때 짧은 감압 연출, 자동 |
+| Signal_Electronics_Loop | Scope | MAIN 전원 켜짐, 자동 |
+| Signal_Lock / Lost | Scope | 실제 동기화 판정 변화, 자동 |
+| Core_Idle_Loop / Active_Loop | 실제 Core_Block 본체 | 전원/가동 단계, 자동 |
+| Core_Charge / Stable / Abort | Core_Block | 시작/완료/중단, 자동 |
+| Core_Heat_Warning / Cold_Warning | Core_Block | 기존 온도 경고 기준, 자동 |
+| Core_GlassArc_01~03 | CORE_FX | 실제 방전 시작, 11번 코드 |
+| Cage_Door_Open / Close | 엘리베이터 | 실제 문 이동 방향, 14번 코드 |
+| Cage_Latch | 엘리베이터 | 문 닫히고 출발, 14번 코드 |
+| Winch_Start / Run_Loop / Brake | 엘리베이터 | 실제 상승 단계, 14번 코드 |
+| Cable_Creak_01~02 | 엘리베이터 | 상승 도중 간헐적, 14번 코드 |
+| Shaft_Air_Loop | 엘리베이터 | 상승 중, 14번 코드 |
+| Lab_ExitDoor_Open | 실험실 출구 | 실제 열기 시작, 12번 코드 |
+| Step_Concrete_01~04 | 플레이어 | 실험실 걷기, 10번 코드 |
+| Step_Metal_01~04 | 플레이어 | 엘리베이터 내부 걷기, 10번 코드 |
+| Step_Forest_01~04 | 플레이어 | 숲 걷기, 10번 코드 |
+| Lab_Unpowered_Loop | 실험실 전체 | MAIN OFF, 자동 |
+| Lab_Ventilation_Loop | 실험실 전체 | MAIN ON, 자동 |
+| Forest_Wind_Loop / Pine_Canopy_Loop | 숲 전체 | 상부 도착 이후, 자동 |
+| Forest_DistantBird_01~02 | 숲 전체 | 상부 도착 이후 간헐적, 자동 |
+| UI_Hover / Confirm / Back | UI | 18번 수동 이벤트 연결 |
+| Fog_Enter / Return | 화면 연출 | 16번 코드 |
+| Forest_Reveal | 엔딩 시작 | 17번 코드 |
+
+감압음은 현재 별도 압력 배출 밸브가 없어 펌프 정지의 짧은 연출로 연결했다. 실제 압력 수치가 지속적으로 0으로 감쇠하는 물리 시뮬레이션을 추가한 것은 아니다.
+
+## 20. 최종 음량을 맞추는 순서
+
+처음에는 시스템/헤드폰 볼륨을 낮게 두고 시작한다. 게임 내부 볼륨 슬라이더는 우선 0.7 정도로 둔다.
+
+1. 발소리가 너무 크지 않은지 확인한다.
+2. 스위치·다이얼·레버가 기계 배경보다 분명하게 들리도록 Controls Level을 조정한다.
+3. 변압기·펌프·코어를 모두 켜고 Machine Level을 조정한다.
+4. 고온 경고가 묻히는지 확인한다.
+5. 엘리베이터 안에서 윈치가 모든 소리를 덮지 않는지 확인한다.
+6. 숲은 바람보다 나뭇잎이 과하게 날카롭지 않은지 확인한다.
+7. UI 소리는 기계음보다 작고 짧게 들리도록 맞춘다.
+
+Level 값은 파일별 기본 음량에 곱해지는 값이다. 예를 들어 기본 Volume 0.42, Controls Level 0.75이면 AudioSource Volume은 0.315가 된다. 파일마다 기본 음량이 다르므로 모든 AudioSource를 일괄 Volume 1로 바꾸지 않는다.
+
+특정 파일 하나만 바꾸려면 Project 창에서 Resources 폴더에 가져온 `catalog.json`을 열어 해당 `file` 항목 바로 아래의 `volume`만 조정한다. JSON 문법의 쉼표와 따옴표는 유지한다. 이 방식은 **다음 Play부터** 반영된다. 처음에는 AudioRoot의 그룹 Level만 조정하고, 개별 JSON 조절은 필요한 파일에 한해 한다.
+
+재생 중 Audio_... 자식의 Volume을 직접 바꾸면 코드가 다시 덮어쓸 수 있고 Play 종료 후 보존되지 않는다. 저장할 조절은 Play를 멈춘 뒤 AudioRoot의 Inspector에서 한다.
+
+## 21. 자주 생기는 문제
+
+**아무 소리도 안 난다.**
+
+먼저 Console 오류를 확인한다. 그다음 Main Camera의 Audio Listener, Game 창의 Mute Audio 상태, 운영체제 볼륨, 기존 설정창의 볼륨을 확인한다. Resources 경로가 `RELAY_Audio_v02`인지, catalog.json이 WAV 폴더 옆에 있는지도 확인한다.
+
+**Missing WAV라고 나온다.**
+
+파일 이름을 바꾸었거나 WAV 일부만 가져온 경우다. 원래 파일 이름을 유지한다. 이름 뒤에 `(1)` 같은 접미사가 붙은 파일은 코드의 이름과 일치하지 않는다.
+
+**Duplicate AudioClip name이라고 나온다.**
+
+PREVIEW나 v01을 같은 Resources 하위에 같이 넣었는지 확인한다. 동일 이름의 16-bit 청음본과 24-bit 원본을 함께 넣지 않는다.
+
+**클래스가 이미 정의되어 있다고 나온다.**
+
+RelayAudioGuideDriver.cs가 두 개 들어갔거나 다른 파일에 전체 코드를 덧붙인 것이다. 제공 파일은 한 개만 둔다. 기존 코드도 메서드 전체를 복제하지 않고 지시한 위치에 필요한 줄만 추가한다.
+
+**AUX만 켰는데 코어/환기가 먼저 돈다.**
+
+현재 안내 코드에서는 해당 소리를 PowerModule.IsOnline에 연결한다. 예전 AudioSource의 Play On Awake가 켜졌거나 별도 소리 코드가 남았는지 확인한다. IsAuxPowered로 임의 교체하지 않는다.
+
+**게임 시작부터 HEAT 소리가 난다.**
+
+MAIN이 정말 켜져 있는지 확인한다. MAIN OFF이면 안내 코드는 경고를 내지 않는다. MAIN ON 직후 온도가 아직 높으면 기존 경고등 기준에 따라 소리가 나는 것은 정상이다. 고온 진입 80, 해제 77 이하, 저온 65 미만이며 기존 퍼즐 기준을 바꾸지 않았다.
+
+**소리가 두 번 난다.**
+
+AudioRoot/Driver 중복, 기존 UnityEvent의 AudioSource.Play 연결, 같은 소리의 수동 코드와 자동 관찰 중복을 확인한다. 위 표에서 ‘자동’이라고 적은 항목에는 별도 호출을 더 넣지 않는다.
+
+**슬라이더를 끝까지 밀고 계속 누르면 드르륵거린다.**
+
+이번 코드에서는 값이 실제 변하지 않으면 이동음이 멈춘다. Phase/Gain Range를 원래 슬라이더의 범위와 맞췄는지 확인한다. 마우스 버튼을 누른 상태만으로 루프를 켜는 예전 코드가 있으면 중복 여부를 확인한다.
+
+**엘리베이터에 가만히 서 있는데 발소리가 난다.**
+
+Walked 호출 위치를 다시 확인한다. transform.position의 매 프레임 변화량을 새로 계산해 전달하면 안 된다. FirstPersonMotor가 이미 계산하는 distance와 walking을 써야 한다.
+
+**문 소리가 문보다 먼저 난다.**
+
+출구는 ExitDoor의 unlocked=true 뒤, 엘리베이터는 closeAmount의 실제 변화 뒤에 넣었는지 확인한다. CORE 완료나 버튼 클릭에 문 소리를 함께 넣지 않는다.
+
+**일시정지에서 UI 소리도 안 난다.**
+
+UI 버튼에 연결한 것이 PlayUiConfirm/Back/Hover인지 확인한다. 일반 기계음은 Pause에서 정지하는 것이 정상이다. 마스터 볼륨 0일 때는 UI도 무음이다.
+
+**리버브/네온 같은 효과가 또 강하다.**
+
+새 코드의 소스는 Reverb Zone Mix 0, Pitch 1, Doppler 0이다. 다른 AudioMixer, Audio Reverb Filter, 기존 소리 스크립트가 추가 효과를 주는지 확인한다. 이번 단계에서는 새 AudioMixer 효과 체인을 만들 필요가 없다.
+
+**숲에 올라갔는데 지하 기계가 들린다.**
+
+Core Body에 Player를 잘못 넣지 않았는지 확인한다. 잘못된 위치에 소리의 중심을 두면 플레이어를 따라올 수 있다. 높이 차이가 작아 Max Distance 안에 남는 경우에는 해당 catalog 항목의 max_distance를 낮춘 뒤 다시 재생한다.
+
+## 22. 완료 확인표
+
+- [ ] Console에 빨간 오류 없음.
+- [ ] 첫 클릭은 커서 잠금만 수행하고 조작음 없음.
+- [ ] AUX/MAIN/PUMP/START는 실제 상태가 바뀔 때 한 번씩 재생.
+- [ ] 잘못된 레버 조작은 빨간 조준선과 실패음만 재생.
+- [ ] 다이얼 한계에서 값이 안 변하면 클릭음이 더 나지 않음.
+- [ ] 슬라이더·밸브를 멈추면 마찰음도 멈춤.
+- [ ] MAIN OFF에서 변압기·전자음·코어·경고음이 계속 나지 않음.
+- [ ] 펌프가 멈추면 펌프 운전음/냉각수음이 내려감.
+- [ ] 코어 성공을 중단음으로 잘못 재생하지 않음.
+- [ ] 문 열림음과 문 움직임이 맞음.
+- [ ] 엘리베이터 출발 취소 시 닫힘 소리가 계속 남지 않음.
+- [ ] 상승 중 가만히 서 있으면 발소리가 없음.
+- [ ] 상승 종료 시 윈치/샤프트 바람이 멈추고 브레이크가 남.
+- [ ] 숲에서 바람/나뭇잎/간헐적인 새소리가 나옴.
+- [ ] 안개 복귀와 동시에 큰 연속 발소리가 발생하지 않음.
+- [ ] ESC에서 게임 소리는 정지하고 Resume 뒤에 자연스럽게 이어짐.
+- [ ] 기존 볼륨 슬라이더가 게임 소리와 UI 소리 모두에 적용됨.
+- [ ] Play를 멈추고 씬을 저장한 뒤 다시 재생해도 동일하게 작동.
+
+## 23. 지금 작성본의 검증 범위
+
+현재 프로젝트 파일과 씬 계층은 읽기만 했다. 현재 스크립트 27개를 프로젝트 밖의 검사용 폴더로 복사하고, 이 노트의 15개 삽입 지점을 적용한 사본과 제공 코드를 Unity 6000.3.9f1의 C# 컴파일러로 검사했다. 컴파일 오류는 없었으며 원래 프로젝트 스크립트의 내용이 바뀌지 않았음도 확인했다. 이 검사는 Unity 에디터를 실행하거나 씬에 연결한 Play 테스트는 아니다. 적용 후 위 확인표를 사용자가 직접 확인해야 한다.
+
+원본 사운드의 출처와 편집 내역은 `AUDIO_v02/SOURCES_AND_LICENSES.md`에 있다. 이 노트는 새로운 소리 제작이나 퍼즐 재구성을 하지 않는다.
+
+## 부록. RelayAudioGuideDriver.cs 전체 코드
+
+파일 복사로 넣었다면 아래 코드를 또 붙여 넣지 않는다. 문서 하나만 가지고 적용할 때를 위해 같은 코드를 함께 보관한다.
+
+```csharp
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Startup
+{
+    // Install manually. No editor automation and no changes to puzzle state.
+    [DisallowMultipleComponent]
+    [DefaultExecutionOrder(450)]
+    public sealed class RelayAudioGuideDriver : MonoBehaviour
+    {
+        [Header("Existing modules")]
+        [SerializeField] private PowerModule power;
+        [SerializeField] private CoolingModule cooling;
+        [SerializeField] private SignalScope signal;
+        [SerializeField] private CoreModule core;
+        [SerializeField] private ElevatorModule elevator;
+
+        [Header("Sound positions")]
+        [SerializeField] private Transform player;
+        [SerializeField] private Transform coreBody;
+        [SerializeField] private Transform exitDoor;
+
+        [Header("Existing switches and levers")]
+        [SerializeField] private MachineSwitch auxSwitch;
+        [SerializeField] private MachineSwitch mainLever;
+        [SerializeField] private MachineSwitch pumpSwitch;
+        [SerializeField] private MachineSwitch startLever;
+
+        [Header("Existing dials and sliders")]
+        [SerializeField] private MachineDial voltageDial;
+        [SerializeField] private MachineDial balanceDial;
+        [SerializeField] private MachineDial frequencyDial;
+        [SerializeField] private MachineDial flowValve;
+        [SerializeField] private MachineSlider phaseSlider;
+        [SerializeField] private MachineSlider gainSlider;
+        [SerializeField] private Vector2 phaseRange = new Vector2(0f, 345f);
+        [SerializeField] private Vector2 gainRange = new Vector2(0.25f, 1.25f);
+
+        [Header("Mix - multiplied by the supplied catalog volume")]
+        [SerializeField, Range(0f, 1f)] private float controlsLevel = 0.75f;
+        [SerializeField, Range(0f, 1f)] private float machineLevel = 0.65f;
+        [SerializeField, Range(0f, 1f)] private float ambienceLevel = 0.5f;
+        [SerializeField, Range(0f, 1f)] private float footstepsLevel = 0.65f;
+        [SerializeField, Range(0f, 1f)] private float uiLevel = 0.6f;
+        [SerializeField, Min(0.2f)] private float stepDistance = 1.15f;
+        [SerializeField, Min(0.05f)] private float loopFadeSeconds = 0.35f;
+
+        [Serializable] private class Catalog { public Cue[] items; }
+        [Serializable] private class Cue
+        {
+            public string file;
+            public bool loop;
+            public float volume;
+            public float max_distance;
+        }
+        private sealed class Voice
+        {
+            public Cue cue;
+            public AudioSource source;
+            public string group;
+            public Transform anchor;
+            public bool positionOverride;
+            public float target;
+        }
+        private const string ResourceFolder = "RELAY_Audio_v02";
+        private static RelayAudioGuideDriver instance;
+        private readonly Dictionary<string, Voice> voices = new Dictionary<string, Voice>();
+        private readonly Dictionary<string, List<string>> variants = new Dictionary<string, List<string>>();
+        private readonly Dictionary<string, int> previousVariant = new Dictionary<string, int>();
+        private readonly Dictionary<string, float> playedAt = new Dictionary<string, float>();
+        private readonly Dictionary<MachineSwitch, bool> switchStates = new Dictionary<MachineSwitch, bool>();
+        private readonly Dictionary<Interactable, float> values = new Dictionary<Interactable, float>();
+        private readonly System.Random random = new System.Random();
+        private bool ready, wasOnline, wasPumping, wasLocked, wasRunning, wasComplete;
+        private bool hot, wasCold;
+        private float valveUntil, sliderUntil, travelled, nextAlarm, nextBird;
+
+        private void Awake()
+        {
+            if (instance != null && instance != this)
+            {
+                Debug.LogError("RELAY Audio: only one RelayAudioGuideDriver is allowed.", this);
+                enabled = false;
+                return;
+            }
+            instance = this;
+            TextAsset map = Resources.Load<TextAsset>(ResourceFolder + "/catalog");
+            if (map == null)
+            {
+                Debug.LogError("RELAY Audio: put catalog.json in Assets/RELAY/Resources/RELAY_Audio_v02/.", this);
+                enabled = false;
+                return;
+            }
+            Catalog catalog = JsonUtility.FromJson<Catalog>("{\"items\":" + map.text + "}");
+            Dictionary<string, AudioClip> clips = new Dictionary<string, AudioClip>();
+            foreach (AudioClip clip in Resources.LoadAll<AudioClip>(ResourceFolder))
+            {
+                if (clips.ContainsKey(clip.name))
+                {
+                    Debug.LogError("RELAY Audio: duplicate AudioClip name: " + clip.name, this);
+                    enabled = false;
+                    return;
+                }
+                clips.Add(clip.name, clip);
+            }
+            foreach (Cue cue in catalog.items)
+            {
+                string[] parts = cue.file.Split('/');
+                string id = System.IO.Path.GetFileNameWithoutExtension(cue.file);
+                if (!clips.TryGetValue(id, out AudioClip clip))
+                {
+                    Debug.LogWarning("RELAY Audio: missing WAV: " + id, this);
+                    continue;
+                }
+                GameObject child = new GameObject("Audio_" + id);
+                child.transform.SetParent(transform, false);
+                AudioSource source = child.AddComponent<AudioSource>();
+                source.playOnAwake = false;
+                source.loop = cue.loop;
+                source.clip = clip;
+                source.pitch = 1f;
+                source.dopplerLevel = 0f;
+                source.reverbZoneMix = 0f;
+                source.ignoreListenerVolume = false;
+                source.ignoreListenerPause = id.StartsWith("UI_", StringComparison.Ordinal);
+                source.spatialBlend = (parts[1] == "08_Ambience" || parts[1] == "09_UI" ||
+                    parts[1] == "10_Ending" || parts[1] == "07_Footsteps" ||
+                    id == "Interaction_Blocked") ? 0f : 1f;
+                source.rolloffMode = AudioRolloffMode.Linear;
+                source.minDistance = 1.5f;
+                source.maxDistance = Mathf.Max(2f, cue.max_distance);
+                source.volume = 0f;
+                Voice voice = new Voice { cue = cue, source = source, group = parts[1] };
+                voice.anchor = AnchorFor(voice.group);
+                if (id == "Lab_ExitDoor_Open" && exitDoor != null) voice.anchor = exitDoor;
+                voices.Add(id, voice);
+                int split = id.LastIndexOf('_');
+                if (split > 0 && int.TryParse(id.Substring(split + 1), out int unused))
+                {
+                    string family = id.Substring(0, split);
+                    if (!variants.ContainsKey(family)) variants.Add(family, new List<string>());
+                    variants[family].Add(id);
+                }
+            }
+        }
+
+        private Transform AnchorFor(string group)
+        {
+            switch (group)
+            {
+                case "01_Controls": case "02_Power": return power != null ? power.transform : player;
+                case "03_Cooling": return cooling != null ? cooling.transform : player;
+                case "04_Signal": return signal != null ? signal.transform : player;
+                case "05_Core": return coreBody != null ? coreBody : (core != null ? core.transform : player);
+                case "06_Elevator": return elevator != null ? elevator.transform : player;
+                default: return player;
+            }
+        }
+
+        private void Start()
+        {
+            if (!enabled || instance != this) return;
+            wasOnline = power != null && power.IsOnline;
+            wasPumping = cooling != null && cooling.IsPumping;
+            wasLocked = signal != null && signal.IsLocked;
+            wasRunning = core != null && core.IsStarting;
+            wasComplete = core != null && core.IsComplete;
+            CaptureSwitch(auxSwitch); CaptureSwitch(mainLever); CaptureSwitch(pumpSwitch); CaptureSwitch(startLever);
+            CaptureValue(voltageDial); CaptureValue(balanceDial); CaptureValue(frequencyDial); CaptureValue(flowValve);
+            CaptureValue(phaseSlider); CaptureValue(gainSlider);
+            nextBird = Time.time + 10f;
+            ready = true;
+        }
+
+        private void CaptureSwitch(MachineSwitch s) { if (s != null) switchStates[s] = s.IsOn; }
+        private void CaptureValue(Interactable control)
+        {
+            if (control is MachineDial d) values[control] = d.Value;
+            else if (control is MachineSlider s) values[control] = s.Value;
+        }
+
+        private float Level(Voice v)
+        {
+            float group = v.group == "01_Controls" ? controlsLevel :
+                v.group == "08_Ambience" ? ambienceLevel :
+                v.group == "07_Footsteps" ? footstepsLevel :
+                v.group == "09_UI" ? uiLevel : machineLevel;
+            return Mathf.Clamp01(v.cue.volume * group);
+        }
+
+        private string Resolve(string id)
+        {
+            if (voices.ContainsKey(id)) return id;
+            if (!variants.TryGetValue(id, out List<string> options) || options.Count == 0) return null;
+            int index = random.Next(options.Count);
+            if (options.Count > 1 && previousVariant.TryGetValue(id, out int old) && index == old)
+                index = (index + 1 + random.Next(options.Count - 1)) % options.Count;
+            previousVariant[id] = index;
+            return options[index];
+        }
+
+        public static void Play(string id) { if (instance != null) instance.Emit(id, null); }
+        public static void PlayAt(string id, Vector3 position) { if (instance != null) instance.Emit(id, position); }
+        private void Emit(string id, Vector3? position)
+        {
+            if (!ready || !isActiveAndEnabled) return;
+            if (AudioListener.pause && !id.StartsWith("UI_", StringComparison.Ordinal)) return;
+            float gap = id == "Interaction_Blocked" ? .25f : id == "Core_GlassArc" ? .35f : .045f;
+            if (playedAt.TryGetValue(id, out float last) && Time.unscaledTime - last < gap) return;
+            string key = Resolve(id);
+            if (key == null || !voices.TryGetValue(key, out Voice v) || v.cue.loop) return;
+            playedAt[id] = Time.unscaledTime;
+            v.positionOverride = position.HasValue;
+            v.source.transform.position = position ?? (v.anchor != null ? v.anchor.position : transform.position);
+            v.source.volume = Level(v);
+            v.source.PlayOneShot(v.source.clip, 1f);
+        }
+
+        public static void SetLoop(string id, bool playing, float amount = 1f)
+        {
+            if (instance == null || !instance.ready || !instance.voices.TryGetValue(id, out Voice v) || !v.cue.loop) return;
+            v.target = playing ? Mathf.Clamp01(amount) : 0f;
+        }
+        public static void Stop(string id)
+        {
+            if (instance == null) return;
+            if (!instance.voices.TryGetValue(id, out Voice v))
+            {
+                if (instance.variants.TryGetValue(id, out List<string> group))
+                    foreach (string name in group) Stop(name);
+                return;
+            }
+            v.target = 0f;
+            v.source.Stop();
+            v.source.volume = 0f;
+        }
+
+        private void WatchSwitch(MachineSwitch s, string on, string off)
+        {
+            if (s == null) return;
+            bool old = switchStates.TryGetValue(s, out bool state) && state;
+            if (old != s.IsOn) PlayAt(s.IsOn ? on : off, s.transform.position);
+            switchStates[s] = s.IsOn;
+        }
+
+        private bool Changed(Interactable control, float value)
+        {
+            bool result = values.TryGetValue(control, out float old) && !Mathf.Approximately(old, value);
+            values[control] = value;
+            return result;
+        }
+        private void WatchDial(MachineDial dial)
+        {
+            if (dial != null && Changed(dial, dial.Value)) PlayAt("Dial_Detent", dial.transform.position);
+        }
+        private void WatchSlider(MachineSlider slider, Vector2 range)
+        {
+            if (slider == null) return;
+            float old = values.TryGetValue(slider, out float prior) ? prior : slider.Value;
+            if (!Changed(slider, slider.Value)) return;
+            sliderUntil = Time.time + .12f;
+            if (voices.TryGetValue("Slider_Travel_Loop", out Voice v)) v.anchor = slider.transform;
+            float epsilon = Mathf.Abs(range.y - range.x) * .0001f;
+            bool atEnd = slider.Value <= range.x + epsilon || slider.Value >= range.y - epsilon;
+            bool wasEnd = old <= range.x + epsilon || old >= range.y - epsilon;
+            if (atEnd && !wasEnd) PlayAt("Slider_EndStop", slider.transform.position);
+        }
+
+        private void LateUpdate()
+        {
+            if (!ready || AudioListener.pause || Time.timeScale <= 0f) return;
+            WatchSwitch(auxSwitch, "Switch_On_01", "Switch_Off_01");
+            WatchSwitch(pumpSwitch, "Switch_On_02", "Switch_Off_02");
+            WatchSwitch(mainLever, "Lever_Engage_01", "Lever_Release_01");
+            WatchSwitch(startLever, "Lever_Engage_02", "Lever_Release_02");
+            WatchDial(voltageDial); WatchDial(balanceDial); WatchDial(frequencyDial);
+            if (flowValve != null && Changed(flowValve, flowValve.Value)) valveUntil = Time.time + .16f;
+            if (voices.TryGetValue("Valve_Wheel_Loop", out Voice valve)) valve.anchor = flowValve != null ? flowValve.transform : null;
+            WatchSlider(phaseSlider, phaseRange); WatchSlider(gainSlider, gainRange);
+            SetLoop("Valve_Wheel_Loop", Time.time < valveUntil);
+            SetLoop("Slider_Travel_Loop", Time.time < sliderUntil);
+
+            bool online = power != null && power.IsOnline;
+            bool pumping = cooling != null && cooling.IsPumping;
+            bool locked = signal != null && signal.IsLocked;
+            bool running = core != null && core.IsStarting;
+            bool complete = core != null && core.IsComplete;
+            bool outside = elevator != null && elevator.HasArrived;
+            if (online != wasOnline) { Play(online ? "Power_MainOn" : "Power_MainOff"); if (online) Play("Light_Ignition"); }
+            if (pumping != wasPumping)
+            {
+                if (pumping) { Stop("Pump_Stop"); Play("Pump_Start"); }
+                else { Stop("Pump_Start"); Play("Pump_Stop"); Play("Pressure_Release"); }
+            }
+            if (locked && !wasLocked) Play("Signal_Lock");
+            if (!locked && wasLocked && online) Play("Signal_Lost");
+            if (running && !wasRunning) Play("Core_Charge");
+            if (complete && !wasComplete) { Stop("Core_Charge"); Play("Core_Stable"); }
+            if (!running && wasRunning && !complete) { Stop("Core_Charge"); Play("Core_Abort"); }
+            SetLoop("Power_Transformer_Loop", online);
+            SetLoop("Pump_Run_Loop", pumping);
+            SetLoop("Coolant_Flow_Loop", pumping, cooling != null ? cooling.Flow / cooling.MaxFlow : 0f);
+            SetLoop("Signal_Electronics_Loop", online);
+            SetLoop("Core_Idle_Loop", online && !running && !complete);
+            SetLoop("Core_Active_Loop", online && (running || complete));
+            SetLoop("Lab_Unpowered_Loop", !online && !outside);
+            SetLoop("Lab_Ventilation_Loop", online && !outside);
+            SetLoop("Forest_Wind_Loop", outside);
+            SetLoop("Pine_Canopy_Loop", outside, .55f);
+            if (outside && Time.time >= nextBird)
+            {
+                Play("Forest_DistantBird"); nextBird = Time.time + 12f + (float)random.NextDouble() * 13f;
+            }
+            bool warningAllowed = online && core != null && core.isActiveAndEnabled && cooling != null && cooling.isActiveAndEnabled;
+            float temperature = cooling != null ? cooling.Temperature : 70f;
+            bool nextHot = warningAllowed && (hot ? temperature > 77f : temperature >= 80f);
+            bool cold = warningAllowed && temperature < 65f;
+            if ((nextHot && !hot) || (cold && !wasCold)) nextAlarm = 0f;
+            if (!nextHot) Stop("Core_Heat_Warning");
+            if (!cold) Stop("Core_Cold_Warning");
+            hot = nextHot; wasCold = cold;
+            if ((hot || cold) && Time.time >= nextAlarm)
+            {
+                Play(hot ? "Core_Heat_Warning" : "Core_Cold_Warning"); nextAlarm = Time.time + 5f;
+            }
+            wasOnline = online; wasPumping = pumping; wasLocked = locked; wasRunning = running; wasComplete = complete;
+            foreach (Voice v in voices.Values)
+            {
+                if (!v.positionOverride && v.anchor != null) v.source.transform.position = v.anchor.position;
+                if (!v.cue.loop) continue;
+                float goal = v.target * Level(v);
+                v.source.volume = Mathf.MoveTowards(v.source.volume, goal,
+                    Time.deltaTime * Mathf.Max(.02f, Level(v)) / Mathf.Max(.05f, loopFadeSeconds));
+                if (v.target > 0f && !v.source.isPlaying) v.source.Play();
+                if (v.target <= 0f && v.source.volume <= .0001f && v.source.isPlaying) v.source.Stop();
+            }
+        }
+
+        public static void Walked(float distance, bool walking)
+        {
+            if (instance == null || !instance.ready) return;
+            RelayAudioGuideDriver d = instance;
+            if (!walking || distance > .75f || AudioListener.pause || Time.timeScale <= 0f) { d.travelled = 0f; return; }
+            d.travelled += Mathf.Max(0f, distance);
+            if (d.travelled < d.stepDistance) return;
+            d.travelled %= d.stepDistance;
+            bool inCage = d.elevator != null && d.elevator.PlayerFullyInside;
+            bool forest = d.elevator != null && d.elevator.HasArrived;
+            Play(inCage ? "Step_Metal" : forest ? "Step_Forest" : "Step_Concrete");
+        }
+
+        // These instance methods can be selected in UI Button/EventTrigger lists.
+        public void PlayUiHover() { Play("UI_Hover"); }
+        public void PlayUiConfirm() { Play("UI_Confirm"); }
+        public void PlayUiBack() { Play("UI_Back"); }
+
+        private void OnDisable()
+        {
+            foreach (Voice v in voices.Values) { v.target = 0f; if (v.source != null) v.source.Stop(); }
+        }
+        private void OnDestroy() { if (instance == this) instance = null; }
+    }
+}
+```

@@ -205,6 +205,7 @@ namespace Startup
                 burstEnd = upperContact + ContactOffset();
                 PrepareGlassArcs();
                 bursting = true;
+                RelayAudioGuideDriver.PlayAt("Core_GlassArc", transform.position);
             }
 
             if (age >= lifetime)

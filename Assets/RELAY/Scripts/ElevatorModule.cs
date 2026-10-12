@@ -41,6 +41,8 @@ namespace Startup
 
         private float closeAmount;
         private float rideElapsed;
+        private int audioDoorDirection;
+        private float audioNextCable;
 
         private Vector3 leftOpen;
         private Vector3 rightOpen;
@@ -200,6 +202,7 @@ namespace Startup
         {
             if (!configured || phase == Phase.Rising)
                 return;
+            float audioPreviousClose = closeAmount;
 
             // Leaving before departure cancels the request.
             if (phase == Phase.Closing && !PlayerFullyInside)
@@ -213,6 +216,22 @@ namespace Startup
                 Time.fixedDeltaTime / Mathf.Max(0.1f, doorMoveSeconds));
 
             float eased = Mathf.SmoothStep(0f, 1f, closeAmount);
+
+            int audioDirection = closeAmount > audioPreviousClose ? 1 :
+    closeAmount < audioPreviousClose ? -1 : 0;
+
+            if (audioDirection != audioDoorDirection)
+            {
+                RelayAudioGuideDriver.Stop("Cage_Door_Open");
+                RelayAudioGuideDriver.Stop("Cage_Door_Close");
+
+                if (audioDirection > 0)
+                    RelayAudioGuideDriver.Play("Cage_Door_Close");
+                else if (audioDirection < 0)
+                    RelayAudioGuideDriver.Play("Cage_Door_Open");
+
+                audioDoorDirection = audioDirection;
+            }
 
             leftDoor.MovePosition(transform.TransformPoint(
                 Vector3.Lerp(leftOpen, leftClosed, eased)));
@@ -237,6 +256,11 @@ namespace Startup
                 return;
 
             rideElapsed += Time.deltaTime;
+            if (rideElapsed >= audioNextCable)
+            {
+                RelayAudioGuideDriver.Play("Cable_Creak");
+                audioNextCable += 2.8f;
+            }
 
             float t = Mathf.Clamp01(
                 rideElapsed / Mathf.Max(1f, rideSeconds));
@@ -269,6 +293,11 @@ namespace Startup
                     surfaceLight.enabled = true;
 
                 phase = Phase.Opening;
+                RelayAudioGuideDriver.Stop("Winch_Start");
+                RelayAudioGuideDriver.Stop("Cable_Creak");
+                RelayAudioGuideDriver.SetLoop("Winch_Run_Loop", false);
+                RelayAudioGuideDriver.SetLoop("Shaft_Air_Loop", false);
+                RelayAudioGuideDriver.Play("Winch_Brake");
             }
         }
 
@@ -293,6 +322,14 @@ namespace Startup
             rideElapsed = 0f;
             rideActive = true;
             phase = Phase.Rising;
+            RelayAudioGuideDriver.Stop("Cage_Door_Open");
+            RelayAudioGuideDriver.Stop("Cage_Door_Close");
+            RelayAudioGuideDriver.Play("Cage_Latch");
+            RelayAudioGuideDriver.Play("Winch_Start");
+            RelayAudioGuideDriver.SetLoop("Winch_Run_Loop", true);
+            RelayAudioGuideDriver.SetLoop("Shaft_Air_Loop", true);
+            audioDoorDirection = 0;
+            audioNextCable = 2.5f;
         }
 
         private void LateUpdate()

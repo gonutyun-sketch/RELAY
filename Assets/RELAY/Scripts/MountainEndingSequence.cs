@@ -153,6 +153,7 @@ namespace Startup
         private void BeginEnding()
         {
             started = true;
+            RelayAudioGuideDriver.Play("Forest_Reveal");
 
             interactorWasEnabled = interactor.enabled;
             dragWasEnabled = sliderDrag.enabled;
