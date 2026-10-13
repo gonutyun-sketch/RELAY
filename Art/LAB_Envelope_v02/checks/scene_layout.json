@@ -1,0 +1,4570 @@
+{
+  "scene": "C:\\Users\\gonut\\School_p2\\Assets\\Scenes\\Startup_Graybox.unity",
+  "sha256": "81e57ae064de01766894693e35b81a1e4a27b88d0fcbb04f00f47dc177205318",
+  "audit": "Read-only saved-scene inspection, no Unity actions or writes. Model bounds of FBX internals are flagged unknown. All explicit Transform parent chains accounted for.",
+  "units": "Unity metres, X right, Y up, Z toward rear-machine wall",
+  "environment_transform_identity": true,
+  "room": {
+    "floor_top_y": 0,
+    "ceiling_bottom_y": 6,
+    "clear_interior_x": [
+      -7.75,
+      7.75
+    ],
+    "clear_interior_z": [
+      -9.75,
+      5.75
+    ],
+    "outer_floor_x": [
+      -8,
+      8
+    ],
+    "outer_floor_z": [
+      -10,
+      6
+    ],
+    "floor_bottom_y": -0.5,
+    "wall_outer_x": [
+      -8.25,
+      8.25
+    ]
+  },
+  "door_opening": {
+    "world_x": [
+      -1.2,
+      1.2
+    ],
+    "world_y": [
+      0,
+      3
+    ],
+    "wall_thickness_z": [
+      -10.25,
+      -9.75
+    ],
+    "door_panel_closed_aabb": {
+      "min": [
+        -1.2,
+        0,
+        -10.175
+      ],
+      "max": [
+        1.2,
+        3,
+        -9.825
+      ]
+    },
+    "notes": [
+      "Wall_Front is inactive and must stay inactive.",
+      "Replacement front wall must be split left/right/header; do not fill central 2.4 x 3.0 opening.",
+      "ExitFloor reaches z=-9.5 and overlaps lab floor z=-10..-9.5 intentionally. Both top y=0. Avoid coplanar replacement floor overlap beyond room.",
+      "ExitDoor script lifts DoorMover upward; keep door movement corridor and do not add lower lintel.",
+      "Door lift sweeps panel z=-10.175..-9.825 and y=0..6.1. Keep this volume untouched; header already visually hides lifted panel. Any new skin should stay interior of z=-9.75 so it cannot intersect the moving slab."
+    ],
+    "exit_door_lift_distance": 3.1,
+    "exit_door_open_panel_world_y": [
+      3.1,
+      6.1
+    ]
+  },
+  "replacement_policy": {
+    "disable_only_mesh_renderer": [
+      "Environment/Floor",
+      "Environment/Wall_Left",
+      "Environment/Wall_Right",
+      "Environment/Wall_Back",
+      "Environment/Ceiling",
+      "Environment/EXIT_Module/Wall_LeftSection",
+      "Environment/EXIT_Module/Wall_RightSection",
+      "Environment/EXIT_Module/Wall_Header",
+      "Environment/LabStructure/*"
+    ],
+    "keep_gameobjects_colliders_scripts": true,
+    "preserve": [
+      "Environment/Lighting",
+      "Environment/EXIT_Module/ELEVATOR_Module",
+      "Environment/EXIT_Module/DoorMover",
+      "Environment/EXIT_Module/ElevatorShaft",
+      "all machine modules",
+      "Environment/Core_Block",
+      "Player"
+    ],
+    "floor_markings": "Existing top y=.011, preserve by keeping replacement floor <= y0 unless markings renderer intentionally replaced separately."
+  },
+  "objects": [
+    {
+      "transform_file_id": 1439699745,
+      "path": "Environment",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 546721939,
+      "path": "Environment/COOLING_Module",
+      "local_position": [
+        -3.0,
+        1.2,
+        4.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        -3.0,
+        1.2,
+        4.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -3.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 954874102,
+      "path": "Environment/CORE_Module",
+      "local_position": [
+        3.0,
+        1.2,
+        4.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        3.0,
+        1.2,
+        4.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 994267582,
+      "path": "Environment/Ceiling",
+      "local_position": [
+        0.0,
+        6.15,
+        -2.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        16.0,
+        0.3,
+        16.0
+      ],
+      "world_position": [
+        0.0,
+        6.15,
+        -2.0
+      ],
+      "world_matrix": [
+        [
+          16.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.3,
+          0.0,
+          6.15
+        ],
+        [
+          0.0,
+          0.0,
+          16.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 994267583,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -8.0,
+              6.0,
+              -10.0
+            ],
+            "max": [
+              8.0,
+              6.3,
+              6.0
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -8.0,
+          6.0,
+          -10.0
+        ],
+        "max": [
+          8.0,
+          6.3,
+          6.0
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1349894557,
+      "path": "Environment/Core_Block",
+      "local_position": [
+        0.0,
+        1.75,
+        -1.5
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        3.0,
+        3.5,
+        3.0
+      ],
+      "world_position": [
+        0.0,
+        1.75,
+        -1.5
+      ],
+      "world_matrix": [
+        [
+          3.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.5,
+          0.0,
+          1.75
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          -1.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1349894558,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -1.5,
+              0.0,
+              -3.0
+            ],
+            "max": [
+              1.5,
+              3.5,
+              0.0
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": false,
+      "cube_world_aabb": {
+        "min": [
+          -1.5,
+          0.0,
+          -3.0
+        ],
+        "max": [
+          1.5,
+          3.5,
+          0.0
+        ]
+      }
+    },
+    {
+      "transform_file_id": 945377959,
+      "path": "Environment/Core_Block/CORE_Containment",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "local_scale": [
+        0.3333333,
+        0.2857143,
+        0.3333333
+      ],
+      "world_position": [
+        0.0,
+        1.75,
+        -1.5
+      ],
+      "world_matrix": [
+        [
+          -0.9999999,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.75
+        ],
+        [
+          0.0,
+          0.0,
+          -0.9999999,
+          -1.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "prefab_guid": "a5924df383f573449bcb01548d5cd9c3",
+      "mesh_bounds": "Unknown in this saved scene; not estimated from Transform scale."
+    },
+    {
+      "transform_file_id": 1483172277,
+      "path": "Environment/Core_Block/CORE_Emitter",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "local_scale": [
+        0.3333333,
+        0.2857143,
+        0.3333333
+      ],
+      "world_position": [
+        0.0,
+        1.75,
+        -1.5
+      ],
+      "world_matrix": [
+        [
+          -0.9999999,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.75
+        ],
+        [
+          0.0,
+          0.0,
+          -0.9999999,
+          -1.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "prefab_guid": "9e2148f82912deb4fa48de665ac94f16",
+      "mesh_bounds": "Unknown in this saved scene; not estimated from Transform scale."
+    },
+    {
+      "transform_file_id": 303896538,
+      "path": "Environment/Core_Block/CORE_Glass",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "local_scale": [
+        0.3333333,
+        0.2857143,
+        0.3333333
+      ],
+      "world_position": [
+        0.0,
+        1.75,
+        -1.5
+      ],
+      "world_matrix": [
+        [
+          -0.9999999,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.75
+        ],
+        [
+          0.0,
+          0.0,
+          -0.9999999,
+          -1.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "prefab_guid": "5845afb840f370d498bc80b3e9323e4d",
+      "mesh_bounds": "Unknown in this saved scene; not estimated from Transform scale."
+    },
+    {
+      "transform_file_id": 1292457469,
+      "path": "Environment/Core_Block/CORE_Guardrail",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "local_scale": [
+        0.3333333,
+        0.2857143,
+        0.3333333
+      ],
+      "world_position": [
+        0.0,
+        1.75,
+        -1.5
+      ],
+      "world_matrix": [
+        [
+          -0.9999999,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.75
+        ],
+        [
+          0.0,
+          0.0,
+          -0.9999999,
+          -1.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "prefab_guid": "2f6b1636a8b6b2a4e901080f05cc7b76",
+      "mesh_bounds": "Unknown in this saved scene; not estimated from Transform scale."
+    },
+    {
+      "transform_file_id": 196963603,
+      "path": "Environment/EXIT_Module",
+      "local_position": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 1799309588,
+      "path": "Environment/EXIT_Module/DoorMover",
+      "local_position": [
+        0.0,
+        1.5,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        0.0,
+        1.5,
+        -10.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 1513272642,
+      "path": "Environment/EXIT_Module/DoorMover/DoorPanel",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        2.4,
+        3.0,
+        0.35
+      ],
+      "world_position": [
+        0.0,
+        1.5,
+        -10.0
+      ],
+      "world_matrix": [
+        [
+          2.4,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.35,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1513272644,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -1.2,
+              0.0,
+              -10.175
+            ],
+            "max": [
+              1.2,
+              3.0,
+              -9.825
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -1.2,
+          0.0,
+          -10.175
+        ],
+        "max": [
+          1.2,
+          3.0,
+          -9.825
+        ]
+      }
+    },
+    {
+      "transform_file_id": 472959854,
+      "path": "Environment/EXIT_Module/ELEVATOR_Module",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 1191906127,
+      "path": "Environment/EXIT_Module/ELEVATOR_Module/BoardingArea",
+      "local_position": [
+        0.0,
+        1.5,
+        -1.85
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        0.0,
+        1.5,
+        -11.85
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -11.85
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1191906128,
+          "enabled": true,
+          "trigger": true,
+          "world_aabb": {
+            "min": [
+              -1.3,
+              -0.1,
+              -13.05
+            ],
+            "max": [
+              1.3,
+              3.1,
+              -10.65
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "transform_file_id": 1061870797,
+      "path": "Environment/EXIT_Module/ELEVATOR_Module/Door_Left",
+      "local_position": [
+        -1.85,
+        1.5,
+        -0.45
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        -1.85,
+        1.5,
+        -10.45
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -1.85
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.45
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 1016489918,
+      "path": "Environment/EXIT_Module/ELEVATOR_Module/Door_Right",
+      "local_position": [
+        1.85,
+        1.5,
+        -0.45
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        1.85,
+        1.5,
+        -10.45
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.85
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -10.45
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 1728672999,
+      "path": "Environment/EXIT_Module/ELEVATOR_Module/ExitCeiling",
+      "local_position": [
+        0.0,
+        3.15,
+        -1.5
+      ],
+      "local_rotation_xyzw": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_scale": [
+        3.4,
+        0.3,
+        3.5
+      ],
+      "world_position": [
+        0.0,
+        3.15,
+        -11.5
+      ],
+      "world_matrix": [
+        [
+          3.4,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.3,
+          0.0,
+          3.15
+        ],
+        [
+          0.0,
+          0.0,
+          3.5,
+          -11.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1728673000,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -1.7,
+              3.0,
+              -13.25
+            ],
+            "max": [
+              1.7,
+              3.3,
+              -9.75
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": false,
+      "cube_world_aabb": {
+        "min": [
+          -1.7,
+          3.0,
+          -13.25
+        ],
+        "max": [
+          1.7,
+          3.3,
+          -9.75
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1356914338,
+      "path": "Environment/EXIT_Module/ELEVATOR_Module/ExitEndWall",
+      "local_position": [
+        0.0,
+        1.5,
+        -3.0
+      ],
+      "local_rotation_xyzw": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_scale": [
+        3.4,
+        3.0,
+        0.5
+      ],
+      "world_position": [
+        0.0,
+        1.5,
+        -13.0
+      ],
+      "world_matrix": [
+        [
+          3.4,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          -13.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1356914339,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -1.7,
+              0.0,
+              -13.25
+            ],
+            "max": [
+              1.7,
+              3.0,
+              -12.75
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": false,
+      "cube_world_aabb": {
+        "min": [
+          -1.7,
+          0.0,
+          -13.25
+        ],
+        "max": [
+          1.7,
+          3.0,
+          -12.75
+        ]
+      }
+    },
+    {
+      "transform_file_id": 208762809,
+      "path": "Environment/EXIT_Module/ELEVATOR_Module/ExitFloor",
+      "local_position": [
+        0.0,
+        -0.25,
+        -1.5
+      ],
+      "local_rotation_xyzw": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_scale": [
+        3.4,
+        0.5,
+        4.0
+      ],
+      "world_position": [
+        0.0,
+        -0.25,
+        -11.5
+      ],
+      "world_matrix": [
+        [
+          3.4,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.5,
+          0.0,
+          -0.25
+        ],
+        [
+          0.0,
+          0.0,
+          4.0,
+          -11.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 208762810,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -1.7,
+              -0.5,
+              -13.5
+            ],
+            "max": [
+              1.7,
+              0.0,
+              -9.5
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": false,
+      "cube_world_aabb": {
+        "min": [
+          -1.7,
+          -0.5,
+          -13.5
+        ],
+        "max": [
+          1.7,
+          0.0,
+          -9.5
+        ]
+      }
+    },
+    {
+      "transform_file_id": 552835333,
+      "path": "Environment/EXIT_Module/ELEVATOR_Module/ExitSide_Left",
+      "local_position": [
+        -1.45,
+        1.5,
+        -1.5
+      ],
+      "local_rotation_xyzw": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_scale": [
+        0.5,
+        3.0,
+        3.0
+      ],
+      "world_position": [
+        -1.45,
+        1.5,
+        -11.5
+      ],
+      "world_matrix": [
+        [
+          0.5,
+          0.0,
+          0.0,
+          -1.45
+        ],
+        [
+          0.0,
+          3.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          -11.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 552835334,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -1.7,
+              0.0,
+              -13.0
+            ],
+            "max": [
+              -1.2,
+              3.0,
+              -10.0
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": false,
+      "cube_world_aabb": {
+        "min": [
+          -1.7,
+          0.0,
+          -13.0
+        ],
+        "max": [
+          -1.2,
+          3.0,
+          -10.0
+        ]
+      }
+    },
+    {
+      "transform_file_id": 69645152,
+      "path": "Environment/EXIT_Module/ELEVATOR_Module/ExitSide_Right",
+      "local_position": [
+        1.45,
+        1.5,
+        -1.5
+      ],
+      "local_rotation_xyzw": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_scale": [
+        0.5,
+        3.0,
+        3.0
+      ],
+      "world_position": [
+        1.45,
+        1.5,
+        -11.5
+      ],
+      "world_matrix": [
+        [
+          0.5,
+          0.0,
+          0.0,
+          1.45
+        ],
+        [
+          0.0,
+          3.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          3.0,
+          -11.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 69645153,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              1.2,
+              0.0,
+              -13.0
+            ],
+            "max": [
+              1.7,
+              3.0,
+              -10.0
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": false,
+      "cube_world_aabb": {
+        "min": [
+          1.2,
+          0.0,
+          -13.0
+        ],
+        "max": [
+          1.7,
+          3.0,
+          -10.0
+        ]
+      }
+    },
+    {
+      "transform_file_id": 89852871,
+      "path": "Environment/EXIT_Module/Wall_Header",
+      "local_position": [
+        0.0,
+        4.5,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        2.4,
+        3.0,
+        0.5
+      ],
+      "world_position": [
+        0.0,
+        4.5,
+        -10.0
+      ],
+      "world_matrix": [
+        [
+          2.4,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.0,
+          0.0,
+          4.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 89852872,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -1.2,
+              3.0,
+              -10.25
+            ],
+            "max": [
+              1.2,
+              6.0,
+              -9.75
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -1.2,
+          3.0,
+          -10.25
+        ],
+        "max": [
+          1.2,
+          6.0,
+          -9.75
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1645218027,
+      "path": "Environment/EXIT_Module/Wall_LeftSection",
+      "local_position": [
+        -4.6,
+        3.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        6.8,
+        6.0,
+        0.5
+      ],
+      "world_position": [
+        -4.6,
+        3.0,
+        -10.0
+      ],
+      "world_matrix": [
+        [
+          6.8,
+          0.0,
+          0.0,
+          -4.6
+        ],
+        [
+          0.0,
+          6.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1645218028,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -8.0,
+              0.0,
+              -10.25
+            ],
+            "max": [
+              -1.2,
+              6.0,
+              -9.75
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -8.0,
+          0.0,
+          -10.25
+        ],
+        "max": [
+          -1.2,
+          6.0,
+          -9.75
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1437250940,
+      "path": "Environment/EXIT_Module/Wall_RightSection",
+      "local_position": [
+        4.6,
+        3.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        6.8,
+        6.0,
+        0.5
+      ],
+      "world_position": [
+        4.6,
+        3.0,
+        -10.0
+      ],
+      "world_matrix": [
+        [
+          6.8,
+          0.0,
+          0.0,
+          4.6
+        ],
+        [
+          0.0,
+          6.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1437250941,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              1.2,
+              0.0,
+              -10.25
+            ],
+            "max": [
+              8.0,
+              6.0,
+              -9.75
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          1.2,
+          0.0,
+          -10.25
+        ],
+        "max": [
+          8.0,
+          6.0,
+          -9.75
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1178886915,
+      "path": "Environment/Floor",
+      "local_position": [
+        0.0,
+        -0.25,
+        -2.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        16.0,
+        0.5,
+        16.0
+      ],
+      "world_position": [
+        0.0,
+        -0.25,
+        -2.0
+      ],
+      "world_matrix": [
+        [
+          16.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.5,
+          0.0,
+          -0.25
+        ],
+        [
+          0.0,
+          0.0,
+          16.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1178886916,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -8.0,
+              -0.5,
+              -10.0
+            ],
+            "max": [
+              8.0,
+              0.0,
+              6.0
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -8.0,
+          -0.5,
+          -10.0
+        ],
+        "max": [
+          8.0,
+          0.0,
+          6.0
+        ]
+      }
+    },
+    {
+      "transform_file_id": 688262911,
+      "path": "Environment/FloorMarkings",
+      "local_position": [
+        -2.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        -2.0,
+        0.0,
+        0.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 1724786819,
+      "path": "Environment/FloorMarkings/WorkArea_Front",
+      "local_position": [
+        2.0,
+        0.006,
+        1.35
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        8.7,
+        0.01,
+        0.08
+      ],
+      "world_position": [
+        0.0,
+        0.006,
+        1.35
+      ],
+      "world_matrix": [
+        [
+          8.7,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.01,
+          0.0,
+          0.006
+        ],
+        [
+          0.0,
+          0.0,
+          0.08,
+          1.35
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -4.35,
+          0.001,
+          1.31
+        ],
+        "max": [
+          4.35,
+          0.011,
+          1.39
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1924141749,
+      "path": "Environment/FloorMarkings/WorkArea_Left",
+      "local_position": [
+        -2.35,
+        0.006,
+        2.975
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        0.08,
+        0.01,
+        3.25
+      ],
+      "world_position": [
+        -4.35,
+        0.006,
+        2.975
+      ],
+      "world_matrix": [
+        [
+          0.08,
+          0.0,
+          0.0,
+          -4.35
+        ],
+        [
+          0.0,
+          0.01,
+          0.0,
+          0.006
+        ],
+        [
+          0.0,
+          0.0,
+          3.25,
+          2.975
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -4.39,
+          0.001,
+          1.35
+        ],
+        "max": [
+          -4.31,
+          0.011,
+          4.6
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1868787905,
+      "path": "Environment/FloorMarkings/WorkArea_Right",
+      "local_position": [
+        6.35,
+        0.006,
+        2.975
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        0.08,
+        0.01,
+        3.25
+      ],
+      "world_position": [
+        4.35,
+        0.006,
+        2.975
+      ],
+      "world_matrix": [
+        [
+          0.08,
+          0.0,
+          0.0,
+          4.35
+        ],
+        [
+          0.0,
+          0.01,
+          0.0,
+          0.006
+        ],
+        [
+          0.0,
+          0.0,
+          3.25,
+          2.975
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          4.31,
+          0.001,
+          1.35
+        ],
+        "max": [
+          4.39,
+          0.011,
+          4.6
+        ]
+      }
+    },
+    {
+      "transform_file_id": 2075723266,
+      "path": "Environment/LabStructure",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 733285977,
+      "path": "Environment/LabStructure/Beam_Back",
+      "local_position": [
+        0.0,
+        5.85,
+        5.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        14.7,
+        0.3,
+        0.65
+      ],
+      "world_position": [
+        0.0,
+        5.85,
+        5.0
+      ],
+      "world_matrix": [
+        [
+          14.7,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.3,
+          0.0,
+          5.85
+        ],
+        [
+          0.0,
+          0.0,
+          0.65,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 733285978,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -7.35,
+              5.7,
+              4.675
+            ],
+            "max": [
+              7.35,
+              6.0,
+              5.325
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -7.35,
+          5.7,
+          4.675
+        ],
+        "max": [
+          7.35,
+          6.0,
+          5.325
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1478542081,
+      "path": "Environment/LabStructure/Beam_Front",
+      "local_position": [
+        0.0,
+        5.85,
+        -5.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        14.7,
+        0.3,
+        0.65
+      ],
+      "world_position": [
+        0.0,
+        5.85,
+        -5.0
+      ],
+      "world_matrix": [
+        [
+          14.7,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.3,
+          0.0,
+          5.85
+        ],
+        [
+          0.0,
+          0.0,
+          0.65,
+          -5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1478542082,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -7.35,
+              5.7,
+              -5.325
+            ],
+            "max": [
+              7.35,
+              6.0,
+              -4.675
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -7.35,
+          5.7,
+          -5.325
+        ],
+        "max": [
+          7.35,
+          6.0,
+          -4.675
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1387961561,
+      "path": "Environment/LabStructure/Pillar_LeftBack",
+      "local_position": [
+        -7.55,
+        3.0,
+        5.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        0.4,
+        6.0,
+        0.65
+      ],
+      "world_position": [
+        -7.55,
+        3.0,
+        5.0
+      ],
+      "world_matrix": [
+        [
+          0.4,
+          0.0,
+          0.0,
+          -7.55
+        ],
+        [
+          0.0,
+          6.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.65,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1387961562,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -7.75,
+              0.0,
+              4.675
+            ],
+            "max": [
+              -7.35,
+              6.0,
+              5.325
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -7.75,
+          0.0,
+          4.675
+        ],
+        "max": [
+          -7.35,
+          6.0,
+          5.325
+        ]
+      }
+    },
+    {
+      "transform_file_id": 215776589,
+      "path": "Environment/LabStructure/Pillar_LeftFront",
+      "local_position": [
+        -7.55,
+        3.0,
+        -5.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        0.4,
+        6.0,
+        0.65
+      ],
+      "world_position": [
+        -7.55,
+        3.0,
+        -5.0
+      ],
+      "world_matrix": [
+        [
+          0.4,
+          0.0,
+          0.0,
+          -7.55
+        ],
+        [
+          0.0,
+          6.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.65,
+          -5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 215776590,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -7.75,
+              0.0,
+              -5.325
+            ],
+            "max": [
+              -7.35,
+              6.0,
+              -4.675
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -7.75,
+          0.0,
+          -5.325
+        ],
+        "max": [
+          -7.35,
+          6.0,
+          -4.675
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1280968748,
+      "path": "Environment/LabStructure/Pillar_RightBack",
+      "local_position": [
+        7.55,
+        3.0,
+        5.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        0.4,
+        6.0,
+        0.65
+      ],
+      "world_position": [
+        7.55,
+        3.0,
+        5.0
+      ],
+      "world_matrix": [
+        [
+          0.4,
+          0.0,
+          0.0,
+          7.55
+        ],
+        [
+          0.0,
+          6.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.65,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1280968749,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              7.35,
+              0.0,
+              4.675
+            ],
+            "max": [
+              7.75,
+              6.0,
+              5.325
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          7.35,
+          0.0,
+          4.675
+        ],
+        "max": [
+          7.75,
+          6.0,
+          5.325
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1375641458,
+      "path": "Environment/LabStructure/Pillar_RightFront",
+      "local_position": [
+        7.55,
+        3.0,
+        -5.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        0.4,
+        6.0,
+        0.65
+      ],
+      "world_position": [
+        7.55,
+        3.0,
+        -5.0
+      ],
+      "world_matrix": [
+        [
+          0.4,
+          0.0,
+          0.0,
+          7.55
+        ],
+        [
+          0.0,
+          6.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.65,
+          -5.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1375641459,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              7.35,
+              0.0,
+              -5.325
+            ],
+            "max": [
+              7.75,
+              6.0,
+              -4.675
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          7.35,
+          0.0,
+          -5.325
+        ],
+        "max": [
+          7.75,
+          6.0,
+          -4.675
+        ]
+      }
+    },
+    {
+      "transform_file_id": 118513707,
+      "path": "Environment/Lighting/Fixture_Exit",
+      "local_position": [
+        -4.0,
+        5.95,
+        -6.5
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        5.95,
+        -6.5
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.95
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -6.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 1935065968,
+      "path": "Environment/Lighting/Fixture_Exit/Light",
+      "local_position": [
+        0.0,
+        -0.16,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.7071068,
+        0.0,
+        0.0,
+        0.7071068
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        5.79,
+        -6.5
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -1.0,
+          5.79
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          -6.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "light": {
+        "type": 0.0,
+        "enabled": true,
+        "intensity": 9.0,
+        "range": 12.0
+      }
+    },
+    {
+      "transform_file_id": 441863218,
+      "path": "Environment/Lighting/Fixture_ExitRight",
+      "local_position": [
+        4.0,
+        5.95,
+        -6.5
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        5.95,
+        -6.5
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.95
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -6.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 1781588200,
+      "path": "Environment/Lighting/Fixture_ExitRight/Light",
+      "local_position": [
+        0.0,
+        -0.16,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.7071068,
+        0.0,
+        0.0,
+        0.7071068
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        5.79,
+        -6.5
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -1.0,
+          5.79
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          -6.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "light": {
+        "type": 0.0,
+        "enabled": true,
+        "intensity": 9.0,
+        "range": 12.0
+      }
+    },
+    {
+      "transform_file_id": 1938480245,
+      "path": "Environment/Lighting/Fixture_MidLeft",
+      "local_position": [
+        -4.0,
+        5.95,
+        -2.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        5.95,
+        -2.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.95
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 732165428,
+      "path": "Environment/Lighting/Fixture_MidLeft/Light",
+      "local_position": [
+        0.0,
+        -0.16,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.7071068,
+        0.0,
+        0.0,
+        0.7071068
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        5.79,
+        -2.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -1.0,
+          5.79
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "light": {
+        "type": 0.0,
+        "enabled": true,
+        "intensity": 9.0,
+        "range": 12.0
+      }
+    },
+    {
+      "transform_file_id": 968883393,
+      "path": "Environment/Lighting/Fixture_MidRight",
+      "local_position": [
+        4.0,
+        5.95,
+        -2.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        5.95,
+        -2.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.95
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 2005704773,
+      "path": "Environment/Lighting/Fixture_MidRight/Light",
+      "local_position": [
+        0.0,
+        -0.16,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.7071068,
+        0.0,
+        0.0,
+        0.7071068
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        5.79,
+        -2.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -1.0,
+          5.79
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "light": {
+        "type": 0.0,
+        "enabled": true,
+        "intensity": 9.0,
+        "range": 12.0
+      }
+    },
+    {
+      "transform_file_id": 616315169,
+      "path": "Environment/Lighting/Fixture_WorkLeft",
+      "local_position": [
+        -4.0,
+        5.95,
+        2.5
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        5.95,
+        2.5
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.95
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 394518984,
+      "path": "Environment/Lighting/Fixture_WorkLeft/Light",
+      "local_position": [
+        0.0,
+        -0.16,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.7071068,
+        0.0,
+        0.0,
+        0.7071068
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        5.79,
+        2.5
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -1.0,
+          5.79
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          2.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "light": {
+        "type": 0.0,
+        "enabled": true,
+        "intensity": 9.0,
+        "range": 12.0
+      }
+    },
+    {
+      "transform_file_id": 1457104975,
+      "path": "Environment/Lighting/Fixture_WorkRight",
+      "local_position": [
+        4.0,
+        5.95,
+        2.5
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        5.95,
+        2.5
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.95
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 993252130,
+      "path": "Environment/Lighting/Fixture_WorkRight/Light",
+      "local_position": [
+        0.0,
+        -0.16,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.7071068,
+        0.0,
+        0.0,
+        0.7071068
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        5.79,
+        2.5
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -1.0,
+          5.79
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0,
+          2.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "light": {
+        "type": 0.0,
+        "enabled": true,
+        "intensity": 9.0,
+        "range": 12.0
+      }
+    },
+    {
+      "transform_file_id": 657052368,
+      "path": "Environment/Lighting/Lab_Reflection",
+      "local_position": [
+        3.0,
+        1.8,
+        2.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        3.0,
+        1.8,
+        2.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.8
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 1268241569,
+      "path": "Environment/POWER_Module",
+      "local_position": [
+        1.0,
+        1.2,
+        4.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        1.0,
+        1.2,
+        4.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 2005745135,
+      "path": "Environment/SIGNAL_Module",
+      "local_position": [
+        -1.0,
+        1.2,
+        4.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        -1.0,
+        1.2,
+        4.0
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.2
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    },
+    {
+      "transform_file_id": 1781787432,
+      "path": "Environment/Wall_Back",
+      "local_position": [
+        0.0,
+        3.0,
+        6.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        16.0,
+        6.0,
+        0.5
+      ],
+      "world_position": [
+        0.0,
+        3.0,
+        6.0
+      ],
+      "world_matrix": [
+        [
+          16.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          6.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 1781787433,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -8.0,
+              0.0,
+              5.75
+            ],
+            "max": [
+              8.0,
+              6.0,
+              6.25
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -8.0,
+          0.0,
+          5.75
+        ],
+        "max": [
+          8.0,
+          6.0,
+          6.25
+        ]
+      }
+    },
+    {
+      "transform_file_id": 338997533,
+      "path": "Environment/Wall_Front",
+      "local_position": [
+        0.0,
+        3.0,
+        -10.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        24.0,
+        6.0,
+        0.5
+      ],
+      "world_position": [
+        0.0,
+        3.0,
+        -10.0
+      ],
+      "world_matrix": [
+        [
+          24.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          -10.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": false,
+      "box_colliders": [
+        {
+          "file_id": 338997534,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -12.0,
+              0.0,
+              -10.25
+            ],
+            "max": [
+              12.0,
+              6.0,
+              -9.75
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -12.0,
+          0.0,
+          -10.25
+        ],
+        "max": [
+          12.0,
+          6.0,
+          -9.75
+        ]
+      }
+    },
+    {
+      "transform_file_id": 37273666,
+      "path": "Environment/Wall_Left",
+      "local_position": [
+        -8.0,
+        3.0,
+        -2.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        0.5,
+        6.0,
+        16.0
+      ],
+      "world_position": [
+        -8.0,
+        3.0,
+        -2.0
+      ],
+      "world_matrix": [
+        [
+          0.5,
+          0.0,
+          0.0,
+          -8.0
+        ],
+        [
+          0.0,
+          6.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          16.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 37273667,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              -8.25,
+              0.0,
+              -10.0
+            ],
+            "max": [
+              -7.75,
+              6.0,
+              6.0
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          -8.25,
+          0.0,
+          -10.0
+        ],
+        "max": [
+          -7.75,
+          6.0,
+          6.0
+        ]
+      }
+    },
+    {
+      "transform_file_id": 2026883039,
+      "path": "Environment/Wall_Right",
+      "local_position": [
+        8.0,
+        3.0,
+        -2.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        0.5,
+        6.0,
+        16.0
+      ],
+      "world_position": [
+        8.0,
+        3.0,
+        -2.0
+      ],
+      "world_matrix": [
+        [
+          0.5,
+          0.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          6.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          16.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "box_colliders": [
+        {
+          "file_id": 2026883040,
+          "enabled": true,
+          "trigger": false,
+          "world_aabb": {
+            "min": [
+              7.75,
+              0.0,
+              -10.0
+            ],
+            "max": [
+              8.25,
+              6.0,
+              6.0
+            ]
+          }
+        }
+      ],
+      "mesh_renderer_enabled": true,
+      "cube_world_aabb": {
+        "min": [
+          7.75,
+          0.0,
+          -10.0
+        ],
+        "max": [
+          8.25,
+          6.0,
+          6.0
+        ]
+      }
+    },
+    {
+      "transform_file_id": 1816404110,
+      "path": "Player",
+      "local_position": [
+        0.0,
+        0.06,
+        -5.5
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        0.0,
+        0.06,
+        -5.5
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.06
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -5.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true,
+      "mesh_renderer_enabled": false,
+      "cube_world_aabb": {
+        "min": [
+          -0.5,
+          -0.44,
+          -6.0
+        ],
+        "max": [
+          0.5,
+          0.56,
+          -5.0
+        ]
+      }
+    },
+    {
+      "transform_file_id": 330585546,
+      "path": "Player/Main Camera",
+      "local_position": [
+        0.0,
+        1.6,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "local_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_position": [
+        0.0,
+        1.66,
+        -5.5
+      ],
+      "world_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.66
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -5.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "active_self": true
+    }
+  ],
+  "unknowns": [
+    "No live Unity or unsaved scene state inspected.",
+    "Imported FBX vertex bounds not evaluated; only explicit root transforms are verified here.",
+    "Runtime script-driven positions may differ from saved transforms."
+  ],
+  "relevant_model_roots": [
+    {
+      "name": "LIGHT_LinearHousing",
+      "parent_path": "Environment/Lighting/Fixture_WorkRight",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        6.0,
+        2.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearLens",
+      "parent_path": "Environment/Lighting/Fixture_Exit",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        6.0,
+        -6.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "CORE_Cabinet",
+      "parent_path": "Environment/CORE_Module",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        3.0,
+        1.2,
+        4.0
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "CORE_Glass",
+      "parent_path": "Environment/Core_Block",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        1.75,
+        -1.5
+      ],
+      "local_scale_override": {
+        "x": 0.3333333,
+        "y": 0.2857143,
+        "z": 0.3333333
+      },
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearHousing",
+      "parent_path": "Environment/Lighting/Fixture_MidLeft",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        6.0,
+        -2.0
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "ELEVATOR_LandingApron",
+      "parent_path": "Environment/EXIT_Module/ELEVATOR_Module",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "ELEVATOR_DoorTrack",
+      "parent_path": "Environment/EXIT_Module/ELEVATOR_Module",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearLens",
+      "parent_path": "Environment/Lighting/Fixture_WorkLeft",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        6.0,
+        2.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearLens",
+      "parent_path": "Environment/Lighting/Fixture_ExitRight",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        6.0,
+        -6.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearGlass",
+      "parent_path": "Environment/Lighting/Fixture_Exit",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        6.0,
+        -6.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearLens",
+      "parent_path": "Environment/Lighting/Fixture_MidRight",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        6.0,
+        -2.0
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearLens",
+      "parent_path": "Environment/Lighting/Fixture_WorkRight",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        6.0,
+        2.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "CORE_Containment",
+      "parent_path": "Environment/Core_Block",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        1.75,
+        -1.5
+      ],
+      "local_scale_override": {
+        "x": 0.3333333,
+        "y": 0.2857143,
+        "z": 0.3333333
+      },
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearGlass",
+      "parent_path": "Environment/Lighting/Fixture_WorkRight",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        6.0,
+        2.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearGlass",
+      "parent_path": "Environment/Lighting/Fixture_MidLeft",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        6.0,
+        -2.0
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearHousing",
+      "parent_path": "Environment/Lighting/Fixture_WorkLeft",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        6.0,
+        2.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "ELEVATOR_Cabin",
+      "parent_path": "Environment/EXIT_Module/ELEVATOR_Module",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearLens",
+      "parent_path": "Environment/Lighting/Fixture_MidLeft",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        6.0,
+        -2.0
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearGlass",
+      "parent_path": "Environment/Lighting/Fixture_ExitRight",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        6.0,
+        -6.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "ELEVATOR_DoorRight",
+      "parent_path": "Environment/EXIT_Module/ELEVATOR_Module/Door_Right",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        1.85,
+        1.5,
+        -10.45
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "CORE_Guardrail",
+      "parent_path": "Environment/Core_Block",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        1.75,
+        -1.5
+      ],
+      "local_scale_override": {
+        "x": 0.3333333,
+        "y": 0.2857143,
+        "z": 0.3333333
+      },
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearHousing",
+      "parent_path": "Environment/Lighting/Fixture_ExitRight",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        6.0,
+        -6.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "CORE_Emitter",
+      "parent_path": "Environment/Core_Block",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        1.75,
+        -1.5
+      ],
+      "local_scale_override": {
+        "x": 0.3333333,
+        "y": 0.2857143,
+        "z": 0.3333333
+      },
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "ELEVATOR_DoorLeft",
+      "parent_path": "Environment/EXIT_Module/ELEVATOR_Module/Door_Left",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        -1.85,
+        1.5,
+        -10.45
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearHousing",
+      "parent_path": "Environment/Lighting/Fixture_MidRight",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        6.0,
+        -2.0
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearHousing",
+      "parent_path": "Environment/Lighting/Fixture_Exit",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        6.0,
+        -6.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearGlass",
+      "parent_path": "Environment/Lighting/Fixture_MidRight",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        4.0,
+        6.0,
+        -2.0
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    },
+    {
+      "name": "LIGHT_LinearGlass",
+      "parent_path": "Environment/Lighting/Fixture_WorkLeft",
+      "local_position": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "local_rotation_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "world_position": [
+        -4.0,
+        6.0,
+        2.5
+      ],
+      "local_scale_override": {},
+      "unoverridden_scale": "Imported FBX source; not independently inspected"
+    }
+  ],
+  "art_yaw_convention": {
+    "core_model_root_yaw_degrees": 180,
+    "light_model_root_yaw_degrees": 0,
+    "note": "Core imports compensate Core_Block nonuniform scale via (1/3,1/3.5,1/3). Linear light model roots use local y=.05, no yaw. Do not generalize yaw180 to every existing asset."
+  },
+  "elevator_floor_overlap": {
+    "asset": "Assets/RELAY/Art/ForestExit/Models/ELEVATOR_LandingApron.fbx",
+    "sha256_verified": "444eebaab3940b718669f40771cfce8567edb0a2630543a97bf77c5d7bbceddc",
+    "source_manifest": "Art/FOREST_03_ExitIntegration/manifest.json",
+    "source_geometry": "Art/FOREST_03_ExitIntegration/scripts/build_exit.py lines 259-264",
+    "world_root": [
+      0,
+      0,
+      -10
+    ],
+    "rotation_identity": true,
+    "import_global_scale": 1,
+    "front_flange_aabb": {
+      "min": [
+        -1.7,
+        -0.046,
+        -9.894
+      ],
+      "max": [
+        1.7,
+        0,
+        -9.5
+      ]
+    },
+    "side_flange_x_intervals": [
+      [
+        -1.7,
+        -1.525
+      ],
+      [
+        1.525,
+        1.7
+      ]
+    ],
+    "side_flange_z_interval": [
+      -13.5,
+      -9.5
+    ],
+    "new_floor_recommendation": {
+      "exclude_top_y0_rectangle_x": [
+        -1.72,
+        1.72
+      ],
+      "exclude_top_y0_rectangle_z": [
+        -10,
+        -9.48
+      ],
+      "underlying_dark_bed_max_y": -0.055,
+      "purpose": "Avoid coplanar flange top. Bed closes view beneath elevator after departure, while existing collider remains unchanged. Dimensions are proposed safe model clearance, not current scene geometry."
+    }
+  }
+}

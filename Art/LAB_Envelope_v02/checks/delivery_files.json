@@ -1,0 +1,209 @@
+{
+  "package": "RELAY Laboratory v02 - continuous services",
+  "created": "2026-10-13",
+  "unity_scene_modified": false,
+  "geometry_validation_passed": true,
+  "services_validation_passed": true,
+  "files": [
+    {
+      "path": "manifest.json",
+      "bytes": 7749,
+      "sha256": "3b5356bd1b5bde890f8282ea2177b5868fa6687f3ae3ca3f26f33acf75766b78"
+    },
+    {
+      "path": "material_specs.json",
+      "bytes": 4278,
+      "sha256": "43c804759abefe7142c1d23e802d1e362e7c390e8ef1f5ab1432115e9913b9a9"
+    },
+    {
+      "path": "RELAY_Laboratory_Review.blend",
+      "bytes": 20215683,
+      "sha256": "528bcb389cc81b99a8012f6c764062973081ea65950e4e0cfc35ae7422f88eb6"
+    },
+    {
+      "path": "RELAY_Laboratory.blend",
+      "bytes": 17922116,
+      "sha256": "33f373206eac5184e651cbaab07a108cfa20ffa5ea94b59f9350bad56b49ccbc"
+    },
+    {
+      "path": "START_HERE_적용안내.md",
+      "bytes": 15797,
+      "sha256": "66b57e97d2c42865122c625daeca3d1f5aa815f21c40d50da70b3816682dee2b"
+    },
+    {
+      "path": "START_HERE_적용안내.txt",
+      "bytes": 15800,
+      "sha256": "4bf67dfef71bfb6edc50d6da1ba6f0f816024e9f9501dc52480d13d7543c6c60"
+    },
+    {
+      "path": "texture_contact_sheet.png",
+      "bytes": 341208,
+      "sha256": "9f9313ce3adee37386c9dc142ba7b7c39fc96b8738133b8b03e6684aaf24209b"
+    },
+    {
+      "path": "texture_qa.json",
+      "bytes": 2905,
+      "sha256": "cebdb3c03c74741c55f64f11034b7a0c7015a7990d16e30edae9ce878cdda1c0"
+    },
+    {
+      "path": "checks/geometry_validation.json",
+      "bytes": 19200,
+      "sha256": "a897ef68278cd95d9d67cf696a2af29fe6c26f6e2e922516df7047cd01063589"
+    },
+    {
+      "path": "checks/scene_layout.json",
+      "bytes": 83532,
+      "sha256": "3660a0d77e493eb9e7ab86c5e3190eadffec767331fd6f4339fcc4d8f8c7ac57"
+    },
+    {
+      "path": "checks/service_network.json",
+      "bytes": 62468,
+      "sha256": "47f4954423d14771bc7d5e3825e64ea4f4a188acd22cd012c5240c3267b05e58"
+    },
+    {
+      "path": "checks/services_validation.json",
+      "bytes": 9268,
+      "sha256": "eb0c60e08a535ff07a3a8ce81e52929bf1edbdcf364d76739b55aface0e56732"
+    },
+    {
+      "path": "checks/source_elements.json",
+      "bytes": 861670,
+      "sha256": "2888d2af4aaa8d5fde653b04d47734f4145fd9f03bbef0bb452f7d2f5f324d54"
+    },
+    {
+      "path": "exports/LAB_Envelope.fbx",
+      "bytes": 1322396,
+      "sha256": "aab51dfa67e7bcfe7cb7a20677025c3d553749c47c369c0d3411f44d5a9a4c72"
+    },
+    {
+      "path": "previews/LAB_01_Interior.png",
+      "bytes": 1883142,
+      "sha256": "de98a1f9f4ed8daeabbeb613ad2f30460a0e7c6297460fa225ff3acd2cf67bc5"
+    },
+    {
+      "path": "previews/LAB_02_Wall_Floor.png",
+      "bytes": 1757928,
+      "sha256": "893a023544ee38d52a5bdf93621802abf64b26f356a4b00586d07c8296dc939a"
+    },
+    {
+      "path": "previews/LAB_03_Ceiling_Exit.png",
+      "bytes": 1926149,
+      "sha256": "2ddbc8a2cebde1a9317b57212eaf2bf82f306ca4fcc45468a1be0b510b55696b"
+    },
+    {
+      "path": "previews/LAB_04_Pipe_Corner.png",
+      "bytes": 1760494,
+      "sha256": "66733a64e496aa765b3dd9a65717215faf780f1755eba30a5ae1496c95d8543b"
+    },
+    {
+      "path": "previews/LAB_05_Back_Corner.png",
+      "bytes": 1753191,
+      "sha256": "fb1533365877f00e40bfcf1fa56101f261000160fc99995b973ffcd76c1c8729"
+    },
+    {
+      "path": "scripts/build_lab.py",
+      "bytes": 27602,
+      "sha256": "31efe4e74863d0957b1a571f9cf500639ce72eaa9ca29d1ff783283321e60164"
+    },
+    {
+      "path": "scripts/make_lab_textures.py",
+      "bytes": 9076,
+      "sha256": "289f7a1f133be4427126acba351028f37c96df9036af0fbdf45383290d7e2de4"
+    },
+    {
+      "path": "scripts/render_lab.py",
+      "bytes": 6041,
+      "sha256": "720ebfe2d9812167b6bdfd066dd68650f90c506aa358546e85e239248633781f"
+    },
+    {
+      "path": "scripts/validate_lab.py",
+      "bytes": 4918,
+      "sha256": "08c45eb42398213288ba34f678609cd3573f6bc1000f51a231119c79ae4cb128"
+    },
+    {
+      "path": "scripts/validate_services.py",
+      "bytes": 4067,
+      "sha256": "91802cf066cf2de7dd04763ccac8a688dba457525530c4c4e2e8ae27fec873cd"
+    },
+    {
+      "path": "textures/RLYR_Concrete_BaseColor.png",
+      "bytes": 2224782,
+      "sha256": "0b7e7954e3c12075f55575600c73d7da066ef0e89be1377fadb08fa06c8f22cd"
+    },
+    {
+      "path": "textures/RLYR_Concrete_MetallicSmoothness.png",
+      "bytes": 1062890,
+      "sha256": "87f7fe3a769485a0033fa19c2d116dd083d7eae6e0204f84845fd2c3a7b6a5c1"
+    },
+    {
+      "path": "textures/RLYR_Concrete_Normal.png",
+      "bytes": 3853561,
+      "sha256": "1a0a3e1d9a07913667af08cd6641f0f4ffd032626627906f8c2fa95a9e16d03f"
+    },
+    {
+      "path": "textures/RLYR_Concrete_Roughness.png",
+      "bytes": 829247,
+      "sha256": "5718b57e4e4e746de3c2c1ac8fbabdbb1f1c62661b6460be2849f494ab095afc"
+    },
+    {
+      "path": "textures/RLYR_Floor_BaseColor.png",
+      "bytes": 1274086,
+      "sha256": "bbf484d4e510a2c1a273769b85b4dac051d08d6a7e92d022bf8662d06f3071bb"
+    },
+    {
+      "path": "textures/RLYR_Floor_MetallicSmoothness.png",
+      "bytes": 447483,
+      "sha256": "2e7242eec9afd7b07040605bd235e531b762026362029dff64adb2e11f3eb109"
+    },
+    {
+      "path": "textures/RLYR_Floor_Normal.png",
+      "bytes": 2290863,
+      "sha256": "fd25fc44421dd4e6c04074972aec644000be0c819360a0fe54801932f664b86d"
+    },
+    {
+      "path": "textures/RLYR_Floor_Roughness.png",
+      "bytes": 350349,
+      "sha256": "6ffc32e8b525508e67810a5b8fcec3a7191dc72ee6fdf7f30ca00760b48a4c4c"
+    },
+    {
+      "path": "textures/RLYR_Paint_BaseColor.png",
+      "bytes": 1114837,
+      "sha256": "7e278e50aa95be1c3db4c69cbe419ef6ce842303759a0a593bd8ff2ec87019eb"
+    },
+    {
+      "path": "textures/RLYR_Paint_MetallicSmoothness.png",
+      "bytes": 970333,
+      "sha256": "6c3110940a773fde4d5cd6ce413f2e1cf62b83899e4cf3a3f2f3082760e47a8e"
+    },
+    {
+      "path": "textures/RLYR_Paint_Normal.png",
+      "bytes": 1100707,
+      "sha256": "9de9a2b32b8df41b622167e0b7340264cf5c0272aed47f622b48d7323fd37396"
+    },
+    {
+      "path": "textures/RLYR_Paint_Roughness.png",
+      "bytes": 706434,
+      "sha256": "32bd7943edc5a0ba7636dba9bab37914d404fe60e222ad6c502cfa1f57208536"
+    },
+    {
+      "path": "textures/RLYR_Steel_BaseColor.png",
+      "bytes": 817302,
+      "sha256": "a695dad68d7cc8968fd4d21b4b4e24a5ce761ca517a2ca8f0ca3347a734ae113"
+    },
+    {
+      "path": "textures/RLYR_Steel_MetallicSmoothness.png",
+      "bytes": 561463,
+      "sha256": "d5143057e1ec83b5314cb860256d420e76ba0a9eeec52081c388c8e4588073f3"
+    },
+    {
+      "path": "textures/RLYR_Steel_Normal.png",
+      "bytes": 1044030,
+      "sha256": "a61f502122cb89b457b30309b11aaf08d61e9631e87d9e82e3d05fbd4ef90682"
+    },
+    {
+      "path": "textures/RLYR_Steel_Roughness.png",
+      "bytes": 301853,
+      "sha256": "820aafe6533d0a621d4ed77a71daf4e96d4acb624e0cd4fcb4f16a74d7b2081b"
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "scope": "Actual source mesh closed-loop topology, endpoint receivers and support contact geometry",
+  "closed_run_count": 8,
+  "terminated_run_count": 4,
+  "tests": [
+    {
+      "name": "Continuous ring main 0",
+      "passed": true,
+      "euler_characteristic": 0,
+      "boundary_edges": 0
+    },
+    {
+      "name": "Continuous ring main 0_nonzero_segments",
+      "passed": true
+    },
+    {
+      "name": "Continuous ring main 1",
+      "passed": true,
+      "euler_characteristic": 0,
+      "boundary_edges": 0
+    },
+    {
+      "name": "Continuous ring main 1_nonzero_segments",
+      "passed": true
+    },
+    {
+      "name": "Continuous formed cable tray rail -0.23",
+      "passed": true,
+      "euler_characteristic": 0,
+      "boundary_edges": 0
+    },
+    {
+      "name": "Continuous formed cable tray rail -0.23_nonzero_segments",
+      "passed": true
+    },
+    {
+      "name": "Continuous formed cable tray rail 0.23",
+      "passed": true,
+      "euler_characteristic": 0,
+      "boundary_edges": 0
+    },
+    {
+      "name": "Continuous formed cable tray rail 0.23_nonzero_segments",
+      "passed": true
+    },
+    {
+      "name": "Continuous insulated cable -0.15",
+      "passed": true,
+      "euler_characteristic": 0,
+      "boundary_edges": 0
+    },
+    {
+      "name": "Continuous insulated cable -0.15_nonzero_segments",
+      "passed": true
+    },
+    {
+      "name": "Continuous insulated cable -0.05",
+      "passed": true,
+      "euler_characteristic": 0,
+      "boundary_edges": 0
+    },
+    {
+      "name": "Continuous insulated cable -0.05_nonzero_segments",
+      "passed": true
+    },
+    {
+      "name": "Continuous insulated cable 0.05",
+      "passed": true,
+      "euler_characteristic": 0,
+      "boundary_edges": 0
+    },
+    {
+      "name": "Continuous insulated cable 0.05_nonzero_segments",
+      "passed": true
+    },
+    {
+      "name": "Continuous insulated cable 0.15",
+      "passed": true,
+      "euler_characteristic": 0,
+      "boundary_edges": 0
+    },
+    {
+      "name": "Continuous insulated cable 0.15_nonzero_segments",
+      "passed": true
+    },
+    {
+      "name": "Ring manifold branch 0_receiver_start",
+      "passed": true,
+      "distance": 0.0
+    },
+    {
+      "name": "Ring manifold branch 0_receiver_end",
+      "passed": true,
+      "point": [
+        -7.400000095367432,
+        4.039999961853027,
+        -6.599999904632568
+      ],
+      "receiver_bounds": [
+        [
+          -7.745,
+          3.3699999999999997,
+          -6.859999999999999
+        ],
+        [
+          -7.364999999999999,
+          4.1899999999999995,
+          -5.84
+        ]
+      ]
+    },
+    {
+      "name": "Ring manifold branch 1_receiver_start",
+      "passed": true,
+      "distance": 0.0
+    },
+    {
+      "name": "Ring manifold branch 1_receiver_end",
+      "passed": true,
+      "point": [
+        -7.400000095367432,
+        3.6500000953674316,
+        -6.099999904632568
+      ],
+      "receiver_bounds": [
+        [
+          -7.745,
+          3.3699999999999997,
+          -6.859999999999999
+        ],
+        [
+          -7.364999999999999,
+          4.1899999999999995,
+          -5.84
+        ]
+      ]
+    },
+    {
+      "name": "Terminated junction conduit -1_receiver_start",
+      "passed": true,
+      "point": [
+        -7.650000095367432,
+        2.944999933242798,
+        -3.4000000953674316
+      ],
+      "receiver_bounds": [
+        [
+          -7.745,
+          2.4400000000000004,
+          -3.6
+        ],
+        [
+          -7.585,
+          2.96,
+          -3.1999999999999997
+        ]
+      ]
+    },
+    {
+      "name": "Terminated junction conduit -1_receiver_end",
+      "passed": true,
+      "point": [
+        -6.300000190734863,
+        5.489999771118164,
+        -3.4000000953674316
+      ],
+      "receiver_bounds": [
+        [
+          -6.47,
+          5.45,
+          -3.57
+        ],
+        [
+          -6.13,
+          5.62,
+          -3.23
+        ]
+      ]
+    },
+    {
+      "name": "Terminated junction conduit 1_receiver_start",
+      "passed": true,
+      "point": [
+        7.650000095367432,
+        2.944999933242798,
+        -3.4000000953674316
+      ],
+      "receiver_bounds": [
+        [
+          7.585,
+          2.4400000000000004,
+          -3.6
+        ],
+        [
+          7.745,
+          2.96,
+          -3.1999999999999997
+        ]
+      ]
+    },
+    {
+      "name": "Terminated junction conduit 1_receiver_end",
+      "passed": true,
+      "point": [
+        6.300000190734863,
+        5.489999771118164,
+        -3.4000000953674316
+      ],
+      "receiver_bounds": [
+        [
+          6.13,
+          5.45,
+          -3.57
+        ],
+        [
+          6.47,
+          5.62,
+          -3.23
+        ]
+      ]
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "pipe_saddle",
+      "passed": true,
+      "gap": 0.0030000000000001137
+    },
+    {
+      "name": "cables_rest_on_rungs",
+      "passed": true,
+      "gap": 0.0
+    },
+    {
+      "name": "hanger_at_(-6.3, -8)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(-6.3, -5)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(-6.3, -2)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(-6.3, 1)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(-6.3, 3)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(6.3, -8)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(6.3, -5)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(6.3, -2)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(6.3, 1)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(6.3, 3)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(-4, -8.78)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(0, -8.78)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(4, -8.78)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(-4, 4.15)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(0, 4.15)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "hanger_at_(4, 4.15)",
+      "passed": true,
+      "gap": 0
+    },
+    {
+      "name": "352_grate_treads_attached",
+      "passed": true
+    },
+    {
+      "name": "grate_bearers_seated",
+      "passed": true
+    },
+    {
+      "name": "LAB_Wall_Left_Return grille bolt_seated",
+      "passed": true,
+      "count": 8
+    },
+    {
+      "name": "LAB_Wall_Right_Return grille bolt_seated",
+      "passed": true,
+      "count": 8
+    },
+    {
+      "name": "LAB_Wall_Exit_Jamb bolt_seated",
+      "passed": true,
+      "count": 12
+    },
+    {
+      "name": "LAB_Structure_Column splice bolt_seated",
+      "passed": true,
+      "count": 80
+    }
+  ],
+  "all_passed": true
+}

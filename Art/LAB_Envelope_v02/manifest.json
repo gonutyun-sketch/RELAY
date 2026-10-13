@@ -1,0 +1,344 @@
+{
+  "asset": "RELAY Laboratory Envelope v02 - continuous services",
+  "scene_sha256": "81e57ae064de01766894693e35b81a1e4a27b88d0fcbb04f00f47dc177205318",
+  "units": "metres",
+  "source_dimension_axes": "Unity X,Y,Z mapped to Blender X,Z,Y",
+  "unity_instance_transform": {
+    "parent": "Environment",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      180,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "clear_room": {
+    "floor_top_y": 0,
+    "ceiling_bottom_y": 6,
+    "clear_interior_x": [
+      -7.75,
+      7.75
+    ],
+    "clear_interior_z": [
+      -9.75,
+      5.75
+    ],
+    "outer_floor_x": [
+      -8,
+      8
+    ],
+    "outer_floor_z": [
+      -10,
+      6
+    ],
+    "floor_bottom_y": -0.5,
+    "wall_outer_x": [
+      -8.25,
+      8.25
+    ]
+  },
+  "door_opening": {
+    "world_x": [
+      -1.2,
+      1.2
+    ],
+    "world_y": [
+      0,
+      3
+    ],
+    "wall_thickness_z": [
+      -10.25,
+      -9.75
+    ],
+    "door_panel_closed_aabb": {
+      "min": [
+        -1.2,
+        0,
+        -10.175
+      ],
+      "max": [
+        1.2,
+        3,
+        -9.825
+      ]
+    },
+    "notes": [
+      "Wall_Front is inactive and must stay inactive.",
+      "Replacement front wall must be split left/right/header; do not fill central 2.4 x 3.0 opening.",
+      "ExitFloor reaches z=-9.5 and overlaps lab floor z=-10..-9.5 intentionally. Both top y=0. Avoid coplanar replacement floor overlap beyond room.",
+      "ExitDoor script lifts DoorMover upward; keep door movement corridor and do not add lower lintel.",
+      "Door lift sweeps panel z=-10.175..-9.825 and y=0..6.1. Keep this volume untouched; header already visually hides lifted panel. Any new skin should stay interior of z=-9.75 so it cannot intersect the moving slab."
+    ],
+    "exit_door_lift_distance": 3.1,
+    "exit_door_open_panel_world_y": [
+      3.1,
+      6.1
+    ]
+  },
+  "collision": "Visual only: preserve original colliders; Generate Colliders OFF",
+  "materials": [
+    {
+      "name": "RLYR_Concrete",
+      "color": "#85847C",
+      "metallic": 0,
+      "smoothness": 0.12,
+      "surface": "Opaque",
+      "base_map": "textures/RLYR_Concrete_BaseColor.png",
+      "normal_map": "textures/RLYR_Concrete_Normal.png",
+      "metallic_smoothness_map": "textures/RLYR_Concrete_MetallicSmoothness.png"
+    },
+    {
+      "name": "RLYR_Floor",
+      "color": "#4C524F",
+      "metallic": 0,
+      "smoothness": 0.31999999999999995,
+      "surface": "Opaque",
+      "base_map": "textures/RLYR_Floor_BaseColor.png",
+      "normal_map": "textures/RLYR_Floor_Normal.png",
+      "metallic_smoothness_map": "textures/RLYR_Floor_MetallicSmoothness.png"
+    },
+    {
+      "name": "RLYR_Paint",
+      "color": "#616A61",
+      "metallic": 0.03,
+      "smoothness": 0.31000000000000005,
+      "surface": "Opaque",
+      "base_map": "textures/RLYR_Paint_BaseColor.png",
+      "normal_map": "textures/RLYR_Paint_Normal.png",
+      "metallic_smoothness_map": "textures/RLYR_Paint_MetallicSmoothness.png"
+    },
+    {
+      "name": "RLYR_Steel",
+      "color": "#414947",
+      "metallic": 0.88,
+      "smoothness": 0.41000000000000003,
+      "surface": "Opaque",
+      "base_map": "textures/RLYR_Steel_BaseColor.png",
+      "normal_map": "textures/RLYR_Steel_Normal.png",
+      "metallic_smoothness_map": "textures/RLYR_Steel_MetallicSmoothness.png"
+    },
+    {
+      "name": "RLYR_Seam",
+      "color": "#1C2422",
+      "metallic": 0,
+      "smoothness": 0.07999999999999996,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYR_BareMetal",
+      "color": "#828780",
+      "metallic": 0.8,
+      "smoothness": 0.62,
+      "surface": "Opaque"
+    },
+    {
+      "name": "RLYR_Ochre",
+      "color": "#A28A53",
+      "metallic": 0.02,
+      "smoothness": 0.33999999999999997,
+      "surface": "Opaque"
+    }
+  ],
+  "parts": [
+    {
+      "name": "LAB_Floor",
+      "vertices": 13848,
+      "triangles": 24236,
+      "min": [
+        -8.0,
+        -0.5,
+        -10.0
+      ],
+      "max": [
+        8.0,
+        0.0,
+        6.0
+      ],
+      "materials": [
+        "RLYR_Floor",
+        "RLYR_Steel",
+        "RLYR_Seam",
+        "RLYR_BareMetal"
+      ],
+      "uv_layers": 1,
+      "logical_pieces": 865
+    },
+    {
+      "name": "LAB_Wall_Left",
+      "vertices": 3000,
+      "triangles": 5348,
+      "min": [
+        -8.25,
+        0.0,
+        -10.0
+      ],
+      "max": [
+        -7.6620001792907715,
+        6.0,
+        6.0
+      ],
+      "materials": [
+        "RLYR_Concrete",
+        "RLYR_Paint",
+        "RLYR_Steel",
+        "RLYR_Seam",
+        "RLYR_BareMetal"
+      ],
+      "uv_layers": 1,
+      "logical_pieces": 163
+    },
+    {
+      "name": "LAB_Wall_Right",
+      "vertices": 3000,
+      "triangles": 5348,
+      "min": [
+        7.6620001792907715,
+        0.0,
+        -10.0
+      ],
+      "max": [
+        8.25,
+        6.0,
+        6.0
+      ],
+      "materials": [
+        "RLYR_Concrete",
+        "RLYR_Paint",
+        "RLYR_Steel",
+        "RLYR_Seam",
+        "RLYR_BareMetal"
+      ],
+      "uv_layers": 1,
+      "logical_pieces": 163
+    },
+    {
+      "name": "LAB_Wall_Back",
+      "vertices": 2392,
+      "triangles": 4284,
+      "min": [
+        -7.75,
+        0.0,
+        5.676000118255615
+      ],
+      "max": [
+        7.75,
+        6.0,
+        6.25
+      ],
+      "materials": [
+        "RLYR_Concrete",
+        "RLYR_Paint",
+        "RLYR_Steel",
+        "RLYR_Seam",
+        "RLYR_BareMetal"
+      ],
+      "uv_layers": 1,
+      "logical_pieces": 125
+    },
+    {
+      "name": "LAB_Wall_Exit",
+      "vertices": 2976,
+      "triangles": 5312,
+      "min": [
+        -8.0,
+        0.0,
+        -10.25
+      ],
+      "max": [
+        8.0,
+        6.0,
+        -9.671500205993652
+      ],
+      "materials": [
+        "RLYR_Concrete",
+        "RLYR_Paint",
+        "RLYR_Steel",
+        "RLYR_Seam",
+        "RLYR_BareMetal"
+      ],
+      "uv_layers": 1,
+      "logical_pieces": 160
+    },
+    {
+      "name": "LAB_Ceiling",
+      "vertices": 8568,
+      "triangles": 15004,
+      "min": [
+        -8.0,
+        5.860000133514404,
+        -10.0
+      ],
+      "max": [
+        8.0,
+        6.300000190734863,
+        6.0
+      ],
+      "materials": [
+        "RLYR_Paint",
+        "RLYR_Steel",
+        "RLYR_Seam",
+        "RLYR_BareMetal"
+      ],
+      "uv_layers": 1,
+      "logical_pieces": 533
+    },
+    {
+      "name": "LAB_Structure",
+      "vertices": 4096,
+      "triangles": 7184,
+      "min": [
+        -7.764999866485596,
+        0.0,
+        -5.355500221252441
+      ],
+      "max": [
+        7.764999866485596,
+        6.0,
+        5.349999904632568
+      ],
+      "materials": [
+        "RLYR_Paint",
+        "RLYR_Steel",
+        "RLYR_BareMetal"
+      ],
+      "uv_layers": 1,
+      "logical_pieces": 252
+    },
+    {
+      "name": "LAB_Services",
+      "vertices": 14632,
+      "triangles": 27164,
+      "min": [
+        -7.748000144958496,
+        2.440000057220459,
+        -9.748000144958496
+      ],
+      "max": [
+        7.748000144958496,
+        6.0,
+        5.748000144958496
+      ],
+      "materials": [
+        "RLYR_Paint",
+        "RLYR_Steel",
+        "RLYR_Seam",
+        "RLYR_BareMetal",
+        "RLYR_Ochre"
+      ],
+      "uv_layers": 1,
+      "logical_pieces": 533
+    }
+  ],
+  "triangles_total": 93880,
+  "source_element_count": 2794,
+  "fbx": "exports/LAB_Envelope.fbx"
+}

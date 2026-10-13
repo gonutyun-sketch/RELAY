@@ -1,0 +1,150 @@
+{
+  "generator": "make_lab_textures.py",
+  "seed": 13026,
+  "created_for": "RELAY LAB Envelope v01",
+  "authorship": "Procedural original textures, no third-party image sources.",
+  "color_spaces": {
+    "BaseColor": "sRGB",
+    "Normal": "Linear OpenGL +Y",
+    "Roughness": "Linear",
+    "MetallicSmoothness": "Linear; R metallic, A smoothness"
+  },
+  "materials": [
+    {
+      "name": "RLYR_Concrete",
+      "description": "Aged cast concrete; warm mineral aggregate and restrained damp clouding.",
+      "size": [
+        2048,
+        2048
+      ],
+      "repeat_meters": 2.0,
+      "basecolor_srgb_mean_0_255": [
+        126.35,
+        127.44,
+        119.57
+      ],
+      "metallic_range": [
+        0.0,
+        0.0
+      ],
+      "smoothness_range": [
+        0.053384602069854736,
+        0.27908313274383545
+      ],
+      "smoothness_mean": 0.17199067771434784,
+      "files": {
+        "BaseColor": "textures/RLYR_Concrete_BaseColor.png",
+        "Normal": "textures/RLYR_Concrete_Normal.png",
+        "MetallicSmoothness": "textures/RLYR_Concrete_MetallicSmoothness.png",
+        "Roughness": "textures/RLYR_Concrete_Roughness.png"
+      },
+      "seam_qa": {
+        "edge_x_mean_rgb_step": 0.8099,
+        "edge_y_mean_rgb_step": 0.8291,
+        "interior_mean_rgb_step": 0.8227
+      }
+    },
+    {
+      "name": "RLYR_Floor",
+      "description": "Dense dark epoxy/concrete floor; small abrasions without baked tile seams.",
+      "size": [
+        2048,
+        2048
+      ],
+      "repeat_meters": 2.0,
+      "basecolor_srgb_mean_0_255": [
+        65.96,
+        71.96,
+        68.96
+      ],
+      "metallic_range": [
+        0.0,
+        0.0
+      ],
+      "smoothness_range": [
+        0.15082526206970215,
+        0.3398892283439636
+      ],
+      "smoothness_mean": 0.2596016526222229,
+      "files": {
+        "BaseColor": "textures/RLYR_Floor_BaseColor.png",
+        "Normal": "textures/RLYR_Floor_Normal.png",
+        "MetallicSmoothness": "textures/RLYR_Floor_MetallicSmoothness.png",
+        "Roughness": "textures/RLYR_Floor_Roughness.png"
+      },
+      "seam_qa": {
+        "edge_x_mean_rgb_step": 0.5146,
+        "edge_y_mean_rgb_step": 0.5322,
+        "interior_mean_rgb_step": 0.5353
+      }
+    },
+    {
+      "name": "RLYR_Paint",
+      "description": "Muted sage-gray factory paint; fine orange peel with sparse aged flecks.",
+      "size": [
+        2048,
+        2048
+      ],
+      "repeat_meters": 2.0,
+      "basecolor_srgb_mean_0_255": [
+        90.99,
+        105.98,
+        100.98
+      ],
+      "metallic_range": [
+        0.0,
+        0.20628094673156738
+      ],
+      "smoothness_range": [
+        0.18501120805740356,
+        0.443600058555603
+      ],
+      "smoothness_mean": 0.3698137700557709,
+      "files": {
+        "BaseColor": "textures/RLYR_Paint_BaseColor.png",
+        "Normal": "textures/RLYR_Paint_Normal.png",
+        "MetallicSmoothness": "textures/RLYR_Paint_MetallicSmoothness.png",
+        "Roughness": "textures/RLYR_Paint_Roughness.png"
+      },
+      "seam_qa": {
+        "edge_x_mean_rgb_step": 0.3346,
+        "edge_y_mean_rgb_step": 0.3605,
+        "interior_mean_rgb_step": 0.35
+      }
+    },
+    {
+      "name": "RLYR_Steel",
+      "description": "Graphite structural steel; mild patina and fine directional machining.",
+      "size": [
+        2048,
+        2048
+      ],
+      "repeat_meters": 2.0,
+      "basecolor_srgb_mean_0_255": [
+        65.02,
+        72.02,
+        73.02
+      ],
+      "metallic_range": [
+        0.7599999904632568,
+        0.9100000262260437
+      ],
+      "smoothness_range": [
+        0.3361417055130005,
+        0.4744054079055786
+      ],
+      "smoothness_mean": 0.4097374975681305,
+      "files": {
+        "BaseColor": "textures/RLYR_Steel_BaseColor.png",
+        "Normal": "textures/RLYR_Steel_Normal.png",
+        "MetallicSmoothness": "textures/RLYR_Steel_MetallicSmoothness.png",
+        "Roughness": "textures/RLYR_Steel_Roughness.png"
+      },
+      "seam_qa": {
+        "edge_x_mean_rgb_step": 0.2905,
+        "edge_y_mean_rgb_step": 0.666,
+        "interior_mean_rgb_step": 0.3973
+      }
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+﻿# RELAY 실험실 벽·바닥·천장 v02 — 배관 연결 수정본
+
+제작일: 2026-10-13 / Unity 6000.3.9f1 URP
+
+이 패키지는 현재 저장된 Startup_Graybox 씬을 읽어 치수를 맞춘 아트 파일이다. Unity 씬·Inspector·스크립트는 자동으로 수정하지 않았다. 연결 작업은 사용자가 아래 순서대로 진행한다.
+
+## v02에서 고친 부분
+
+- 두 줄의 배관을 모서리 엘보로 이어 실험실 둘레를 순환하도록 만들었다. 중간에서 끝나는 배관은 제거했다.
+- 벽의 분배함으로 연결되는 가지 배관에는 T 연결부와 관통 피팅을 넣었다.
+- 케이블 트레이와 전선도 네 벽을 돌아 이어지며, 모서리에도 가로 받침이 있다.
+- 전선관 양쪽 끝은 벽 접속함과 트레이 접속함 내부에 들어간다.
+- 배관 받침대는 벽 또는 철골에 고정했고, 두 높이의 배관 각각에 받침과 고정 밴드를 넣었다.
+- 트레이 행거를 천장/보에 붙이고 전선이 가로 받침 위에 닿도록 조정했다.
+- 바닥 그레이팅에 세로 지지대와 받침 턱을 추가하고, 떠 있던 환기구·문틀·기둥의 볼트를 표면에 밀착했다.
+
+모델은 8개 Mesh, 93,880개 삼각형이다. 기존 방의 치수, 피벗, FBX 이름과 재질 이름은 v01과 같다.
+
+아직 Unity에 넣지 않았다면 이 v02만 사용한다. 이미 v01을 넣었다면 Unity Play를 끈 뒤 **Project에 가져온 기존 LAB_Envelope.fbx 파일의 내용만 이 패키지의 FBX로 덮어쓴다. 기존 .meta 파일은 유지한다.** 재질 이미지는 v01과 같으므로 다시 연결할 필요가 없다. 같은 위치에 파일을 교체하면 기존 재질 연결과 씬 배치를 유지할 수 있지만, 가져온 뒤 Materials 탭과 8개 Mesh의 연결 상태는 확인한다. 씬에 새 모델을 중복으로 놓지 않는다.
+
+`previews/LAB_04_Pipe_Corner.png`와 `LAB_05_Back_Corner.png`는 수정한 앞/뒤 모서리의 실제 모델 근접 렌더다. `checks/services_validation.json`에는 실제 닫힌 배관/트레이 형상, 전선관 끝의 접속함 연결, 그레이팅과 볼트의 접촉 검사 결과가 들어 있다.
+
+## 1. 만든 것
+
+- 벽 4면: 콘크리트 상부, 회녹색 하단 정비 패널, 낮은 금속 걸레받이, 패널 체결부.
+- 바닥: 실제 틈이 있는 슬래브, 양측 배수/정비 그레이팅, 그 아래 어두운 막음판.
+- 천장: 닫힌 패널 천장. 기존 조명 6개를 둘 공간 확보.
+- 구조물: 기존 위치에 맞춘 기둥 4개와 천장 보 2개.
+- 부속물: 상부 배관, 배관 커플링, 케이블 트레이, 벽의 환기구와 접속함.
+
+한 개의 FBX 안에 8개 Mesh가 들어 있다. 벽·바닥·천장을 각각 손으로 다시 조립할 필요가 없다. 바닥의 이음새와 그레이팅은 모델이고, 재질은 일반 URP Lit으로 연결한다. 별도 커스텀 셰이더나 상시 발광 재질은 없다.
+
+| 파일 | 용도 |
+|---|---|
+| `exports/LAB_Envelope.fbx` | Unity에 넣을 최종 모델 |
+| `textures/` | 2048×2048 재질 이미지 16개 |
+| `RELAY_Laboratory.blend` | 새 실험실 외형만 들어 있는 Blender 편집 원본 |
+| `RELAY_Laboratory_Review.blend` | 기존 기계와 조명을 배치한 확인용 Blender 파일 |
+| `previews/LAB_01_Interior.png` | 기존 기계와 함께 보는 실내 |
+| `previews/LAB_02_Wall_Floor.png` | 벽·바닥·환기구 근접 확인 |
+| `previews/LAB_03_Ceiling_Exit.png` | 천장·배관·출입구 확인 |
+| `manifest.json` | 정확한 모델 치수·재질·삼각형 수 |
+| `checks/geometry_validation.json` | 실제 FBX 재임포트 및 공간 검사 결과 |
+
+미리보기는 **Blender에서 실제 모델을 렌더한 이미지**다. 기존 코어·기계·조명·엘리베이터는 크기와 배치를 확인하기 위한 배경 자료이며 이번 FBX에는 포함하지 않는다. 코어의 푸른빛, 전원이 들어온 조명과 노출은 미리보기용이다. Unity의 기존 전원 제어와 CORE FX를 계속 사용한다.
+
+## 2. 현재 씬에 맞춘 기준
+
+| 항목 | 기준 |
+|---|---|
+| 바닥 크기 | X 16m × Z 16m |
+| 바닥 중심 | 월드 `(0, 0, -2)` |
+| 바닥 위쪽 | Y = 0 |
+| 천장 기본 아래 면 | Y = 6 |
+| 실내 좌우 벽 안쪽 | X = -7.75 / 7.75 |
+| 실내 앞뒤 벽 안쪽 | Z = -9.75 / 5.75 |
+| 출입구 | X -1.2..1.2, Y 0..3, Z 약 -10 |
+| 조명 위치 | X ±4, Z -6.5 / -2 / 2.5 |
+
+새 벽의 마감은 기존 벽보다 실내 쪽으로 수 cm 나온다. 문틀의 안쪽 끝은 X ±1.2와 Y 3을 넘지 않는다. 문 앞 발판이 있는 X ±1.72, Z -10..-9.48에는 새 바닥 윗면을 만들지 않았다. 그 아래 Y=-0.08에 어두운 바닥이 있으므로 기존 발판과 같은 높이의 면이 겹치지 않는다.
+
+씬을 저장하지 않고 Unity 화면에서만 위치를 바꿨다면 그 변경은 이 제작 기준에 포함되지 않는다. 연결 전에 아래 수치와 현재 저장한 방이 같은지 확인한다.
+
+## 3. 파일 넣기
+
+1. Unity Play를 끄고 현재 씬을 저장한다.
+2. Project 창에서 `Assets/RELAY/Art/Lab` 폴더를 만든다.
+3. 이 패키지의 **exports 폴더**와 **textures 폴더**를 그 안으로 가져온다.
+4. `Assets/RELAY/Art/Lab/Materials` 폴더를 만든다.
+5. Blender `.blend`, `scripts`, `checks`, `previews`는 Unity Assets에 넣지 않는다. 모델과 재질 이미지만 가져오면 된다.
+
+예상 경로:
+
+```text
+Assets/RELAY/Art/Lab/
+├─ exports/
+│  └─ LAB_Envelope.fbx
+├─ textures/
+│  ├─ RLYR_Concrete_BaseColor.png
+│  ├─ RLYR_Concrete_Normal.png
+│  └─ ...
+└─ Materials/
+```
+
+`LAB_Envelope.fbx`를 선택하고 Model 탭에서 다음을 확인한다.
+
+- Scale Factor = 1, Convert Units = On.
+- Bake Axis Conversion = Off. 이 패키지의 배치 안내는 기본 FBX 축 변환과 아래 Y 회전 180을 함께 사용한다.
+- Generate Colliders = Off.
+- Normals = Import.
+- Tangents = Calculate Mikktspace.
+- Read/Write = Off.
+- Generate Lightmap UVs = Off로 시작한다. 현재 기존 실시간 조명을 그대로 쓰는 연결 기준이다. 추후 조명을 베이크할 때 별도로 검토한다.
+- Apply.
+
+이번 모델 자체의 위치·크기를 맞추기 위해 Scale Factor를 바꾸지 않는다.
+
+## 4. 재질 이미지 설정
+
+4종 재질 이름은 `RLYR_Concrete`, `RLYR_Floor`, `RLYR_Paint`, `RLYR_Steel`이다. 이름 뒤에 같은 접미사가 붙은 이미지끼리 같은 방식으로 설정한다.
+
+| 접미사 | Texture Type | sRGB | 나머지 |
+|---|---|---|---|
+| `_BaseColor.png` | Default | On | Max Size 2048, Wrap Mode Repeat |
+| `_Normal.png` | Normal map | 자동 처리 | Create from Grayscale Off, Flip Green Channel Off, Wrap Repeat |
+| `_MetallicSmoothness.png` | Default | Off | Alpha Source Input Texture Alpha, Alpha Is Transparency Off, Wrap Repeat |
+| `_Roughness.png` | Default | Off | Blender 확인용. Unity 재질에는 연결하지 않아도 됨 |
+
+각 묶음 설정 후 Apply한다. Normal Map이 일반 이미지로 들어가면 표면이 제대로 표현되지 않는다. MetallicSmoothness의 알파 채널은 매끄러움 값이므로 지우거나 투명도 용도로 바꾸지 않는다. 이미지 압축은 처음에는 기본값으로 시작해도 된다. 가까이에서 압축 자국이 보일 때만 Normal Map 압축 품질을 높인다.
+
+## 5. 외부 Material 7개 만들기
+
+Materials 폴더에서 Create → Material을 사용한다. FBX를 펼쳤을 때 보이는 내부 재질을 그대로 다른 재질의 외부 연결 대상으로 넣지 않는다. 기존에 겪었던 `sub-asset ... cannot be used as an external material` 문제를 피하려면 **Project 창의 별도 .mat**을 연결해야 한다.
+
+모든 재질 공통:
+
+- Shader = Universal Render Pipeline/Lit.
+- Workflow Mode = Metallic.
+- Surface Type = Opaque.
+- Render Face = Front.
+- Alpha Clipping = Off.
+- Emission = Off.
+- Receive Shadows = On.
+
+먼저 이미지가 있는 4개 Material을 만든다.
+
+| Material 이름 | Base Map | Metallic Map | Normal Map |
+|---|---|---|---|
+| RLYR_Concrete | Concrete_BaseColor | Concrete_MetallicSmoothness | Concrete_Normal |
+| RLYR_Floor | Floor_BaseColor | Floor_MetallicSmoothness | Floor_Normal |
+| RLYR_Paint | Paint_BaseColor | Paint_MetallicSmoothness | Paint_Normal |
+| RLYR_Steel | Steel_BaseColor | Steel_MetallicSmoothness | Steel_Normal |
+
+표의 이미지 이름은 모두 `RLYR_` 접두사와 `.png` 확장자를 생략한 것이다.
+
+4개 모두 Base Map 옆 색을 흰색 `#FFFFFFFF`로 둔다. 파일 자체에 색이 들어 있어서 여기에 회색을 다시 곱하면 너무 어두워진다.
+
+- Smoothness Source = Metallic Alpha.
+- Smoothness 배율 = 1. 이미지 알파의 값이 이미 재질별로 조정되어 있다.
+- Normal 강도 = 0.6부터 시작.
+- Tiling X=1, Y=1 / Offset X=0, Y=0. UV에서 이미 2m당 한 번 반복하도록 만들었다.
+
+그다음 이미지 없이 쓸 3개 Material을 만든다.
+
+| Material 이름 | Base Map 색 | Metallic | Smoothness |
+|---|---|---:|---:|
+| RLYR_Seam | `#1C2422` | 0 | 0.08 |
+| RLYR_BareMetal | `#828780` | 0.80 | 0.62 |
+| RLYR_Ochre | `#A28A53` | 0.02 | 0.34 |
+
+이 3개의 색상 Alpha는 모두 1, 즉 255로 둔다. 어두운 홈은 불투명한 재질이다. 벽이나 바닥을 Transparent로 바꾸지 않는다.
+
+재질 연결 기준은 Unity 6.3 공식 [URP Lit 재질 문서](https://docs.unity3d.com/6000.3/Documentation/Manual/urp/lit-shader.html)와 [FBX Materials 탭 문서](https://docs.unity3d.com/6000.3/Documentation/Manual/FBXImporter-Materials.html)를 확인했다.
+
+## 6. FBX 재질 슬롯 연결
+
+1. Project 창에서 `LAB_Envelope.fbx` 선택.
+2. Inspector의 Materials 탭으로 이동.
+3. Material Creation Mode가 None이면 Standard로 설정하고 Apply.
+4. Remapped Materials 목록의 `RLYR_Concrete` 칸에 방금 만든 외부 `RLYR_Concrete.mat`을 넣는다.
+5. 같은 방식으로 나머지 6개도 이름대로 연결한다.
+6. Apply.
+
+이 설정은 한 번 하면 모델을 씬에 놓았을 때 전체 8개 Mesh에 적용된다. 분홍색 면이 생기면 해당 슬롯의 외부 재질 Shader가 URP/Lit인지 먼저 확인한다.
+
+## 7. 씬에 한 번에 배치
+
+Hierarchy의 기존 `Environment`를 선택한다. 현재 이 부모의 Position/Rotation은 0, Scale은 1이다.
+
+1. Environment 바로 아래에 Create Empty.
+2. 이름을 `LAB_Visual`로 변경.
+3. 이 Empty의 **Local** 값을 다음처럼 입력한다.
+
+| 항목 | X | Y | Z |
+|---|---:|---:|---:|
+| Position | 0 | 0 | 0 |
+| Rotation | 0 | 180 | 0 |
+| Scale | 1 | 1 | 1 |
+
+4. Project 창의 `LAB_Envelope.fbx`를 `LAB_Visual` 아래에 자식으로 드래그한다.
+5. 들어온 FBX 자식의 Local Position=0,0,0 / Rotation=0,0,0 / Scale=1,1,1로 설정한다.
+
+**Y 회전 180은 LAB_Visual 부모 한 곳에만 넣는다.** 자식에도 180을 다시 넣지 않는다. 기존 RELAY 기계 제작에서 사용한 축 기준을 따른 것이며, 방 중심 Z=-2와 출구 Z=-10을 그대로 맞춘다.
+
+```text
+Environment
+├─ Floor                         ← 원래 오브젝트 보존
+├─ Wall_Left / Wall_Right / Wall_Back
+├─ Ceiling
+├─ LabStructure
+├─ Lighting                      ← 기존 조명 보존
+├─ EXIT_Module                   ← 문·엘리베이터 보존
+└─ LAB_Visual                    ← 이번에 만드는 새 부모
+   └─ LAB_Envelope
+      ├─ LAB_Floor_GAME
+      ├─ LAB_Wall_Left_GAME
+      ├─ LAB_Wall_Right_GAME
+      ├─ LAB_Wall_Back_GAME
+      ├─ LAB_Wall_Exit_GAME
+      ├─ LAB_Ceiling_GAME
+      ├─ LAB_Structure_GAME
+      └─ LAB_Services_GAME
+```
+
+씬에 끌어다 놓은 직후 원래 벽과 바닥이 겹쳐 보이는 것은 교체 전 상태다. 다음 단계에서 원래 렌더러만 끈다.
+
+## 8. 원래 회색 외형만 숨기기
+
+다음 오브젝트의 Inspector에서 **Mesh Renderer 컴포넌트 체크만 Off** 한다.
+
+- `Environment/Floor`
+- `Environment/Wall_Left`
+- `Environment/Wall_Right`
+- `Environment/Wall_Back`
+- `Environment/Ceiling`
+- `Environment/EXIT_Module/Wall_LeftSection`
+- `Environment/EXIT_Module/Wall_RightSection`
+- `Environment/EXIT_Module/Wall_Header`
+- `Environment/LabStructure/Pillar_LeftFront`
+- `Environment/LabStructure/Pillar_RightFront`
+- `Environment/LabStructure/Pillar_LeftBack`
+- `Environment/LabStructure/Pillar_RightBack`
+- `Environment/LabStructure/Beam_Front`
+- `Environment/LabStructure/Beam_Back`
+
+오브젝트 맨 위의 활성 체크를 끄거나 삭제하면 Collider도 사라질 수 있다. **기존 Box Collider는 켜 둔다.** 새로운 모델에 Collider를 자동 생성하지 않는다.
+
+기존 `Wall_Front`는 비활성 상태 그대로 둔다. 이것을 다시 켜면 출입구를 막는다. `DoorMover`, `DoorPanel`, `ExitFloor`, `ELEVATOR_Module`, `Lighting`, `Core_Block`, 각 조작 패널은 이번 외형 교체 대상이 아니다. 조명 연결과 사운드 연결도 그대로 둔다.
+
+FloorMarkings는 기존 상태를 유지한다. 새 바닥 표면은 Y=0이어서 기존 Y=.011 부근의 마킹을 덮지 않는다. 원치 않는 마킹을 새 모델에서 추가하지 않았다.
+
+## 9. 적용 후 확인할 순서
+
+1. Scene에서 천장이 위에 있고, 앞쪽 출구 Z=-10에 폭2.4m의 문 구멍이 보이는지 확인.
+2. 실내 바닥 위에 플레이어가 서 있는지 확인.
+3. 벽 모서리·바닥 이음새·문 앞을 가까이 보며 깜박임이 없는지 확인.
+4. 기존 조명 6개가 천장에 묻히지 않았는지 확인.
+5. Play에서 무전원 → POWER 인가 시 기존 조명과 CORE FX가 정상 작동하는지 확인.
+6. 각 패널의 손잡이·다이얼·슬라이더 조작과 사운드 확인.
+7. 출구 문이 위로 열리고 엘리베이터까지 걸어갈 수 있는지 확인.
+8. Console 확인 후 씬 저장.
+
+문 구멍이 반대쪽으로 가 있다면 방 전체를 이동하기 전에 `LAB_Visual`의 Local Rotation Y=180, 그 안 FBX의 Local Rotation Y=0부터 확인한다. 모델이 두 배 크거나 납작하면 부모 Environment의 Scale=1,1,1과 FBX Scale Factor=1부터 확인한다.
+
+실제 게임 화면의 밝기는 현재 Unity 조명·노출·색보정에 따라 달라진다. 미리보기와 밝기가 다르다는 이유로 재질에 Emission을 추가하지 않는다. 우선 위의 재질 연결과 기존 전원 켜짐 상태를 확인한다.
+
+## 10. 검증 범위와 원본 편집
+
+완성 FBX를 Blender에서 다시 열어 8개 Mesh, UV, 재질, 닫힌 면, 정상 크기와 삼각형 수를 점검했다. 바닥·천장 방향, 출입구 빈 공간, 문턱 하부, 벽면과 기존 6개 조명 공간은 50개 광선/공간 항목으로 확인했다. 이 검사는 Unity 플레이테스트를 대신하지 않는다. 실제 적용과 최종 이동 확인은 위 9번 순서대로 사용자가 진행한다.
+
+Blender에서 수정할 때는 `RELAY_Laboratory.blend`의 `01_EDITABLE_LAB_SURFACES` 컬렉션을 사용한다. 편집용과 최종 출력용 모델이 한 화면에 겹치지 않도록 `02_GAME_EXPORTS`는 숨겨져 있다. 필요하면 Edit Mode에서 마우스를 부품 위에 두고 L로 연결된 패널을 선택한다.
+
+`RELAY_Laboratory_Review.blend`에는 미리보기용 기존 기계가 포함되어 있다. 이 파일 전체를 Unity에 가져오면 기존 기계가 중복된다. Unity에는 `exports/LAB_Envelope.fbx`만 사용한다.
+
+텍스처 제작 원본은 `scripts/make_lab_textures.py`, 모델 제작 원본은 `scripts/build_lab.py`, 검증은 `scripts/validate_lab.py`, 미리보기 제작은 `scripts/render_lab.py`다. 원본 Blender 파일에는 재질 이미지가 packed되어 있으며, 최종 FBX용 이미지도 textures 폴더에 별도로 제공한다.

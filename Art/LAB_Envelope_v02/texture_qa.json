@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "texture_count": 16,
+  "total_bytes": 18950220,
+  "checks": [
+    {
+      "name": "RLYR_Concrete_BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "bytes": 2224782
+    },
+    {
+      "name": "RLYR_Concrete_MetallicSmoothness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGBA",
+      "bytes": 1062890
+    },
+    {
+      "name": "RLYR_Concrete_Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "bytes": 3853561,
+      "normal_length_max_error": 0.004979719062408239
+    },
+    {
+      "name": "RLYR_Concrete_Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "L",
+      "bytes": 829247
+    },
+    {
+      "name": "RLYR_Floor_BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "bytes": 1274086
+    },
+    {
+      "name": "RLYR_Floor_MetallicSmoothness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGBA",
+      "bytes": 447483
+    },
+    {
+      "name": "RLYR_Floor_Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "bytes": 2290863,
+      "normal_length_max_error": 0.003944546305671759
+    },
+    {
+      "name": "RLYR_Floor_Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "L",
+      "bytes": 350349
+    },
+    {
+      "name": "RLYR_Paint_BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "bytes": 1114837
+    },
+    {
+      "name": "RLYR_Paint_MetallicSmoothness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGBA",
+      "bytes": 970333
+    },
+    {
+      "name": "RLYR_Paint_Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "bytes": 1100707,
+      "normal_length_max_error": 0.00019990312586770642
+    },
+    {
+      "name": "RLYR_Paint_Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "L",
+      "bytes": 706434
+    },
+    {
+      "name": "RLYR_Steel_BaseColor.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "bytes": 817302
+    },
+    {
+      "name": "RLYR_Steel_MetallicSmoothness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGBA",
+      "bytes": 561463
+    },
+    {
+      "name": "RLYR_Steel_Normal.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "bytes": 1044030,
+      "normal_length_max_error": 0.0003843936332625919
+    },
+    {
+      "name": "RLYR_Steel_Roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "L",
+      "bytes": 301853
+    }
+  ]
+}

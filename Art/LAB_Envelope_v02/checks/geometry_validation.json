@@ -1,0 +1,876 @@
+{
+  "scope": "Actual Blender FBX reimport plus ray tests; Unity import/playtest not performed.",
+  "parts": [
+    {
+      "name": "LAB_Ceiling",
+      "checks": {
+        "bounds_match": true,
+        "finite": true,
+        "has_uv": true,
+        "all_materials_assigned": true,
+        "no_loose_edges": true,
+        "closed_components": true,
+        "no_zero_area_faces": true,
+        "triangles_match": true
+      },
+      "bounds_max_error": 9.5367431640625e-07,
+      "triangles": 15004,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    },
+    {
+      "name": "LAB_Floor",
+      "checks": {
+        "bounds_match": true,
+        "finite": true,
+        "has_uv": true,
+        "all_materials_assigned": true,
+        "no_loose_edges": true,
+        "closed_components": true,
+        "no_zero_area_faces": true,
+        "triangles_match": true
+      },
+      "bounds_max_error": 7.549789984295785e-07,
+      "triangles": 24236,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    },
+    {
+      "name": "LAB_Services",
+      "checks": {
+        "bounds_match": true,
+        "finite": true,
+        "has_uv": true,
+        "all_materials_assigned": true,
+        "no_loose_edges": true,
+        "closed_components": true,
+        "no_zero_area_faces": true,
+        "triangles_match": true
+      },
+      "bounds_max_error": 4.76837158203125e-07,
+      "triangles": 27164,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    },
+    {
+      "name": "LAB_Structure",
+      "checks": {
+        "bounds_match": true,
+        "finite": true,
+        "has_uv": true,
+        "all_materials_assigned": true,
+        "no_loose_edges": true,
+        "closed_components": true,
+        "no_zero_area_faces": true,
+        "triangles_match": true
+      },
+      "bounds_max_error": 4.76837158203125e-07,
+      "triangles": 7184,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    },
+    {
+      "name": "LAB_Wall_Back",
+      "checks": {
+        "bounds_match": true,
+        "finite": true,
+        "has_uv": true,
+        "all_materials_assigned": true,
+        "no_loose_edges": true,
+        "closed_components": true,
+        "no_zero_area_faces": true,
+        "triangles_match": true
+      },
+      "bounds_max_error": 4.76837158203125e-07,
+      "triangles": 4284,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    },
+    {
+      "name": "LAB_Wall_Exit",
+      "checks": {
+        "bounds_match": true,
+        "finite": true,
+        "has_uv": true,
+        "all_materials_assigned": true,
+        "no_loose_edges": true,
+        "closed_components": true,
+        "no_zero_area_faces": true,
+        "triangles_match": true
+      },
+      "bounds_max_error": 9.5367431640625e-07,
+      "triangles": 5312,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    },
+    {
+      "name": "LAB_Wall_Left",
+      "checks": {
+        "bounds_match": true,
+        "finite": true,
+        "has_uv": true,
+        "all_materials_assigned": true,
+        "no_loose_edges": true,
+        "closed_components": true,
+        "no_zero_area_faces": true,
+        "triangles_match": true
+      },
+      "bounds_max_error": 9.5367431640625e-07,
+      "triangles": 5348,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    },
+    {
+      "name": "LAB_Wall_Right",
+      "checks": {
+        "bounds_match": true,
+        "finite": true,
+        "has_uv": true,
+        "all_materials_assigned": true,
+        "no_loose_edges": true,
+        "closed_components": true,
+        "no_zero_area_faces": true,
+        "triangles_match": true
+      },
+      "bounds_max_error": 9.5367431640625e-07,
+      "triangles": 5348,
+      "boundary_edges": 0,
+      "zero_area_faces": 0
+    }
+  ],
+  "ray_tests": [
+    {
+      "name": "floor_top_-5.7_-8.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          -5.699999809265137,
+          5.960464477539062e-07,
+          -8.5
+        ],
+        "normal": [
+          0.0,
+          0.9999999403953552,
+          7.549787994776125e-08
+        ],
+        "distance": 0.9999994039535522
+      }
+    },
+    {
+      "name": "floor_top_-5.7_-3.3",
+      "passed": true,
+      "hit": {
+        "point": [
+          -5.699999809265137,
+          2.384185791015625e-07,
+          -3.299999952316284
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549789415861596e-08
+        ],
+        "distance": 0.9999997615814209
+      }
+    },
+    {
+      "name": "floor_top_-5.7_0.6",
+      "passed": true,
+      "hit": {
+        "point": [
+          -5.699999809265137,
+          -1.1920928955078125e-07,
+          0.6000000238418579
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549789415861596e-08
+        ],
+        "distance": 1.0000001192092896
+      }
+    },
+    {
+      "name": "floor_top_-5.7_3.6",
+      "passed": true,
+      "hit": {
+        "point": [
+          -5.699999809265137,
+          -3.5762786865234375e-07,
+          3.5999999046325684
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549790126404332e-08
+        ],
+        "distance": 1.0000003576278687
+      }
+    },
+    {
+      "name": "floor_top_-2.3_-8.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          -2.299999952316284,
+          5.960464477539062e-07,
+          -8.5
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.54979225803254e-08
+        ],
+        "distance": 0.9999994039535522
+      }
+    },
+    {
+      "name": "floor_top_-2.3_-3.3",
+      "passed": true,
+      "hit": {
+        "point": [
+          -2.299999952316284,
+          2.384185791015625e-07,
+          -3.299999952316284
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549790126404332e-08
+        ],
+        "distance": 0.9999997615814209
+      }
+    },
+    {
+      "name": "floor_top_-2.3_0.6",
+      "passed": true,
+      "hit": {
+        "point": [
+          -2.299999952316284,
+          0.0,
+          0.6000000238418579
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549790836947068e-08
+        ],
+        "distance": 1.0
+      }
+    },
+    {
+      "name": "floor_top_-2.3_3.6",
+      "passed": true,
+      "hit": {
+        "point": [
+          -2.299999952316284,
+          -2.384185791015625e-07,
+          3.5999999046325684
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549790126404332e-08
+        ],
+        "distance": 1.000000238418579
+      }
+    },
+    {
+      "name": "floor_top_0.4_-8.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.4000000059604645,
+          6.556510925292969e-07,
+          -8.5
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549792968575275e-08
+        ],
+        "distance": 0.9999993443489075
+      }
+    },
+    {
+      "name": "floor_top_0.4_-3.3",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.4000000059604645,
+          2.384185791015625e-07,
+          -3.299999952316284
+        ],
+        "normal": [
+          0.0,
+          0.9999999403953552,
+          7.549790126404332e-08
+        ],
+        "distance": 0.9999997615814209
+      }
+    },
+    {
+      "name": "floor_top_0.4_0.6",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.4000000059604645,
+          -1.1920928955078125e-07,
+          0.6000000238418579
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549790126404332e-08
+        ],
+        "distance": 1.0000001192092896
+      }
+    },
+    {
+      "name": "floor_top_0.4_3.6",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.4000000059604645,
+          -2.384185791015625e-07,
+          3.5999999046325684
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.54978870531886e-08
+        ],
+        "distance": 1.000000238418579
+      }
+    },
+    {
+      "name": "floor_top_3.9_-8.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          3.9000000953674316,
+          7.152557373046875e-07,
+          -8.5
+        ],
+        "normal": [
+          0.0,
+          0.9999999403953552,
+          7.549790126404332e-08
+        ],
+        "distance": 0.9999992847442627
+      }
+    },
+    {
+      "name": "floor_top_3.9_-3.3",
+      "passed": true,
+      "hit": {
+        "point": [
+          3.9000000953674316,
+          1.7881393432617188e-07,
+          -3.299999952316284
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549790836947068e-08
+        ],
+        "distance": 0.9999998211860657
+      }
+    },
+    {
+      "name": "floor_top_3.9_0.6",
+      "passed": true,
+      "hit": {
+        "point": [
+          3.9000000953674316,
+          -2.384185791015625e-07,
+          0.6000000238418579
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549790126404332e-08
+        ],
+        "distance": 1.000000238418579
+      }
+    },
+    {
+      "name": "floor_top_3.9_3.6",
+      "passed": true,
+      "hit": {
+        "point": [
+          3.9000000953674316,
+          -3.5762786865234375e-07,
+          3.5999999046325684
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549790126404332e-08
+        ],
+        "distance": 1.0000003576278687
+      }
+    },
+    {
+      "name": "floor_top_5.9_-8.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          5.900000095367432,
+          5.960464477539062e-07,
+          -8.5
+        ],
+        "normal": [
+          0.0,
+          0.9999999403953552,
+          7.549787994776125e-08
+        ],
+        "distance": 0.9999994039535522
+      }
+    },
+    {
+      "name": "floor_top_5.9_-3.3",
+      "passed": true,
+      "hit": {
+        "point": [
+          5.900000095367432,
+          2.384185791015625e-07,
+          -3.299999952316284
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549789415861596e-08
+        ],
+        "distance": 0.9999997615814209
+      }
+    },
+    {
+      "name": "floor_top_5.9_0.6",
+      "passed": true,
+      "hit": {
+        "point": [
+          5.900000095367432,
+          -1.1920928955078125e-07,
+          0.6000000238418579
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549789415861596e-08
+        ],
+        "distance": 1.0000001192092896
+      }
+    },
+    {
+      "name": "floor_top_5.9_3.6",
+      "passed": true,
+      "hit": {
+        "point": [
+          5.900000095367432,
+          -3.5762786865234375e-07,
+          3.5999999046325684
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.549790126404332e-08
+        ],
+        "distance": 1.0000003576278687
+      }
+    },
+    {
+      "name": "ceiling_closed_-5.1_-7.4",
+      "passed": true,
+      "hit": {
+        "point": [
+          -5.099999904632568,
+          6.000000953674316,
+          -7.400000095367432
+        ],
+        "normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "distance": 5.000000953674316
+      }
+    },
+    {
+      "name": "ceiling_closed_-5.1_-2.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          -5.099999904632568,
+          5.999999523162842,
+          -2.5
+        ],
+        "normal": [
+          0.0,
+          -1.0,
+          -2.4082686422843835e-07
+        ],
+        "distance": 4.999999523162842
+      }
+    },
+    {
+      "name": "ceiling_closed_-5.1_2.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          -5.099999904632568,
+          5.999999523162842,
+          2.5
+        ],
+        "normal": [
+          0.0,
+          -1.0,
+          -2.4082686422843835e-07
+        ],
+        "distance": 4.999999523162842
+      }
+    },
+    {
+      "name": "ceiling_closed_0_-7.4",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.0,
+          6.028001308441162,
+          -7.400000095367432
+        ],
+        "normal": [
+          0.0,
+          -0.9999999403953552,
+          -8.943491280888338e-08
+        ],
+        "distance": 5.028001308441162
+      }
+    },
+    {
+      "name": "ceiling_closed_0_-2.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.0,
+          6.028000354766846,
+          -2.5
+        ],
+        "normal": [
+          0.0,
+          -0.9999999403953552,
+          -8.943491280888338e-08
+        ],
+        "distance": 5.028000354766846
+      }
+    },
+    {
+      "name": "ceiling_closed_0_2.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.0,
+          6.0279998779296875,
+          2.5
+        ],
+        "normal": [
+          0.0,
+          -0.9999999403953552,
+          -8.943491280888338e-08
+        ],
+        "distance": 5.0279998779296875
+      }
+    },
+    {
+      "name": "ceiling_closed_5.1_-7.4",
+      "passed": true,
+      "hit": {
+        "point": [
+          5.099999904632568,
+          6.000000953674316,
+          -7.400000095367432
+        ],
+        "normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "distance": 5.000000953674316
+      }
+    },
+    {
+      "name": "ceiling_closed_5.1_-2.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          5.099999904632568,
+          5.999999523162842,
+          -2.5
+        ],
+        "normal": [
+          0.0,
+          -1.0,
+          -2.4082686422843835e-07
+        ],
+        "distance": 4.999999523162842
+      }
+    },
+    {
+      "name": "ceiling_closed_5.1_2.5",
+      "passed": true,
+      "hit": {
+        "point": [
+          5.099999904632568,
+          6.0,
+          2.5
+        ],
+        "normal": [
+          0.0,
+          -1.0,
+          -2.4082686422843835e-07
+        ],
+        "distance": 5.0
+      }
+    },
+    {
+      "name": "doorway_clear_-1.18_0.1",
+      "passed": true,
+      "hit": null
+    },
+    {
+      "name": "doorway_clear_-1.18_1.5",
+      "passed": true,
+      "hit": null
+    },
+    {
+      "name": "doorway_clear_-1.18_2.94",
+      "passed": true,
+      "hit": null
+    },
+    {
+      "name": "doorway_clear_0_0.1",
+      "passed": true,
+      "hit": null
+    },
+    {
+      "name": "doorway_clear_0_1.5",
+      "passed": true,
+      "hit": null
+    },
+    {
+      "name": "doorway_clear_0_2.94",
+      "passed": true,
+      "hit": null
+    },
+    {
+      "name": "doorway_clear_1.18_0.1",
+      "passed": true,
+      "hit": null
+    },
+    {
+      "name": "doorway_clear_1.18_1.5",
+      "passed": true,
+      "hit": null
+    },
+    {
+      "name": "doorway_clear_1.18_2.94",
+      "passed": true,
+      "hit": null
+    },
+    {
+      "name": "lintel_present",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.0,
+          3.5,
+          -9.744000434875488
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance": 0.34400081634521484
+      }
+    },
+    {
+      "name": "apron_recess_-1.55",
+      "passed": true,
+      "hit": {
+        "point": [
+          -1.5499999523162842,
+          -0.07999908924102783,
+          -9.699999809265137
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.545410340981107e-08
+        ],
+        "distance": 1.0799990892410278
+      }
+    },
+    {
+      "name": "apron_recess_0",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.0,
+          -0.07999920845031738,
+          -9.699999809265137
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.545410340981107e-08
+        ],
+        "distance": 1.0799992084503174
+      }
+    },
+    {
+      "name": "apron_recess_1.55",
+      "passed": true,
+      "hit": {
+        "point": [
+          1.5499999523162842,
+          -0.07999920845031738,
+          -9.699999809265137
+        ],
+        "normal": [
+          0.0,
+          1.0,
+          7.545410340981107e-08
+        ],
+        "distance": 1.0799992084503174
+      }
+    },
+    {
+      "name": "wall_inside_(-1, 0, 0)",
+      "passed": true,
+      "hit": {
+        "point": [
+          -7.74399995803833,
+          2.0,
+          -4.449999809265137
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          3.4507488066992664e-07
+        ],
+        "distance": 7.74399995803833
+      }
+    },
+    {
+      "name": "wall_inside_(1, 0, 0)",
+      "passed": true,
+      "hit": {
+        "point": [
+          7.74399995803833,
+          2.0,
+          -4.449999809265137
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          3.4507488066992664e-07
+        ],
+        "distance": 7.74399995803833
+      }
+    },
+    {
+      "name": "wall_inside_(0, 0, 1)",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.4000000059604645,
+          2.0,
+          5.744000434875488
+        ],
+        "normal": [
+          0.0,
+          1.781641714160287e-07,
+          -1.0
+        ],
+        "distance": 3.7440004348754883
+      }
+    },
+    {
+      "name": "wall_inside_(0, 0, -1)",
+      "passed": true,
+      "hit": {
+        "point": [
+          4.0,
+          2.0,
+          -9.744000434875488
+        ],
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "distance": 1.7440004348754883
+      }
+    },
+    {
+      "name": "recessed_wall_joint_is_closed_(-1, 0, 0)",
+      "passed": true,
+      "hit": {
+        "point": [
+          -7.7739996910095215,
+          2.0,
+          -4.0
+        ],
+        "normal": [
+          0.9999999403953552,
+          0.0,
+          3.642718482410601e-08
+        ],
+        "distance": 7.7739996910095215
+      }
+    },
+    {
+      "name": "recessed_wall_joint_is_closed_(1, 0, 0)",
+      "passed": true,
+      "hit": {
+        "point": [
+          7.7739996910095215,
+          2.0,
+          -4.0
+        ],
+        "normal": [
+          -0.9999999403953552,
+          0.0,
+          3.980025553573796e-08
+        ],
+        "distance": 7.7739996910095215
+      }
+    },
+    {
+      "name": "recessed_wall_joint_is_closed_(0, 0, 1)",
+      "passed": true,
+      "hit": {
+        "point": [
+          0.0,
+          2.0,
+          5.77400016784668
+        ],
+        "normal": [
+          0.0,
+          8.216942859462506e-08,
+          -1.0
+        ],
+        "distance": 3.774000406265259
+      }
+    },
+    {
+      "name": "six_light_mount_volumes_clear",
+      "passed": true,
+      "hit": null
+    }
+  ],
+  "light_intersections": [],
+  "unity_scene_unchanged": true,
+  "all_passed": true
+}
