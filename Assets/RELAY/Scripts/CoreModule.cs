@@ -28,6 +28,10 @@ namespace Startup
 
         public bool IsComplete { get; private set; }
 
+        // A completed startup supplies the exit terminal while MAIN stays online.
+        public bool HasExitPower =>
+            IsComplete && ConnectionsAvailable && powerSource.IsOnline;
+
         public bool HasAuxPower =>
     ConnectionsAvailable && powerSource.IsAuxPowered;
 

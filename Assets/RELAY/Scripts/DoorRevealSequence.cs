@@ -99,7 +99,7 @@ namespace Startup
 
         private void LateUpdate()
         {
-            if (!ready || played || !coreSource.IsComplete)
+            if (!ready || played || exitDoor == null || !exitDoor.ReadyToUnlock)
                 return;
 
             // Wait until the player is actually controlling the game.

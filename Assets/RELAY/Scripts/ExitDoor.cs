@@ -6,6 +6,7 @@ namespace Startup
     public sealed class ExitDoor : MonoBehaviour
     {
         [SerializeField] private CoreModule coreSource;
+        [SerializeField] private ExitTerminal securityTerminal;
         [SerializeField] private Rigidbody movingDoor;
 
         [SerializeField, Min(0.1f)]
@@ -25,15 +26,31 @@ namespace Startup
         public bool IsOpen { get; private set; }
         public CoreModule Source => coreSource;
         public float OpenDuration => Mathf.Max(0.1f, openSeconds);
+        public ExitTerminal SecurityTerminal => securityTerminal;
+
+        // The camera reveal and the actual door share this authorization gate.
+        public bool ReadyToUnlock =>
+            configured && isActiveAndEnabled &&
+            coreSource != null &&
+            securityTerminal != null && securityTerminal.isActiveAndEnabled &&
+            SecuritySequenceRule.CanAuthorize(coreSource.HasExitPower, securityTerminal.IsSolved);
 
         private void Awake()
         {
-            if (coreSource == null || movingDoor == null)
+            if (coreSource == null || movingDoor == null || securityTerminal == null)
             {
                 Debug.LogError(
-                    "ExitDoor: assign Core Source and Moving Door.",
+                    "ExitDoor: assign Core Source, Moving Door and Security Terminal.",
                     this);
 
+                enabled = false;
+                return;
+            }
+
+            if (securityTerminal.CoreSource != coreSource ||
+                securityTerminal.ControlledDoor != this)
+            {
+                Debug.LogError("ExitDoor: Security Terminal must reference this door and the same Core Source.", this);
                 enabled = false;
                 return;
             }
@@ -104,7 +121,7 @@ namespace Startup
 
             if (!unlocked)
             {
-                if (coreSource == null || !coreSource.IsComplete)
+                if (!ReadyToUnlock)
                     return;
 
                 if (holdOwner != null && holdOwner.isActiveAndEnabled)
