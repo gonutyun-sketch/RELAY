@@ -1,0 +1,226 @@
+{
+  "passed": true,
+  "count": 36,
+  "checks": [
+    {
+      "name": "TERMINAL_Body finite geometry",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Body controlled material names",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Body complete UV map",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Body UV coordinates within atlas",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Body FBX reimport preserves dimensions",
+      "passed": true,
+      "details": {
+        "max_error_m": 5.960464477539063e-08
+      }
+    },
+    {
+      "name": "TERMINAL_Body FBX neutral origin and no animation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Body FBX axes match documented attachment",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Keys finite geometry",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Keys controlled material names",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Keys complete UV map",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Keys UV coordinates within atlas",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Keys FBX reimport preserves dimensions",
+      "passed": true,
+      "details": {
+        "max_error_m": 5.960464477539063e-08
+      }
+    },
+    {
+      "name": "TERMINAL_Keys FBX neutral origin and no animation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Keys FBX axes match documented attachment",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_EnterKey finite geometry",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_EnterKey controlled material names",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_EnterKey complete UV map",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_EnterKey UV coordinates within atlas",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_EnterKey FBX reimport preserves dimensions",
+      "passed": true,
+      "details": {
+        "max_error_m": 9.313225746154785e-10
+      }
+    },
+    {
+      "name": "TERMINAL_EnterKey FBX neutral origin and no animation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_EnterKey FBX axes match documented attachment",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Screen finite geometry",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Screen controlled material names",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Screen FBX reimport preserves dimensions",
+      "passed": true,
+      "details": {
+        "max_error_m": 8.940696716308594e-08
+      }
+    },
+    {
+      "name": "TERMINAL_Screen FBX neutral origin and no animation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "TERMINAL_Screen FBX axes match documented attachment",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "One environment prop triangle budget",
+      "passed": true,
+      "details": {
+        "triangles": 26730,
+        "budget": 40000
+      }
+    },
+    {
+      "name": "69 modelled keys",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Keycaps clear CRT front lip",
+      "passed": true,
+      "details": {
+        "nearest_key_z": 0.27949997782707214
+      }
+    },
+    {
+      "name": "Screen remains behind existing WorldStatus canvas",
+      "passed": true,
+      "details": {
+        "frontmost_glass_z": 0.23350000381469727,
+        "canvas_z": 0.245
+      }
+    },
+    {
+      "name": "Screen normals face player",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Live status text area has no front occlusion",
+      "passed": true,
+      "details": {
+        "rays": 527,
+        "blocked": 0
+      }
+    },
+    {
+      "name": "TERMINAL_BaseColor.png actual saved 2048 texture",
+      "passed": true,
+      "details": {
+        "dimensions": [
+          2048,
+          2048
+        ]
+      }
+    },
+    {
+      "name": "TERMINAL_Roughness.png actual saved 2048 texture",
+      "passed": true,
+      "details": {
+        "dimensions": [
+          2048,
+          2048
+        ]
+      }
+    },
+    {
+      "name": "TERMINAL_MetallicSmoothness.png actual saved 2048 texture",
+      "passed": true,
+      "details": {
+        "dimensions": [
+          2048,
+          2048
+        ]
+      }
+    },
+    {
+      "name": "Packed metallic red and smoothness alpha retained",
+      "passed": true,
+      "details": {
+        "metallic_max": 0.8000000715255737,
+        "smoothness_min": 0.15294118225574493,
+        "smoothness_max": 1.0
+      }
+    }
+  ],
+  "unity_opened_or_modified": false,
+  "actual_unity_playtest": false
+}

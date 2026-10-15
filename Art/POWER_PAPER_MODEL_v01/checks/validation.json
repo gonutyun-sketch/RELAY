@@ -1,0 +1,25 @@
+{
+  "dimensions_m": {
+    "width": 0.3005603104829788,
+    "height_including_tape": 0.43622787296772003,
+    "depth": 0.009656937822001055
+  },
+  "vertices": 1290,
+  "triangles": 2572,
+  "material_slots": [
+    "RLYP_Paper",
+    "RLYP_Tape"
+  ],
+  "fbx_roundtrip_bounds_error_m": 1.5832483768463135e-08,
+  "printed_text": [
+    "70",
+    "30"
+  ],
+  "front_authored": "-Z in Unity design coordinates; Blender -Y",
+  "unity_visual_child_rotation_degrees": [
+    0,
+    180,
+    0
+  ],
+  "unity_project_modified": false
+}

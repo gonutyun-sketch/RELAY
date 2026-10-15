@@ -1,0 +1,15 @@
+{
+  "shader": "Universal Render Pipeline/Lit",
+  "surface": "Opaque",
+  "materials": [
+    {"name":"RLYT_Surface","baseColor":"#FFFFFF","baseMap":"textures/TERMINAL_BaseColor.png","metallicMap":"textures/TERMINAL_MetallicSmoothness.png","smoothness":1,"smoothnessSource":"MetallicAlpha","emission":false},
+    {"name":"RLYT_Ink","baseColor":"#242D28","metallic":0,"smoothness":0.2},
+    {"name":"RLYT_Legend","baseColor":"#D5D2BD","metallic":0,"smoothness":0.21},
+    {"name":"RLYT_CRTScreen","baseColor":"#08140F","metallic":0,"smoothness":0.84,"emission":false}
+  ],
+  "textures": {
+    "TERMINAL_BaseColor.png":{"sRGB":true,"maxSize":2048},
+    "TERMINAL_MetallicSmoothness.png":{"sRGB":false,"maxSize":2048,"red":"metallic","alpha":"smoothness","alphaIsTransparency":false},
+    "TERMINAL_Roughness.png":{"sRGB":false,"maxSize":2048,"UnityURPDirectSlot":null}
+  }
+}

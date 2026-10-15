@@ -1,0 +1,194 @@
+{
+  "asset": "RELAY Exit Terminal v01",
+  "unity_modified": false,
+  "units": "metres",
+  "front": "Unity +Z",
+  "root_parent": "Environment/EXIT_Module",
+  "root_local_position": [
+    2.1,
+    0,
+    0.55
+  ],
+  "root_local_rotation": [
+    0,
+    0,
+    0
+  ],
+  "root_local_scale": [
+    1,
+    1,
+    1
+  ],
+  "world_status_canvas_position": [
+    0,
+    1.25,
+    0.245
+  ],
+  "world_status_canvas_rotation": [
+    0,
+    180,
+    0
+  ],
+  "world_status_canvas_scale": [
+    0.001,
+    0.001,
+    0.001
+  ],
+  "keyboard_key_count": 69,
+  "parts": [
+    {
+      "name": "TERMINAL_Body",
+      "file": "exports/TERMINAL_Body.fbx",
+      "child_local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 15291,
+      "bounds": [
+        [
+          -0.4099999964237213,
+          0.4100000262260437
+        ],
+        [
+          0.0,
+          1.5499999523162842
+        ],
+        [
+          -0.29753515124320984,
+          0.5633000135421753
+        ]
+      ],
+      "materials": [
+        "RLYT_Surface",
+        "RLYT_Ink",
+        "RLYT_Legend"
+      ]
+    },
+    {
+      "name": "TERMINAL_Keys",
+      "file": "exports/TERMINAL_Keys.fbx",
+      "child_local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 9026,
+      "bounds": [
+        [
+          -0.3089999556541443,
+          0.32600000500679016
+        ],
+        [
+          0.9290000200271606,
+          0.9485000371932983
+        ],
+        [
+          0.27949997782707214,
+          0.4465000033378601
+        ]
+      ],
+      "materials": [
+        "RLYT_Surface",
+        "RLYT_Legend",
+        "RLYT_Ink"
+      ]
+    },
+    {
+      "name": "TERMINAL_EnterKey",
+      "file": "exports/TERMINAL_EnterKey.fbx",
+      "child_local_position": [
+        -0.10719999670982361,
+        0.9390000104904175,
+        0.3630000054836273
+      ],
+      "child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 173,
+      "bounds": [
+        [
+          -0.03880000114440918,
+          0.03880000114440918
+        ],
+        [
+          -0.009999990463256836,
+          0.00830000638961792
+        ],
+        [
+          -0.013500005006790161,
+          0.013500005006790161
+        ]
+      ],
+      "materials": [
+        "RLYT_Surface",
+        "RLYT_Ink"
+      ]
+    },
+    {
+      "name": "TERMINAL_Screen",
+      "file": "exports/TERMINAL_Screen.fbx",
+      "child_local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "child_local_rotation": [
+        0,
+        180,
+        0
+      ],
+      "child_local_scale": [
+        1,
+        1,
+        1
+      ],
+      "triangles": 2240,
+      "bounds": [
+        [
+          -0.32199999690055847,
+          0.32199999690055847
+        ],
+        [
+          1.0490000247955322,
+          1.4509999752044678
+        ],
+        [
+          0.2160000056028366,
+          0.23350000381469727
+        ]
+      ],
+      "materials": [
+        "RLYT_CRTScreen"
+      ]
+    }
+  ],
+  "triangles_total": 26730
+}
